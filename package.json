@@ -1,0 +1,37 @@
+{
+  "name": "openerz",
+  "version": "0.0.1",
+  "description": "Open ERZ API",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha -R spec -t 10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/metaodi/openerz.git"
+  },
+  "author": "Stefan Oderbolz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metaodi/openerz/issues"
+  },
+  "homepage": "https://github.com/metaodi/openerz",
+  "dependencies": {
+    "async": "^0.8.0",
+    "csvtojson": "^0.3.17",
+    "hapi": "4.0.3",
+    "hapi-swagger": "0.1.12",
+    "joi": "3.1.0",
+    "nipple": "^2.5.2",
+    "pm2": "~0.8.2",
+    "through": "~2.3.4",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "should": "~3.3.1"
+  },
+  "engines": {
+    "node": ">=0.10.32"
+  }
+}
