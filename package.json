@@ -25,6 +25,7 @@
     "moment": "^2.8.4",
     "nipple": "^2.5.2",
     "pm2": "~0.8.2",
+    "superagent": "^0.21.0",
     "through": "~2.3.4",
     "underscore": "~1.6.0"
   },
