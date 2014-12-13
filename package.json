@@ -19,6 +19,7 @@
   "dependencies": {
     "async": "^0.8.0",
     "csvtojson": "^0.3.17",
+    "fanci": "^0.3.0",
     "hapi": "4.0.3",
     "hapi-swagger": "0.1.12",
     "joi": "3.1.0",
