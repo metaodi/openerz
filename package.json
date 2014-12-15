@@ -24,6 +24,7 @@
     "hapi-swagger": "0.1.12",
     "joi": "3.1.0",
     "moment": "^2.8.4",
+    "mongojs": "^0.18.0",
     "nipple": "^2.5.2",
     "pm2": "~0.8.2",
     "superagent": "^0.21.0",
