@@ -12,13 +12,13 @@ db.on('error',function(err) {
     console.log('database error', err);
 });
 
-db.on('ready',function() {
-    console.log('db connected');
+db.on('ready', function() {
+    console.log('db connected', dbUrl);
     // remove previous entries
     db.station.remove();
     db.calendar.remove();
 
-    async.parallel([
+    async.series([
         function(callback){
             csv.convertToJson('./csv/Entsorgung_Sammelstellen_2014.csv', format.stationEntry, function (objArr) {
                 console.log('CSV converted, got ' + objArr.length + ' objects');
