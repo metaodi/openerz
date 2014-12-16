@@ -45,10 +45,10 @@ sudo npm install -g pm2
 # Install dependencies
 cd /vagrant && npm install
 
-# # Import GeoJSON in MongoDB
-# mongo denkmap --eval "db.wfsktzh.remove()"
-# mongoimport --db denkmap --collection wfsktzh < /vagrant/resources/remote/denkmal_mongodb.geojson
-# mongo denkmap --eval "db.wfsktzh.ensureIndex({geometry: '2dsphere'})"
+# Import GeoJSON in MongoDB
+mongo openerz --eval "db.calendar.remove()"
+mongo openerz --eval "db.station.remove()"
+node loadData.js
 
 # start node web server
 pm2 kill
