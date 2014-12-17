@@ -16,16 +16,20 @@ var server = Hapi.createServer(
         cors: true
     });
 
+var swaggerOptions = {
 var options = {
     basePath: appConfig.basepath,
     apiVersion: version
 };
 
-server.pack.require({'hapi-swagger': options}, function (err) {
-    if (!err && err !== null) {
-        server.log(['error'], 'Plugin "hapi-swagger" load error: ' + err);
-    } else {
-         server.log(['start'], 'swagger interface loaded');
+server.pack.register({
+        plugin: require('hapi-swagger'),
+        options: swaggerOptions
+    }, function (err) {
+    if (err) {
+        server.log(['error'], 'Plugin "hapi-swagger" load error: ' + err)
+    }else{
+        server.log(['start'], 'Swagger interface loaded')
     }
 });
 
