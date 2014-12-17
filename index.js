@@ -22,7 +22,7 @@ var swaggerOptions = {
     info: {
         title: 'Open ERZ API',
         description: 'This API provides data from <a href=\'https://www.stadt-zuerich.ch/ted/de/index/entsorgung_recycling.html\'>Entsorgung und Recycling Zürich (ERZ)</a>. The data is provided on the <a href=\'http://data.stadt-zuerich.ch/\'>open data portal of the City of Zurich</a>.',
-        license: 'MIT',
+        license: 'MIT License, &copy; Stefan Oderbolz 2014',
         licenseUrl: 'https://github.com/metaodi/openerz/blob/master/LICENSE.md'
     }
 };
