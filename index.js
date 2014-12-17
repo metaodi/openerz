@@ -16,16 +16,25 @@ var server = Hapi.createServer(
         cors: true
     });
 
-var options = {
+var swaggerOptions = {
     basePath: appConfig.basepath,
-    apiVersion: version
+    apiVersion: version,
+    info: {
+        title: 'Open ERZ API',
+        description: 'This API provides data from <a href=\'https://www.stadt-zuerich.ch/ted/de/index/entsorgung_recycling.html\'>Entsorgung und Recycling Zürich (ERZ)</a>. The data is provided on the <a href=\'http://data.stadt-zuerich.ch/\'>open data portal of the City of Zurich</a>.',
+        license: 'MIT',
+        licenseUrl: 'https://github.com/metaodi/openerz/blob/master/LICENSE.md'
+    }
 };
 
-server.pack.require({'hapi-swagger': options}, function (err) {
-    if (!err && err !== null) {
-        server.log(['error'], 'Plugin "hapi-swagger" load error: ' + err);
-    } else {
-         server.log(['start'], 'swagger interface loaded');
+server.pack.register({
+        plugin: require('hapi-swagger'),
+        options: swaggerOptions
+    }, function (err) {
+    if (err) {
+        server.log(['error'], 'Plugin "hapi-swagger" load error: ' + err)
+    }else{
+        server.log(['start'], 'Swagger interface loaded')
     }
 });
 
