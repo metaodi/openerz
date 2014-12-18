@@ -20,7 +20,7 @@ Or use pm2:
 pm2 start index.js
 ```
 
-Then open http://localhost:8000/doc
+Then open http://localhost:8080/doc
 
 Testing
 =======
