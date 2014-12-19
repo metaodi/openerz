@@ -9,12 +9,8 @@ var Hapi = require('hapi');
 var route = require('./lib/route');
 
 // Create a server with a host and port
-var server = Hapi.createServer(
-    '0.0.0.0',
-    appConfig.port,
-    {
-        cors: true
-    });
+var server = new Hapi.Server();
+server.connection({ port: appConfig.port });
 
 var swaggerOptions = {
     basePath: appConfig.basepath,
@@ -27,8 +23,8 @@ var swaggerOptions = {
     }
 };
 
-server.pack.register({
-        plugin: require('hapi-swagger'),
+server.register({
+        register: require('hapi-swagger'),
         options: swaggerOptions
     }, function (err) {
     if (err) {
