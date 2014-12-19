@@ -6,7 +6,6 @@ var config = require('./lib/config'),
     version = config.version();
 
 var Hapi = require('hapi');
-var route = require('./lib/route');
 
 // Create a server with a host and port
 var server = new Hapi.Server();
@@ -23,22 +22,30 @@ var swaggerOptions = {
     }
 };
 
-server.register({
-        register: require('hapi-swagger'),
-        options: swaggerOptions
-    }, function (err) {
-    if (err) {
-        server.log(['error'], 'Plugin "hapi-swagger" load error: ' + err)
-    }else{
-        server.log(['start'], 'Swagger interface loaded')
+server.register(
+    { register: require('hapi-swagger'), options: swaggerOptions },
+    function (err) {
+        if (err) {
+            server.log(['error'], 'Plugin "hapi-swagger" load error: ' + err);
+        } else {
+            server.log(['start'], 'Swagger interface loaded');
+        }
     }
-});
-
-route.generateRoutes(server);
+);
+server.register(
+    { register: require('./lib/route') },
+    function (err) {
+        if (err) {
+            server.log(['error'], 'Plugin "OpenERZ roueting" load error: ' + err);
+        } else {
+            server.log(['start'], 'Routing loaded');
+        }
+    }
+);
 
 // Start the server
 server.start(function() {
-  console.log('Server started at ' + server.info.uri);
+    console.log('Server started at ' + server.info.uri);
 });
 
 exports.server = server;
