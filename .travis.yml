@@ -3,6 +3,12 @@ language: node_js
 node_js:
 - '0.10'
 
+services:
+- mongodb
+
+before_script:
+- node $TRAVIS_BUILD_DIR/loadData.js
+
 deploy:
   provider: heroku
   app: openerz
