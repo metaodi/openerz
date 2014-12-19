@@ -2,8 +2,12 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Changed
+- Renamed /api/textiles to /api/textile to be consistent
+- The routes are now added in a hapi plugin to ensure they are all set when starting the server
 ### Added
 - Tests for the whole public API to ensure it does not break entiertly
+- Upgrade to Hapi 8.0.0 and hapi-swagger 0.6.0
 
 ## [0.1.0] - 2014-12-17
 - Add metadata about the API
