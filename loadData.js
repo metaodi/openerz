@@ -35,7 +35,7 @@ db.on('ready', function() {
 
     var csvs = [
         {
-            'path': './csv/Entsorgung_Sammelstellen_2014.csv',
+            'path': './csv/Entsorgung_Sammelstellen.csv',
             'format': format.stationEntry,
             'collection': db.station,
             'type': 'stations'
