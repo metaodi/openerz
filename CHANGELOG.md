@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## [0.2.0] - 2014-12-20
 ### Changed
 - Renamed /api/textiles to /api/textile to be consistent
 - The routes are now added in a hapi plugin to ensure they are all set when starting the server
