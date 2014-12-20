@@ -19,6 +19,14 @@ describe('make sure the server is running', function() {
     });
   });
 
+  describe('/api/tram_stops is working', function() {
+    it('should return something', function(done) {
+      supertest
+        .get('/api/tram_stops')
+        .expect(200, done);
+    });
+  });
+
   describe('/api/calendar is working', function() {
     it('should return something', function(done) {
       supertest

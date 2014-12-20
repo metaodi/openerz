@@ -5,11 +5,18 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Renamed /api/textiles to /api/textile to be consistent
 - The routes are now added in a hapi plugin to ensure they are all set when starting the server
+- Refactoring of loadData script to reduce duplicate code
+- Renamed `tram_station` parameter to `station`
+
 ### Added
+- New data for year 2015!
 - Tests for the whole public API to ensure it does not break entiertly
 - Upgrade to Hapi 8.0.0 and hapi-swagger 0.6.0
+- Added /api/tram_stops to serve the GeoJSON of all Cargo and E-Tram stops
+- Added `limit` parameter to be able to limit the amount of records returned by the API
 
 ## [0.1.0] - 2014-12-17
+### Added
 - Add metadata about the API
 
 ### Changed
