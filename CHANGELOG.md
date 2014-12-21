@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## [0.3.0] - 2014-12-21
+### Changed
+- /api/tram_stops returns a 'custom' JSON if the client accept application/json, otherwise HTTP 406 Not Acceptable
+
 ### Added
 - The /api/tram_stops route respects the Accept header to serve the GeoJSON with Content-Type application/vnd.geo+json
 
