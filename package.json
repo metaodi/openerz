@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/metaodi/openerz",
   "dependencies": {
+    "accepts": "^1.2.0",
     "async": "^0.8.0",
     "csvtojson": "^0.3.17",
     "fanci": "^0.3.0",
