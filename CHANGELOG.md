@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Added
+- The /api/tram_stops route respects the Accept header to serve the GeoJSON with Content-Type application/vnd.geo+json
 
 ## [0.2.0] - 2014-12-20
 ### Changed
