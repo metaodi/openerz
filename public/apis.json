@@ -14,7 +14,7 @@
   "created": "2014-12-13",
   "modified": "2014-12-22",
   "url": "http://openerz.herokuapp.com/apis.json",
-  "SpecificationVersion": "0.14",
+  "specificationVersion": "0.14",
   "apis": [
     {
       "name": "Open ERZ API",
