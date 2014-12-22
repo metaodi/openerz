@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
 
+## [0.4.0] - 2014-12-23
+### Added
+- Added apis.json discovery file to describe the API
+- The routes /api and /export show their resp. part of the API doc only
+
 ## [0.3.0] - 2014-12-21
 ### Changed
 - /api/tram_stops returns a 'custom' JSON if the client accept application/json, otherwise HTTP 406 Not Acceptable
