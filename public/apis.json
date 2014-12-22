@@ -1,7 +1,7 @@
 {
   "name": "Open ERZ API",
   "description": "This API provides data from Entsorgung und Recycling Zürich (ERZ).",
-  "image": "https://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
+  "image": "http://openerz.herokuapp.com/static/logo.png",
   "tags": [
     "application programming interface",
     "API",
@@ -19,7 +19,7 @@
     {
       "name": "Open ERZ API",
       "description": "Provides access to the ERZ calendar and stations for all kinds of waste. Based on CSVs that are available on the open data portal of the City of Zurich.",
-      "image": "https://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
+      "image": "http://openerz.herokuapp.com/static/logo.png",
       "humanURL": "http://openerz.herokuapp.com",
       "baseURL": "http://openerz.herokuapp.com/api",
       "tags": [
@@ -49,7 +49,7 @@
     {
       "name": "Open ERZ Export",
       "description": "Provides access to the ERZ data used by the smartphone app 'Sauberes Zürich' by ERZ.",
-      "image": "https://s3.amazonaws.com/kinlane-productions/api-evangelist/t-shirts/KL_InApiWeTrust-1000.png",
+      "image": "http://openerz.herokuapp.com/static/logo.png",
       "humanURL": "http://openerz.herokuapp.com",
       "baseURL": "http://openerz.herokuapp.com/export",
       "tags": [
