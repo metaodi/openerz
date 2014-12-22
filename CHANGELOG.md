@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
 
+## [0.4.2] - 2014-12-23
+### Fixed
+- Typo in apis.json, which caused API.io to reject the content
+
 ## [0.4.1] - 2014-12-23
 ### Fixed
 - Typo in apis.json, which caused the file not to render correctly as JSON
