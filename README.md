@@ -37,3 +37,10 @@ To setup the whole environment there is a vagrant box. All you have to do to run
 1. [Install Vagrant](https://www.vagrantup.com/)
 2. Clone this repo
 3. Run `vagrant up` on your command line
+
+Credits
+=======
+
+![Logo](https://raw.githubusercontent.com/metaodi/openerz/master/public/logo.png)
+
+The logo was created by sagit milshtein from the Noun Project (CC-BY 3.0)
