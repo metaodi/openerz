@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
 
+## [0.4.1] - 2014-12-23
+### Fixed
+- Typo in apis.json, which caused the file not to render correctly as JSON
+
 ## [0.4.0] - 2014-12-23
 ### Added
 - Added apis.json discovery file to describe the API
