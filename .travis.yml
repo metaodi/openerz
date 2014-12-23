@@ -8,6 +8,10 @@ services:
 
 before_script:
 - node $TRAVIS_BUILD_DIR/loadData.js
+- npm install -g gulp
+
+script:
+- gulp travis
 
 deploy:
   provider: heroku

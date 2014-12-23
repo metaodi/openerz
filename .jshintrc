@@ -1,0 +1,22 @@
+{
+    "predef": {
+    },
+    "jquery": true,
+    "curly": true,
+    "strict": false,
+    "eqeqeq": true,
+    "immed": true,
+    "latedef": "nofunc",
+    "newcap": false,
+    "noarg": true,
+    "sub": true,
+    "undef": true,
+    "unused": false,
+    "onevar": true,
+    "eqnull": true,
+    "browser": false,
+    "mocha": true,
+    "node": true,
+    "devel": true,
+    "maxcomplexity": 5
+}

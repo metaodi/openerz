@@ -5,10 +5,10 @@ var format = require('./lib/format');
 var async = require('async');
 
 var dbUrl = process.env.MONGOLAB_URI || 'mongodb://localhost/openerz',
-    coll = ['calendar', 'station']
-    db = mongojs(dbUrl, coll),
+    coll = [ 'calendar', 'station' ],
+    db = mongojs(dbUrl, coll);
 
-db.on('error',function(err) {
+db.on('error', function(err) {
     console.log('database error', err);
 });
 
@@ -19,10 +19,10 @@ db.on('ready', function() {
     db.calendar.remove();
 
     var importCsv = function(path, format, collection, type, callback) {
-        csv.convertToJson(path, format, function (objArr) {
+        csv.convertToJson(path, format, function(objArr) {
             console.log('CSV converted, got ' + objArr.length + ' objects');
 
-            _.each(objArr, function (obj) {
+            _.each(objArr, function(obj) {
                 if (type !== 'stations') {
                     obj['type'] = type;
                 }
@@ -31,7 +31,7 @@ db.on('ready', function() {
             console.log("Finished inserting", type);
             callback();
         });
-    }
+    };
 
     var csvs = [
         {
@@ -140,23 +140,23 @@ db.on('ready', function() {
 
     async.eachSeries(
         csvs,
-        function (csv, callback) {
+        function(csv, callback) {
             try {
                 importCsv(csv.path, csv.format, csv.collection, csv.type, callback);
             } catch (e) {
                 callback(e);
             }
         },
-        function(err){
+        function(err) {
             if (err) {
-              console.log('Import failed:', err);
-                process.exit(code=1);
+                console.log('Import failed:', err);
+                process.exit(1);
             } else {
                 console.log("Import finished");
-                process.exit(code=0);
+                process.exit(0);
             }
         }
-    ); 
+    );
 });
 
 // make sure the database in opened and the 'ready' event is fired

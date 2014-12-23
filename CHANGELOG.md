@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Added
+- Gulp as a task manger
+- JSHint and JSCS to check the JavaScript code
+
+### Fixed
+- Linting errors
 
 ## [0.4.2] - 2014-12-23
 ### Fixed
