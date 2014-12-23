@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## [0.5.0] - 2014-12-23
 ### Added
 - Gulp as a task manger
 - JSHint and JSCS to check the JavaScript code
