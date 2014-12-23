@@ -1,0 +1,8 @@
+{
+    "preset": "jquery",
+    "validateQuoteMarks": null,
+    "validateIndentation": 4,
+    "maximumLineLength": 120,
+    "requireDotNotation": null,
+    "requireMultipleVarDecl": null
+}
