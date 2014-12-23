@@ -5,7 +5,6 @@ var gulp   = require('gulp');
 var jscs = require('gulp-jscs');
 var exec = require('child_process').exec;
 
-
 var scripts = [
     './**/*.js',
     '!./node_modules/**/*.js'
@@ -27,5 +26,5 @@ gulp.task('test', function(cb) {
     });
 });
 
-gulp.task('default', ['lint']);
-gulp.task('travis', ['lint', 'test']);
+gulp.task('default', [ 'lint' ]);
+gulp.task('travis', [ 'lint', 'test' ]);

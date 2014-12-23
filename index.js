@@ -11,6 +11,7 @@ var Hapi = require('hapi');
 var server = new Hapi.Server();
 server.connection({ port: appConfig.port });
 
+// jscs:disable maximumLineLength
 var swaggerOptions = {
     basePath: appConfig.basepath,
     apiVersion: version,
@@ -21,24 +22,25 @@ var swaggerOptions = {
         licenseUrl: 'https://github.com/metaodi/openerz/blob/master/LICENSE.md'
     }
 };
+// jscs:enable maximumLineLength
 
 server.register(
     { register: require('hapi-swagger'), options: swaggerOptions },
-    function (err) {
+    function(err) {
         if (err) {
-            server.log(['error'], 'Plugin "hapi-swagger" load error: ' + err);
+            server.log([ 'error' ], 'Plugin "hapi-swagger" load error: ' + err);
         } else {
-            server.log(['start'], 'Swagger interface loaded');
+            server.log([ 'start' ], 'Swagger interface loaded');
         }
     }
 );
 server.register(
     { register: require('./lib/route') },
-    function (err) {
+    function(err) {
         if (err) {
-            server.log(['error'], 'Plugin "OpenERZ roueting" load error: ' + err);
+            server.log([ 'error' ], 'Plugin "OpenERZ roueting" load error: ' + err);
         } else {
-            server.log(['start'], 'Routing loaded');
+            server.log([ 'start' ], 'Routing loaded');
         }
     }
 );
