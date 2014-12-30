@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## [0.6.0] - 2014-12-30
 ### Changed
 - Upgraded to fanci 0.4.0 to use the new `transform` function in lib/format.js
 
