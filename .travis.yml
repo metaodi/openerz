@@ -16,5 +16,8 @@ script:
 deploy:
   provider: heroku
   app: openerz
+  on:
+    tags: true
+    all_branches: true
   api_key:
     secure: KyHOcVLsv6/Ri/se3HG8jfJPRt8D1ypKC4jeEccI55ibpN/1nvZNxCbhJiMPAp34MwQ8k/Fu4EYXMW9epv3N4dAxTn04uOGWrIKx1eQGlZaBz1Jyi3M5/2KdBOmtL9YLMJ+gS7/e2COGHKXlunkPsCm7cXFTRbVYXEDlaGSopnI=
