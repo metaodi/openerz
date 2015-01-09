@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## [0.7.1] - 2014-01-09
 ### Added
 - New translations
 - Description for calendar events
