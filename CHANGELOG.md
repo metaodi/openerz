@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Added
+- New translations
+- Description for calendar events
+
+### Changed
+- Re-use the calendar route config for the calendar output
 
 ## [0.7.0] - 2015-01-09
 ### Added
