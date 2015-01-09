@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Added
+- Added format parameter to the calendar routes
+- iCal/ICS support to output a calendar instead of JSON
+- Translations with the new `lang` parameter to output calendar data in German and English
 
 ## [0.6.0] - 2014-12-30
 ### Changed
