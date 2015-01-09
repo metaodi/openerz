@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## [0.7.0] - 2015-01-09
 ### Added
 - Added format parameter to the calendar routes
 - iCal/ICS support to output a calendar instead of JSON
