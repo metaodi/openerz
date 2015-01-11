@@ -2,12 +2,14 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## [0.7.2] - 2015-01-11
 ### Added
 - New translations
 - New calendar properties (name, timezone, description)
 - Set location property on events if applicable
 
-## [0.7.1] - 2014-01-09
+## [0.7.1] - 2015-01-09
 ### Added
 - New translations
 - Description for calendar events
