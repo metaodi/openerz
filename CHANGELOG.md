@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
 
+## [0.7.3] - 2015-01-11
+### Fixed
+- Default locale is set if there is no explicit `lang` param
+
 ## [0.7.2] - 2015-01-11
 ### Added
 - New translations
