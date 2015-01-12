@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## 0.7.4 - 2015-01-12
 ### Changed
 - Validation of `lang` parameter with fixed value list
 - Refactoring of geo-specific code
