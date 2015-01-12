@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Changed
+- Validation of `lang` parameter with fixed value list
+- Refactoring of geo-specific code
+- Simplify content negotiation code
 
 ## [0.7.3] - 2015-01-11
 ### Fixed
