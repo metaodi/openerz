@@ -7,17 +7,17 @@ All notable changes to this project will be documented in this file.
 - Refactoring of geo-specific code
 - Simplify content negotiation code
 
-## [0.7.3] - 2015-01-11
+## 0.7.3 - 2015-01-11
 ### Fixed
 - Default locale is set if there is no explicit `lang` param
 
-## [0.7.2] - 2015-01-11
+## 0.7.2 - 2015-01-11
 ### Added
 - New translations
 - New calendar properties (name, timezone, description)
 - Set location property on events if applicable
 
-## [0.7.1] - 2015-01-09
+## 0.7.1 - 2015-01-09
 ### Added
 - New translations
 - Description for calendar events
@@ -25,17 +25,17 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Re-use the calendar route config for the calendar output
 
-## [0.7.0] - 2015-01-09
+## 0.7.0 - 2015-01-09
 ### Added
 - Added format parameter to the calendar routes
 - iCal/ICS support to output a calendar instead of JSON
 - Translations with the new `lang` parameter to output calendar data in German and English
 
-## [0.6.0] - 2014-12-30
+## 0.6.0 - 2014-12-30
 ### Changed
 - Upgraded to fanci 0.4.0 to use the new `transform` function in lib/format.js
 
-## [0.5.0] - 2014-12-23
+## 0.5.0 - 2014-12-23
 ### Added
 - Gulp as a task manger
 - JSHint and JSCS to check the JavaScript code
@@ -43,27 +43,27 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 - Linting errors
 
-## [0.4.2] - 2014-12-23
+## 0.4.2 - 2014-12-23
 ### Fixed
 - Typo in apis.json, which caused API.io to reject the content
 
-## [0.4.1] - 2014-12-23
+## 0.4.1 - 2014-12-23
 ### Fixed
 - Typo in apis.json, which caused the file not to render correctly as JSON
 
-## [0.4.0] - 2014-12-23
+## 0.4.0 - 2014-12-23
 ### Added
 - Added apis.json discovery file to describe the API
 - The routes /api and /export show their resp. part of the API doc only
 
-## [0.3.0] - 2014-12-21
+## 0.3.0 - 2014-12-21
 ### Changed
 - /api/tram_stops returns a 'custom' JSON if the client accept application/json, otherwise HTTP 406 Not Acceptable
 
 ### Added
 - The /api/tram_stops route respects the Accept header to serve the GeoJSON with Content-Type application/vnd.geo+json
 
-## [0.2.0] - 2014-12-20
+## 0.2.0 - 2014-12-20
 ### Changed
 - Renamed /api/textiles to /api/textile to be consistent
 - The routes are now added in a hapi plugin to ensure they are all set when starting the server
@@ -77,7 +77,7 @@ All notable changes to this project will be documented in this file.
 - Added /api/tram_stops to serve the GeoJSON of all Cargo and E-Tram stops
 - Added `limit` parameter to be able to limit the amount of records returned by the API
 
-## [0.1.0] - 2014-12-17
+## 0.1.0 - 2014-12-17
 ### Added
 - Add metadata about the API
 
@@ -85,11 +85,11 @@ All notable changes to this project will be documented in this file.
 - Upgrade to Hapi 7.5 and Joi 5.0
 - Upgrade of hapi-swagger to 0.5.2.pr91 (on my own fork)
 
-## [0.0.4] - 2014-12-16
+## 0.0.4 - 2014-12-16
 ### Added
 - New route /export/metadata to fully support the ERZ app
 
-## [0.0.3] - 2014-12-15
+## 0.0.3 - 2014-12-15
 ### Added
 - Redirect to API docs for all routes that do not match otherwise (catch-all)
 
@@ -98,7 +98,7 @@ All notable changes to this project will be documented in this file.
 - Return all dates with timezone of Zurich to avoid confusing of output
  
 
-## [0.0.2] - 2014-12-15
+## 0.0.2 - 2014-12-15
 ### Added
 - Use `fanci` to rename JSON output
 
