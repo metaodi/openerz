@@ -1,8 +1,10 @@
 {
-    "preset": "jquery",
+    "preset": "node-style-guide",
+    "requireCapitalizedComments": null,
+    "disallowQuotedKeysInObjects": null,
+    "requireTrailingComma": null,
     "validateQuoteMarks": null,
     "validateIndentation": 4,
     "maximumLineLength": 120,
-    "requireDotNotation": null,
-    "requireMultipleVarDecl": null
+    "disallowMultipleVarDecl": null
 }
