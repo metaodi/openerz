@@ -1,6 +1,6 @@
 'use strict';
 
-//Load the config.yml in a global variable
+// Load the config.yml in a global variable
 var config = require('./lib/config'),
     appConfig = config.app(),
     version = config.version();
