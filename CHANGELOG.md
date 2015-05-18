@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
 
+## 0.7.5 - 2015-05-18
+### Changed
+- Update dependency 'fanci' to 0.5.0
+- Change preset of JSCS and fix linting errors
+
 ## 0.7.4 - 2015-01-12
 ### Changed
 - Validation of `lang` parameter with fixed value list
