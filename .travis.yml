@@ -13,6 +13,8 @@ before_script:
 script:
 - gulp travis
 
+sudo: false
+
 deploy:
   provider: heroku
   app: openerz
