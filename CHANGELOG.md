@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
 
+## 0.7.6 - 2015-08-03
+### Changed
+- Updated year of license
+
 ## 0.7.5 - 2015-05-18
 ### Changed
 - Update dependency 'fanci' to 0.5.0
