@@ -2,6 +2,9 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Changed
+- Updated moment-timezone to get rid of deprecation warning
+- Use container-based infrastructure on Travis CI
 
 ## 0.7.6 - 2015-08-03
 ### Changed
