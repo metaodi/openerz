@@ -28,7 +28,7 @@
     "joi": "^5.0.2",
     "localize": "^0.4.7",
     "moment": "^2.8.4",
-    "moment-timezone": "^0.2.5",
+    "moment-timezone": "^0.4.0",
     "mongojs": "^0.18.0",
     "nipple": "^2.5.2",
     "pm2": "~0.8.2",
