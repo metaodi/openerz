@@ -2,6 +2,9 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Added
+- Added new parameter `offset` for pagination to calendar and station routes
+
 ### Changed
 - Updated moment-timezone to get rid of deprecation warning
 - Use container-based infrastructure on Travis CI
