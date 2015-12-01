@@ -3,6 +3,15 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
 
+## 0.9.1 - 2015-12-01
+### Added
+- New CSV with data for 2016
+- Description in README for loading data
+
+### Changed
+- Added possibility to configure CSV delimiter, as the new CSV do not use semicolon (;) anymore, but a simple comma (,)
+
+
 ## 0.9.0 - 2015-08-07
 ### Changed
 - BC-break: /calendar and /station now return results and metadata as a single object JSON
