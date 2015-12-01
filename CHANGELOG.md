@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
 
+## 0.9.3 - 2015-12-01
+### Changed
+- Use the bulk-update functionality of mongojs to import entries
+
 ## 0.9.2 - 2015-12-01
 ### Changed
 - Use node 0.12.7
