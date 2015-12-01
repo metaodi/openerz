@@ -18,6 +18,10 @@ db.on('ready', function() {
     db.station.remove();
     db.calendar.remove();
 
+    // initialize bulk update
+    var station_bulk = db.station.initializeOrderedBulkOp();
+    var calendar_bulk = db.calendar.initializeOrderedBulkOp();
+
     var importCsv = function(path, format, collection, type, delimiter, callback) {
         csv.convertToJson(path, format, delimiter, function(objArr) {
             console.log('CSV converted, got ' + objArr.length + ' objects');
@@ -38,175 +42,175 @@ db.on('ready', function() {
             'path': './csv/Entsorgung_Sammelstellen.csv',
             'format': format.stationEntry,
             'delimiter': ',',
-            'collection': db.station,
+            'collection': station_bulk,
             'type': 'stations'
         },
         {
             'path': './csv/Entsorgungskalender_Bioabfall_2014.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'organic'
         },
         {
             'path': './csv/Entsorgungskalender_CargoTram_2014.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'cargotram'
         },
         {
             'path': './csv/Entsorgungskalender_eTram_2014.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'etram'
         },
         {
             'path': './csv/Entsorgungskalender_Karton_2014.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'cardboard'
         },
         {
             'path': './csv/Entsorgungskalender_Papier_2014.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'paper'
         },
         {
             'path': './csv/Entsorgungskalender_Kehricht_2014.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'waste'
         },
         {
             'path': './csv/Entsorgungskalender_Sonderabfall_2014.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'special'
         },
         {
             'path': './csv/Entsorgungskalender_Textilien_2014.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'textile'
         },
         {
             'path': './csv/Entsorgungskalender_Bioabfall_2015.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'organic'
         },
         {
             'path': './csv/Entsorgungskalender_CargoTram_2015.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'cargotram'
         },
         {
             'path': './csv/Entsorgungskalender_eTram_2015.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'etram'
         },
         {
             'path': './csv/Entsorgungskalender_Karton_2015.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'cardboard'
         },
         {
             'path': './csv/Entsorgungskalender_Papier_2015.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'paper'
         },
         {
             'path': './csv/Entsorgungskalender_Kehricht_2015.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'waste'
         },
         {
             'path': './csv/Entsorgungskalender_Sonderabfall_2015.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'special'
         },
         {
             'path': './csv/Entsorgungskalender_Textilien_2015.csv',
             'format': format.calendarEntry,
             'delimiter': ';',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'textile'
         },
         {
             'path': './csv/Entsorgungskalender_Bioabfall_2016.csv',
             'format': format.calendarEntry,
             'delimiter': ',',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'organic'
         },
         {
             'path': './csv/Entsorgungskalender_CargoTram_2016.csv',
             'format': format.calendarEntry,
             'delimiter': ',',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'cargotram'
         },
         {
             'path': './csv/Entsorgungskalender_eTram_2016.csv',
             'format': format.calendarEntry,
             'delimiter': ',',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'etram'
         },
         {
             'path': './csv/Entsorgungskalender_Karton_2016.csv',
             'format': format.calendarEntry,
             'delimiter': ',',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'cardboard'
         },
         {
             'path': './csv/Entsorgungskalender_Papier_2016.csv',
             'format': format.calendarEntry,
             'delimiter': ',',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'paper'
         },
         {
             'path': './csv/Entsorgungskalender_Kehricht_2016.csv',
             'format': format.calendarEntry,
             'delimiter': ',',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'waste'
         },
         {
             'path': './csv/Entsorgungskalender_Sonderabfall_2016.csv',
             'format': format.calendarEntry,
             'delimiter': ',',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'special'
         },
         {
             'path': './csv/Entsorgungskalender_Textilien_2016.csv',
             'format': format.calendarEntry,
             'delimiter': ',',
-            'collection': db.calendar,
+            'collection': calendar_bulk,
             'type': 'textile'
         }
     ];
@@ -224,10 +228,31 @@ db.on('ready', function() {
             if (err) {
                 console.log('Import failed:', err);
                 process.exit(1);
-            } else {
+            }
+            async.series([
+                function(callback) {
+                    console.log("Executing bulk update for stations...");
+                    station_bulk.execute(function(err, res) {
+                        console.log("Done.");
+                        callback(err, res);
+                    });
+                },
+                function(callback) {
+                    console.log("Executing bulk update for calendar...");
+                    calendar_bulk.execute(function(err, res) {
+                        console.log("Done.");
+                        callback(err, res);
+                    });
+                },
+            ],
+            function(err, results) {
+                if (err) {
+                    console.log('Import failed:', err);
+                    process.exit(1);
+                }
                 console.log("Import finished");
                 process.exit(0);
-            }
+            });
         }
     );
 });
