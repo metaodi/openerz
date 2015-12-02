@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Added
+- Add format parameter to /api/stations to be consistent (only JSON allowed)
 
 ## 0.9.3 - 2015-12-01
 ### Changed
