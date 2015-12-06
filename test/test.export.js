@@ -7,8 +7,11 @@ var should = require('should'),
 
 describe('make sure the server is running', function() {
     // start the server
-    before(function() {
-        server.start();
+    before(function(done) {
+        server.start(function(err) {
+            should.not.exist(err);
+            done();
+        });
     });
 
     describe('/export/metadata is working', function() {
@@ -29,7 +32,7 @@ describe('make sure the server is running', function() {
     });
 
     // kill the server again
-    after(function() {
-        server.stop();
+    after(function(done) {
+        server.stop(done);
     });
 });
