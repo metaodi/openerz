@@ -22,10 +22,12 @@
     "boom": "^2.6.1",
     "csvtojson": "^0.3.17",
     "fanci": "^0.5.0",
-    "hapi": "^8.0.0",
-    "hapi-swagger": "^0.6.0",
+    "h2o2": "^4.0.2",
+    "hapi": "^10.5.0",
+    "hapi-swagger": "^2.0.0",
     "icalendar": "^0.7.1",
-    "joi": "^5.0.2",
+    "inert": "^3.2.0",
+    "joi": "^7.0.1",
     "localize": "^0.4.7",
     "moment": "^2.8.4",
     "moment-timezone": "^0.4.0",
@@ -35,7 +37,8 @@
     "superagent": "^0.21.0",
     "supertest": "^0.15.0",
     "through": "~2.3.4",
-    "underscore": "~1.6.0"
+    "underscore": "~1.6.0",
+    "vision": "^4.0.1"
   },
   "devDependencies": {
     "gulp": "^3.8.10",
@@ -47,6 +50,6 @@
     "should": "~3.3.1"
   },
   "engines": {
-    "node": ">=0.12.7"
+    "node": ">=4.2.3"
   }
 }
