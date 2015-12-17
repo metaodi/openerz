@@ -4,12 +4,13 @@ var should = require('should'),
     appConfig = require('../lib/config').app(),
     testHost = 'http://localhost:' + appConfig.port,
     supertest = require('supertest')(testHost),
+    initServer = require('../index').initServer,
     server = require('../index').server;
 
-describe('make sure the server is running', function() {
+describe('make sure the server is running (test.server)', function() {
     // start the server
     before(function(done) {
-        server.start(function(err) {
+        initServer(function(err) {
             should.not.exist(err);
             done();
         });
@@ -38,10 +39,5 @@ describe('make sure the server is running', function() {
                 .expect(302)
                 .expect('location', testHost + '/doc', done);
         });
-    });
-
-    // kill the server again
-    after(function(done) {
-        server.stop(done);
     });
 });

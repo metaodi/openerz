@@ -3,12 +3,13 @@
 var should = require('should'),
     appConfig = require('../lib/config').app(),
     supertest = require('supertest')('http://localhost:' + appConfig.port),
+    initServer = require('../index').initServer,
     server = require('../index').server;
 
-describe('make sure the server is running', function() {
+describe('make sure the server is running (test.api)', function() {
     // start the server
     before(function(done) {
-        server.start(function(err) {
+        initServer(function(err) {
             should.not.exist(err);
             done();
         });
@@ -308,10 +309,5 @@ describe('make sure the server is running', function() {
                 .get('/api/calendar.json?types=cargotram&types=etram')
                 .expect(200, done);
         });
-    });
-
-    // kill the server again
-    after(function(done) {
-        server.stop(done);
     });
 });

@@ -24,29 +24,45 @@ var swaggerOptions = {
 };
 // jscs:enable maximumLineLength
 
+var initialized = false;
 
-server.register(
-    [
-        { register: require('hapi-swagger'), options: swaggerOptions },
-        require('inert'),
-        require('vision'),
-        require('h2o2'),
-        require('./lib/route')
-    ],
-    function(err) {
-        if (err) {
-            console.log('Got an error while registering modules on server: ' + err);
-            throw err;
-        }
-        // Start the server
-        server.start(function(err) {
-            if (err) {
-                console.log("Error on startup: ", err);
-                return;
+var initServer = function(callback) {
+    if (initialized) {
+        console.log("ALREADY INITIALIZED");
+        callback();
+        return;
+    } else {
+        console.log("NOT YET INITIALIZED");
+        server.register(
+            [
+                { register: require('hapi-swagger'), options: swaggerOptions },
+                require('inert'),
+                require('vision'),
+                require('h2o2'),
+                require('./lib/route')
+            ],
+            function(err) {
+                if (err) {
+                    console.log('Got an error while registering modules on server: ' + err);
+                    throw err;
+                }
+                initialized = true;
+                // Start the server
+                server.start(callback);
             }
-            console.log('Server started at ' + server.info.uri);
-        });
+        );
     }
-);
+};
 
+if (!module.parent) {
+    initServer(function(err) {
+        if (err) {
+            console.log("Error on startup: ", err);
+            return;
+        }
+        console.log('Server started at ' + server.info.uri);
+    });
+}
+
+exports.initServer = initServer;
 exports.server = server;

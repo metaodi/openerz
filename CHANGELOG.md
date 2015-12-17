@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - New `types` parameter for calendar route to request only specific types of waste
+- New initServer() method to handle the server initalization in tests
 
 ## 0.9.4 - 2015-12-02
 ### Added
