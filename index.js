@@ -24,30 +24,45 @@ var swaggerOptions = {
 };
 // jscs:enable maximumLineLength
 
-server.register(
-    { register: require('hapi-swagger'), options: swaggerOptions },
-    function(err) {
-        if (err) {
-            server.log([ 'error' ], 'Plugin "hapi-swagger" load error: ' + err);
-        } else {
-            server.log([ 'start' ], 'Swagger interface loaded');
-        }
-    }
-);
-server.register(
-    { register: require('./lib/route') },
-    function(err) {
-        if (err) {
-            server.log([ 'error' ], 'Plugin "OpenERZ roueting" load error: ' + err);
-        } else {
-            server.log([ 'start' ], 'Routing loaded');
-        }
-    }
-);
+var initialized = false;
 
-// Start the server
-server.start(function() {
-    console.log('Server started at ' + server.info.uri);
-});
+var initServer = function(callback) {
+    if (initialized) {
+        console.log("ALREADY INITIALIZED");
+        callback();
+        return;
+    } else {
+        console.log("NOT YET INITIALIZED");
+        server.register(
+            [
+                { register: require('hapi-swagger'), options: swaggerOptions },
+                require('inert'),
+                require('vision'),
+                require('h2o2'),
+                require('./lib/route')
+            ],
+            function(err) {
+                if (err) {
+                    console.log('Got an error while registering modules on server: ' + err);
+                    throw err;
+                }
+                initialized = true;
+                // Start the server
+                server.start(callback);
+            }
+        );
+    }
+};
 
+if (!module.parent) {
+    initServer(function(err) {
+        if (err) {
+            console.log("Error on startup: ", err);
+            return;
+        }
+        console.log('Server started at ' + server.info.uri);
+    });
+}
+
+exports.initServer = initServer;
 exports.server = server;

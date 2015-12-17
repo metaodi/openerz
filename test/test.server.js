@@ -4,12 +4,16 @@ var should = require('should'),
     appConfig = require('../lib/config').app(),
     testHost = 'http://localhost:' + appConfig.port,
     supertest = require('supertest')(testHost),
+    initServer = require('../index').initServer,
     server = require('../index').server;
 
-describe('make sure the server is running', function() {
+describe('make sure the server is running (test.server)', function() {
     // start the server
-    before(function() {
-        server.start();
+    before(function(done) {
+        initServer(function(err) {
+            should.not.exist(err);
+            done();
+        });
     });
 
     describe('Isalive is working', function() {
@@ -35,10 +39,5 @@ describe('make sure the server is running', function() {
                 .expect(302)
                 .expect('location', testHost + '/doc', done);
         });
-    });
-
-    // kill the server again
-    after(function() {
-        server.stop();
     });
 });

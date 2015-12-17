@@ -3,12 +3,16 @@
 var should = require('should'),
     appConfig = require('../lib/config').app(),
     supertest = require('supertest')('http://localhost:' + appConfig.port),
+    initServer = require('../index').initServer,
     server = require('../index').server;
 
-describe('make sure the server is running', function() {
+describe('make sure the server is running (test.export)', function() {
     // start the server
-    before(function() {
-        server.start();
+    before(function(done) {
+        initServer(function(err) {
+            should.not.exist(err);
+            done();
+        });
     });
 
     describe('/export/metadata is working', function() {
@@ -26,10 +30,5 @@ describe('make sure the server is running', function() {
                 })
                 .end(done);
         });
-    });
-
-    // kill the server again
-    after(function() {
-        server.stop();
     });
 });

@@ -3,12 +3,16 @@
 var should = require('should'),
     appConfig = require('../lib/config').app(),
     supertest = require('supertest')('http://localhost:' + appConfig.port),
+    initServer = require('../index').initServer,
     server = require('../index').server;
 
-describe('make sure the server is running', function() {
+describe('make sure the server is running (test.api)', function() {
     // start the server
-    before(function() {
-        server.start();
+    before(function(done) {
+        initServer(function(err) {
+            should.not.exist(err);
+            done();
+        });
     });
 
     describe('/api/stations is working', function() {
@@ -275,8 +279,35 @@ describe('make sure the server is running', function() {
         });
     });
 
-    // kill the server again
-    after(function() {
-        server.stop();
+    describe('/api/calendar.json?types=cargotram is working', function() {
+        it('should return something', function(done) {
+            supertest
+                .get('/api/calendar.json?types=cargotram')
+                .expect(200, done);
+        });
+    });
+
+    describe('/api/calendar.json?types[]=cargotram is working', function() {
+        it('should return something', function(done) {
+            supertest
+                .get('/api/calendar.json?types[]=cargotram')
+                .expect(200, done);
+        });
+    });
+
+    describe('/api/calendar.json?types[]=cargotram&types[]=etram is working', function() {
+        it('should return something', function(done) {
+            supertest
+                .get('/api/calendar.json?types[]=cargotram&types[]=etram')
+                .expect(200, done);
+        });
+    });
+
+    describe('/api/calendar.json?types=cargotram&types=etram is working', function() {
+        it('should return something', function(done) {
+            supertest
+                .get('/api/calendar.json?types=cargotram&types=etram')
+                .expect(200, done);
+        });
     });
 });
