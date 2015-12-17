@@ -2,9 +2,11 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## 0.10.0 - 2015-12-17
 ### Changed
 - Updated lib dependencies (hapi, joi, hapi-swagger)
-- Now requires node >= 4.0.0
+- node >= 4.0.0 is required
 
 ### Added
 - New `types` parameter for calendar route to request only specific types of waste
