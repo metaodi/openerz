@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## 0.11.1 - 2016-01-03
 ### Fixed
 - Parse all dates as UTC to avoid timezone conversion errors
 - Use hapi-swagger 2.0.0, where the optional path parameter {format?} works as expected ([#32](https://github.com/metaodi/openerz/issues/32), thanks [Daniel Schregenberger](https://github.com/SuperBFG7))
