@@ -319,7 +319,7 @@ describe('make sure the server is running (test.api)', function() {
                 .expect(200, {
                     "_metadata": {"total_count": 1},
                     "result": [{
-                        "date": "2016-01-04T00:00:00+01:00",
+                        "date": "2016-01-04",
                         "zip": 8038,
                         "type": "cardboard"
                     }]
