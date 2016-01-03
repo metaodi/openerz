@@ -1,3 +1,4 @@
+// jscs:disable maximumLineLength
 'use strict';
 
 var should = require('should'),
@@ -310,4 +311,54 @@ describe('make sure the server is running (test.api)', function() {
                 .expect(200, done);
         });
     });
+
+    describe('/api/calendar.json API is returning a correct entry', function() {
+        it('should return something', function(done) {
+            supertest
+                .get('/api/calendar.json?types=paper&types=cardboard&zip=8038&lang=de&start=2016-01-01&end=2016-01-05&sort=date')
+                .expect(200, {
+                    "_metadata": {"total_count": 1},
+                    "result": [{
+                        "date": "2016-01-04",
+                        "zip": 8038,
+                        "type": "cardboard"
+                    }]
+                }, done);
+        });
+    });
+
+    describe('/api/calendar.ics API is returning a correct entry', function() {
+        it('should return something', function(done) {
+            var expectedLines = [
+                "BEGIN:VCALENDAR",
+                "VERSION:2.0",
+                "PRODID:-//metaodi//openerz//EN",
+                "NAME:OpenERZ",
+                "X-WR-CALNAME:OpenERZ",
+                "DESCRIPTION:Entsorungskalender der Stadt Zürich (ERZ)",
+                "X-WR-CALDESC:Entsorungskalender der Stadt Zürich (ERZ)",
+                "TIMEZONE-ID:Europe/Zurich",
+                "TZID:Europe/Zurich",
+                "X-WR-TIMEZONE:Europe/Zurich",
+                "BEGIN:VEVENT",
+                "SUMMARY:Karton\\, PLZ: 8038",
+                "LOCATION:PLZ: 8038",
+                "DESCRIPTION:Kartonabfuhr-Kalender",
+                "DTSTART;VALUE=DATE:20160104",
+                "DTEND;VALUE=DATE:20160105",
+                "END:VEVENT",
+                "END:VCALENDAR"
+            ];
+            var expectedResult = expectedLines.join("\r\n") + "\r\n";
+            supertest
+                .get('/api/calendar.ics?types=paper&types=cardboard&zip=8038&lang=de&start=2016-01-01&end=2016-01-05&sort=date')
+                .expect(200)
+                .end(function(err, res) {
+                    should.not.exist(err);
+                    should.equal(res.text, expectedResult);
+                    done();
+                });
+        });
+    });
+
 });

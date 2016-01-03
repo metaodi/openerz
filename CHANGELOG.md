@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Changed
+- The /api/calendar API now returns dates in YYYY-MM-DD format, the time part is removed (BC break!)
+
+### Fixed
+- Correct date in ICS files ([#31](https://github.com/metaodi/openerz/issues/31), thanks [Daniel Schregenberger](https://github.com/SuperBFG7))
 
 ## 0.10.0 - 2015-12-17
 ### Changed
