@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Fixed
+- Parse all dates as UTC to avoid timezone conversion errors
 
 ## 0.11.0 - 2016-01-03
 ### Changed
