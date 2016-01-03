@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+
+## 0.11.0 - 2016-01-03
 ### Changed
 - The /api/calendar API now returns dates in YYYY-MM-DD format, the time part is removed (BC break!)
 
