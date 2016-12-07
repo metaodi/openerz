@@ -212,6 +212,62 @@ db.on('ready', function() {
             'delimiter': ',',
             'collection': calendarBulk,
             'type': 'textile'
+        },
+        {
+            'path': './csv/Entsorgungskalender_Bioabfall_2017.csv',
+            'format': format.calendarEntry,
+            'delimiter': ',',
+            'collection': calendarBulk,
+            'type': 'organic'
+        },
+        {
+            'path': './csv/Entsorgungskalender_CargoTram_2017.csv',
+            'format': format.calendarEntry,
+            'delimiter': ',',
+            'collection': calendarBulk,
+            'type': 'cargotram'
+        },
+        {
+            'path': './csv/Entsorgungskalender_eTram_2017.csv',
+            'format': format.calendarEntry,
+            'delimiter': ',',
+            'collection': calendarBulk,
+            'type': 'etram'
+        },
+        {
+            'path': './csv/Entsorgungskalender_Karton_2017.csv',
+            'format': format.calendarEntry,
+            'delimiter': ',',
+            'collection': calendarBulk,
+            'type': 'cardboard'
+        },
+        {
+            'path': './csv/Entsorgungskalender_Papier_2017.csv',
+            'format': format.calendarEntry,
+            'delimiter': ',',
+            'collection': calendarBulk,
+            'type': 'paper'
+        },
+        {
+            'path': './csv/Entsorgungskalender_Kehricht_2017.csv',
+            'format': format.calendarEntry,
+            'delimiter': ',',
+            'collection': calendarBulk,
+            'type': 'waste'
+        },
+        {
+            'path': './csv/Entsorgungskalender_Sonderabfall_2017.csv',
+            'format': format.calendarEntry,
+            'delimiter': ',',
+            'collection': calendarBulk,
+            'type': 'special'
+        },
+        {
+            'path': './csv/Entsorgungskalender_Textilien_2017.csv',
+            'format': format.calendarEntry,
+            'delimiter': ',',
+            'collection': calendarBulk,
+            'type': 'textile'
         }
     ];
 
