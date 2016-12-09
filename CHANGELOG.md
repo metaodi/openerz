@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
+### Changed
+- BC-break: /api/tram_stops is now called /api/tramstops to be more consistent with the naming
+
+## Added
+- New CSV with data for 2016
+- New route /api/wastebins to get all public waste bins of the City of Zurich
+- New field `pickup` for /api/station, which indications when this station is being emptied by ERZ
+
 
 ## 0.11.1 - 2016-01-03
 ### Fixed
