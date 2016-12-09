@@ -24,37 +24,62 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
-    describe('/api/tram_stops is working', function() {
+    describe('/api/tramstops is working', function() {
         it('should return something', function(done) {
             supertest
-                .get('/api/tram_stops')
+                .get('/api/tramstops')
                 .expect(200, done);
         });
     });
 
-    describe('/api/tram_stops.json is working', function() {
+    describe('/api/tramstops.json is working', function() {
         it('should return something', function(done) {
             supertest
-                .get('/api/tram_stops.json')
+                .get('/api/tramstops.json')
                 .expect(200, done);
         });
     });
 
-    describe('/api/tram_stops.geojson is working', function() {
+    describe('/api/tramstops.geojson is working', function() {
         it('should return something', function(done) {
             supertest
-                .get('/api/tram_stops.geojson')
+                .get('/api/tramstops.geojson')
                 .expect(200, done);
         });
     });
 
-    describe('/api/tram_stops.test does not work', function() {
+    describe('/api/tramstops.test does not work', function() {
         it('should return something', function(done) {
             supertest
-                .get('/api/tram_stops.test')
+                .get('/api/tramstops.test')
                 .expect(400, done);
         });
     });
+
+    describe('/api/wastebins is working', function() {
+        it('should return something', function(done) {
+            supertest
+                .get('/api/wastebins')
+                .expect(200, done);
+        });
+    });
+
+    describe('/api/wastebins.json is working', function() {
+        it('should return something', function(done) {
+            supertest
+                .get('/api/wastebins.json')
+                .expect(200, done);
+        });
+    });
+
+    describe('/api/wastebins.geojson is working', function() {
+        it('should return something', function(done) {
+            supertest
+                .get('/api/wastebins.geojson')
+                .expect(200, done);
+        });
+    });
+
 
     describe('/api/calendar is working', function() {
         it('should return something', function(done) {
