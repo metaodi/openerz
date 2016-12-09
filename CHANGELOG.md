@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
 
+## 0.12.1 - 2016-12-09
+### Changed
+- Update mongojs package to fix heroku deployment
+
 ## 0.12.0 - 2016-12-09
 ### Changed
 - BC-break: /api/tram_stops is now called /api/tramstops to be more consistent with the naming
@@ -11,7 +15,6 @@ All notable changes to this project will be documented in this file.
 - New CSV with data for 2017
 - New route /api/wastebins to get all public waste bins of the City of Zurich
 - New field `pickup` for /api/station, which indications when this station is being emptied by ERZ
-
 
 ## 0.11.1 - 2016-01-03
 ### Fixed
