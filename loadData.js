@@ -219,56 +219,56 @@ var csvs = [
     },
     {
         'path': './csv/Entsorgungskalender_Bioabfall_2017.csv',
-        'format': format.calendarEntry,
+        'format': format.calendarEntry2017,
         'delimiter': ',',
         'collection': calendar,
         'type': 'organic'
     },
     {
         'path': './csv/Entsorgungskalender_CargoTram_2017.csv',
-        'format': format.calendarEntry,
+        'format': format.calendarEntry2017,
         'delimiter': ',',
         'collection': calendar,
         'type': 'cargotram'
     },
     {
         'path': './csv/Entsorgungskalender_eTram_2017.csv',
-        'format': format.calendarEntry,
+        'format': format.calendarEntry2017,
         'delimiter': ',',
         'collection': calendar,
         'type': 'etram'
     },
     {
         'path': './csv/Entsorgungskalender_Karton_2017.csv',
-        'format': format.calendarEntry,
+        'format': format.calendarEntry2017,
         'delimiter': ',',
         'collection': calendar,
         'type': 'cardboard'
     },
     {
         'path': './csv/Entsorgungskalender_Papier_2017.csv',
-        'format': format.calendarEntry,
+        'format': format.calendarEntry2017,
         'delimiter': ',',
         'collection': calendar,
         'type': 'paper'
     },
     {
         'path': './csv/Entsorgungskalender_Kehricht_2017.csv',
-        'format': format.calendarEntry,
+        'format': format.calendarEntry2017,
         'delimiter': ',',
         'collection': calendar,
         'type': 'waste'
     },
     {
         'path': './csv/Entsorgungskalender_Sonderabfall_2017.csv',
-        'format': format.calendarEntry,
+        'format': format.calendarEntry2017,
         'delimiter': ',',
         'collection': calendar,
         'type': 'special'
     },
     {
         'path': './csv/Entsorgungskalender_Textilien_2017.csv',
-        'format': format.calendarEntry,
+        'format': format.calendarEntry2017,
         'delimiter': ',',
         'collection': calendar,
         'type': 'textile'
