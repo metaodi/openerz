@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## 0.13.0 - 2017-07-13
+### Changed
+- Updated node version needed to run OpenERZ to >=4.8.4
+- Special format for 2017 calendar entries
+
 ### Removed
 - Bulk update functionality in loadData.js script
 
