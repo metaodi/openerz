@@ -63,8 +63,13 @@ heroku run env --app openerz
 Release
 =======
 
-To create a new release, simply create a new git tag.
-This triggers a build on TravisCI, which deploys the application on heroku (http://openerz.herokuapp.com)
+To create a new release follow these steps:
+
+1. Update the version number in `package.json`
+1. Update the `CHANGELOG.md`
+1. Create a [new release/tag on GitHub](https://github.com/metaodi/openerz/releases)
+
+The new tag on GitHub triggers a build on TravisCI, which deploys the application to heroku (http://openerz.herokuapp.com).
 
 Credits
 =======
