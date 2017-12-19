@@ -2,25 +2,16 @@
 
 Installation
 ============
-To install the Open ERZ API locally, first clone the repository and install the dependencies, for that, you need to have the npm node packager manager installed: https://www.npmjs.org/.
 
-```bash
-git clone git@github.com:metaodi/openerz.git
-cd openerz
-npm install
-```
+To setup the whole environment there is a docker setup. All you have to do to run it is:
 
-Start the node server locally:
-```bash
-node index.js
-```
+1. [Install Docker](https://www.docker.com/)
+1. git clone git@github.com:metaodi/openerz.git
+1. Clone this repo
+1. Copy `.env.dist` to `.env`
+1. Run `docker-compose up` on your command line
 
-Or use pm2:
-```bash
-pm2 start index.js
-```
-
-Then open http://localhost:8080/doc
+Then open http://localhost:9999/doc (or whatever port you specified in your `.env` file)
 
 Testing
 =======
@@ -29,23 +20,14 @@ Testing
 npm test
 ```
 
-Development
-===========
-
-To setup the whole environment there is a vagrant box. All you have to do to run it is:
-
-1. [Install Vagrant](https://www.vagrantup.com/)
-2. Clone this repo
-3. Run `vagrant up` on your command line
-
 Update data
 ===========
 
 Each year, ERZ will release the new waste collection data. 
-The `loadData.js` script is used for that:
+The `loadData.js` script is used for that (run it **in** the container):
 
 ```bash
-node loadData.js
+docker-compose exec openerz sh -c "node loadData.js"
 ```
 
 To update the data that is used on the production version, make sure you run the `loadData.js` script with the correctly set MongoDB URL:

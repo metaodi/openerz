@@ -4,6 +4,7 @@
   "description": "Open ERZ API",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "NODE_ENV='test' mocha -R spec -t 10000"
   },
   "repository": {
