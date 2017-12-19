@@ -313,22 +313,6 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
-    describe('/api/calendar.json?types[]=cargotram is working', function() {
-        it('should return something', function(done) {
-            supertest
-                .get('/api/calendar.json?types[]=cargotram')
-                .expect(200, done);
-        });
-    });
-
-    describe('/api/calendar.json?types[]=cargotram&types[]=etram is working', function() {
-        it('should return something', function(done) {
-            supertest
-                .get('/api/calendar.json?types[]=cargotram&types[]=etram')
-                .expect(200, done);
-        });
-    });
-
     describe('/api/calendar.json?types=cargotram&types=etram is working', function() {
         it('should return something', function(done) {
             supertest

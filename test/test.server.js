@@ -27,8 +27,8 @@ describe('make sure the server is running (test.server)', function() {
     describe('API doc is working', function() {
         it('should return the docs.', function(done) {
             supertest
-                .get('/doc')
-                .expect(/.*Open ERZ API Documentation.*/, done);
+                .get('/documentation')
+                .expect(/.*Open ERZ API.*/, done);
         });
     });
 
@@ -37,7 +37,7 @@ describe('make sure the server is running (test.server)', function() {
             supertest
                 .get('/xyz')
                 .expect(302)
-                .expect('location', testHost + '/doc', done);
+                .expect('location', testHost + '/documentation', done);
         });
     });
 });

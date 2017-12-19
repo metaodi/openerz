@@ -17,7 +17,7 @@ Testing
 =======
 
 ```bash
-npm test
+docker-compose exec openerz sh -c "npm test"
 ```
 
 Update data
