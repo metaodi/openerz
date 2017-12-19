@@ -52,7 +52,7 @@ describe('make sure the server is running (test.api)', function() {
         it('should return something', function(done) {
             supertest
                 .get('/api/tramstops.test')
-                .expect(400, done);
+                .expect(406, done);
         });
     });
 
@@ -301,7 +301,7 @@ describe('make sure the server is running (test.api)', function() {
         it('should return something', function(done) {
             supertest
                 .get('/api/calendar/cargotram.test')
-                .expect(400, done);
+                .expect(406, done);
         });
     });
 
