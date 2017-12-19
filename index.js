@@ -6,6 +6,12 @@ var config = require('./lib/config'),
     version = config.version();
 
 var Hapi = require('hapi');
+var HapiSwagger = require('hapi-swagger');
+var Inert = require('inert');
+var Vision = require('vision');
+var H2o2 = require('h2o2');
+
+var route = require('./lib/route');
 
 // Create a server with a host and port
 var server = new Hapi.Server();
@@ -14,12 +20,19 @@ server.connection({ port: appConfig.port });
 // jscs:disable maximumLineLength
 var swaggerOptions = {
     basePath: appConfig.basepath,
-    apiVersion: version,
     info: {
         title: 'Open ERZ API',
+        version: version,
         description: '<ul style=\'list-style-type: disc; padding: 20px; font-size: 16px;\'><li>This API provides data from <a href=\'https://www.stadt-zuerich.ch/ted/de/index/entsorgung_recycling.html\'>Entsorgung und Recycling Zürich (ERZ)</a></<li><li>The data is provided on the <a href=\'https://data.stadt-zuerich.ch/\'>open data portal of the City of Zurich</a></li><li>All the code <a href=\'https://github.com/metaodi/openerz\'>is open source and can be found on GitHub</a></li><li>All notable changes to this API are documented in <a href=\'https://github.com/metaodi/openerz/blob/master/CHANGELOG.md\'>it\'s CHANGELOG</a>.</li><li>The logo was created by sigit milshtein from the Noun Project (CC-BY 3.0)</li></ul>',
-        license: 'MIT License, © Stefan Oderbolz 2017',
-        licenseUrl: 'https://github.com/metaodi/openerz/blob/master/LICENSE.md'
+        license: {
+            name: 'MIT License',
+            url: 'https://github.com/metaodi/openerz/blob/master/LICENSE.md'
+        },
+        contact: {
+            name: '© Stefan Oderbolz 2018',
+            url: 'https://github.com/metaodi/openerz',
+            email: 'openerz@metaodi.ch'
+        }
     }
 };
 // jscs:enable maximumLineLength
@@ -35,11 +48,11 @@ var initServer = function(callback) {
         console.log("NOT YET INITIALIZED");
         server.register(
             [
-                { register: require('hapi-swagger'), options: swaggerOptions },
-                require('inert'),
-                require('vision'),
-                require('h2o2'),
-                require('./lib/route')
+                { register: HapiSwagger, options: swaggerOptions },
+                Inert,
+                Vision,
+                H2o2,
+                route
             ],
             function(err) {
                 if (err) {
