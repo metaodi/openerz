@@ -11,7 +11,8 @@ before_script:
 - npm install -g gulp
 
 script:
-- gulp travis
+- gulp lint
+- npm test
 
 sudo: false
 
