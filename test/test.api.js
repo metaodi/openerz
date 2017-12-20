@@ -321,6 +321,21 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
+    describe('/api/calendar.json API is returning records', function() {
+        it('should return something', function(done) {
+            supertest
+                .get('/api/calendar.json')
+                .expect(200)
+                .end(function(err, res) {
+                    if (err) {
+                        return done(err);
+                    }
+                    (res.body._metadata.total_count).should.be.above(0);
+                    done();
+                });
+        });
+    });
+
     describe('/api/calendar.json API is returning a correct entry', function() {
         it('should return something', function(done) {
             supertest
