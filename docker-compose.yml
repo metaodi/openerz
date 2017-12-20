@@ -1,5 +1,7 @@
 openerz:
     build: .
+    environment:
+        - MONGO_URI=mongodb://mongodbhost/openerz
     volumes:
       - ./:/usr/src/app
     ports:

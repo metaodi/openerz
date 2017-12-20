@@ -4,7 +4,8 @@ var csv = require('./lib/csv');
 var format = require('./lib/format');
 var async = require('async');
 
-var dbUrl = process.env.MONGOLAB_URI || 'mongodb://mongodbhost/openerz',
+
+var dbUrl = process.env.MONGOLAB_URI || process.env.MONGO_URI || 'mongodb://localhost/openerz',
     coll = [ 'calendar', 'station' ],
     db = mongojs(dbUrl, coll);
 
