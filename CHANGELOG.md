@@ -4,11 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## 1.0.0 - 2017-12-22
 ### Changed
 - Updated a lot of npm dependencies
 - BC-break: on the /api/calendar route the paramter `types[]` is no longer allowed, instead use `types` (and repeat this paramter as much as you need)
 - BC-break: the documentation lives now at /documentation instead of /doc (but don't worry, there is a redirect)
 - BC-break: minimum node version >= 6.11.0
+
 ### Added
 - New data for 2018 (yay!)
 
