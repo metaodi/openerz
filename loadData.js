@@ -13,7 +13,10 @@ db.on('error', function(err) {
     console.log('database error', err);
 });
 
-console.log('db connected', dbUrl);
+db.on('connect', function () {
+    console.log('db connected', dbUrl);
+});
+
 // remove previous entries
 db.station.remove();
 db.calendar.remove();
@@ -23,18 +26,18 @@ var calendar = db.calendar;
 
 var importCsv = function(path, format, collection, type, delimiter, callback) {
     csv.convertToJson(path, format, delimiter, function(objArr) {
-        console.log('CSV converted, got ' + objArr.length + ' objects');
+        console.log('CSV ' + path + ' converted, got ' + objArr.length + ' objects');
 
         async.each(objArr, function(obj, cb) {
             if (type !== 'stations') {
                 obj['type'] = type;
             }
-            collection.insert(obj);
-            cb();
+            collection.insert(obj, cb);
         }, function(err) {
             if (err) {
                 console.log("An error occured", err);
                 callback(err);
+                return;
             }
             console.log("Finished importing this CSV.");
             callback();
