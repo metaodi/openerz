@@ -2,353 +2,506 @@
 'use strict';
 
 var should = require('should'),
-    appConfig = require('../lib/config').app(),
-    supertest = require('supertest')('http://localhost:' + appConfig.port),
-    initServer = require('../index').initServer,
-    server = require('../index').server;
+    initServer = require('../lib/server').initServer;
+var server;
 
 describe('make sure the server is running (test.api)', function() {
-    // start the server
     before(function(done) {
-        initServer(function(err) {
-            should.not.exist(err);
+        initServer(function(err, readyServer) {
+            if (err) {
+                throw err;
+            }
+            server = readyServer;
             done();
         });
     });
 
     describe('/api/stations is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/stations')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/stations'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/tramstops is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/tramstops')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/tramstops'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/tramstops.json is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/tramstops.json')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/tramstops.json'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/tramstops.geojson is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/tramstops.geojson')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/tramstops.geojson'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/tramstops.test does not work', function() {
-        it('should return something', function(done) {
-            supertest
-                .get('/api/tramstops.test')
-                .expect(400, done);
+        it('should return an error', function(done) {
+            server.inject({
+                method: 'GET',
+                url: '/api/tramstops.test'
+            }, function(response) {
+                response.statusCode.should.equal(406);
+                done();
+            });
         });
     });
 
     describe('/api/wastebins is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/wastebins')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/wastebins'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/wastebins.json is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/wastebins.json')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/wastebins.json'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/wastebins.geojson is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/wastebins.geojson')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/wastebins.geojson'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
 
     describe('/api/calendar is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar.ics is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar.ics')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar.ics'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar.json is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar.json')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar.json'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/cardboard is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/cardboard')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/cardboard'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/cardboard.ics is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/cardboard.ics')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/cardboard.ics'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/cardboard.json is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/cardboard.json')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/cardboard.json'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/paper is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/paper')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/paper'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/paper.ics is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/paper.ics')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/paper.ics'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/paper.json is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/paper.json')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/paper.json'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/waste is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/waste')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/waste'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/waste.ics is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/waste.ics')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/waste.ics'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/waste.json is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/waste.json')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/waste.json'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/special is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/special')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/special'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/special.ics is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/special.ics')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/special.ics'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/special.json is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/special.json')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/special.json'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/organic is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/organic')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/organic'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/organic.ics is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/organic.ics')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/organic.ics'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/organic.json is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/organic.json')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/organic.json'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/textile is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/textile')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/textile'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/textile.ics is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/textile.ics')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/textile.ics'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/textile.json is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/textile.json')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/textile.json'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/etram is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/etram')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/etram'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/etram.ics is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/etram.ics')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/etram.ics'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/etram.json is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/etram.json')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/etram.json'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/cargotram is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/cargotram')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/cargotram'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/cargotram.ics is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/cargotram.ics')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/cargotram.ics'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/cargotram.json is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/cargotram.json')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/cargotram.json'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar/cargotram.test does not work', function() {
-        it('should return something', function(done) {
-            supertest
-                .get('/api/calendar/cargotram.test')
-                .expect(400, done);
+        it('should return an error', function(done) {
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/cargotram.test'
+            }, function(response) {
+                response.statusCode.should.equal(406);
+                done();
+            });
         });
     });
 
     describe('/api/calendar.json?types=cargotram is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar.json?types=cargotram')
-                .expect(200, done);
-        });
-    });
-
-    describe('/api/calendar.json?types[]=cargotram is working', function() {
-        it('should return something', function(done) {
-            supertest
-                .get('/api/calendar.json?types[]=cargotram')
-                .expect(200, done);
-        });
-    });
-
-    describe('/api/calendar.json?types[]=cargotram&types[]=etram is working', function() {
-        it('should return something', function(done) {
-            supertest
-                .get('/api/calendar.json?types[]=cargotram&types[]=etram')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?types=cargotram'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
         });
     });
 
     describe('/api/calendar.json?types=cargotram&types=etram is working', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar.json?types=cargotram&types=etram')
-                .expect(200, done);
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?types=cargotram&types=etram'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                done();
+            });
+        });
+    });
+
+    describe('/api/calendar.json API is returning records', function() {
+        it('should return several results', function(done) {
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar.json'
+            }, function(response) {
+                (response.result._metadata.total_count).should.be.above(0);
+                done();
+            });
         });
     });
 
     describe('/api/calendar.json API is returning a correct entry', function() {
         it('should return something', function(done) {
-            supertest
-                .get('/api/calendar.json?types=paper&types=cardboard&zip=8038&lang=de&start=2016-01-01&end=2016-01-05&sort=date')
-                .expect(200, {
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?types=paper&types=cardboard&zip=8038&lang=de&start=2016-01-01&end=2016-01-05&sort=date'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                response.result.should.deepEqual({
                     "_metadata": {"total_count": 1},
                     "result": [{
                         "date": "2016-01-04",
                         "zip": 8038,
                         "type": "cardboard"
                     }]
-                }, done);
+                });
+                done();
+            });
         });
     });
 
@@ -375,15 +528,13 @@ describe('make sure the server is running (test.api)', function() {
                 "END:VCALENDAR"
             ];
             var expectedResult = expectedLines.join("\r\n") + "\r\n";
-            supertest
-                .get('/api/calendar.ics?types=paper&types=cardboard&zip=8038&lang=de&start=2016-01-01&end=2016-01-05&sort=date')
-                .expect(200)
-                .end(function(err, res) {
-                    should.not.exist(err);
-                    should.equal(res.text, expectedResult);
-                    done();
-                });
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar.ics?types=paper&types=cardboard&zip=8038&lang=de&start=2016-01-01&end=2016-01-05&sort=date'
+            }, function(response) {
+                response.payload.should.deepEqual(expectedResult);
+                done();
+            });
         });
     });
-
 });

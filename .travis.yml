@@ -1,7 +1,7 @@
 language: node_js
     
 node_js:
-- '4.0.0'
+- "6"
 
 services:
 - mongodb
@@ -11,7 +11,8 @@ before_script:
 - npm install -g gulp
 
 script:
-- gulp travis
+- gulp lint
+- npm test
 
 sudo: false
 

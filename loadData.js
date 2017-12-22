@@ -4,7 +4,8 @@ var csv = require('./lib/csv');
 var format = require('./lib/format');
 var async = require('async');
 
-var dbUrl = process.env.MONGOLAB_URI || 'mongodb://localhost/openerz',
+
+var dbUrl = process.env.MONGOLAB_URI || process.env.MONGO_URI || 'mongodb://localhost/openerz',
     coll = [ 'calendar', 'station' ],
     db = mongojs(dbUrl, coll);
 
@@ -219,56 +220,112 @@ var csvs = [
     },
     {
         'path': './csv/Entsorgungskalender_Bioabfall_2017.csv',
-        'format': format.calendarEntry2017,
+        'format': format.calendarEntryIso,
         'delimiter': ',',
         'collection': calendar,
         'type': 'organic'
     },
     {
         'path': './csv/Entsorgungskalender_CargoTram_2017.csv',
-        'format': format.calendarEntry2017,
+        'format': format.calendarEntryIso,
         'delimiter': ',',
         'collection': calendar,
         'type': 'cargotram'
     },
     {
         'path': './csv/Entsorgungskalender_eTram_2017.csv',
-        'format': format.calendarEntry2017,
+        'format': format.calendarEntryIso,
         'delimiter': ',',
         'collection': calendar,
         'type': 'etram'
     },
     {
         'path': './csv/Entsorgungskalender_Karton_2017.csv',
-        'format': format.calendarEntry2017,
+        'format': format.calendarEntryIso,
         'delimiter': ',',
         'collection': calendar,
         'type': 'cardboard'
     },
     {
         'path': './csv/Entsorgungskalender_Papier_2017.csv',
-        'format': format.calendarEntry2017,
+        'format': format.calendarEntryIso,
         'delimiter': ',',
         'collection': calendar,
         'type': 'paper'
     },
     {
         'path': './csv/Entsorgungskalender_Kehricht_2017.csv',
-        'format': format.calendarEntry2017,
+        'format': format.calendarEntryIso,
         'delimiter': ',',
         'collection': calendar,
         'type': 'waste'
     },
     {
         'path': './csv/Entsorgungskalender_Sonderabfall_2017.csv',
-        'format': format.calendarEntry2017,
+        'format': format.calendarEntryIso,
         'delimiter': ',',
         'collection': calendar,
         'type': 'special'
     },
     {
         'path': './csv/Entsorgungskalender_Textilien_2017.csv',
-        'format': format.calendarEntry2017,
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'textile'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Bioabfall_2018.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'organic'
+    },
+    {
+        'path': './csv/Entsorgungskalender_CargoTram_2018.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'cargotram'
+    },
+    {
+        'path': './csv/Entsorgungskalender_eTram_2018.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'etram'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Karton_2018.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'cardboard'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Papier_2018.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'paper'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Kehricht_2018.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'waste'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Sonderabfall_2018.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'special'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Textilien_2018.csv',
+        'format': format.calendarEntryIso,
         'delimiter': ',',
         'collection': calendar,
         'type': 'textile'
