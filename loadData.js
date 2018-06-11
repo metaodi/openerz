@@ -332,6 +332,41 @@ var csvs = [
         'delimiter': ',',
         'collection': calendar,
         'type': 'textile'
+    },
+    {
+        'path': './csv/thalwil_bioabfall_2018.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'organic'
+    },
+    {
+        'path': './csv/thalwil_karton_2018.csv',
+        'format': format.calendarEntryTour,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'cardboard'
+    },
+    {
+        'path': './csv/thalwil_kehricht_2018.csv',
+        'format': format.calendarEntryTour,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'waste'
+    },
+    {
+        'path': './csv/thalwil_metall_2018.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'metal'
+    },
+    {
+        'path': './csv/thalwil_papier_2018.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'paper'
     }
 ];
 
