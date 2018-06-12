@@ -505,6 +505,63 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
+    describe('/api/calendar/cardboard.json with zip and tour parameter', function() {
+        it('should return a correct entry for 8800', function(done) {
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/cardboard.json?zip=8800&tour=b&limit=1&sort=date'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                response.result.should.deepEqual({
+                    "_metadata": {"total_count": 12},
+                    "result": [{
+                        "date": "2018-01-11",
+                        "zip": 8800,
+                        "tour": "b",
+                        "type": "cardboard"
+                    }]
+                });
+                done();
+            });
+        });
+        it('should return a correct entry for 8800 with uppercase tour', function(done) {
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/cardboard.json?zip=8800&tour=B&limit=1&sort=date'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                response.result.should.deepEqual({
+                    "_metadata": {"total_count": 12},
+                    "result": [{
+                        "date": "2018-01-11",
+                        "zip": 8800,
+                        "tour": "b",
+                        "type": "cardboard"
+                    }]
+                });
+                done();
+            });
+        });
+        it('should return a correct entry for 8800 without tour parameter', function(done) {
+            server.inject({
+                method: 'GET',
+                url: '/api/calendar/cardboard.json?zip=8800&limit=1&sort=date'
+            }, function(response) {
+                response.statusCode.should.equal(200);
+                response.result.should.deepEqual({
+                    "_metadata": {"total_count": 36},
+                    "result": [{
+                        "date": "2018-01-04",
+                        "zip": 8800,
+                        "tour": "a",
+                        "type": "cardboard"
+                    }]
+                });
+                done();
+            });
+        });
+    });
+
     describe('/api/calendar.ics API is returning a correct entry', function() {
         it('should return something', function(done) {
             var expectedLines = [
