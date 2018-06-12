@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## 1.1.1 - 2018-06-12
+### Fixed
+- Fixed unit tests
+
 ## 1.1.0 - 2018-06-12
 ### Added
 - Waste collection data of Thalwil
