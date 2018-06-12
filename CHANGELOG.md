@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## 1.1.0 - 2018-06-12
+### Added
+- Waste collection data of Thalwil
+- New parameter `tour`, to distingish different waste collections in the same zip code (e.g. tour A in zip 8800 covers only a certain area in Thalwil)
+
 ## 1.0.0 - 2017-12-22
 ### Changed
 - Updated a lot of npm dependencies
