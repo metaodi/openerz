@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "NODE_ENV='test' mocha -R spec -t 10000"
+    "test": "NODE_ENV='test' mocha -R spec -t 10000",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -37,7 +39,8 @@
     "supertest": "^3.0.0",
     "through": "~2.3.4",
     "underscore": "~1.8.3",
-    "vision": "^4.1.1"
+    "vision": "^4.1.1",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "gulp": "^3.8.10",
@@ -51,5 +54,6 @@
   },
   "engines": {
     "node": ">=6.11.0"
-  }
+  },
+  "snyk": true
 }

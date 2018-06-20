@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - nipple > hoek:
+        patched: '2018-06-20T02:04:56.324Z'
+    - nipple > boom > hoek:
+        patched: '2018-06-20T02:04:56.324Z'
