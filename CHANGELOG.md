@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## 1.2.0 - 2018-12-30
+### Added
+- New data for 2019 from Zurich and Thalwil
+
 ## 1.1.1 - 2018-06-12
 ### Fixed
 - Fixed unit tests
