@@ -367,6 +367,97 @@ var csvs = [
         'delimiter': ',',
         'collection': calendar,
         'type': 'paper'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Bioabfall_2019.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'organic'
+    },
+    {
+        'path': './csv/Entsorgungskalender_CargoTram_2019.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'cargotram'
+    },
+    {
+        'path': './csv/Entsorgungskalender_eTram_2019.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'etram'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Karton_2019.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'cardboard'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Papier_2019.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'paper'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Kehricht_2019.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'waste'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Sonderabfall_2019.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'special'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Textilien_2019.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'textile'
+    },
+    {
+        'path': './csv/thalwil_bioabfall_2019.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'organic'
+    },
+    {
+        'path': './csv/thalwil_karton_2019.csv',
+        'format': format.calendarEntryTour,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'cardboard'
+    },
+    {
+        'path': './csv/thalwil_kehricht_2019.csv',
+        'format': format.calendarEntryTour,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'waste'
+    },
+    {
+        'path': './csv/thalwil_metall_2019.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'metal'
+    },
+    {
+        'path': './csv/thalwil_papier_2019.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'paper'
     }
 ];
 

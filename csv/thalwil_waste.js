@@ -2,27 +2,28 @@ var _ = require('underscore');
 var Moment = require('moment');
 
 // define days of the waste collection
+var startOfNextYear = Moment().add(1, 'year').startOf('year');
 var tourAday = 'Monday';
-var tourADate = Moment().startOf('year').isoWeekday(tourAday);
+var tourADate = Moment(startOfNextYear).isoWeekday(tourAday);
 var tourBday = 'Tuesday';
-var tourBDate = Moment().startOf('year').isoWeekday(tourBday);
+var tourBDate = Moment(startOfNextYear).isoWeekday(tourBday);
 var tourCday = 'Friday';
-var tourCDate = Moment().startOf('year').isoWeekday(tourCday);
+var tourCDate = Moment(startOfNextYear).isoWeekday(tourCday);
 
 //CSV Header
 console.log("PLZ,Abholdatum,Tour");
 
-while (tourADate.year() <= Moment().year()) {
+while (tourADate.year() <= startOfNextYear.year()) {
     console.log("8800," + tourADate.format('YYYY-MM-DD') + ",A");
     tourADate = tourADate.add(7, 'days');
 }
 
-while (tourBDate.year() <= Moment().year()) {
+while (tourBDate.year() <= startOfNextYear.year()) {
     console.log("8800," + tourBDate.format('YYYY-MM-DD') + ",B");
     tourBDate = tourBDate.add(7, 'days');
 }
 
-while (tourCDate.year() <= Moment().year()) {
+while (tourCDate.year() <= startOfNextYear.year()) {
     console.log("8800," + tourCDate.format('YYYY-MM-DD') + ",C");
     tourCDate = tourCDate.add(7, 'days');
 }

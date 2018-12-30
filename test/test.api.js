@@ -509,7 +509,7 @@ describe('make sure the server is running (test.api)', function() {
         it('should return a correct entry for 8800', function(done) {
             server.inject({
                 method: 'GET',
-                url: '/api/calendar/cardboard.json?zip=8800&tour=b&limit=1&sort=date'
+                url: '/api/calendar/cardboard.json?zip=8800&tour=b&limit=1&sort=date&end=2018-12-31'
             }, function(response) {
                 response.statusCode.should.equal(200);
                 response.result.should.deepEqual({
@@ -527,7 +527,7 @@ describe('make sure the server is running (test.api)', function() {
         it('should return a correct entry for 8800 with uppercase tour', function(done) {
             server.inject({
                 method: 'GET',
-                url: '/api/calendar/cardboard.json?zip=8800&tour=B&limit=1&sort=date'
+                url: '/api/calendar/cardboard.json?zip=8800&tour=B&limit=1&sort=date&end=2018-12-31'
             }, function(response) {
                 response.statusCode.should.equal(200);
                 response.result.should.deepEqual({
@@ -545,7 +545,7 @@ describe('make sure the server is running (test.api)', function() {
         it('should return a correct entry for 8800 without tour parameter', function(done) {
             server.inject({
                 method: 'GET',
-                url: '/api/calendar/cardboard.json?zip=8800&limit=1&sort=date'
+                url: '/api/calendar/cardboard.json?zip=8800&limit=1&sort=date&end=2018-12-31'
             }, function(response) {
                 response.statusCode.should.equal(200);
                 response.result.should.deepEqual({
@@ -565,7 +565,7 @@ describe('make sure the server is running (test.api)', function() {
         it('should return a correct entry for 8800', function(done) {
             server.inject({
                 method: 'GET',
-                url: '/api/calendar.json?zip=8800&tour=a&limit=1&sort=date'
+                url: '/api/calendar.json?zip=8800&tour=a&limit=1&sort=date&end=2018-12-31'
             }, function(response) {
                 response.statusCode.should.equal(200);
                 response.result.should.deepEqual({
