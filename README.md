@@ -51,7 +51,7 @@ To create a new release follow these steps:
 1. Update the `CHANGELOG.md`
 1. Create a [new release/tag on GitHub](https://github.com/metaodi/openerz/releases)
 
-The new tag on GitHub triggers a build on TravisCI, which deploys the application to heroku (http://openerz.herokuapp.com).
+The new tag on GitHub triggers a build on TravisCI, which deploys the application to heroku (http://openerz.metaodi.ch).
 
 Credits
 =======

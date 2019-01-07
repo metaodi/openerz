@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## 1.2.1 - 2019-01-07
+### Added
+- Add a custom domain for OpenERZ, it's now available at http://openerz.metaodi.ch. The old domain http://openerz.herokuapp.com still works, but it's recommended to use the new custom domain
+
 ## 1.2.0 - 2018-12-30
 ### Added
 - New data for 2019 from Zurich and Thalwil
