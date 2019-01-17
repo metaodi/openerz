@@ -1,10 +1,10 @@
 'use strict';
 
-var server = require('./lib/server');
+var liftOff = require('./lib/server').liftOff;
 
 (async () => {
     try {
-        await server.liftOff()
+        var server = await liftOff()
         await server.start()
         console.log(`Server started at ${server.info.uri}`)
 
