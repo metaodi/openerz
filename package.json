@@ -32,6 +32,7 @@
     "localize": "^0.4.7",
     "moment": "^2.23.0",
     "mongoist": "^2.0.0",
+    "mongojs": "^2.6.0",
     "nipple": "^2.5.6",
     "pug": "^2.0.3",
     "superagent": "^4.1.0",
