@@ -8,7 +8,7 @@ services:
 
 before_script:
 - node $TRAVIS_BUILD_DIR/loadData.js
-- npm install -g gulp
+- npm install -g gulp-cli
 
 script:
 - gulp lint
