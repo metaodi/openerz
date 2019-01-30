@@ -1,0 +1,42 @@
+{
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 2017
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-console": "off",
+        "no-unused-vars": [
+            "error",
+            {
+                "args": "none"
+            }
+        ],
+        "complexity": ["error", 5],
+        "max-lines-per-function": ["error", 30],
+        "max-len": [
+            "error",
+            {
+                "code": 120,
+                "ignoreUrls": true 
+            }
+        ],
+        "eqeqeq": ["error", "always"],
+        "curly": "error"
+    },
+    "overrides": [{
+        "files": [ "test/*.js" ],
+        "rules": {
+            "no-unused-vars": "off",
+            "max-len": "off",
+            "max-lines-per-function": "off"
+        }
+	}] 
+}

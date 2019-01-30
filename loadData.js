@@ -1,4 +1,3 @@
-var _ = require('underscore');
 var mongoist = require('mongoist');
 var csv = require('./lib/csv');
 var format = require('./lib/format');
@@ -448,15 +447,15 @@ var csvs = [
             process.exit(1);
         }
     }
-    console.log("Import finished");
+    console.log('Import finished');
     process.exit(0);
 })();
 
 async function importCsv(path, format, collection, type, delimiter) {
     var objArr = await csv.convertToJson(path, format, delimiter);
-	console.log('CSV ' + path + ' converted, got ' + objArr.length + ' objects');
+    console.log('CSV ' + path + ' converted, got ' + objArr.length + ' objects');
 
-	const promises = objArr.map(async (obj) => {
+    const promises = objArr.map(async (obj) => {
         var coll = collection;
         var recType = type;
         return new Promise(async (resolve, reject) => {
@@ -467,12 +466,12 @@ async function importCsv(path, format, collection, type, delimiter) {
                 await coll.insert(obj);
                 resolve();
             } catch (err) {
-			    console.log("An error occured", err);
+                console.log('An error occured', err);
                 reject(err);
             }
         });
     });
     await Promise.all(promises);
-    console.log("Finished importing this CSV.");
+    console.log('Finished importing this CSV.');
 }
 

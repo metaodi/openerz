@@ -1,3 +1,4 @@
+/*global describe it before after*/
 // jscs:disable maximumLineLength
 'use strict';
 
@@ -10,7 +11,7 @@ describe('make sure the server is running (test.api)', function() {
     before(async function() {
         server = await liftOff();
         await server.initialize();
-        console.log("Server initialized");
+        console.log('Server initialized');
     });
 
     describe('/api/stations is working', function() {
@@ -43,15 +44,15 @@ describe('make sure the server is running (test.api)', function() {
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
             (result[0]).should.deepEqual({
-				"name": "Zürich, Hirzenbach",
-				"zip": "8051",
-				"city": "Zürich",
-				"website": "http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html",
-				"coordinates": [
-				  8.59117477319821,
-				  47.4032514042971,
-				  0
-				]
+                'name': 'Zürich, Hirzenbach',
+                'zip': '8051',
+                'city': 'Zürich',
+                'website': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html',
+                'coordinates': [
+                    8.59117477319821,
+                    47.4032514042971,
+                    0
+                ]
             });
         });
     });
@@ -64,24 +65,24 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
-            result.name.should.equal("CargoTram");
-            result.type.should.equal("FeatureCollection");
+            result.name.should.equal('CargoTram');
+            result.type.should.equal('FeatureCollection');
             (result.features[0]).should.deepEqual({
-                "type": "Feature",
-				"geometry": {
-				  "type": "Point",
-				  "coordinates": [
-				    8.59117477319821,
-				    47.4032514042971,
-				    0
-				  ]
-				},
-				"properties": {
-				  "name": "Zürich, Hirzenbach",
-				  "ort": "Zürich",
-				  "plz": "8051",
-				  "www": "http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html"
-				} 
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [
+                        8.59117477319821,
+                        47.4032514042971,
+                        0
+                    ]
+                },
+                'properties': {
+                    'name': 'Zürich, Hirzenbach',
+                    'ort': 'Zürich',
+                    'plz': '8051',
+                    'www': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html'
+                } 
             });
         });
     });
@@ -116,13 +117,13 @@ describe('make sure the server is running (test.api)', function() {
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
             (result[0]).should.deepEqual({
-                "type": "Zuerikuebel",
-                "volume": "L70",
-                "location": "Haltestelle Bahnhof Tiefenbrunnen",
-                "remark": null,
-                "coordinates": [
-                  8.56090169371346,
-                  47.3500948889789
+                'type': 'Zuerikuebel',
+                'volume': 'L70',
+                'location': 'Haltestelle Bahnhof Tiefenbrunnen',
+                'remark': null,
+                'coordinates': [
+                    8.56090169371346,
+                    47.3500948889789
                 ]
             });
         });
@@ -136,22 +137,22 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
-            result.name.should.equal("Abfallgefaess");
-            result.type.should.equal("FeatureCollection");
+            result.name.should.equal('Abfallgefaess');
+            result.type.should.equal('FeatureCollection');
             (result.features[0]).should.deepEqual({
-                "type": "Feature",
-                "geometry": {
-                  "type": "Point",
-                  "coordinates": [
-                    8.56090169371346,
-                    47.3500948889789
-                  ]
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [
+                        8.56090169371346,
+                        47.3500948889789
+                    ]
                 },
-                "properties": {
-                  "bemerkung": null,
-                  "ort": "Haltestelle Bahnhof Tiefenbrunnen",
-                  "gefaesstyp_txt": "Zuerikuebel",
-                  "dimension_txt": "L70"
+                'properties': {
+                    'bemerkung': null,
+                    'ort': 'Haltestelle Bahnhof Tiefenbrunnen',
+                    'gefaesstyp_txt': 'Zuerikuebel',
+                    'dimension_txt': 'L70'
                 }
             });
         });
@@ -173,7 +174,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.ics'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -183,7 +184,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -193,7 +194,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -203,7 +204,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard.ics'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -213,7 +214,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard.json'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -223,7 +224,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/paper'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -233,7 +234,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/paper.ics'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -243,7 +244,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/paper.json'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -253,7 +254,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/waste'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -263,7 +264,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/waste.ics'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -273,7 +274,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/waste.json'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -283,7 +284,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/special'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -293,7 +294,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/special.ics'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -303,7 +304,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/special.json'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -313,7 +314,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/organic'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -323,7 +324,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/organic.ics'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -333,7 +334,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/organic.json'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -343,7 +344,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/textile'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -353,7 +354,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/textile.ics'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -363,7 +364,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/textile.json'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -373,7 +374,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/etram'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -383,7 +384,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/etram.ics'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -393,7 +394,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/etram.json'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -403,7 +404,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cargotram'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -413,7 +414,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cargotram.ics'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -423,7 +424,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cargotram.json'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -433,7 +434,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cargotram.test'
-            })
+            });
             response.statusCode.should.equal(406);
         });
     });
@@ -443,7 +444,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?types=cargotram'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -453,7 +454,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?types=cargotram&types=etram'
-            })
+            });
             response.statusCode.should.equal(200);
         });
     });
@@ -463,7 +464,7 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json'
-            })
+            });
             response.statusCode.should.equal(200);
             (response.result._metadata.total_count).should.be.above(0);
         });
@@ -474,14 +475,14 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?types=paper&types=cardboard&zip=8038&lang=de&start=2016-01-01&end=2016-01-05&sort=date'
-            })
+            });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                "_metadata": {"total_count": 1},
-                "result": [{
-                    "date": "2016-01-04",
-                    "zip": 8038,
-                    "type": "cardboard"
+                '_metadata': {'total_count': 1},
+                'result': [{
+                    'date': '2016-01-04',
+                    'zip': 8038,
+                    'type': 'cardboard'
                 }]
             });
         });
@@ -492,15 +493,15 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard.json?zip=8800&tour=b&limit=1&sort=date&end=2018-12-31'
-            })
+            });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                "_metadata": {"total_count": 12},
-                "result": [{
-                    "date": "2018-01-11",
-                    "zip": 8800,
-                    "tour": "b",
-                    "type": "cardboard"
+                '_metadata': {'total_count': 12},
+                'result': [{
+                    'date': '2018-01-11',
+                    'zip': 8800,
+                    'tour': 'b',
+                    'type': 'cardboard'
                 }]
             });
         });
@@ -508,15 +509,15 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard.json?zip=8800&tour=B&limit=1&sort=date&end=2018-12-31'
-            })
+            });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                "_metadata": {"total_count": 12},
-                "result": [{
-                    "date": "2018-01-11",
-                    "zip": 8800,
-                    "tour": "b",
-                    "type": "cardboard"
+                '_metadata': {'total_count': 12},
+                'result': [{
+                    'date': '2018-01-11',
+                    'zip': 8800,
+                    'tour': 'b',
+                    'type': 'cardboard'
                 }]
             });
         });
@@ -524,15 +525,15 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard.json?zip=8800&limit=1&sort=date&end=2018-12-31'
-            })
+            });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                "_metadata": {"total_count": 36},
-                "result": [{
-                    "date": "2018-01-04",
-                    "zip": 8800,
-                    "tour": "a",
-                    "type": "cardboard"
+                '_metadata': {'total_count': 36},
+                'result': [{
+                    'date': '2018-01-04',
+                    'zip': 8800,
+                    'tour': 'a',
+                    'type': 'cardboard'
                 }]
             });
         });
@@ -542,14 +543,14 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?zip=8800&tour=a&limit=1&sort=date&end=2018-12-31'
-            })
+            });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                "_metadata": {"total_count": 132},
-                "result": [{
-                    "date": "2018-01-03",
-                    "zip": 8800,
-                    "type": "organic"
+                '_metadata': {'total_count': 132},
+                'result': [{
+                    'date': '2018-01-03',
+                    'zip': 8800,
+                    'type': 'organic'
                 }]
             });
         });
@@ -557,20 +558,20 @@ describe('make sure the server is running (test.api)', function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?zip=8800&tour=a&limit=2&start=2018-06-01&end=2018-06-30&sort=date'
-            })
+            });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                "_metadata": {"total_count": 11},
-                "result": [{
-                    "date": "2018-06-02",
-                    "zip": 8800,
-                    "type": "paper"
+                '_metadata': {'total_count': 11},
+                'result': [{
+                    'date': '2018-06-02',
+                    'zip': 8800,
+                    'type': 'paper'
                 },
                 {
-                    "date": "2018-06-04",
-                    "zip": 8800,
-                    "tour": "a",
-                    "type": "waste"
+                    'date': '2018-06-04',
+                    'zip': 8800,
+                    'tour': 'a',
+                    'type': 'waste'
                 }]
             });
         });
@@ -579,26 +580,26 @@ describe('make sure the server is running (test.api)', function() {
     describe('/api/calendar.ics API is returning a correct entry', function() {
         it('should return something', async function() {
             var expectedLines = [
-                "BEGIN:VCALENDAR",
-                "VERSION:2.0",
-                "PRODID:-//metaodi//openerz//EN",
-                "NAME:OpenERZ",
-                "X-WR-CALNAME:OpenERZ",
-                "DESCRIPTION:Entsorungskalender",
-                "X-WR-CALDESC:Entsorungskalender",
-                "TIMEZONE-ID:Europe/Zurich",
-                "TZID:Europe/Zurich",
-                "X-WR-TIMEZONE:Europe/Zurich",
-                "BEGIN:VEVENT",
-                "SUMMARY:Karton\\, PLZ: 8038",
-                "LOCATION:PLZ: 8038",
-                "DESCRIPTION:Kartonabfuhr-Kalender",
-                "DTSTART;VALUE=DATE:20160104",
-                "DTEND;VALUE=DATE:20160105",
-                "END:VEVENT",
-                "END:VCALENDAR"
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//metaodi//openerz//EN',
+                'NAME:OpenERZ',
+                'X-WR-CALNAME:OpenERZ',
+                'DESCRIPTION:Entsorungskalender',
+                'X-WR-CALDESC:Entsorungskalender',
+                'TIMEZONE-ID:Europe/Zurich',
+                'TZID:Europe/Zurich',
+                'X-WR-TIMEZONE:Europe/Zurich',
+                'BEGIN:VEVENT',
+                'SUMMARY:Karton\\, PLZ: 8038',
+                'LOCATION:PLZ: 8038',
+                'DESCRIPTION:Kartonabfuhr-Kalender',
+                'DTSTART;VALUE=DATE:20160104',
+                'DTEND;VALUE=DATE:20160105',
+                'END:VEVENT',
+                'END:VCALENDAR'
             ];
-            var expectedResult = expectedLines.join("\r\n") + "\r\n";
+            var expectedResult = expectedLines.join('\r\n') + '\r\n';
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.ics?types=paper&types=cardboard&zip=8038&lang=de&start=2016-01-01&end=2016-01-05&sort=date'
