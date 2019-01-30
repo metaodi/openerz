@@ -1,7 +1,4 @@
 var gulp   = require('gulp');
-var gutil   = require('gulp-util');
-var jshint = require('gulp-jshint');
-var jscs = require('gulp-jscs');
 var eslint = require('gulp-eslint');
 var exec = require('child_process').exec;
 
@@ -9,14 +6,6 @@ var scripts = [
     './**/*.js',
     '!./node_modules/**/*.js'
 ];
-
-function oldlint() {
-    return gulp.src(scripts)
-        .pipe(jshint('./.jshintrc'))
-        .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(jshint.reporter('fail'))
-        .pipe(jscs());
-}
 
 function lint() {
     return gulp.src(scripts)
@@ -34,7 +23,6 @@ function test(cb) {
 }
 
 gulp.task('lint', lint);
-gulp.task('oldlint', oldlint);
 gulp.task('test', test);
 
 gulp.task('default', lint );
