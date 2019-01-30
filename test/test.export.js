@@ -1,3 +1,4 @@
+/*global describe it before after*/
 'use strict';
 
 var should = require('should'),
@@ -9,12 +10,12 @@ describe('make sure the server is running (test.export)', function() {
     before(async function() {
         server = await liftOff();
         await server.initialize();
-        console.log("Server initialized");
+        console.log('Server initialized');
     });
 
     after(async function() {
         await server.stop();
-        console.log("Server stopped.");
+        console.log('Server stopped.');
     });
 
     describe('/export/metadata is working', function() {
