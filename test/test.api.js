@@ -43,7 +43,8 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
-            (result[0]).should.deepEqual({
+            result._metadata.total_count.should.equal(11);
+            (result['result'][0]).should.deepEqual({
                 'name': 'Zürich, Hirzenbach',
                 'zip': '8051',
                 'city': 'Zürich',
@@ -116,7 +117,8 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
-            (result[0]).should.deepEqual({
+            result._metadata.total_count.should.equal(4074);
+            (result['result'][0]).should.deepEqual({
                 'type': 'Zuerikuebel',
                 'volume': 'L70',
                 'location': 'Haltestelle Bahnhof Tiefenbrunnen',
