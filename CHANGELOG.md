@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Changed
+- BC-Break: all /api routes, that return JSON, will return it using a top-level object with a `_metadata` and a `result` key, previously `/api/wastebins`, `/api/tramstops` did not follow that notation.
+- Migrate to hapi v17, therefore change everything to async/await
+- Migrate code style check from JSHint/JSCS to eslint
 
 ## 1.2.1 - 2019-01-07
 ### Added
