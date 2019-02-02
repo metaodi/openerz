@@ -39,11 +39,13 @@ describe('make sure the server is running (test.api)', function() {
         it('should return something', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/tramstops.json'
+                url: '/api/tramstops.json?limit=1'
             });
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
-            (result[0]).should.deepEqual({
+            result._metadata.total_count.should.equal(11);
+            result.result.length.should.equal(1);
+            (result['result'][0]).should.deepEqual({
                 'name': 'Zürich, Hirzenbach',
                 'zip': '8051',
                 'city': 'Zürich',
@@ -51,6 +53,28 @@ describe('make sure the server is running (test.api)', function() {
                 'coordinates': [
                     8.59117477319821,
                     47.4032514042971,
+                    0
+                ]
+            });
+        });
+    });
+    describe('/api/tramstops.json pagination is working', function() {
+        it('should return something', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/tramstops.json?limit=1&offset=10'
+            });
+            response.statusCode.should.equal(200);
+            var result = JSON.parse(response.payload);
+            result.result.length.should.equal(1);
+            (result['result'][0]).should.deepEqual({
+                'name': 'Zürich, Burgwies',
+                'zip': '8032',
+                'city': 'Zürich',
+                'website': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html',
+                'coordinates': [
+                    8.57187536427284,
+                    47.3580164291757,
                     0
                 ]
             });
@@ -65,6 +89,38 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
+            result.features.length.should.equal(11);
+            result.name.should.equal('CargoTram');
+            result.type.should.equal('FeatureCollection');
+            (result.features[0]).should.deepEqual({
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [
+                        8.59117477319821,
+                        47.4032514042971,
+                        0
+                    ]
+                },
+                'properties': {
+                    'name': 'Zürich, Hirzenbach',
+                    'ort': 'Zürich',
+                    'plz': '8051',
+                    'www': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html'
+                } 
+            });
+        });
+    });
+
+    describe('/api/tramstops.geojson with limit is working', function() {
+        it('should return something', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/tramstops.geojson?limit=2'
+            });
+            response.statusCode.should.equal(200);
+            var result = JSON.parse(response.payload);
+            result.features.length.should.equal(2);
             result.name.should.equal('CargoTram');
             result.type.should.equal('FeatureCollection');
             (result.features[0]).should.deepEqual({
@@ -112,11 +168,13 @@ describe('make sure the server is running (test.api)', function() {
         it('should return something', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/wastebins.json'
+                url: '/api/wastebins.json?limit=5'
             });
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
-            (result[0]).should.deepEqual({
+            result.result.length.should.equal(5);
+            result._metadata.total_count.should.equal(4074);
+            (result['result'][0]).should.deepEqual({
                 'type': 'Zuerikuebel',
                 'volume': 'L70',
                 'location': 'Haltestelle Bahnhof Tiefenbrunnen',
@@ -133,10 +191,11 @@ describe('make sure the server is running (test.api)', function() {
         it('should return something', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/wastebins.geojson'
+                url: '/api/wastebins.geojson?limit=3'
             });
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
+            result.features.length.should.equal(3);
             result.name.should.equal('Abfallgefaess');
             result.type.should.equal('FeatureCollection');
             (result.features[0]).should.deepEqual({
