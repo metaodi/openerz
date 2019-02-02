@@ -23,7 +23,7 @@
     "csvtojson": "^2.0.8",
     "fanci": "^0.7.0",
     "h2o2": "^8.1.2",
-    "hapi": "^18.0.0",
+    "hapi": "^18.0.1",
     "hapi-swagger": "9.3.0",
     "icalendar": "^0.7.1",
     "inert": "^5.1.2",
@@ -36,6 +36,7 @@
     "vision": "^5.4.4"
   },
   "devDependencies": {
+    "eslint": "^5.13.0",
     "gulp": "^4.0.0",
     "gulp-eslint": "^5.0.0",
     "mocha": "~5.2.0",
