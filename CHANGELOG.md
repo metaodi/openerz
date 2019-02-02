@@ -4,10 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+- /api/tramstops and /api/wastebins endpoints now support the limit and offset parameters (to enable pagination) 
+
 ### Changed
 - BC-Break: all /api routes, that return JSON, will return it using a top-level object with a `_metadata` and a `result` key, previously `/api/wastebins`, `/api/tramstops` did not follow that notation.
-- Migrate to hapi v17, therefore change everything to async/await
+- Migrate to hapi v17/v18, therefore change everything to async/await
 - Migrate code style check from JSHint/JSCS to eslint
+- To run openerz, node >= 8.0.0 is required
 
 ## 1.2.1 - 2019-01-07
 ### Added
