@@ -35,6 +35,23 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
+    describe('/api/tramstops with Accept header application/vnd.geo+json returns geojson', function() {
+        it('should return something', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/tramstops',
+                headers: {
+                    'Accept': 'application/vnd.geo+json'
+                }
+            });
+            response.statusCode.should.equal(200);
+            var result = JSON.parse(response.payload);
+            result.features.length.should.equal(11);
+            result.name.should.equal('CargoTram');
+            result.type.should.equal('FeatureCollection');
+        });
+    });
+
     describe('/api/tramstops.json is working', function() {
         it('should return something', async function() {
             var response = await server.inject({
