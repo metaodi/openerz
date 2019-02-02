@@ -1,14 +1,14 @@
 language: node_js
     
 node_js:
-- "6"
+- "8"
 
 services:
 - mongodb
 
 before_script:
 - node $TRAVIS_BUILD_DIR/loadData.js
-- npm install -g gulp
+- npm install -g gulp-cli
 
 script:
 - gulp lint

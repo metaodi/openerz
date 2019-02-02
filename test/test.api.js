@@ -1,639 +1,686 @@
+/*global describe it before after*/
 // jscs:disable maximumLineLength
 'use strict';
 
 var should = require('should'),
-    initServer = require('../lib/server').initServer;
+    liftOff = require('../lib/server').liftOff;
+
 var server;
 
 describe('make sure the server is running (test.api)', function() {
-    before(function(done) {
-        initServer(function(err, readyServer) {
-            if (err) {
-                throw err;
-            }
-            server = readyServer;
-            done();
-        });
+    before(async function() {
+        server = await liftOff();
+        await server.initialize();
+        console.log('Server initialized');
     });
 
     describe('/api/stations is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/stations'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/tramstops is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/tramstops'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
+            response.result.should.not.be.empty();
+        });
+    });
+
+    describe('/api/tramstops with Accept header application/vnd.geo+json returns geojson', function() {
+        it('should return something', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/tramstops',
+                headers: {
+                    'Accept': 'application/vnd.geo+json'
+                }
+            });
+            response.statusCode.should.equal(200);
+            var result = JSON.parse(response.payload);
+            result.features.length.should.equal(11);
+            result.name.should.equal('CargoTram');
+            result.type.should.equal('FeatureCollection');
         });
     });
 
     describe('/api/tramstops.json is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
-                url: '/api/tramstops.json'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
+                url: '/api/tramstops.json?limit=1'
+            });
+            response.statusCode.should.equal(200);
+            var result = JSON.parse(response.payload);
+            result._metadata.total_count.should.equal(11);
+            result.result.length.should.equal(1);
+            (result['result'][0]).should.deepEqual({
+                'name': 'Zürich, Hirzenbach',
+                'zip': '8051',
+                'city': 'Zürich',
+                'website': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html',
+                'coordinates': [
+                    8.59117477319821,
+                    47.4032514042971,
+                    0
+                ]
+            });
+        });
+    });
+    describe('/api/tramstops.json pagination is working', function() {
+        it('should return something', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/tramstops.json?limit=1&offset=10'
+            });
+            response.statusCode.should.equal(200);
+            var result = JSON.parse(response.payload);
+            result.result.length.should.equal(1);
+            (result['result'][0]).should.deepEqual({
+                'name': 'Zürich, Burgwies',
+                'zip': '8032',
+                'city': 'Zürich',
+                'website': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html',
+                'coordinates': [
+                    8.57187536427284,
+                    47.3580164291757,
+                    0
+                ]
             });
         });
     });
 
     describe('/api/tramstops.geojson is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/tramstops.geojson'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
+            });
+            response.statusCode.should.equal(200);
+            var result = JSON.parse(response.payload);
+            result.features.length.should.equal(11);
+            result.name.should.equal('CargoTram');
+            result.type.should.equal('FeatureCollection');
+            (result.features[0]).should.deepEqual({
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [
+                        8.59117477319821,
+                        47.4032514042971,
+                        0
+                    ]
+                },
+                'properties': {
+                    'name': 'Zürich, Hirzenbach',
+                    'ort': 'Zürich',
+                    'plz': '8051',
+                    'www': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html'
+                } 
+            });
+        });
+    });
+
+    describe('/api/tramstops.geojson with limit is working', function() {
+        it('should return something', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/tramstops.geojson?limit=2'
+            });
+            response.statusCode.should.equal(200);
+            var result = JSON.parse(response.payload);
+            result.features.length.should.equal(2);
+            result.name.should.equal('CargoTram');
+            result.type.should.equal('FeatureCollection');
+            (result.features[0]).should.deepEqual({
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [
+                        8.59117477319821,
+                        47.4032514042971,
+                        0
+                    ]
+                },
+                'properties': {
+                    'name': 'Zürich, Hirzenbach',
+                    'ort': 'Zürich',
+                    'plz': '8051',
+                    'www': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html'
+                } 
             });
         });
     });
 
     describe('/api/tramstops.test does not work', function() {
-        it('should return an error', function(done) {
-            server.inject({
+        it('should return an error', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/tramstops.test'
-            }, function(response) {
-                response.statusCode.should.equal(406);
-                done();
             });
+            response.statusCode.should.equal(406);
         });
     });
 
     describe('/api/wastebins is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/wastebins'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
+            response.should.not.be.empty();
         });
     });
 
     describe('/api/wastebins.json is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
-                url: '/api/wastebins.json'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
+                url: '/api/wastebins.json?limit=5'
+            });
+            response.statusCode.should.equal(200);
+            var result = JSON.parse(response.payload);
+            result.result.length.should.equal(5);
+            result._metadata.total_count.should.equal(4074);
+            (result['result'][0]).should.deepEqual({
+                'type': 'Zuerikuebel',
+                'volume': 'L70',
+                'location': 'Haltestelle Bahnhof Tiefenbrunnen',
+                'remark': null,
+                'coordinates': [
+                    8.56090169371346,
+                    47.3500948889789
+                ]
             });
         });
     });
 
     describe('/api/wastebins.geojson is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
-                url: '/api/wastebins.geojson'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
+                url: '/api/wastebins.geojson?limit=3'
+            });
+            response.statusCode.should.equal(200);
+            var result = JSON.parse(response.payload);
+            result.features.length.should.equal(3);
+            result.name.should.equal('Abfallgefaess');
+            result.type.should.equal('FeatureCollection');
+            (result.features[0]).should.deepEqual({
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'Point',
+                    'coordinates': [
+                        8.56090169371346,
+                        47.3500948889789
+                    ]
+                },
+                'properties': {
+                    'bemerkung': null,
+                    'ort': 'Haltestelle Bahnhof Tiefenbrunnen',
+                    'gefaesstyp_txt': 'Zuerikuebel',
+                    'dimension_txt': 'L70'
+                }
             });
         });
     });
 
 
     describe('/api/calendar is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar.ics is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.ics'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar.json is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/cardboard is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/cardboard.ics is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard.ics'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/cardboard.json is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard.json'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/paper is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/paper'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/paper.ics is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/paper.ics'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/paper.json is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/paper.json'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/waste is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/waste'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/waste.ics is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/waste.ics'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/waste.json is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/waste.json'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/special is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/special'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/special.ics is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/special.ics'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/special.json is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/special.json'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/organic is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/organic'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/organic.ics is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/organic.ics'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/organic.json is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/organic.json'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/textile is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/textile'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/textile.ics is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/textile.ics'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/textile.json is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/textile.json'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/etram is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/etram'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/etram.ics is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/etram.ics'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/etram.json is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/etram.json'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/cargotram is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cargotram'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/cargotram.ics is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cargotram.ics'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/cargotram.json is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cargotram.json'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar/cargotram.test does not work', function() {
-        it('should return an error', function(done) {
-            server.inject({
+        it('should return an error', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cargotram.test'
-            }, function(response) {
-                response.statusCode.should.equal(406);
-                done();
             });
+            response.statusCode.should.equal(406);
         });
     });
 
     describe('/api/calendar.json?types=cargotram is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?types=cargotram'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar.json?types=cargotram&types=etram is working', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?types=cargotram&types=etram'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                done();
             });
+            response.statusCode.should.equal(200);
         });
     });
 
     describe('/api/calendar.json API is returning records', function() {
-        it('should return several results', function(done) {
-            server.inject({
+        it('should return several results', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json'
-            }, function(response) {
-                (response.result._metadata.total_count).should.be.above(0);
-                done();
             });
+            response.statusCode.should.equal(200);
+            (response.result._metadata.total_count).should.be.above(0);
         });
     });
 
     describe('/api/calendar.json API is returning a correct entry', function() {
-        it('should return something', function(done) {
-            server.inject({
+        it('should return something', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?types=paper&types=cardboard&zip=8038&lang=de&start=2016-01-01&end=2016-01-05&sort=date'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                response.result.should.deepEqual({
-                    "_metadata": {"total_count": 1},
-                    "result": [{
-                        "date": "2016-01-04",
-                        "zip": 8038,
-                        "type": "cardboard"
-                    }]
-                });
-                done();
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 1},
+                'result': [{
+                    'date': '2016-01-04',
+                    'zip': 8038,
+                    'type': 'cardboard'
+                }]
             });
         });
     });
 
     describe('/api/calendar/cardboard.json with zip and tour parameter', function() {
-        it('should return a correct entry for 8800', function(done) {
-            server.inject({
+        it('should return a correct entry for 8800', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard.json?zip=8800&tour=b&limit=1&sort=date&end=2018-12-31'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                response.result.should.deepEqual({
-                    "_metadata": {"total_count": 12},
-                    "result": [{
-                        "date": "2018-01-11",
-                        "zip": 8800,
-                        "tour": "b",
-                        "type": "cardboard"
-                    }]
-                });
-                done();
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 12},
+                'result': [{
+                    'date': '2018-01-11',
+                    'zip': 8800,
+                    'tour': 'b',
+                    'type': 'cardboard'
+                }]
             });
         });
-        it('should return a correct entry for 8800 with uppercase tour', function(done) {
-            server.inject({
+        it('should return a correct entry for 8800 with uppercase tour', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard.json?zip=8800&tour=B&limit=1&sort=date&end=2018-12-31'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                response.result.should.deepEqual({
-                    "_metadata": {"total_count": 12},
-                    "result": [{
-                        "date": "2018-01-11",
-                        "zip": 8800,
-                        "tour": "b",
-                        "type": "cardboard"
-                    }]
-                });
-                done();
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 12},
+                'result': [{
+                    'date': '2018-01-11',
+                    'zip': 8800,
+                    'tour': 'b',
+                    'type': 'cardboard'
+                }]
             });
         });
-        it('should return a correct entry for 8800 without tour parameter', function(done) {
-            server.inject({
+        it('should return a correct entry for 8800 without tour parameter', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard.json?zip=8800&limit=1&sort=date&end=2018-12-31'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                response.result.should.deepEqual({
-                    "_metadata": {"total_count": 36},
-                    "result": [{
-                        "date": "2018-01-04",
-                        "zip": 8800,
-                        "tour": "a",
-                        "type": "cardboard"
-                    }]
-                });
-                done();
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 36},
+                'result': [{
+                    'date': '2018-01-04',
+                    'zip': 8800,
+                    'tour': 'a',
+                    'type': 'cardboard'
+                }]
             });
         });
     });
     describe('/api/calendar.json with zip and tour parameter', function() {
-        it('should return a correct entry for 8800', function(done) {
-            server.inject({
+        it('should return a correct entry for 8800', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?zip=8800&tour=a&limit=1&sort=date&end=2018-12-31'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                response.result.should.deepEqual({
-                    "_metadata": {"total_count": 132},
-                    "result": [{
-                        "date": "2018-01-03",
-                        "zip": 8800,
-                        "type": "organic"
-                    }]
-                });
-                done();
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 132},
+                'result': [{
+                    'date': '2018-01-03',
+                    'zip': 8800,
+                    'type': 'organic'
+                }]
             });
         });
-        it('should return a correct entries for 8800 (without and without tour)', function(done) {
-            server.inject({
+        it('should return a correct entries for 8800 (without and without tour)', async function() {
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?zip=8800&tour=a&limit=2&start=2018-06-01&end=2018-06-30&sort=date'
-            }, function(response) {
-                response.statusCode.should.equal(200);
-                response.result.should.deepEqual({
-                    "_metadata": {"total_count": 11},
-                    "result": [{
-                        "date": "2018-06-02",
-                        "zip": 8800,
-                        "type": "paper"
-                    },
-                    {
-                        "date": "2018-06-04",
-                        "zip": 8800,
-                        "tour": "a",
-                        "type": "waste"
-                    }]
-                });
-                done();
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 11},
+                'result': [{
+                    'date': '2018-06-02',
+                    'zip': 8800,
+                    'type': 'paper'
+                },
+                {
+                    'date': '2018-06-04',
+                    'zip': 8800,
+                    'tour': 'a',
+                    'type': 'waste'
+                }]
             });
         });
     });
 
     describe('/api/calendar.ics API is returning a correct entry', function() {
-        it('should return something', function(done) {
+        it('should return something', async function() {
             var expectedLines = [
-                "BEGIN:VCALENDAR",
-                "VERSION:2.0",
-                "PRODID:-//metaodi//openerz//EN",
-                "NAME:OpenERZ",
-                "X-WR-CALNAME:OpenERZ",
-                "DESCRIPTION:Entsorungskalender",
-                "X-WR-CALDESC:Entsorungskalender",
-                "TIMEZONE-ID:Europe/Zurich",
-                "TZID:Europe/Zurich",
-                "X-WR-TIMEZONE:Europe/Zurich",
-                "BEGIN:VEVENT",
-                "SUMMARY:Karton\\, PLZ: 8038",
-                "LOCATION:PLZ: 8038",
-                "DESCRIPTION:Kartonabfuhr-Kalender",
-                "DTSTART;VALUE=DATE:20160104",
-                "DTEND;VALUE=DATE:20160105",
-                "END:VEVENT",
-                "END:VCALENDAR"
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//metaodi//openerz//EN',
+                'NAME:OpenERZ',
+                'X-WR-CALNAME:OpenERZ',
+                'DESCRIPTION:Entsorungskalender',
+                'X-WR-CALDESC:Entsorungskalender',
+                'TIMEZONE-ID:Europe/Zurich',
+                'TZID:Europe/Zurich',
+                'X-WR-TIMEZONE:Europe/Zurich',
+                'BEGIN:VEVENT',
+                'SUMMARY:Karton\\, PLZ: 8038',
+                'LOCATION:PLZ: 8038',
+                'DESCRIPTION:Kartonabfuhr-Kalender',
+                'DTSTART;VALUE=DATE:20160104',
+                'DTEND;VALUE=DATE:20160105',
+                'END:VEVENT',
+                'END:VCALENDAR'
             ];
-            var expectedResult = expectedLines.join("\r\n") + "\r\n";
-            server.inject({
+            var expectedResult = expectedLines.join('\r\n') + '\r\n';
+            var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.ics?types=paper&types=cardboard&zip=8038&lang=de&start=2016-01-01&end=2016-01-05&sort=date'
-            }, function(response) {
-                response.payload.should.deepEqual(expectedResult);
-                done();
             });
+            response.payload.should.deepEqual(expectedResult);
         });
     });
 });

@@ -1,13 +1,10 @@
-var _ = require('underscore');
-var mongojs = require('mongojs');
+var mongoist = require('mongoist');
 var csv = require('./lib/csv');
 var format = require('./lib/format');
-var async = require('async');
 
 
 var dbUrl = process.env.MONGOLAB_URI || process.env.MONGO_URI || 'mongodb://localhost/openerz',
-    coll = [ 'calendar', 'station' ],
-    db = mongojs(dbUrl, coll);
+    db = mongoist(dbUrl);
 
 db.on('error', function(err) {
     console.log('database error', err);
@@ -17,33 +14,8 @@ db.on('connect', function () {
     console.log('db connected', dbUrl);
 });
 
-// remove previous entries
-db.station.remove();
-db.calendar.remove();
-
 var station = db.station;
 var calendar = db.calendar;
-
-var importCsv = function(path, format, collection, type, delimiter, callback) {
-    csv.convertToJson(path, format, delimiter, function(objArr) {
-        console.log('CSV ' + path + ' converted, got ' + objArr.length + ' objects');
-
-        async.each(objArr, function(obj, cb) {
-            if (type !== 'stations') {
-                obj['type'] = type;
-            }
-            collection.insert(obj, cb);
-        }, function(err) {
-            if (err) {
-                console.log("An error occured", err);
-                callback(err);
-                return;
-            }
-            console.log("Finished importing this CSV.");
-            callback();
-        });
-    });
-};
 
 var csvs = [
     {
@@ -461,22 +433,45 @@ var csvs = [
     }
 ];
 
-async.eachSeries(
-    csvs,
-    function(csv, callback) {
+
+(async () => {
+    // remove previous entries
+    await db.station.remove();
+    await db.calendar.remove();
+
+    for (const csv of csvs) {
         try {
-            importCsv(csv.path, csv.format, csv.collection, csv.type, csv.delimiter, callback);
-        } catch (e) {
-            callback(e);
-        }
-    },
-    function(err) {
-        if (err) {
+            await importCsv(csv.path, csv.format, csv.collection, csv.type, csv.delimiter);
+        } catch (err) {
             console.log('Import failed:', err);
             process.exit(1);
         }
-        console.log("Import finished");
-        process.exit(0);
     }
-);
+    console.log('Import finished');
+    process.exit(0);
+})();
+
+async function importCsv(path, format, collection, type, delimiter) {
+    var objArr = await csv.convertToJson(path, format, delimiter);
+    console.log('CSV ' + path + ' converted, got ' + objArr.length + ' objects');
+
+    const promises = objArr.map(async (obj) => {
+        var coll = collection;
+        var recType = type;
+        return new Promise(async (resolve, reject) => {
+            if (recType !== 'stations') {
+                obj['type'] = recType;
+            }
+            try {
+                await coll.insert(obj);
+                resolve();
+            } catch (err) {
+                console.log('An error occured', err);
+                reject(err);
+            }
+        });
+    });
+    await Promise.all(promises);
+    console.log('Finished importing this CSV.');
+}
 

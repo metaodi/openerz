@@ -1,17 +1,15 @@
 'use strict';
 
-var server = require('./lib/server');
+var liftOff = require('./lib/server').liftOff;
 
-server.initServer(function(err, hapi) {
-    if (err) {
-        console.log('Got an error while registering modules on server: ' + err);
+(async () => {
+    try {
+        var server = await liftOff();
+        await server.start();
+        console.log(`Server started at ${server.info.uri}`);
+
+    } catch (err) {
+        console.log('Got an error while starting server: ' + err);
         throw err;
     }
-    hapi.start(function(err) {
-        if (err) {
-            console.log("Error on startup: ", err);
-            return;
-        }
-        console.log('Server started at ' + hapi.info.uri);
-    });
-});
+})();
