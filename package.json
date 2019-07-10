@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "NODE_ENV='test' mocha -R spec -t 10000 --exit"
+    "test": "NODE_ENV='test' mocha -R spec -t 10000 --exit",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -33,7 +35,8 @@
     "mongoist": "^2.0.0",
     "superagent": "^4.1.0",
     "underscore": "~1.9.1",
-    "vision": "^5.4.4"
+    "vision": "^5.4.4",
+    "snyk": "^1.192.4"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
@@ -44,5 +47,6 @@
   },
   "engines": {
     "node": ">=8.0.0"
-  }
+  },
+  "snyk": true
 }
