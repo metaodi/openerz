@@ -47,7 +47,7 @@ describe('make sure the server is running (test.api)', function() {
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
             result.features.length.should.equal(11);
-            result.name.should.equal('CargoTram');
+            result.name.should.equal('stzh.poi_cargoetram_view');
             result.type.should.equal('FeatureCollection');
         });
     });
@@ -63,15 +63,11 @@ describe('make sure the server is running (test.api)', function() {
             result._metadata.total_count.should.equal(11);
             result.result.length.should.equal(1);
             (result['result'][0]).should.deepEqual({
-                'name': 'Zürich, Hirzenbach',
-                'zip': '8051',
+                'name': 'Zürich, Wartau',
+                'zip': '8049',
                 'city': 'Zürich',
-                'website': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html',
-                'coordinates': [
-                    8.59117477319821,
-                    47.4032514042971,
-                    0
-                ]
+                'website': 'https://www.stadt-zuerich.ch/ted/de/index/entsorgung_recycling/publikationen_broschueren/fahrplan_cargo_tram_und_e_tram.html',
+                'coordinates': [8.4916264363, 47.4027635986, 0]
             });
         });
     });
@@ -85,13 +81,13 @@ describe('make sure the server is running (test.api)', function() {
             var result = JSON.parse(response.payload);
             result.result.length.should.equal(1);
             (result['result'][0]).should.deepEqual({
-                'name': 'Zürich, Burgwies',
-                'zip': '8032',
+                'name': 'Zürich, Tramdepot Hard',
+                'zip': '8005',
                 'city': 'Zürich',
-                'website': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html',
+                'website': 'https://www.stadt-zuerich.ch/ted/de/index/entsorgung_recycling/publikationen_broschueren/fahrplan_cargo_tram_und_e_tram.html',
                 'coordinates': [
-                    8.57187536427284,
-                    47.3580164291757,
+                    8.5197705253,
+                    47.3918446254,
                     0
                 ]
             });
@@ -107,23 +103,19 @@ describe('make sure the server is running (test.api)', function() {
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
             result.features.length.should.equal(11);
-            result.name.should.equal('CargoTram');
+            result.name.should.equal('stzh.poi_cargoetram_view');
             result.type.should.equal('FeatureCollection');
-            (result.features[0]).should.deepEqual({
+            (result.features[0]).should.containDeep({
                 'type': 'Feature',
                 'geometry': {
                     'type': 'Point',
-                    'coordinates': [
-                        8.59117477319821,
-                        47.4032514042971,
-                        0
-                    ]
+                    'coordinates': [8.4916264363, 47.4027635986, 0]
                 },
                 'properties': {
-                    'name': 'Zürich, Hirzenbach',
+                    'name': 'Zürich, Wartau',
                     'ort': 'Zürich',
-                    'plz': '8051',
-                    'www': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html'
+                    'plz': '8049',
+                    'www': 'https://www.stadt-zuerich.ch/ted/de/index/entsorgung_recycling/publikationen_broschueren/fahrplan_cargo_tram_und_e_tram.html'
                 } 
             });
         });
@@ -138,23 +130,19 @@ describe('make sure the server is running (test.api)', function() {
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
             result.features.length.should.equal(2);
-            result.name.should.equal('CargoTram');
+            result.name.should.equal('stzh.poi_cargoetram_view');
             result.type.should.equal('FeatureCollection');
-            (result.features[0]).should.deepEqual({
+            (result.features[0]).should.containDeep({
                 'type': 'Feature',
                 'geometry': {
                     'type': 'Point',
-                    'coordinates': [
-                        8.59117477319821,
-                        47.4032514042971,
-                        0
-                    ]
+                    'coordinates': [8.4916264363, 47.4027635986, 0]
                 },
                 'properties': {
-                    'name': 'Zürich, Hirzenbach',
+                    'name': 'Zürich, Wartau',
                     'ort': 'Zürich',
-                    'plz': '8051',
-                    'www': 'http://www.stadt-zuerich.ch/content/ted/de/index/entsorgung_recycling/sauberes_zuerich/entsorgen_wiederverwerten/cargotram_elektrotram/tram_was_was_nicht.html'
+                    'plz': '8049',
+                    'www': 'https://www.stadt-zuerich.ch/ted/de/index/entsorgung_recycling/publikationen_broschueren/fahrplan_cargo_tram_und_e_tram.html'
                 } 
             });
         });
@@ -190,15 +178,15 @@ describe('make sure the server is running (test.api)', function() {
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
             result.result.length.should.equal(5);
-            result._metadata.total_count.should.equal(4074);
+            result._metadata.total_count.should.equal(4063);
             (result['result'][0]).should.deepEqual({
                 'type': 'Zuerikuebel',
                 'volume': 'L70',
                 'location': 'Haltestelle Bahnhof Tiefenbrunnen',
                 'remark': null,
                 'coordinates': [
-                    8.56090169371346,
-                    47.3500948889789
+                    8.5609016937,
+                    47.350094889
                 ]
             });
         });
@@ -213,15 +201,15 @@ describe('make sure the server is running (test.api)', function() {
             response.statusCode.should.equal(200);
             var result = JSON.parse(response.payload);
             result.features.length.should.equal(3);
-            result.name.should.equal('Abfallgefaess');
+            result.name.should.equal('erz.abfallgefaess_p');
             result.type.should.equal('FeatureCollection');
-            (result.features[0]).should.deepEqual({
+            (result.features[0]).should.containDeep({
                 'type': 'Feature',
                 'geometry': {
                     'type': 'Point',
                     'coordinates': [
-                        8.56090169371346,
-                        47.3500948889789
+                        8.5609016937,
+                        47.350094889
                     ]
                 },
                 'properties': {
