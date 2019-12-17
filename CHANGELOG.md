@@ -5,6 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+
+## 3.0.0 - 2019-12-17
+### Added
+- Data from 2020
+
+### Changed
+- Updated all dependencies
+- BC-break: minimum node version >= 10.0.0
+
+### Removed
+- Removed all `/export` routes, since they are out-of-date and do not provide more data
+
 ## 2.0.0 - 2019-02-02
 ### Added
 - `/api/tramstops` and `/api/wastebins` endpoints now support the `limit` and `offset` parameters (to enable pagination) 

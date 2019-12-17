@@ -1,3 +1,4 @@
+/* eslint-disable no-async-promise-executor */
 var mongoist = require('mongoist');
 var csv = require('./lib/csv');
 var format = require('./lib/format');
@@ -430,6 +431,62 @@ var csvs = [
         'delimiter': ',',
         'collection': calendar,
         'type': 'paper'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Bioabfall_2020.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'organic'
+    },
+    {
+        'path': './csv/Entsorgungskalender_CargoTram_2020.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'cargotram'
+    },
+    {
+        'path': './csv/Entsorgungskalender_eTram_2020.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'etram'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Karton_2020.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'cardboard'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Papier_2020.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'paper'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Kehricht_2020.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'waste'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Sonderabfall_2020.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'special'
+    },
+    {
+        'path': './csv/Entsorgungskalender_Textilien_2020.csv',
+        'format': format.calendarEntryIso,
+        'delimiter': ',',
+        'collection': calendar,
+        'type': 'textile'
     }
 ];
 
