@@ -27,7 +27,7 @@
     "hapi-swagger": "11.1.0",
     "icalendar": "^0.7.1",
     "@hapi/inert": "^5.2.2",
-    "@hapi/joi": "^15.1.1",
+    "@hapi/joi": "^16.1.8",
     "localize": "^0.4.7",
     "moment": "^2.24.0",
     "mongoist": "^2.4.0",
