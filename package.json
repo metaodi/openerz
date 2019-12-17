@@ -31,7 +31,6 @@
     "localize": "^0.4.7",
     "moment": "^2.24.0",
     "mongoist": "^2.4.0",
-    "superagent": "^5.1.2",
     "underscore": "~1.9.1",
     "@hapi/vision": "^5.5.4"
   },
