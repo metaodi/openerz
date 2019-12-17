@@ -1,3 +1,4 @@
+/* eslint-disable no-async-promise-executor */
 var mongoist = require('mongoist');
 var csv = require('./lib/csv');
 var format = require('./lib/format');
