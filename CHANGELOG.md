@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## 3.0.1 - 2019-12-17
+### Fixed
+- Travis deployment only on one node version
+
 
 ## 3.0.0 - 2019-12-17
 ### Added
