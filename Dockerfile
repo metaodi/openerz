@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM node:erbium
 MAINTAINER Stefan Oderbolz <odi@metaodi.ch>
 # Create app directory
 WORKDIR /usr/src/app
