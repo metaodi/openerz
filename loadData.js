@@ -522,7 +522,7 @@ var csvs = [
         'delimiter': ',',
         'collection': calendar,
         'type': 'paper'
-    },
+    }
 ];
 
 
