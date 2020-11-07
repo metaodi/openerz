@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Use the taffydb in-memory database to serve the data
 
 ### Removed
+- Removed Dockerfile
 - Removed need for MongoDB as a database backend
 
 ## 3.0.1 - 2019-12-17
