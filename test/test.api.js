@@ -614,6 +614,7 @@ describe('make sure the server is running (test.api)', function() {
                 'result': [{
                     'date': '2018-01-03',
                     'zip': 8800,
+                    'tour': '',
                     'type': 'organic'
                 }]
             });
@@ -629,6 +630,7 @@ describe('make sure the server is running (test.api)', function() {
                 'result': [{
                     'date': '2018-06-02',
                     'zip': 8800,
+                    'tour': '',
                     'type': 'paper'
                 },
                 {
