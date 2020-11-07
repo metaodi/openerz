@@ -1,46 +1,33 @@
 [![Build Status](https://travis-ci.org/metaodi/openerz.svg?branch=master)](https://travis-ci.org/metaodi/openerz)
 
+**Access the public API here: http://openerz.metaodi.ch**
+
 Installation
 ============
 
-To setup the whole environment there is a docker setup. All you have to do to run it is:
+If you want to run openerz yourself, here is how to set it up:
 
-1. [Install Docker](https://www.docker.com/)
-1. git clone git@github.com:metaodi/openerz.git
-1. Clone this repo
-1. Copy `.env.dist` to `.env`
-1. Run `docker-compose up` on your command line
+1. Clone this repository: `git clone git@github.com:metaodi/openerz.git`
+1. Switch to the clones repository: `cd openerz`
+1. Run `npm install`
+1. Run `npm start`
 
-Then open http://localhost:9999/doc (or whatever port you specified in your `.env` file)
+Then open http://localhost:8080/doc (or whatever port you specified in your PORT env variable)
 
 Testing
 =======
 
 ```bash
-docker-compose exec openerz sh -c "npm test"
+npm test
 ```
 
 Update data
 ===========
 
-Each year, ERZ will release the new waste collection data. 
-The `loadData.js` script is used for that (run it **in** the container):
+Each year, new waste collection data is released. 
+Update the `lib/data.js` module, to load the new data.
 
-```bash
-docker-compose exec openerz sh -c "node loadData.js"
-```
-
-To update the data that is used on the production version, make sure you run the `loadData.js` script with the correctly set MongoDB URL:
-
-```bash
-MONGOLAB_URI='mongodb://<dbuser>:<dbpassword>@dsXXXXX.mongolab.com:63630/heroku_appXXXX' node loadData.js
-```
-
-You can find the URI with the following `heroku` command:
-
-```bash
-heroku run env --app openerz
-```
+OpenERZ uses an in-memory database, which is initialized at startup based on the CSV files in the repository.
 
 Release
 =======
