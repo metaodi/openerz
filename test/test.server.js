@@ -32,7 +32,7 @@ describe('make sure the server is running (test.server)', function() {
         it('should return the docs.', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: 'http://montoya:8080/documentation'
+                url: 'http://localhost:8080/documentation'
             });
             response.statusCode.should.equal(200);
             response.payload.should.match(/.*Open ERZ API.*/);
