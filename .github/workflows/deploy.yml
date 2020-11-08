@@ -15,10 +15,9 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
-          npm install -g gulp-cli
           
       - name: Linting
-        run: gulp lint
+        run: npm run lint
         
       - name: Run tests
         run: npm test
