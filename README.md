@@ -38,11 +38,11 @@ To create a new release follow these steps:
 1. Update the `CHANGELOG.md`
 1. Create a [new release/tag on GitHub](https://github.com/metaodi/openerz/releases)
 
-The new tag on GitHub triggers a build on TravisCI, which deploys the application to heroku (http://openerz.metaodi.ch).
+The new release on GitHub triggers a deployment of the application to heroku (http://openerz.metaodi.ch).
 
 Credits
 =======
 
-![Logo](https://raw.githubusercontent.com/metaodi/openerz/master/public/logo.png)
-
 The logo was created by sagit milshtein from the Noun Project (CC-BY 3.0)
+
+<img src="http://openerz.metaodi.ch/static/logo.png" alt="OpenERZ-Logo" width="90"/>
