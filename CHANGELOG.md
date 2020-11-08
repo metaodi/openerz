@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+- Use the taffydb in-memory database to serve the data
+
+### Removed
+- Removed Dockerfile
+- Removed need for MongoDB as a database backend
 
 ## 3.0.1 - 2019-12-17
 ### Fixed
