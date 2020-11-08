@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - BC-break: minimum node version >= 12.0.0
 - Updated all dependencies
 - BC-break: all zip codes using the `tour` parameter now *must* provide the `Tour` field in all CSVs
+- Switched from Travis CI to GitHub Actions to test and deploy OpenERZ
 
 ### Added
 - Use the taffydb in-memory database to serve the data
