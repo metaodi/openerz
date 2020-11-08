@@ -43,6 +43,6 @@ The new release on GitHub triggers a deployment of the application to heroku (ht
 Credits
 =======
 
-![Logo](http://openerz.metaodi.ch/static/logo.png)
-
 The logo was created by sagit milshtein from the Noun Project (CC-BY 3.0)
+
+<img src="http://openerz.metaodi.ch/static/logo.png" alt="OpenERZ-Logo" width="90"/>
