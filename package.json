@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "NODE_ENV='test' mocha -R spec -t 10000 --exit"
+    "test": "NODE_ENV='test' mocha -R spec -t 10000 --exit",
+    "lint": "eslint './**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -36,8 +37,6 @@
   },
   "devDependencies": {
     "eslint": "^7.13.0",
-    "gulp": "^4.0.2",
-    "gulp-eslint": "^6.0.0",
     "mocha": "^8.2.1",
     "should": "~13.2.3"
   },
