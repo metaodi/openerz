@@ -8,7 +8,6 @@ Installation
 If you want to run openerz yourself, here is how to set it up:
 
 1. Clone this repository: `git clone git@github.com:metaodi/openerz.git`
-1. Switch to the clones repository: `cd openerz`
 1. Run `npm install`
 1. Run `npm start`
 
@@ -38,7 +37,7 @@ To create a new release follow these steps:
 1. Update the `CHANGELOG.md`
 1. Create a [new release/tag on GitHub](https://github.com/metaodi/openerz/releases)
 
-The new release on GitHub triggers a deployment of the application to heroku (http://openerz.metaodi.ch).
+The new release on GitHub triggers a deployment of the application to heroku (https://openerz.metaodi.ch).
 
 Credits
 =======
