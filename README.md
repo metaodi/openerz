@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/metaodi/openerz.svg?branch=master)](https://travis-ci.org/metaodi/openerz)
+[![Build Status](https://github.com/metaodi/openerz/workflows/Build%20OpenERZ/badge.svg)](https://github.com/metaodi/openerz/actions?query=workflow%3A%22Build+OpenERZ%22)
 
-**Access the public API here: http://openerz.metaodi.ch**
+**Access the public API here: https://openerz.metaodi.ch**
 
 Installation
 ============
@@ -45,4 +45,4 @@ Credits
 
 The logo was created by sagit milshtein from the Noun Project (CC-BY 3.0)
 
-<img src="http://openerz.metaodi.ch/static/logo.png" alt="OpenERZ-Logo" width="90"/>
+<img src="https://openerz.metaodi.ch/static/logo.png" alt="OpenERZ-Logo" width="90"/>
