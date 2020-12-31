@@ -6,15 +6,17 @@ var day = 'Wednesday';
 var organicDate = Moment(startOfNextYear).isoWeekday(day);
 
 //CSV Header
-console.log('PLZ,Abholdatum,Tour');
+//console.log('PLZ,Abholdatum,Tour');
 
 while (organicDate.year() <= startOfNextYear.year()) {
     if (organicDate.month() !== 11) {
-        console.log('8800,' + organicDate.format('YYYY-MM-DD'), ',');
+        console.log('8800,' + organicDate.format('YYYY-MM-DD') + ',');
     }
     organicDate = organicDate.add(7, 'days');
 }
 
 //special handling for december
-console.log('8800,2020-12-02');
-console.log('8800,2020-12-16');
+console.log('8800,2021-12-01,');
+console.log('8800,2021-12-08,');
+console.log('8800,2021-12-15,');
+console.log('8800,2021-12-22,');
