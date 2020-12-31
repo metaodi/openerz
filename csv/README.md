@@ -4,6 +4,7 @@ Source Files
 ## Zurich
 
 The source files of the City of Zurich are [published on their Open Data Portal](https://data.stadt-zuerich.ch/dataset?tags=entsorgung).
+The files from the City of Zurich are appended to the corresponding CSV.
 
 ## Thalwil
 
