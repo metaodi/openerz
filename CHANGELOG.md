@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+- New data for 2021 for Zurich and Thalwil
+
+### Changed
+- Use single csv file per type and place
+- Refactor old CSVs in new file to simplify code
+- Updated some dependencies
 
 ## 4.1.0 - 2020-11-10
 ### Changed

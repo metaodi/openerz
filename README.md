@@ -24,7 +24,7 @@ Update data
 ===========
 
 Each year, new waste collection data is released. 
-Update the `lib/data.js` module, to load the new data.
+Update the CSVs in the `csv` directory by appending the new data to the corresponding file.
 
 OpenERZ uses an in-memory database, which is initialized at startup based on the CSV files in the repository.
 

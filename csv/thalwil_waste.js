@@ -10,7 +10,7 @@ var tourCday = 'Friday';
 var tourCDate = Moment(startOfNextYear).isoWeekday(tourCday);
 
 //CSV Header
-console.log('PLZ,Abholdatum,Tour');
+//console.log('PLZ,Abholdatum,Tour');
 
 while (tourADate.year() <= startOfNextYear.year()) {
     console.log('8800,' + tourADate.format('YYYY-MM-DD') + ',A');
