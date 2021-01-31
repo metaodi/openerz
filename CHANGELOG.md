@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## 4.2.1 - 2021-01-31
+### Fixed
+- Thalwil had to postpone the metal collection from 2021-01-28 to 2021-02-25
+
 ## 4.2.0 - 2021-01-01
 ### Added
 - New data for 2021 for Zurich and Thalwil
