@@ -33,7 +33,7 @@
     "localize": "^0.4.7",
     "moment": "^2.29.1",
     "taffy": "^2.6.2",
-    "underscore": "^1.12.0"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "eslint": "^7.16.0",
