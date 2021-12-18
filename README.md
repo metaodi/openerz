@@ -2,6 +2,21 @@
 
 **Access the public API here: https://openerz.metaodi.ch**
 
+Usage examples
+==============
+
+Get all **organic** waste collections in **Wollishofen** (zip code 8038) as **JSON** sorted by descending date:
+
+```
+https://openerz.metaodi.ch/api/calendar.json?zip=8038&types=organic&sort=date:desc&offset=0&limit=0&lang=de
+```
+
+Get all **cardboard** and **paper** collection date as **iCal** calendar (.ics) for **Thalwil** (zip code 8800) for **tour B**:
+
+```
+https://openerz.metaodi.ch/api/calendar.ics?zip=8800&tour=b&types=cardboard&types=paper&sort=date&offset=0&limit=0&lang=de
+```
+
 Installation
 ============
 
