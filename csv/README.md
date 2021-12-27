@@ -16,3 +16,10 @@ Therefore there are scripts for those files:
 node thalwil_waste.js > thalwil_kehricht_2018.csv
 node thalwil_organic.js > thalwil_bioabfall_2018.csv
 ```
+
+## Basel
+
+The source file of Basel are published in their [Open Data Portal](https://data.bs.ch/explore/dataset/100096/).
+The file from Basel is append to the corresponding CSV.
+
+You can use `basel.py` to download the latest version.
