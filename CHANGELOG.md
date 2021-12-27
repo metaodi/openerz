@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Changed
+- BC-break: minimum node version >= 14.0.0
+- Updated all dependencies
 
 ## 4.2.1 - 2021-01-31
 ### Fixed
