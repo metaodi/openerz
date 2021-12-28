@@ -14,6 +14,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Add 2021 data of Basel
 - Add new waste types for Basel: incombustibles, bulky goods and chipping service
 
+### Removed
+- Removed geo route `/api/wastebins`
+- Removed geo route `/api/tramstops`
+
 ## 4.2.1 - 2021-01-31
 ### Fixed
 - Thalwil had to postpone the metal collection from 2021-01-28 to 2021-02-25
