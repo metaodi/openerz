@@ -7,6 +7,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Changed
 - BC-break: minimum node version >= 14.0.0
 - Updated all dependencies
+- Renamed `tour` parameter to `area` to be more generic
+
+### Added
+- Add new `/api/region` routes for Zurich, Thalwil, Basel and St. Gallen
+- Add 2021 data of Basel
+- Add new waste types for Basel: incombustibles, bulky goods and chipping service
 
 ## 4.2.1 - 2021-01-31
 ### Fixed
