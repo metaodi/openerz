@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Added
 - Add new `/api/region` routes for Zurich, Thalwil, Basel and St. Gallen
-- Add 2021 data of Basel
+- Add 2021 data of Basel (incl. recycling stations)
 - Add new waste types for Basel: incombustibles, bulky goods and chipping service
 
 ### Removed
