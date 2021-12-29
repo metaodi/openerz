@@ -24,204 +24,36 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
-    describe('/api/tramstops is working', function() {
-        it('should return something', async function() {
+    describe('/api/stations API with region parameter', function() {
+        it('should return entry for zurich', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/tramstops'
+                url: '/api/stations?region=zurich'
             });
             response.statusCode.should.equal(200);
-            response.result.should.not.be.empty();
+            response.result.result[0].should.deepEqual({
+                zip: '8001',
+                name: 'Bahnhofquai vis-à-vis 5',
+                kind: { oil: false, metal: true, glass: true },
+                region: 'zurich'
+                     
+            });
         });
-    });
-
-    describe('/api/tramstops with Accept header application/vnd.geo+json returns geojson', function() {
-        it('should return something', async function() {
+        it('should return entry for basel', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/tramstops',
-                headers: {
-                    'Accept': 'application/vnd.geo+json'
-                }
+                url: '/api/stations?region=basel'
             });
             response.statusCode.should.equal(200);
-            var result = JSON.parse(response.payload);
-            result.features.length.should.equal(11);
-            result.name.should.equal('stzh.poi_cargoetram_view');
-            result.type.should.equal('FeatureCollection');
-        });
-    });
-
-    describe('/api/tramstops.json is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/tramstops.json?limit=1'
-            });
-            response.statusCode.should.equal(200);
-            var result = JSON.parse(response.payload);
-            result._metadata.total_count.should.equal(11);
-            result.result.length.should.equal(1);
-            (result['result'][0]).should.deepEqual({
-                'name': 'Zürich, Wartau',
-                'zip': '8049',
-                'city': 'Zürich',
-                'website': 'https://www.stadt-zuerich.ch/ted/de/index/entsorgung_recycling/publikationen_broschueren/fahrplan_cargo_tram_und_e_tram.html',
-                'coordinates': [8.4916264363, 47.4027635986, 0]
+            response.result.result[0].should.deepEqual({
+                zip: '4057',
+                name: 'Hochbergerstrasse 75',
+                kind: { oil: false, metal: true, glass: true },
+                region: 'basel'
+                     
             });
         });
     });
-    describe('/api/tramstops.json pagination is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/tramstops.json?limit=1&offset=10'
-            });
-            response.statusCode.should.equal(200);
-            var result = JSON.parse(response.payload);
-            result.result.length.should.equal(1);
-            (result['result'][0]).should.deepEqual({
-                'name': 'Zürich, Tramdepot Hard',
-                'zip': '8005',
-                'city': 'Zürich',
-                'website': 'https://www.stadt-zuerich.ch/ted/de/index/entsorgung_recycling/publikationen_broschueren/fahrplan_cargo_tram_und_e_tram.html',
-                'coordinates': [
-                    8.5197705253,
-                    47.3918446254,
-                    0
-                ]
-            });
-        });
-    });
-
-    describe('/api/tramstops.geojson is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/tramstops.geojson'
-            });
-            response.statusCode.should.equal(200);
-            var result = JSON.parse(response.payload);
-            result.features.length.should.equal(11);
-            result.name.should.equal('stzh.poi_cargoetram_view');
-            result.type.should.equal('FeatureCollection');
-            (result.features[0]).should.containDeep({
-                'type': 'Feature',
-                'geometry': {
-                    'type': 'Point',
-                    'coordinates': [8.4916264363, 47.4027635986, 0]
-                },
-                'properties': {
-                    'name': 'Zürich, Wartau',
-                    'ort': 'Zürich',
-                    'plz': '8049',
-                    'www': 'https://www.stadt-zuerich.ch/ted/de/index/entsorgung_recycling/publikationen_broschueren/fahrplan_cargo_tram_und_e_tram.html'
-                } 
-            });
-        });
-    });
-
-    describe('/api/tramstops.geojson with limit is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/tramstops.geojson?limit=2'
-            });
-            response.statusCode.should.equal(200);
-            var result = JSON.parse(response.payload);
-            result.features.length.should.equal(2);
-            result.name.should.equal('stzh.poi_cargoetram_view');
-            result.type.should.equal('FeatureCollection');
-            (result.features[0]).should.containDeep({
-                'type': 'Feature',
-                'geometry': {
-                    'type': 'Point',
-                    'coordinates': [8.4916264363, 47.4027635986, 0]
-                },
-                'properties': {
-                    'name': 'Zürich, Wartau',
-                    'ort': 'Zürich',
-                    'plz': '8049',
-                    'www': 'https://www.stadt-zuerich.ch/ted/de/index/entsorgung_recycling/publikationen_broschueren/fahrplan_cargo_tram_und_e_tram.html'
-                } 
-            });
-        });
-    });
-
-    describe('/api/tramstops.test does not work', function() {
-        it('should return an error', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/tramstops.test'
-            });
-            response.statusCode.should.equal(406);
-        });
-    });
-
-    describe('/api/wastebins is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/wastebins'
-            });
-            response.statusCode.should.equal(200);
-            response.should.not.be.empty();
-        });
-    });
-
-    describe('/api/wastebins.json is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/wastebins.json?limit=5'
-            });
-            response.statusCode.should.equal(200);
-            var result = JSON.parse(response.payload);
-            result.result.length.should.equal(5);
-            result._metadata.total_count.should.equal(4063);
-            (result['result'][0]).should.deepEqual({
-                'type': 'Zuerikuebel',
-                'volume': 'L70',
-                'location': 'Haltestelle Bahnhof Tiefenbrunnen',
-                'remark': null,
-                'coordinates': [
-                    8.5609016937,
-                    47.350094889
-                ]
-            });
-        });
-    });
-
-    describe('/api/wastebins.geojson is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/wastebins.geojson?limit=3'
-            });
-            response.statusCode.should.equal(200);
-            var result = JSON.parse(response.payload);
-            result.features.length.should.equal(3);
-            result.name.should.equal('erz.abfallgefaess_p');
-            result.type.should.equal('FeatureCollection');
-            (result.features[0]).should.containDeep({
-                'type': 'Feature',
-                'geometry': {
-                    'type': 'Point',
-                    'coordinates': [
-                        8.5609016937,
-                        47.350094889
-                    ]
-                },
-                'properties': {
-                    'bemerkung': null,
-                    'ort': 'Haltestelle Bahnhof Tiefenbrunnen',
-                    'gefaesstyp_txt': 'Zuerikuebel',
-                    'dimension_txt': 'L70'
-                }
-            });
-        });
-    });
-
 
     describe('/api/calendar is working', function() {
         it('should return something', async function() {
@@ -545,18 +377,73 @@ describe('make sure the server is running (test.api)', function() {
                 '_metadata': {'total_count': 1},
                 'result': [{
                     'date': '2016-01-04',
+                    'region': 'zurich',
                     'zip': 8038,
+                    'area': '8038',
                     'type': 'cardboard'
                 }]
             });
         });
     });
 
-    describe('/api/calendar/cardboard.json with zip and tour parameter', function() {
+    describe('/api/calendar.json API with region parameter', function() {
+        it('should return entry for zurich with area=8038', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=zurich&types=paper&area=8038&lang=de&start=2021-01-01&end=2021-12-31&limit=1&sort=date'
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 25},
+                'result': [{
+                    'date': '2021-01-11',
+                    'region': 'zurich',
+                    'zip': 8038,
+                    'area': '8038',
+                    'type': 'paper'
+                }]
+            });
+        });
+        it('should return entry for thalwil with area=b', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=thalwil&types=cardboard&area=b&lang=de&start=2021-01-01&end=2021-12-31&limit=1&sort=date'
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 12},
+                'result': [{
+                    'date': '2021-01-14',
+                    'region': 'thalwil',
+                    'zip': 8800,
+                    'area': 'b',
+                    'type': 'cardboard'
+                }]
+            });
+        });
+        it('should return entry for basel with area=e', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=basel&types=waste&area=e&lang=de&start=2021-01-01&end=2021-12-31&limit=1&sort=date'
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 103},
+                'result': [{
+                    'date': '2021-01-05',
+                    'region': 'basel',
+                    'area': 'e',
+                    'type': 'waste'
+                }]
+            });
+        });
+    });
+
+    describe('/api/calendar/cardboard.json with zip and area parameter', function() {
         it('should return a correct entry for 8800', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/calendar/cardboard.json?zip=8800&tour=b&limit=1&sort=date&end=2018-12-31'
+                url: '/api/calendar/cardboard.json?zip=8800&area=b&limit=1&sort=date&end=2018-12-31'
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
@@ -564,28 +451,30 @@ describe('make sure the server is running (test.api)', function() {
                 'result': [{
                     'date': '2018-01-11',
                     'zip': 8800,
-                    'tour': 'b',
+                    'region': 'thalwil',
+                    'area': 'b',
                     'type': 'cardboard'
                 }]
             });
         });
-        it('should return a correct entry for 8800 with uppercase tour', async function() {
+        it('should return a correct entry for 8800 with uppercase area', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/calendar/cardboard.json?zip=8800&tour=B&limit=1&sort=date&end=2018-12-31'
+                url: '/api/calendar/cardboard.json?zip=8800&area=B&limit=1&sort=date&end=2018-12-31'
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
                 '_metadata': {'total_count': 12},
                 'result': [{
                     'date': '2018-01-11',
+                    'region': 'thalwil',
                     'zip': 8800,
-                    'tour': 'b',
+                    'area': 'b',
                     'type': 'cardboard'
                 }]
             });
         });
-        it('should return a correct entry for 8800 without tour parameter', async function() {
+        it('should return a correct entry for 8800 without area parameter', async function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar/cardboard.json?zip=8800&limit=1&sort=date&end=2018-12-31'
@@ -595,49 +484,121 @@ describe('make sure the server is running (test.api)', function() {
                 '_metadata': {'total_count': 36},
                 'result': [{
                     'date': '2018-01-04',
+                    'region': 'thalwil',
                     'zip': 8800,
-                    'tour': 'a',
+                    'area': 'a',
                     'type': 'cardboard'
                 }]
             });
         });
     });
-    describe('/api/calendar.json with zip and tour parameter', function() {
+
+    describe('/api/calendar.json with zip and area parameter', function() {
         it('should return a correct entry for 8800', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/calendar.json?zip=8800&tour=a&limit=1&sort=date&end=2018-12-31'
+                url: '/api/calendar.json?zip=8800&area=a&limit=1&sort=date&end=2018-12-31'
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
                 '_metadata': {'total_count': 132},
                 'result': [{
                     'date': '2018-01-03',
+                    'region': 'thalwil',
                     'zip': 8800,
-                    'tour': '',
+                    'area': '',
                     'type': 'organic'
                 }]
             });
         });
-        it('should return a correct entries for 8800 (without and without tour)', async function() {
+        it('should return a correct entries for 8800 (without and without area)', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/calendar.json?zip=8800&tour=a&limit=2&start=2018-06-01&end=2018-06-30&sort=date'
+                url: '/api/calendar.json?zip=8800&area=a&limit=2&start=2018-06-01&end=2018-06-30&sort=date'
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
                 '_metadata': {'total_count': 11},
                 'result': [{
                     'date': '2018-06-02',
+                    'region': 'thalwil',
                     'zip': 8800,
-                    'tour': '',
+                    'area': '',
                     'type': 'paper'
                 },
                 {
                     'date': '2018-06-04',
+                    'region': 'thalwil',
                     'zip': 8800,
-                    'tour': 'a',
+                    'area': 'a',
                     'type': 'waste'
+                }]
+            });
+        });
+    });
+
+    describe('/api/region/basel/calendar.json API', function() {
+        it('should return a correct entry', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/region/basel/calendar.json?area=a&limit=1&sort=date&end=2021-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 396},
+                'result': [{
+                    'date': '2020-01-02',
+                    'region': 'basel',
+                    'area': 'a',
+                    'type': 'organic'
+                }]
+            });
+        });
+        it('should return a correct entries for bulky goods', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/region/basel/calendar.json?area=a&limit=1&sort=date&end=2021-12-31&types=bulky_goods'
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 34},
+                'result': [{
+                    'date': '2020-01-15',
+                    'region': 'basel',
+                    'area': 'a',
+                    'type': 'bulky_goods'
+                }]
+            });
+        });
+        it('should return a correct entries for chipping service', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/region/basel/calendar.json?area=f&limit=1&sort=date&end=2021-12-31&types=chipping_service'
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 10},
+                'result': [{
+                    'date': '2020-02-26',
+                    'region': 'basel',
+                    'area': 'f',
+                    'type': 'chipping_service'
+                }]
+            });
+        });
+        it('should return a correct entries for incombustibles', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/region/basel/calendar.json?area=f&limit=1&sort=date&end=2021-12-31&types=incombustibles'
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 22},
+                'result': [{
+                    'date': '2020-01-17',
+                    'region': 'basel',
+                    'area': 'f',
+                    'type': 'incombustibles'
                 }]
             });
         });

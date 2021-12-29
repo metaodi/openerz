@@ -20,7 +20,7 @@
             }
         ],
         "complexity": ["error", 5],
-        "max-lines-per-function": ["error", 30],
+        "max-lines-per-function": ["error", 35],
         "max-len": [
             "error",
             {
