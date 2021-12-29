@@ -24,6 +24,37 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
+    describe('/api/stations API with region parameter', function() {
+        it('should return entry for zurich', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/stations?region=zurich'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result[0].should.deepEqual({
+                zip: '8001',
+                name: 'Bahnhofquai vis-à-vis 5',
+                kind: { oil: false, metal: true, glass: true },
+                region: 'zurich'
+                     
+            });
+        });
+        it('should return entry for basel', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/stations?region=basel'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result[0].should.deepEqual({
+                zip: '4057',
+                name: 'Hochbergerstrasse 75',
+                kind: { oil: false, metal: true, glass: true },
+                region: 'basel'
+                     
+            });
+        });
+    });
+
     describe('/api/calendar is working', function() {
         it('should return something', async function() {
             var response = await server.inject({
@@ -401,7 +432,6 @@ describe('make sure the server is running (test.api)', function() {
                 'result': [{
                     'date': '2021-01-05',
                     'region': 'basel',
-                    'zip': 4000,
                     'area': 'e',
                     'type': 'waste'
                 }]
@@ -519,7 +549,6 @@ describe('make sure the server is running (test.api)', function() {
                 'result': [{
                     'date': '2020-01-02',
                     'region': 'basel',
-                    'zip': 4000,
                     'area': 'a',
                     'type': 'organic'
                 }]
@@ -536,7 +565,6 @@ describe('make sure the server is running (test.api)', function() {
                 'result': [{
                     'date': '2020-01-15',
                     'region': 'basel',
-                    'zip': 4000,
                     'area': 'a',
                     'type': 'bulky_goods'
                 }]
@@ -553,7 +581,6 @@ describe('make sure the server is running (test.api)', function() {
                 'result': [{
                     'date': '2020-02-26',
                     'region': 'basel',
-                    'zip': 4000,
                     'area': 'f',
                     'type': 'chipping_service'
                 }]
@@ -570,7 +597,6 @@ describe('make sure the server is running (test.api)', function() {
                 'result': [{
                     'date': '2020-01-17',
                     'region': 'basel',
-                    'zip': 4000,
                     'area': 'f',
                     'type': 'incombustibles'
                 }]

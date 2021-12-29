@@ -17,6 +17,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Removed
 - Removed geo route `/api/wastebins`
 - Removed geo route `/api/tramstops`
+- Removed `pickup` attribute from `/api/stations` endpoint
 
 ## 4.2.1 - 2021-01-31
 ### Fixed
