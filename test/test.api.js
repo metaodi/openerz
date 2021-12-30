@@ -53,6 +53,20 @@ describe('make sure the server is running (test.api)', function() {
                      
             });
         });
+        it('should return entry for stgallen', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/stations?region=stgallen'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result[0].should.deepEqual({
+                zip: '',
+                name: 'Sturzeneggstrasse',
+                kind: { oil: false, metal: true, glass: true },
+                region: 'stgallen'
+                     
+            });
+        });
     });
 
     describe('/api/calendar is working', function() {
@@ -434,6 +448,22 @@ describe('make sure the server is running (test.api)', function() {
                     'region': 'basel',
                     'area': 'e',
                     'type': 'waste'
+                }]
+            });
+        });
+        it('should return entry for stgallen with area=f', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=stgallen&types=cardboard&area=f&lang=de&start=2021-01-01&end=2021-12-31&limit=1&sort=date'
+            });
+            response.statusCode.should.equal(200);
+            response.result.should.deepEqual({
+                '_metadata': {'total_count': 13},
+                'result': [{
+                    'date': '2021-01-25',
+                    'region': 'stgallen',
+                    'area': 'f',
+                    'type': 'cardboard'
                 }]
             });
         });

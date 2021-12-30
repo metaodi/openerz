@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## [Unreleased][unreleased]
 ## Added
 - New data for 2022 for Zurich
+- Add data of St. Gallen
 
 ## 5.0.0 - 2021-12-29
 ### Changed
