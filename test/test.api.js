@@ -32,9 +32,9 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             response.result.result[0].should.deepEqual({
-                zip: '8001',
+                zip: 8001,
                 name: 'Bahnhofquai vis-à-vis 5',
-                kind: { oil: false, metal: true, glass: true },
+                kind: { oil: false, metal: true, glass: true, textile: false },
                 region: 'zurich'
                      
             });
@@ -46,9 +46,9 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             response.result.result[0].should.deepEqual({
-                zip: '4057',
+                zip: 4057,
                 name: 'Hochbergerstrasse 75',
-                kind: { oil: false, metal: true, glass: true },
+                kind: { oil: false, metal: true, glass: true, textile: false },
                 region: 'basel'
                      
             });
@@ -62,8 +62,22 @@ describe('make sure the server is running (test.api)', function() {
             response.result.result[0].should.deepEqual({
                 zip: '',
                 name: 'Sturzeneggstrasse',
-                kind: { oil: false, metal: true, glass: true },
+                kind: { oil: false, metal: true, glass: true, textile: false },
                 region: 'stgallen'
+                     
+            });
+        });
+        it('should return entry for thalwil', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/stations?region=thalwil'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result[0].should.deepEqual({
+                zip: 8800,
+                name: 'Hofwiesenstrasse',
+                kind: { oil: false, metal: true, glass: true, textile: true },
+                region: 'thalwil'
                      
             });
         });
