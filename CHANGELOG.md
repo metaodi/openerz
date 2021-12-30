@@ -4,12 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
-## Added
+
+## 5.1.0 - 2021-12-30
+### Added
 - New data for 2022 for Zurich
 - Add data of St. Gallen
 - Add data of Thalwil 2022
 
-## Changed
+### Changed
 - The zip code returned by `/api/stations` is now an integer
 
 ## 5.0.0 - 2021-12-29
