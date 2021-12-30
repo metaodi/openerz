@@ -34,7 +34,7 @@ describe('make sure the server is running (test.api)', function() {
             response.result.result[0].should.deepEqual({
                 zip: 8001,
                 name: 'Bahnhofquai vis-à-vis 5',
-                kind: { oil: false, metal: true, glass: true, textile: false },
+                kind: { oil: false, metal: true, glass: true, textile: true },
                 region: 'zurich'
                      
             });
