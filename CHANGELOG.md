@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## 5.1.1 - 2021-12-30
+### Changed
+- Updated some description texts
+
 ## 5.1.0 - 2021-12-30
 ### Added
 - New data for 2022 for Zurich
