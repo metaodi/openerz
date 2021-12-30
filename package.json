@@ -1,6 +1,6 @@
 {
   "name": "openerz",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "description": "Open ERZ API",
   "main": "index.js",
   "scripts": {
