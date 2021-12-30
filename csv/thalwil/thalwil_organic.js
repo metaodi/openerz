@@ -16,7 +16,5 @@ while (organicDate.year() <= startOfNextYear.year()) {
 }
 
 //special handling for december
-console.log('8800,2021-12-01,');
-console.log('8800,2021-12-08,');
-console.log('8800,2021-12-15,');
-console.log('8800,2021-12-22,');
+console.log('8800,2022-12-07,');
+console.log('8800,2022-12-21,');
