@@ -83,6 +83,92 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
+    describe('/api/parameter/regions is working', function() {
+        it('should return the correct parameters', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/parameter/regions'
+            });
+            response.statusCode.should.equal(200);
+            response.result._metadata.total_count.should.equal(4);
+            response.result.result.length.should.equal(4);
+            response.result.result.should.deepEqual([
+                'basel',
+                'stgallen',
+                'thalwil',
+                'zurich'
+            ]);
+        });
+    });
+
+    describe('/api/parameter/types is working', function() {
+        it('should return the correct parameter', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/parameter/types'
+            });
+            response.statusCode.should.equal(200);
+            response.result._metadata.total_count.should.equal(12);
+            response.result.result.length.should.equal(12);
+            response.result.result.should.deepEqual([
+                'bulky_goods',
+                'cardboard',
+                'cargotram',
+                'chipping_service',
+                'etram',
+                'incombustibles',
+                'metal',
+                'organic',
+                'paper',
+                'special',
+                'textile',
+                'waste'
+            ]);
+        });
+        it('should return the correct parameter with region basel', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/parameter/types?region=basel'
+            });
+            response.statusCode.should.equal(200);
+            response.result._metadata.total_count.should.equal(8);
+            response.result.result.length.should.equal(8);
+            response.result.result.should.deepEqual([
+                'bulky_goods',
+                'chipping_service',
+                'incombustibles',
+                'metal',
+                'organic',
+                'paper',
+                'textile',
+                'waste'
+            ]);
+        });
+        it('should return the correct parameter with region thalwil', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/parameter/types?region=thalwil'
+            });
+            response.statusCode.should.equal(200);
+            response.result._metadata.total_count.should.equal(5);
+            response.result.result.length.should.equal(5);
+            response.result.result.should.deepEqual([
+                'cardboard',
+                'metal',
+                'organic',
+                'paper',
+                'waste',
+            ]);
+        });
+        it('should return an error with incorrect region', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/parameter/types?region=xyz'
+            });
+            response.statusCode.should.equal(400);
+        });
+    });
+
     describe('/api/calendar is working', function() {
         it('should return something', async function() {
             var response = await server.inject({

@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+- New routes `/api/parameter/regions` and `/api/parameter/types` to have an endpoint to return all valid parameter values
 
 ## [5.1.2] - 2021-12-30
 ### Changed
