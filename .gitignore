@@ -1,6 +1,4 @@
-.vagrant/
 npm-debug.log
 node_modules/
 .env
 data/
-certs/
