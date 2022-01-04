@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [5.2.0] - 2022-01-04
 ### Added
 - New routes `/api/parameter/regions` and `/api/parameter/types` to have an endpoint to return all valid parameter values
 
@@ -334,7 +336,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v5.1.2...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v5.2.0...HEAD
+[5.2.0]: https://github.com/metaodi/openerz/compare/v5.1.2...v5.2.0
 [5.1.2]: https://github.com/metaodi/openerz/compare/v5.1.1...v5.1.2
 [5.1.1]: https://github.com/metaodi/openerz/compare/v5.1.0...v5.1.1
 [5.1.0]: https://github.com/metaodi/openerz/compare/v5.0.0...v5.1.0
