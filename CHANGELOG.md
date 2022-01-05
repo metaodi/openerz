@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [5.3.0] - 2022-01-05
 ### Added
 - New data for 2022 for Basel
 
