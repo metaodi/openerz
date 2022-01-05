@@ -4,8 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+- New data for 2022 for Basel
+
 ### Changed
 - Enable the "Try it out" mode by default
+
+### Removed
+- Removed `textile` as waste type for Basel
 
 ## [5.2.0] - 2022-01-04
 ### Added
