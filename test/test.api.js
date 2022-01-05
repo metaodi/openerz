@@ -46,8 +46,8 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             response.result.result[0].should.deepEqual({
-                zip: 4057,
-                name: 'Hochbergerstrasse 75',
+                zip: 4058,
+                name: 'Kirchgasse 9',
                 kind: { oil: false, metal: true, glass: true, textile: false },
                 region: 'basel'
                      
@@ -131,8 +131,8 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/parameter/types?region=basel'
             });
             response.statusCode.should.equal(200);
-            response.result._metadata.total_count.should.equal(8);
-            response.result.result.length.should.equal(8);
+            response.result._metadata.total_count.should.equal(7);
+            response.result.result.length.should.equal(7);
             response.result.result.should.deepEqual([
                 'bulky_goods',
                 'chipping_service',
@@ -140,7 +140,6 @@ describe('make sure the server is running (test.api)', function() {
                 'metal',
                 'organic',
                 'paper',
-                'textile',
                 'waste'
             ]);
         });
@@ -542,7 +541,7 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                '_metadata': {'total_count': 103},
+                '_metadata': {'total_count': 104},
                 'result': [{
                     'date': '2021-01-05',
                     'region': 'basel',
@@ -675,7 +674,7 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                '_metadata': {'total_count': 396},
+                '_metadata': {'total_count': 397},
                 'result': [{
                     'date': '2020-01-02',
                     'region': 'basel',
