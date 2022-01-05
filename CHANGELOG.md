@@ -346,7 +346,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v5.2.0...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v5.3.0...HEAD
+[5.3.0]: https://github.com/metaodi/openerz/compare/v5.2.0...v5.3.0
 [5.2.0]: https://github.com/metaodi/openerz/compare/v5.1.2...v5.2.0
 [5.1.2]: https://github.com/metaodi/openerz/compare/v5.1.1...v5.1.2
 [5.1.1]: https://github.com/metaodi/openerz/compare/v5.1.0...v5.1.1
