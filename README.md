@@ -5,7 +5,7 @@
 Usage examples
 ==============
 
-Get all **organic** waste collections in **Wollishofen** (zip code 8038) as **JSON** sorted by descending date:
+Get all **organic** waste collections in **Wollishofen** (zip code 8038) as **JSON** sorted by descending **date**:
 
 ```
 https://openerz.metaodi.ch/api/calendar.json?zip=8038&types=organic&sort=date:desc&offset=0&limit=0&lang=de
@@ -15,6 +15,12 @@ Get all **cardboard** and **paper** collection date as **iCal** calendar (.ics) 
 
 ```
 https://openerz.metaodi.ch/api/calendar.ics?zip=8800&area=b&types=cardboard&types=paper&sort=date&offset=0&limit=0&lang=de
+```
+
+Get all waste collections for **bulky goods** and **incombustibles** in **Basel (area F)** as **JSON** sorted by ascending **date**:
+
+```
+https://openerz.metaodi.ch/api/calendar.json?region=basel&area=f&types=bulky_goods&types=incombustibles&sort=date
 ```
 
 Installation
