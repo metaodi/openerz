@@ -4,8 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [5.4.0] - 2022-01-09
 ### Changed
 - Make sure `types` is displayed as multiselect on Swagger UI
+- Update npm dependencies
 
 ## [5.3.0] - 2022-01-05
 ### Added
@@ -348,7 +351,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v5.3.0...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v5.4.0...HEAD
+[5.4.0]: https://github.com/metaodi/openerz/compare/v5.3.0...v5.4.0
 [5.3.0]: https://github.com/metaodi/openerz/compare/v5.2.0...v5.3.0
 [5.2.0]: https://github.com/metaodi/openerz/compare/v5.1.2...v5.2.0
 [5.1.2]: https://github.com/metaodi/openerz/compare/v5.1.1...v5.1.2
