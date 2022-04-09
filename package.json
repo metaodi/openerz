@@ -31,7 +31,7 @@
     "icalendar": "^0.7.1",
     "joi": "^17.5.0",
     "localize": "^0.4.7",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "taffy": "^2.6.2",
     "underscore": "^1.13.2"
   },
