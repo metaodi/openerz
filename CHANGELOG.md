@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Changed
+- Update npm dependencies
+
+### Removed
+- Support for JSONP was removed
 
 ## [5.4.0] - 2022-01-09
 ### Changed
