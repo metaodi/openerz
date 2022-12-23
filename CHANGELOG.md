@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Update npm dependencies
 
 ### Removed
-- Support for JSONP was removed
+- BC-break: Support for JSONP was removed
 
 ## [5.4.0] - 2022-01-09
 ### Changed
