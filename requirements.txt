@@ -1,0 +1,5 @@
+requests
+icalendar
+psycopg2-binary
+python-dotenv
+docopts

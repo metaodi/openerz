@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "pretest": "NODE_ENV='test' ./start_test_database.sh",
     "test": "NODE_ENV='test' mocha -R spec -t 10000 --exit",
+    "posttest": "docker stop openerz-pg-test",
     "lint": "eslint './**/*.js'"
   },
   "repository": {

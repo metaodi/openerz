@@ -4,3 +4,7 @@ node_modules/
 data/
 pyenv/
 __pycache__
+csv/basel/basel.csv
+csv/basel/basel_stationen.csv
+csv/zurich/zurich.csv
+csv/zurich/zurich_stationen.csv
