@@ -46,7 +46,7 @@ def create_table(cur, table, drop=False, purge=False):
         query = f"""
         CREATE TABLE IF NOT EXISTS {table} (
             region text,
-            zip integer,
+            zip text,
             area text,
             station text,
             waste_type text,
@@ -63,7 +63,7 @@ def create_table(cur, table, drop=False, purge=False):
         query = f"""
         CREATE TABLE IF NOT EXISTS {table} (
             region text,
-            zip integer,
+            zip text,
             name text,
             oil boolean,
             metal boolean,
