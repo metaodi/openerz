@@ -17,7 +17,6 @@ CSV_URL = "https://data.bs.ch/explore/dataset/100096/download/?format=csv&timezo
 r = requests.get(CSV_URL)
 reader = csv.DictReader(StringIO(r.text), delimiter=',')
 
-
 header = [
     'region',
     'zip',
@@ -26,7 +25,6 @@ header = [
     'waste_type',
     'col_date',
 ]
-
 
 waste_type_map = {
     'Kehrichtabfuhr': 'waste',
@@ -50,7 +48,7 @@ with open(csv_path, 'w') as f:
         delimiter=',',
         quotechar='"',
         lineterminator='\r\n',
-        quoting=csv.QUOTE_MINIMAL
+        quoting=csv.QUOTE_NONNUMERIC
     )
     writer.writeheader()
 
@@ -87,7 +85,7 @@ with open(csv_path, 'w') as f:
         delimiter=',',
         quotechar='"',
         lineterminator='\r\n',
-        quoting=csv.QUOTE_MINIMAL
+        quoting=csv.QUOTE_NONNUMERIC
     )
     writer.writeheader()
 

@@ -40,7 +40,7 @@ with open(csv_path, 'w') as f:
         delimiter=',',
         quotechar='"',
         lineterminator='\r\n',
-        quoting=csv.QUOTE_MINIMAL
+        quoting=csv.QUOTE_NONNUMERIC
     )
     writer.writeheader()
 
@@ -86,7 +86,7 @@ with open(csv_path, 'w') as f:
         delimiter=',',
         quotechar='"',
         lineterminator='\r\n',
-        quoting=csv.QUOTE_MINIMAL
+        quoting=csv.QUOTE_NONNUMERIC
     )
     writer.writeheader()
 
