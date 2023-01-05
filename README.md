@@ -49,6 +49,9 @@ Update the CSVs in the `csv` directory by appending the new data to the correspo
 
 OpenERZ uses an in-memory database, which is initialized at startup based on the CSV files in the repository.
 
+Some regions are updated using Python scripts.
+You might want to setup a python virtualenv using the `python_setup.sh` script.
+
 Release
 =======
 

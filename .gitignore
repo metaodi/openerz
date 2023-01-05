@@ -2,3 +2,13 @@ npm-debug.log
 node_modules/
 .env
 data/
+pyenv/
+__pycache__
+csv/basel/basel.csv
+csv/basel/basel_stationen.csv
+csv/zurich/zurich.csv
+csv/zurich/zurich_stationen.csv
+csv/thalwil/calendar.ics
+csv/thalwil/thalwil.csv
+csv/stgallen/stgallen.csv
+csv/stgallen/stgallen_stationen.csv

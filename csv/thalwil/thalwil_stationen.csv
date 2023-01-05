@@ -1,0 +1,13 @@
+region,zip,name,oil,glass,metal,textile
+thalwil,8800,"Hofwiesenstrasse",False,True,True,True
+thalwil,8800,"Sihlhaldenstrasse",True,True,True,True
+thalwil,8800,"Säumerstrasse, Armbrustschützen",True,True,True,True
+thalwil,8800,"Seehalden-/Alpenstrasse",False,True,True,True
+thalwil,8800,"Breitelistrasse",True,True,True,True
+thalwil,8800,"Kronenbergstrasse",False,True,True,True
+thalwil,8800,"Florastrasse, bei Coop",False,True,True,True
+thalwil,8800,"Alter Schiessstand, Dorfstrasse 71",True,True,True,True
+thalwil,8800,"Häuslerstrasse",False,True,True,True
+thalwil,8800,"Schwandelstrasse, bei Migros",,True,True,True
+thalwil,8800,"Tödistrasse, beim Schulhaus Feld",False,True,True,True
+thalwil,8800,"Bahnhofareal, beim Güterschuppen",False,False,False,True
