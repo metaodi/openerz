@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## [6.0.3] - 2023-01-06
+### Changed
+- Update heroku deploy action
+
 ## [6.0.2] - 2023-01-06
 ### Changed
 - Release trigger
