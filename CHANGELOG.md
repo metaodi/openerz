@@ -4,14 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [6.0.0] - 2023-01-06
 ### Added
 - Zurich data of 2023
+- Basel data of 2023
+- Thalwil data of 2023
 
 ### Changed
 - Update npm dependencies
+- BC-break: Calendar entries now have always the same attributes, even when they are empty.
+- All API requests have a described response model
+- Migrate to PostgreSQL as database
 
 ### Removed
 - BC-break: Support for JSONP was removed
+- Taffy as in-memory database
 
 ## [5.4.0] - 2022-01-09
 ### Changed
@@ -359,7 +367,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v5.4.0...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v6.0.0...HEAD
+[6.0.0]: https://github.com/metaodi/openerz/compare/v5.4.0...v6.0.0
 [5.4.0]: https://github.com/metaodi/openerz/compare/v5.3.0...v5.4.0
 [5.3.0]: https://github.com/metaodi/openerz/compare/v5.2.0...v5.3.0
 [5.2.0]: https://github.com/metaodi/openerz/compare/v5.1.2...v5.2.0
