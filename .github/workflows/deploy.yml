@@ -3,6 +3,7 @@ name: Deploy to heroku
 on:
   release:
     types: [created]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -31,7 +32,7 @@ jobs:
       - name: Run tests
         run: npm test
         
-      - uses: akhileshns/heroku-deploy@v3.6.8
+      - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "openerz"
