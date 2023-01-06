@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## [6.0.4] - 2023-01-06
+### Changed
+- Renamed branch from `master` to `main`
+
 ## [6.0.3] - 2023-01-06
 ### Changed
 - Update heroku deploy action
@@ -379,7 +383,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v6.0.3...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v6.0.4...HEAD
+[6.0.4]: https://github.com/metaodi/openerz/compare/v6.0.3...v6.0.4
 [6.0.3]: https://github.com/metaodi/openerz/compare/v6.0.2...v6.0.3
 [6.0.2]: https://github.com/metaodi/openerz/compare/v6.0.1...v6.0.2
 [6.0.1]: https://github.com/metaodi/openerz/compare/v6.0.0...v6.0.1
