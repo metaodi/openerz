@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## [6.0.2] - 2023-01-06
+### Changed
+- Release trigger
+
 ## [6.0.1] - 2023-01-06
 ### Changed
 - Fixed tests
@@ -371,7 +375,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v6.0.1...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v6.0.2...HEAD
+[6.0.2]: https://github.com/metaodi/openerz/compare/v6.0.1...v6.0.2
 [6.0.1]: https://github.com/metaodi/openerz/compare/v6.0.0...v6.0.1
 [6.0.0]: https://github.com/metaodi/openerz/compare/v5.4.0...v6.0.0
 [5.4.0]: https://github.com/metaodi/openerz/compare/v5.3.0...v5.4.0
