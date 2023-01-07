@@ -10,8 +10,5 @@ docker run -d --rm --name openerz-pg-test -e POSTGRES_PASSWORD="test-pw" -e POST
 
 sleep 2
 
-# download
-$DIR/download_csvs.sh
-
-# import csvs
-$DIR/import_csvs.sh
+source $DIR/.env.test
+psql $DATABASE_URL < $DIR/dump.sql

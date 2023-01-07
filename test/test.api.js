@@ -485,12 +485,20 @@ describe('make sure the server is running (test.api)', function() {
         it('should return something', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/calendar.json?types=paper&types=cardboard&zip=8038&lang=de&start=2023-01-01&end=2023-01-20&sort=date'
+                url: '/api/calendar.json?types=paper&types=cardboard&zip=8038&lang=de&start=2023-01-01&end=2023-01-16&sort=date'
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                '_metadata': {'total_count': 1, 'row_count': 1},
+                '_metadata': {'total_count': 2, 'row_count': 2},
                 'result': [{
+                    'date': '2023-01-09',
+                    'region': 'zurich',
+                    'zip': 8038,
+                    'area': '8038',
+                    'type': 'paper',
+                    'station': ''
+                },
+                {
                     'date': '2023-01-16',
                     'region': 'zurich',
                     'zip': 8038,
@@ -512,7 +520,7 @@ describe('make sure the server is running (test.api)', function() {
             response.result.should.deepEqual({
                 '_metadata': {'total_count': 23, 'row_count': 1},
                 'result': [{
-                    'date': '2023-01-23',
+                    'date': '2023-01-09',
                     'region': 'zurich',
                     'zip': 8038,
                     'area': '8038',
@@ -769,6 +777,13 @@ describe('make sure the server is running (test.api)', function() {
                 'TIMEZONE-ID:Europe/Zurich',
                 'TZID:Europe/Zurich',
                 'X-WR-TIMEZONE:Europe/Zurich',
+                'BEGIN:VEVENT',
+                'SUMMARY:Altpapier\\, PLZ: 8038',
+                'LOCATION:PLZ: 8038',
+                'DESCRIPTION:Altpapier-Kalender',
+                'DTSTART;VALUE=DATE:20230109',
+                'DTEND;VALUE=DATE:20230110',
+                'END:VEVENT',
                 'BEGIN:VEVENT',
                 'SUMMARY:Karton\\, PLZ: 8038',
                 'LOCATION:PLZ: 8038',
