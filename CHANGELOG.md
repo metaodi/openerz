@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Changed
+- Refactor common python code in it's own module in `openerzpy`
+
+### Added
+- Data from Adliswil
 
 ## [6.0.5] - 2023-01-07
 ### Changed
