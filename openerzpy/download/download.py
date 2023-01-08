@@ -15,7 +15,7 @@ def _download_request(url):
     http = requests.Session()
     http.mount("https://", adapter)
     http.mount("http://", adapter)
-    headers = {'user-agent': 'Mozilla Firefox Mozilla/5.0; metaodi schulferien-api at github'}
+    headers = {'user-agent': 'Mozilla Firefox Mozilla/5.0; metaodi openerz at github'}
     r = http.get(url, headers=headers, timeout=10)
     r.raise_for_status()
     return r

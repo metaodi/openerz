@@ -4,6 +4,7 @@ node_modules/
 data/
 pyenv/
 __pycache__
+*.egg-info
 csv/basel/basel.csv
 csv/basel/basel_stationen.csv
 csv/zurich/zurich.csv
@@ -12,3 +13,5 @@ csv/thalwil/calendar.ics
 csv/thalwil/thalwil.csv
 csv/stgallen/stgallen.csv
 csv/stgallen/stgallen_stationen.csv
+csv/adliswil/calendar.ics
+csv/adliswil/adliswil.csv

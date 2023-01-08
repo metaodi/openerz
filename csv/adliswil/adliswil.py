@@ -33,6 +33,7 @@ waste_type_map = {
     'Karton': 'cardboard',
     'Sonderabfallmobil': 'special',
     'Grubengut': 'incombustibles',
+    'Häckseldienst': 'chipping_service',
 }
 
 other_categories = [
@@ -51,14 +52,14 @@ def waste_type(in_type):
 
 try:
     # iCal Download URL
-    url = "https://thalwil.entsorglos.swiss/calendar.ics"
+    url = "https://adliswil.entsorglos.swiss/calendar.ics"
     cal_path = os.path.join(__location__, 'calendar.ics')
 
     print(f"Download URL: {url}")
     dl.download_file(url, cal_path)
 
     events = parse_ics.parse_file(cal_path)
-    csv_path = os.path.join(__location__, 'thalwil.csv')
+    csv_path = os.path.join(__location__, 'adliswil.csv')
     with open(csv_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=header, quoting=csv.QUOTE_NONNUMERIC)
         writer.writeheader()
@@ -70,9 +71,9 @@ try:
             if m['zone']:
                 area = m['zone']
             out = {
-                'region': 'thalwil',
+                'region': 'adliswil',
                 'area': area,
-                'zip': '8800',
+                'zip': '8134',
                 'col_date': event['start_date'].date().isoformat(),
                 'waste_type': waste_type(m['art']),
             }

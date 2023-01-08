@@ -23,3 +23,9 @@ if [ ! -f "./csv/thalwil/thalwil.csv" ]; then
     echo "Download Thalwil data..."
     ./csv/thalwil/thalwil.py
 fi
+
+# Adliswil
+if [ ! -f "./csv/adliswil/adliswil.csv" ]; then
+    echo "Download Adliswil data..."
+    ./csv/adliswil/adliswil.py
+fi
