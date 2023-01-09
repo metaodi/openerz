@@ -112,9 +112,7 @@ def generate_muni_csv(muni, config):
         writer = csv.DictWriter(f, fieldnames=header, quoting=csv.QUOTE_NONNUMERIC)
         writer.writeheader()
         for event in events:
-            from pprint import pprint
-            pprint(event)
-            m = re.match(r'(?P<art>.*?)( (Zone|Tour) (?P<zone>.*))?$', event['summary'])
+            m = re.match(r'(?P<art>.*?)( (Zone|Tour) (?P<zone>\w+?)(?P<rest>.*))?$', event['summary'])
             if m['art'] in other_categories:
                 continue
             area = ''
