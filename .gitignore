@@ -13,5 +13,4 @@ csv/stgallen/stgallen.csv
 csv/stgallen/stgallen_stationen.csv
 csv/zimmerberg/*.ics
 csv/zimmerberg/*.csv
-!csv/zimmerberg/thalwil_stationen.csv
-!csv/zimmerberg/adliswil_stationen.csv
+!csv/zimmerberg/*_stationen.csv

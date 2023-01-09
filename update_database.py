@@ -82,15 +82,40 @@ def create_table(cur, table, drop=False, purge=False):
 
 def load_csv(cur, path, table):
     print(f"Load csv file {path} to {table}")
+    tmp_table = f"""
+        CREATE TEMP TABLE tmp_table 
+        ON COMMIT DROP
+        AS
+        SELECT * 
+        FROM {table}
+        WITH NO DATA;
+    """
+    cur.execute(tmp_table)
+
     with open(path, 'r') as f:
         copy_sql = f"""
-            COPY {table} FROM STDIN WITH
+            COPY tmp_table FROM STDIN WITH
             CSV
             HEADER
             DELIMITER AS ','
             QUOTE '"'
         """
         cur.copy_expert(sql=copy_sql, file=f)
+
+    
+    if table == 'calendar':
+        insert_sql = f"""
+            INSERT INTO calendar
+            SELECT DISTINCT ON (region, area, waste_type, col_date) *
+            FROM tmp_table
+        """
+    elif table == 'station':
+        insert_sql = f"""
+            INSERT INTO station
+            SELECT DISTINCT ON (region, name) *
+            FROM tmp_table
+        """
+    cur.execute(insert_sql)
 
 
 def cleanup_table(cur, table, region):

@@ -24,6 +24,24 @@ municipalities = {
     'horgen': {
         'zip': '8810',
     },
+    # 'kilchberg': {
+    #     'zip': '8802',
+    # },
+    'langnau': {
+        'zip': '8135',
+    },
+    'richterswil': {
+        'zip': '8942',
+    },
+    'rueschlikon': {
+        'zip': '8803',
+    },
+    'waedenswil': {
+        'zip': '8820',
+    },
+    'oberrieden': {
+        'zip': '8942',
+    },
     'thalwil': {
         'zip': '8800',
     },
@@ -40,21 +58,19 @@ header = [
 
 waste_type_map = {
     'Kehricht': 'waste',
-    'Kehricht Mo': 'waste',
-    'Kehricht Do': 'waste',
     'Grüngut': 'organic',
     'Metall': 'metal',
     'Papier': 'paper',
     'Karton': 'cardboard',
     'Sonderabfallmobil': 'special',
     'Grubengut': 'incombustibles',
-    'Grubengut (mineralische Abfälle)': 'incombustibles',
     'Häckseldienst': 'chipping_service',
 }
 
 other_categories = [
     'Repair',
     'Repair Café',
+    'Repair-Café',
     'Herbst-Flohmarkt',
     'Frühlings-Flohmarkt',
     'Büchermarkt',
@@ -62,12 +78,24 @@ other_categories = [
     'Kinderkleiderbörse Herbst/Winter',
     'Spielsachenbörse',
     'Velobörse',
+    'Velorbörse',
     'Bring- und Holtag',
+    'Wertstoffsammelstelle',
+    'Abfälle Räbenchilbi',
+    'Christbäume',
 ]
 
 
 def waste_type(in_type):
-    return waste_type_map[in_type]
+    try:
+        return waste_type_map[in_type]
+    except KeyError:
+        # try to match the first word
+        m = re.match(r'(?P<first>[\w]*)(?P<rest>.*)?', in_type)
+        if not m:
+            raise
+        return waste_type_map[m['first']]
+
 
 
 def generate_muni_csv(muni, config):
@@ -84,6 +112,8 @@ def generate_muni_csv(muni, config):
         writer = csv.DictWriter(f, fieldnames=header, quoting=csv.QUOTE_NONNUMERIC)
         writer.writeheader()
         for event in events:
+            from pprint import pprint
+            pprint(event)
             m = re.match(r'(?P<art>.*?)( (Zone|Tour) (?P<zone>.*))?$', event['summary'])
             if m['art'] in other_categories:
                 continue
