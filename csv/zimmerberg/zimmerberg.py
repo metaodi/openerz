@@ -31,7 +31,7 @@ municipalities = {
         'zip': '8135',
     },
     'richterswil': {
-        'zip': '8942',
+        'zip': '8805',
     },
     'rueschlikon': {
         'zip': '8803',
