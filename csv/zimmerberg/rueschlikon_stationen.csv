@@ -1,1 +1,6 @@
 region,zip,name,oil,glass,metal,textile
+rueschlikon,8803,"Seeanlage Marbach, Seestrasse 109",False,True,True,True
+rueschlikon,8803,"Parkplatz Nidelbad, Eggirainweg 3",False,True,True,True
+rueschlikon,8803,"Parkplatz SBB, Bahnhofstrasse 56",False,True,True,True
+rueschlikon,8803,"Parkplatz SBB, Weingartenstrasse 11",False,True,True,True
+rueschlikon,8803,"Werkhof, Riemenstrasse 5",False,True,True,True
