@@ -1,5 +1,6 @@
 requests
 icalendar
+recurring-ical-events
 psycopg2-binary
 python-dotenv
 docopts
