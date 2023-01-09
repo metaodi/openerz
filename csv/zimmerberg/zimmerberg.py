@@ -16,6 +16,19 @@ __location__ = os.path.realpath(
     )
 )
 
+
+municipalities = {
+    'adliswil': {
+        'zip': '8134',
+    },
+    'horgen': {
+        'zip': '8810',
+    },
+    'thalwil': {
+        'zip': '8800',
+    },
+}
+
 header = [
     'region',
     'zip',
@@ -27,22 +40,29 @@ header = [
 
 waste_type_map = {
     'Kehricht': 'waste',
+    'Kehricht Mo': 'waste',
+    'Kehricht Do': 'waste',
     'Grüngut': 'organic',
     'Metall': 'metal',
     'Papier': 'paper',
     'Karton': 'cardboard',
     'Sonderabfallmobil': 'special',
     'Grubengut': 'incombustibles',
+    'Grubengut (mineralische Abfälle)': 'incombustibles',
     'Häckseldienst': 'chipping_service',
 }
 
 other_categories = [
     'Repair',
+    'Repair Café',
     'Herbst-Flohmarkt',
     'Frühlings-Flohmarkt',
     'Büchermarkt',
-    'Kinderkleiderbörse',
-    'Spielsachenbörse'
+    'Kinderkleiderbörse Frühling/Sommer',
+    'Kinderkleiderbörse Herbst/Winter',
+    'Spielsachenbörse',
+    'Velobörse',
+    'Bring- und Holtag',
 ]
 
 
@@ -50,35 +70,38 @@ def waste_type(in_type):
     return waste_type_map[in_type]
 
 
-try:
+def generate_muni_csv(muni, config):
     # iCal Download URL
-    url = "https://adliswil.entsorglos.swiss/calendar.ics"
-    cal_path = os.path.join(__location__, 'calendar.ics')
+    url = f"https://{muni}.entsorglos.swiss/calendar.ics"
+    cal_path = os.path.join(__location__, f'{muni}_calendar.ics')
 
     print(f"Download URL: {url}")
     dl.download_file(url, cal_path)
 
     events = parse_ics.parse_file(cal_path)
-    csv_path = os.path.join(__location__, 'adliswil.csv')
+    csv_path = os.path.join(__location__, f'{muni}.csv')
     with open(csv_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=header, quoting=csv.QUOTE_NONNUMERIC)
         writer.writeheader()
         for event in events:
-            m = re.match(r'(?P<art>[\w-]*)( Zone (?P<zone>.))?', event['summary'])
+            m = re.match(r'(?P<art>.*?)( (Zone|Tour) (?P<zone>.*))?$', event['summary'])
             if m['art'] in other_categories:
                 continue
             area = ''
             if m['zone']:
                 area = m['zone']
             out = {
-                'region': 'adliswil',
+                'region': muni,
                 'area': area,
-                'zip': '8134',
+                'zip': config['zip'],
                 'col_date': event['start_date'].date().isoformat(),
                 'waste_type': waste_type(m['art']),
             }
             writer.writerow(out)
 
+try:
+    for muni, config in municipalities.items():
+        generate_muni_csv(muni, config)
 except Exception as e:
     print("Error: %s" % e)
     print(traceback.format_exc())

@@ -9,9 +9,9 @@ csv/basel/basel.csv
 csv/basel/basel_stationen.csv
 csv/zurich/zurich.csv
 csv/zurich/zurich_stationen.csv
-csv/thalwil/calendar.ics
-csv/thalwil/thalwil.csv
 csv/stgallen/stgallen.csv
 csv/stgallen/stgallen_stationen.csv
-csv/adliswil/calendar.ics
-csv/adliswil/adliswil.csv
+csv/zimmerberg/*.ics
+csv/zimmerberg/*.csv
+!csv/zimmerberg/thalwil_stationen.csv
+!csv/zimmerberg/adliswil_stationen.csv
