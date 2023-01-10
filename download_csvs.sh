@@ -15,3 +15,7 @@ echo "Download St. Gallen data..."
 # Zimmerberg (District Horgen)
 echo "Download Zimmerberg data..."
 ./csv/zimmerberg/zimmerberg.py
+
+# Uster
+echo "Download Uster data..."
+./csv/uster/uster.py

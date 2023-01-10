@@ -15,7 +15,8 @@ $DIR/update_database.py -f $DIR/csv/zimmerberg/richterswil_stationen.csv --table
 $DIR/update_database.py -f $DIR/csv/zimmerberg/rueschlikon_stationen.csv --table station --region rueschlikon
 $DIR/update_database.py -f $DIR/csv/zimmerberg/waedenswil_stationen.csv --table station --region waedenswil
 $DIR/update_database.py -f $DIR/csv/zimmerberg/oberrieden_stationen.csv --table station --region oberrieden
-#$DIR/update_database.py -f $DIR/csv/zimmerberg/kilchberg_stationen.csv --table station --region kilchberg
+$DIR/update_database.py -f $DIR/csv/zimmerberg/kilchberg_stationen.csv --table station --region kilchberg
+$DIR/update_database.py -f $DIR/csv/uster/uster_stationen.csv --table station --region uster
 
 
 # Calendar
@@ -31,3 +32,4 @@ $DIR/update_database.py -f $DIR/csv/zimmerberg/rueschlikon.csv --table calendar 
 $DIR/update_database.py -f $DIR/csv/zimmerberg/waedenswil.csv --table calendar --region waedenswil
 $DIR/update_database.py -f $DIR/csv/zimmerberg/oberrieden.csv --table calendar --region oberrieden
 #$DIR/update_database.py -f $DIR/csv/zimmerberg/kilchberg.csv --table calendar --region kilchberg
+$DIR/update_database.py -f $DIR/csv/uster/uster.csv --table calendar --region uster
