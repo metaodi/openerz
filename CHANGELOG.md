@@ -4,11 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [6.1.0] - 2023-01-10
 ### Changed
 - Refactor common python code in it's own module in `openerzpy`
+- Load data via temporary table to get rid of duplicates
+- Extend ICS parsing to handle recurring events for data import
 
 ### Added
-- Data from Adliswil
+- Add data for all municipalities of district of Horgen (Adliswil, Horgen, Kilchberg, Langnau a. A., Oberrieden, Richterswil, Rüschlikon, Wädenswil)
+- Add data of Uster
 
 ## [6.0.5] - 2023-01-07
 ### Changed
@@ -394,7 +399,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v6.0.5...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v6.1.0...HEAD
+[6.1.0]: https://github.com/metaodi/openerz/compare/v6.0.5...v6.1.0
 [6.0.5]: https://github.com/metaodi/openerz/compare/v6.0.4...v6.0.5
 [6.0.4]: https://github.com/metaodi/openerz/compare/v6.0.3...v6.0.4
 [6.0.3]: https://github.com/metaodi/openerz/compare/v6.0.2...v6.0.3
