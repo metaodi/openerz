@@ -2,7 +2,7 @@ remote_theme: gustavoquinalha/jekyll-help-center-theme
 title: "OpenERZ Hilfe"
 email: odi@metaodi.ch
 description: "Hilfe zur Benutung von OpenERZ."
-baseurl: "/jekyll-help-center-theme"
+baseurl: "/openerz"
 url: "http://metaodi.ch/openerz/"
 twitter_username: "odi"
 github_username:  "metaodi"
