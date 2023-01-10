@@ -24,9 +24,9 @@ municipalities = {
     'horgen': {
         'zip': '8810',
     },
-    # 'kilchberg': {
-    #     'zip': '8802',
-    # },
+    'kilchberg': {
+        'zip': '8802',
+    },
     'langnau': {
         'zip': '8135',
     },

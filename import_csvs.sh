@@ -31,5 +31,5 @@ $DIR/update_database.py -f $DIR/csv/zimmerberg/richterswil.csv --table calendar 
 $DIR/update_database.py -f $DIR/csv/zimmerberg/rueschlikon.csv --table calendar --region rueschlikon
 $DIR/update_database.py -f $DIR/csv/zimmerberg/waedenswil.csv --table calendar --region waedenswil
 $DIR/update_database.py -f $DIR/csv/zimmerberg/oberrieden.csv --table calendar --region oberrieden
-#$DIR/update_database.py -f $DIR/csv/zimmerberg/kilchberg.csv --table calendar --region kilchberg
+$DIR/update_database.py -f $DIR/csv/zimmerberg/kilchberg.csv --table calendar --region kilchberg
 $DIR/update_database.py -f $DIR/csv/uster/uster.csv --table calendar --region uster
