@@ -8,16 +8,7 @@ Source Files
 The source files of the City of Zurich are [published on their Open Data Portal](https://data.stadt-zuerich.ch/dataset?tags=entsorgung).
 The files from the City of Zurich are appended to the corresponding CSV.
 
-## Thalwil
-
-Thalwil does not yet publish machine-readable data, but there is a PDF (see e.g. the 2018 version).
-For some waste types, the dates are not given, but rather an algorithm (e.g. organic waste is collected weekly on Wednesday from January to November, in December only on the 5.12. and the 19.12.2018).
-Therefore there are scripts for those files:
-
-```
-node thalwil_waste.js > thalwil_kehricht_2018.csv
-node thalwil_organic.js > thalwil_bioabfall_2018.csv
-```
+Use `zurich.py` to download the data.
 
 ## Basel
 
@@ -32,6 +23,28 @@ The source file of St. Gallen ist publihsed on their [Open Data Portal](https://
 
 Use `stgallen.py` to download the latest version
 
+## District Horgen
+
+All municipalities in the district of Horgen are using the same web application to publish the waste collection calendar.
+Therefore a single script called `zimmerberg.py` can be used to download the files of the following municipalities:
+
+- Adliswil
+- Horgen
+- Kilchberg
+- Langnau
+- Oberrieden
+- Richterswil
+- Rüschlikon
+- Thalwil
+- Wädenswil
+
+## Uster
+
+Uster publishes part of their waste calendar as ICS file, but normal waste and organic have a simple rule (weekly on weekday X in area Z).
+Therefore all dates must be checked for holidays.
+
+This requires some manual work.
+The script to generate the CSV is `uster.py`%
 
 # Format
 
@@ -44,6 +57,16 @@ The calendar must be available as CSV with the following structure to ensure the
     - stgallen
     - basel
     - thalwil
+    - adliswil
+    - horgen
+    - kilchberg
+    - langnau
+    - oberrieden
+    - richterswil
+    - rueschlikon
+    - thalwil
+    - waedenswil
+    - uster
 2. `area`, an area within a region that has the same schedule, this could be a street, a part of town etc.
     - `A`, `B`, `C`
 3. `zip`, sometimes a zip code is given
@@ -59,10 +82,34 @@ The calendar must be available as CSV with the following structure to ensure the
 
 The collection stations must be available as CSV with the following structure:
 
-1. region
-2. zip
-3. name
-4. oil
-5. metal
-6. glass
-7. textile
+1. `region`
+    - zurich
+    - stgallen
+    - basel
+    - thalwil
+    - adliswil
+    - horgen
+    - kilchberg
+    - langnau
+    - oberrieden
+    - richterswil
+    - rueschlikon
+    - thalwil
+    - waedenswil
+    - uster
+2. `zip`
+    - zip code where the station is located
+3. `name`
+    - name of the station + address if necessary
+4. `oil`
+    - `true`
+    - `false`
+5. `metal`
+    - `true`
+    - `false`
+6. `glass`
+    - `true`
+    - `false`
+7. `textile`
+    - `true`
+    - `false`
