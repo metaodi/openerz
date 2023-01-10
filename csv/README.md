@@ -1,7 +1,4 @@
-Source Files
-============
-
-# Municipalities
+# Source Files
 
 ## Zurich
 
