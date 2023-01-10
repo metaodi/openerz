@@ -1,0 +1,5 @@
+region,zip,name,oil,glass,metal,textile
+langnau,8135,"Wertstoffsammelstelle, Breitwiesstrasse 72.1",False,False,True,False
+langnau,8135,"Breitwiesstrasse, Breitwiesstrasse 72.1",True,True,True,True
+langnau,8135,"Schwerzi, Schwerzistrasse / In der Schwerzi",False,True,True,True
+langnau,8135,"Weidstrasse, Weidstrasse 2",False,True,True,True

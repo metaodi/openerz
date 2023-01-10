@@ -1,0 +1,5 @@
+region,zip,name,oil,glass,metal,textile
+kilchberg,8802,"Bahnhof, Bahnhofstrasse",False,True,True,True
+kilchberg,8802,"Breitloo, Einmündung Breitloostrasse / Steinweidstrasse",True,True,True,True
+kilchberg,8802,"Schooren, bei Schoorenstrasse 41",False,True,True,True
+kilchberg,8802,"Schwelle, Einmündung Schützenmattstrasse/Alte Landstrasse",False,True,True,True

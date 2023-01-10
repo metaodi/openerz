@@ -1,25 +1,21 @@
 #!/bin/sh
 
 # Basel
-if [ ! -f "./csv/basel/basel.csv" ]; then
-    echo "Download Basel data..."
-    ./csv/basel/basel.py
-fi
+echo "Download Basel data..."
+./csv/basel/basel.py
 
 # Zurich
-if [ ! -f "./csv/zurich/zurich.csv" ]; then
-    echo "Download Zurich data..."
-    ./csv/zurich/zurich.py
-fi
+echo "Download Zurich data..."
+./csv/zurich/zurich.py
 
 # St. Gallen
-if [ ! -f "./csv/stgallen/stgallen.csv" ]; then
-    echo "Download St. Gallen data..."
-    ./csv/stgallen/stgallen.py
-fi
+echo "Download St. Gallen data..."
+./csv/stgallen/stgallen.py
 
-# Thalwil
-if [ ! -f "./csv/thalwil/thalwil.csv" ]; then
-    echo "Download Thalwil data..."
-    ./csv/thalwil/thalwil.py
-fi
+# Zimmerberg (District Horgen)
+echo "Download Zimmerberg data..."
+./csv/zimmerberg/zimmerberg.py
+
+# Uster
+echo "Download Uster data..."
+./csv/uster/uster.py

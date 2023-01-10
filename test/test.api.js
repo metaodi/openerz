@@ -90,12 +90,21 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/parameter/regions'
             });
             response.statusCode.should.equal(200);
-            response.result._metadata.total_count.should.equal(4);
-            response.result.result.length.should.equal(4);
+            response.result._metadata.total_count.should.equal(13);
+            response.result.result.length.should.equal(13);
             response.result.result.should.deepEqual([
+                'adliswil',
                 'basel',
+                'horgen',
+                'kilchberg',
+                'langnau',
+                'oberrieden',
+                'richterswil',
+                'rueschlikon',
                 'stgallen',
                 'thalwil',
+                'uster',
+                'waedenswil',
                 'zurich'
             ]);
         });

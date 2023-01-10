@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from icalendar import Calendar, Event
+import recurring_ical_events
 import datetime
 import sys
 
@@ -61,14 +62,14 @@ def map_event(comp):
 
 
 # parse the ICS file
-def parse_file(path):
+def parse_file(path, start_date=None, end_date=None):
     cal = None
     with open(path) as f:
         cal = Calendar.from_ical(f.read())
 
     # convert to CSV/JSON?
     events = []
-    for component in cal.walk(name="VEVENT"):
+    for component in _event_generator(cal, start_date, end_date):
 
         # map properties
         event = map_event(component)
@@ -80,3 +81,14 @@ def parse_file(path):
         events.append(event)
 
     return events
+
+
+def _event_generator(cal, start_date, end_date):
+    if start_date and end_date:
+        events = recurring_ical_events.of(cal).between(start_date, end_date)
+        for event in events:
+            yield event
+    else:
+        for component in cal.walk(name="VEVENT"):
+            yield component
+

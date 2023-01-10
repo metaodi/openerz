@@ -1,0 +1,17 @@
+region,zip,name,oil,glass,metal,textile
+horgen,8810,"Entsorgungspark Horgen (KVA)",True,True,True,True
+horgen,8810,"Seegartenstrasse 67",False,True,True,True
+horgen,8810,"Migros, Seestrasse 148",True,True,True,True
+horgen,8810,"Käpfnach, Mühletalweg 2",False,True,True,True
+horgen,8810,"Plattenstrasse",False,True,True,False
+horgen,8810,"Hüenerbühl, Einsiedlerstrasse / Säntisstrasse",False,True,True,True
+horgen,8810,"Heubach, Püntstrasse 35",True,True,True,False
+horgen,8810,"Bahnhof Oberdorf, Oberdorfstrasse 48",False,True,True,False
+horgen,8810,"Allmend, Einsiedlerstrasse / Im Schnegg",False,True,True,True
+horgen,8810,"Waldegg, Einsiedlerstrasse 301",False,False,False,True
+horgen,8810,"Feller, Bergstrasse 62",False,False,False,True
+horgen,8810,"Arn, Hüttenstrasse 15",True,True,True,True
+horgen,8815,"Horgenberg, Bergstrasse 129",False,True,True,True
+horgen,8835,"Sihlwald Bahnhof, Alte Sihltalstrasse 40",False,True,True,False
+horgen,8816,"Volg Hirzel, Vorderi Siten 7",True,True,True,True
+horgen,8816,"Hirzel Spitzen, Schönenbergstrasse / Sprümülistrasse",False,True,True,False
