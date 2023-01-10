@@ -50,20 +50,20 @@ The script to generate the CSV is `uster.py`%
 The calendar must be available as CSV with the following structure to ensure the seamless import in the database:
 
 1. `region`, region/municipality of the waste collection
-    - zurich
-    - stgallen
-    - basel
-    - thalwil
-    - adliswil
-    - horgen
-    - kilchberg
-    - langnau
-    - oberrieden
-    - richterswil
-    - rueschlikon
-    - thalwil
-    - waedenswil
-    - uster
+    - `zurich`
+    - `stgallen`
+    - `basel`
+    - `thalwil`
+    - `adliswil`
+    - `horgen`
+    - `kilchberg`
+    - `langnau`
+    - `oberrieden`
+    - `richterswil`
+    - `rueschlikon`
+    - `thalwil`
+    - `waedenswil`
+    - `uster`
 2. `area`, an area within a region that has the same schedule, this could be a street, a part of town etc.
     - `A`, `B`, `C`
 3. `zip`, sometimes a zip code is given
@@ -74,13 +74,13 @@ The calendar must be available as CSV with the following structure to ensure the
 5. `col_date`, date of the collection
     - ISO 8601 date, YYYY-MM-DD
 6. `waste_type`, the type of waste collection
-    - 'bulky_goods`
+    - `bulky_goods`
     - `cardboard`
     - `cargotram`
     - `chipping_service`
     - `etram`
     - `incombustibles`
-    - `metal'
+    - `metal`
     - `organic`
     - `paper`
     - `special`
@@ -92,20 +92,20 @@ The calendar must be available as CSV with the following structure to ensure the
 The collection stations must be available as CSV with the following structure:
 
 1. `region`
-    - zurich
-    - stgallen
-    - basel
-    - thalwil
-    - adliswil
-    - horgen
-    - kilchberg
-    - langnau
-    - oberrieden
-    - richterswil
-    - rueschlikon
-    - thalwil
-    - waedenswil
-    - uster
+    - `zurich`
+    - `stgallen`
+    - `basel`
+    - `thalwil`
+    - `adliswil`
+    - `horgen`
+    - `kilchberg`
+    - `langnau`
+    - `oberrieden`
+    - `richterswil`
+    - `rueschlikon`
+    - `thalwil`
+    - `waedenswil`
+    - `uster`
 2. `zip`, zip code where the station is located
     - `8815`
 3. `name`
