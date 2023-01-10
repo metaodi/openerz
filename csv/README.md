@@ -68,9 +68,10 @@ The calendar must be available as CSV with the following structure to ensure the
     - `A`, `B`, `C`
 3. `zip`, sometimes a zip code is given
     - `8038`
-4. `date`, date of the collection
+4. `station`, if the collection only happens at a specific station
+5. `col_date`, date of the collection
     - ISO 8601 date, YYYY-MM-DD
-5. `type`, the type of waste collection
+6. `waste_type`, the type of waste collection
     - `paper`
     - `cardboard`
     - `waste`
@@ -94,8 +95,8 @@ The collection stations must be available as CSV with the following structure:
     - thalwil
     - waedenswil
     - uster
-2. `zip`
-    - zip code where the station is located
+2. `zip`, zip code where the station is located
+    - `8815`
 3. `name`
     - name of the station + address if necessary
 4. `oil`
