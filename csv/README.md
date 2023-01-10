@@ -69,11 +69,22 @@ The calendar must be available as CSV with the following structure to ensure the
 3. `zip`, sometimes a zip code is given
     - `8038`
 4. `station`, if the collection only happens at a specific station
+    - This is for speczal cases like the CargoTran
+    - Leave empty if unsure
 5. `col_date`, date of the collection
     - ISO 8601 date, YYYY-MM-DD
 6. `waste_type`, the type of waste collection
-    - `paper`
+    - 'bulky_goods`
     - `cardboard`
+    - `cargotram`
+    - `chipping_service`
+    - `etram`
+    - `incombustibles`
+    - `metal'
+    - `organic`
+    - `paper`
+    - `special`
+    - `textile`
     - `waste`
 
 ## Station
