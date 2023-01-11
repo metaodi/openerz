@@ -1,4 +1,4 @@
-Die Programmierschnittstelle (API) mit den Entsorgungsdaten ist hier: https://openerz.metaodi.ch
+Die Programmierschnittstelle (API) mit den Entsorgungsdaten ist hier: [**https://openerz.metaodi.ch**](https://openerz.metaodi.ch)
 Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen werden.
 
 ## Daten als Kalender beziehen
