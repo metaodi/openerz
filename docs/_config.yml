@@ -3,7 +3,7 @@ plugins:
 
 remote_theme: jekyll/minima
 
-title: "OpenERZ Anleitung"
+title: "OpenERZ API Anleitung"
 author:
   name: Stefan Oderbolz
   email: "odi@metaodi.ch"
