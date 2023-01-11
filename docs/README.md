@@ -23,15 +23,15 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Wädenswil (`Waedenswil`)
     * Zürich (`zurich`)
 1. Abfallarten auswählen **ACHTUNG: nicht alle Abfallarten sind in allen Gemeinden verfügbar**
-    * Bioabfall (`organic`) -> 
-    * Kehricht (`waste`) -> 
-    * Altpapier (`paper`) ->
-    * Karton (`cardboard`) ->
-    * Unbrennbares / Grubengut (`incombustible`) ->
-    * Häkseldienst (`chipping_service`) ->
-    * Grobmetall (`metal`) ->
-    * Sperrmüll (`bulky_goods`) ->
-    * Sondermüll (`special`) -> 
+    * Bioabfall (`organic`) -> Alle
+    * Kehricht (`waste`) -> Alle
+    * Altpapier (`paper`) -> Alle
+    * Karton (`cardboard`) -> Alle
+    * Unbrennbares / Grubengut (`incombustible`) -> Thalwil, Horgen, Oberrieden, Basel
+    * Häkseldienst (`chipping_service`) -> Wädenswil, Basel, Oberrieden, Rüschlikon, Richterswil, Langnau a. A., Kilchberg, Horgen, Adliswil
+    * Grobmetall (`metal`) -> Thalwil, Horgen, Uster, Basel, St. Gallen
+    * Sperrmüll (`bulky_goods`) -> Basel
+    * Sondermüll (`special`) -> Zürich, Thalwil, Adliswil, Horgen, Kilchberg, Langnau a. A., Rüschlikon, Richterswil, Oberrieden, Wädenswil, Uster
     * eTram (`etram`) -> Zürich
     * CargoTram (`cargotram`) -> Zürich
 1. Gebiet auswählen, grössere Gemeinden sind oft in mehrere Gebiete aufgeteilt (1, 2, 3 / A, B, C / PLZ)
