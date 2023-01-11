@@ -99,6 +99,8 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
   <input id="result" name="url" type="text" />
 </form>
  
+ 
+ 
  ## Daten als JSON beziehen
  
  JSON ist gut geeignet um die Daten z.B. in einer App oder auf einer Webseite anzuzeigen. 
