@@ -66,12 +66,15 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
   <select name="gemeinde">
     <option value="adliswil">Adliswil</option>
   </select>
+  <lable for="art">Abfallarten</lable>
   <select name="art" multiple size="7">
      <option value="cardboard">Karton</option>
      <option value="second">Second Value</option>
      <option value="third">Third Value</option>
   </select>
+  <lable for="area">Gebiet</lable>
   <input name="area" />
+  <lable for="url">Kalender-URL zum kopieren</lable>
   <input id="result" name="url" />
 </form>
  
