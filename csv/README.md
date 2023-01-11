@@ -70,16 +70,14 @@ The calendar must be available as CSV with the following structure to ensure the
     - `waedenswil`
     - `uster`
     - `wangen-bruttisellen`
-2. `area`, an area within a region that has the same schedule, this could be a street, a part of town etc.
-    - `A`, `B`, `C`
-3. `zip`, sometimes a zip code is given
+2. `zip`, sometimes a zip code is given
     - `8038`
+3. `area`, an area within a region that has the same schedule, this could be a street, a part of town etc.
+    - `A`, `B`, `C`
 4. `station`, if the collection only happens at a specific station
     - This is for speczal cases like the CargoTran
     - Leave empty if unsure
-5. `col_date`, date of the collection
-    - ISO 8601 date, YYYY-MM-DD
-6. `waste_type`, the type of waste collection
+5. `waste_type`, the type of waste collection
     - `bulky_goods`
     - `cardboard`
     - `cargotram`
@@ -92,6 +90,8 @@ The calendar must be available as CSV with the following structure to ensure the
     - `special`
     - `textile`
     - `waste`
+6. `col_date`, date of the collection
+    - ISO 8601 date, YYYY-MM-DD
 
 ## Station
 
