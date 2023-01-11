@@ -3,8 +3,10 @@ window.addEventListener('DOMContentLoaded', function () {
     var form = $$('#url-form')[0];                          
     for (var i = 0; i < form.elements.length; i++) {
         form.elements[i].onchange = function() {
-            var data = new FormData($$('#url-form')[0]);
-            updateUrl(data);
+            var changedForm = $$('#url-form')[0];
+            var data = new FormData(changedForm);
+            var url = updateUrl(data);
+            $$('#result')[0].value = url;
         }
     }   
 });
@@ -15,7 +17,7 @@ function updateUrl(formData) {
     var art = data.getAll('art');
     var area = data.get('area');
     
-    if !(gemeinde) {
+    if (!gemeinde) {
         return;
     }
     var url = 'https://openerz.metaodi.ch/api/calendar.ics?lang=de&region=' + gemeinde;
