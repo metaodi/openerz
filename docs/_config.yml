@@ -3,10 +3,11 @@ plugins:
 
 remote_theme: jekyll/minima
 
-
 title: "OpenERZ Anleitung"
-email: odi@metaodi.ch
-description: "Hilfe zur Benutung von OpenERZ."
+author:
+  name: Stefan Oderbolz
+  email: "odi@metaodi.ch"
+description: "Hilfe zur Benutung von OpenERZ"
 url: "http://metaodi.ch/openerz/"
 twitter_username: "odi"
 github_username:  "metaodi"
