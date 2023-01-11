@@ -1,6 +1,7 @@
 Die Programmierschnittstelle (API) mit den Entsorgungsdaten ist hier: [**https://openerz.metaodi.ch**](https://openerz.metaodi.ch).\
 Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen werden.
 
+## Kalender abonnieren
 
 <form id="url-form">
   <lable for="gemeinde">Gemeinde</lable>
@@ -50,7 +51,12 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
 
 Die URL kann kopiert und in einer beliebigen Kalender-Applikation abonniert werden (z.B. Outlook, Apple Kalender, Google Kalender).
 
-## Daten als Kalender beziehen
+## Datenbezug
+
+Die Programmierschnittstelle (API) ist [hier im Detail dokumentiert](https://openerz.metaodi.ch).
+Es handelt sich dabei um eine interaktive Dokumentation (OpenAPI/Swagger), bei der das API direkt ausprobiert werden kann.
+
+### Daten als Kalender beziehen
 
 Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtest, gehe wiefolgt vor:
 
@@ -107,7 +113,7 @@ Als Format für den Kalender am besten ICS (`calendar.ics`) wählen, die so ents
 https://openerz.metaodi.ch/api/calendar.ics?region=horgen&area=B&types=cardboard&types=paper&sort=date&lang=de
 ```
 
-## Daten als JSON beziehen
+### Daten als JSON beziehen
 
 JSON ist gut geeignet um die Daten z.B. in einer App oder auf einer Webseite anzuzeigen.
 Um die Daten als JSON zu beziehen, muss das Format in der URL auf `.json` geändert werden.
