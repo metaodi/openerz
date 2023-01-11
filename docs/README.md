@@ -115,13 +115,13 @@ JSON ist gut geeignet um die Daten z.B. in einer App oder auf einer Webseite anz
  
 Dieses API wird von einigen Anwendungen verwednet, hier zwei Beispiele:
  
-## Denise App
+### Denise App
  
 [Denise](https://www.stadt-zuerich.ch/portal/de/index/ogd/anwendungen/2022/deniseapp.html) ist eine App für iOS und Android mit dem Fokus auf der Stadt Zürich. Lass dich an die Entsorgungstermine erinnern oder schau im Kalender nach.
 
 ![Denise App](https://www.stadt-zuerich.ch/content/portal/de/index/ogd/anwendungen/2022/deniseapp/_jcr_content/mainparsys/graphic/image.1752.png/1641206645649.png)
     
-## Altpapier Bot
+### Altpapier Bot
 
 Der [Altpapier Bot](https://www.stadt-zuerich.ch/portal/de/index/ogd/anwendungen/2020/altbapier_bot.html) ist ein Bot für den Messanger-Dienst Telegram. Ich kann einstellen, an welche Sammlung ich erinnert werden möchte und bekomme dann entsprechend eine Erinnerungsmeldung.
 
