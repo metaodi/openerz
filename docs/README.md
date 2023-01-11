@@ -107,12 +107,12 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
  ```
  https://openerz.metaodi.ch/api/calendar.ics?region=horgen&area=B&types=cardboard&types=paper&sort=date&lang=de
  ```
-  
- ## Daten als JSON beziehen
+ 
+## Daten als JSON beziehen
  
  JSON ist gut geeignet um die Daten z.B. in einer App oder auf einer Webseite anzuzeigen. 
  
- ## Beispiele
+## Beispiele
  
  Dieses API wird von einigen Anwendungen verwednet, hier zwei Beispiele:
  
