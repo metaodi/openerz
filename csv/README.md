@@ -43,6 +43,11 @@ Therefore all dates must be checked for holidays.
 This requires some manual work.
 The script to generate the CSV is `uster.py`%
 
+## Wangen-Brüttisellen
+
+Wangen-Brüttisellen doesnt expose any machine readable format therefor the CSV are created manually.
+The information is taken from the [municipality website](https://www.wangen-bruettisellen.ch/de/verwaltung/abfall)
+
 # Format
 
 ## Calendar
@@ -64,6 +69,7 @@ The calendar must be available as CSV with the following structure to ensure the
     - `thalwil`
     - `waedenswil`
     - `uster`
+    - `wangen-bruttisellen`
 2. `area`, an area within a region that has the same schedule, this could be a street, a part of town etc.
     - `A`, `B`, `C`
 3. `zip`, sometimes a zip code is given
@@ -106,6 +112,7 @@ The collection stations must be available as CSV with the following structure:
     - `thalwil`
     - `waedenswil`
     - `uster`
+    - `wangen-bruttisellen`
 2. `zip`, zip code where the station is located
     - `8815`
 3. `name`
