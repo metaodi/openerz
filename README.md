@@ -1,6 +1,7 @@
 [![Build Status](https://github.com/metaodi/openerz/workflows/Build%20OpenERZ/badge.svg)](https://github.com/metaodi/openerz/actions?query=workflow%3A%22Build+OpenERZ%22)
 
 **Access the public API here: [https://openerz.metaodi.ch](https://openerz.metaodi.ch)**
+
 **Anleitung für OpenERZ auf Deutsch: [https://metaodi.ch/openerz/](https://metaodi.ch/openerz/)**
 
 Usage examples
