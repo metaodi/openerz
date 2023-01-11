@@ -2,7 +2,6 @@ theme: minima
 title: "OpenERZ Hilfe"
 email: odi@metaodi.ch
 description: "Hilfe zur Benutung von OpenERZ."
-baseurl: "/openerz"
 url: "http://metaodi.ch/openerz/"
 twitter_username: "odi"
 github_username:  "metaodi"
