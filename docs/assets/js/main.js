@@ -14,9 +14,9 @@ window.addEventListener('DOMContentLoaded', function () {
     
 function updateUrl(formData) {
     // get all values
-    var gemeinde = data.get('gemeinde');
-    var art = data.getAll('art');
-    var area = data.get('area');
+    var gemeinde = formData.get('gemeinde');
+    var art = formData.getAll('art');
+    var area = formData.get('area');
     
     if (!gemeinde) {
         return;
