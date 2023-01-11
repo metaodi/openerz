@@ -1,6 +1,48 @@
 Die Programmierschnittstelle (API) mit den Entsorgungsdaten ist hier: [**https://openerz.metaodi.ch**](https://openerz.metaodi.ch).\
 Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen werden.
 
+
+<form id="url-form">
+  <lable for="gemeinde">Gemeinde</lable>
+  <select name="gemeinde">
+     <option value="" disabled="disabled">--- Bitte wählen ---</option>
+     <option value="adliswil">Adliswil</option>
+     <option value="basel">Basel</option>
+     <option value="horgen">Horgen</option>
+     <option value="kilchberg">Kilchberg</option>
+     <option value="langnau">Langnau a. A.</option>
+     <option value="oberrieden">Oberrieden</option>
+     <option value="richterswil">Richterswil</option>
+     <option value="rueschlikon">Rüschlikon</option>
+     <option value="stgallen">St. Gallen</option>
+     <option value="thalwil">Thalwil</option>
+     <option value="uster">Uster</option>
+     <option value="waedenswil">Wädenswil</option>
+     <option value="zurich">Zürich</option>
+  </select>
+  <lable for="art">Abfallarten</lable>
+  <select name="art" multiple size="5">
+     <option value="waste">Kehricht</option>
+     <option value="organic">Grüngut</option>
+     <option value="paper">Altpapier</option>
+     <option value="cardboard">Karton</option>
+     <option value="incombustible">Unbrennbares / Grubengut</option>
+     <option value="chipping_service">Häkseldienst</option>
+     <option value="metal">Grobmetall</option>
+     <option value="bulky_goods">Sperrmüll</option>
+     <option value="special">Sondermüll</option>
+     <option value="etram">eTram</option>
+     <option value="cargotram">CargoTram</option>
+  </select>
+  <lable for="area">Gebiet</lable>
+  <input name="area" type="text" />
+  <lable for="url">Kalender-URL zum kopieren</lable>
+  <input id="result" name="url" type="text" />
+</form>
+
+
+Die URL kann kopiert und in einer beliebigen Kalender-Applikation abonniert werden (z.B. Outlook, Apple Kalender, Google Kalender).
+
 ## Daten als Kalender beziehen
 
 Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtest, gehe wiefolgt vor:
@@ -58,49 +100,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
  ```
  https://openerz.metaodi.ch/api/calendar.ics?region=horgen&area=B&types=cardboard&types=paper&sort=date&lang=de
  ```
- 
-### Formular
-
-<form id="url-form">
-  <lable for="gemeinde">Gemeinde</lable>
-  <select name="gemeinde">
-     <option value="" disabled="disabled">--- Bitte wählen ---</option>
-     <option value="adliswil">Adliswil</option>
-     <option value="basel">Basel</option>
-     <option value="horgen">Horgen</option>
-     <option value="kilchberg">Kilchberg</option>
-     <option value="langnau">Langnau a. A.</option>
-     <option value="oberrieden">Oberrieden</option>
-     <option value="richterswil">Richterswil</option>
-     <option value="rueschlikon">Rüschlikon</option>
-     <option value="stgallen">St. Gallen</option>
-     <option value="thalwil">Thalwil</option>
-     <option value="uster">Uster</option>
-     <option value="waedenswil">Wädenswil</option>
-     <option value="zurich">Zürich</option>
-  </select>
-  <lable for="art">Abfallarten</lable>
-  <select name="art" multiple size="5">
-     <option value="waste">Kehricht</option>
-     <option value="organic">Grüngut</option>
-     <option value="paper">Altpapier</option>
-     <option value="cardboard">Karton</option>
-     <option value="incombustible">Unbrennbares / Grubengut</option>
-     <option value="chipping_service">Häkseldienst</option>
-     <option value="metal">Grobmetall</option>
-     <option value="bulky_goods">Sperrmüll</option>
-     <option value="special">Sondermüll</option>
-     <option value="etram">eTram</option>
-     <option value="cargotram">CargoTram</option>
-  </select>
-  <lable for="area">Gebiet</lable>
-  <input name="area" type="text" />
-  <lable for="url">Kalender-URL zum kopieren</lable>
-  <input id="result" name="url" type="text" />
-</form>
- 
- 
- 
+  
  ## Daten als JSON beziehen
  
  JSON ist gut geeignet um die Daten z.B. in einer App oder auf einer Webseite anzuzeigen. 
