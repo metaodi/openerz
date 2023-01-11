@@ -93,9 +93,9 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
      <option value="cargotram">CargoTram</option>
   </select>
   <lable for="area">Gebiet</lable>
-  <input name="area" />
+  <input name="area" type="text" />
   <lable for="url">Kalender-URL zum kopieren</lable>
-  <input id="result" name="url" />
+  <input id="result" name="url" type="text" />
 </form>
  
  ## Daten als JSON beziehen
