@@ -68,7 +68,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
       <option value="second">Second Value</option>
       <option value="third">Third Value</option>
    </select>
-   <input name="area"></input>
+   <input name="area" />
  </form>
  
  ## Daten als JSON beziehen
