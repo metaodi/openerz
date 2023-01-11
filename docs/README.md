@@ -45,12 +45,15 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Uster -> Kehrichtkreise 1-4
     * Wädenswil -> Zone A-D
     * Zürich -> Aufgeteilt nach Postleitzahl (PLZ)
-    
+ 1. Format wählen, entweder JSON (`calendar.json`) oder ICS (`calendar.ics`). 
     
  Mit diesen Angaben, kann die korrekte URL zusammengesetzt werden:
  
  Beispiel für *Horgen* (`region=horgen`), Zone B (`area=B`), Karton und Altpapier (`types=cardboard&types=paper`).
  Der Kalender soll auf Deutsch angezeigt werden (`lang=de`).
+ 
+ Als Format für den Kalender am besten ICS (`calendar.ics`) wählen, die so entstandene URL kann direkt in der Kalenderapplikation hinzugefügt werden.
+ Wenn die Daten im API aktualisiert werden, so erscheinen die neuen Einträge automatisch im abonnierten Kalender.
  
  ```
  https://openerz.metaodi.ch/api/calendar.ics?region=horgen&area=B&types=cardboard&types=paper&sort=date&lang=de
