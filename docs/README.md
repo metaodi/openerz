@@ -94,32 +94,35 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Uster -> Kehrichtkreise 1-4
     * Wädenswil -> Zone A-D
     * Zürich -> Aufgeteilt nach Postleitzahl (PLZ)
- 1. Format wählen, entweder JSON (`calendar.json`) oder ICS (`calendar.ics`). 
+1. Format wählen, entweder JSON (`calendar.json`) oder ICS (`calendar.ics`). 
     
- Mit diesen Angaben, kann die korrekte URL zusammengesetzt werden:
+Mit diesen Angaben, kann die korrekte URL zusammengesetzt werden:
  
- Beispiel für *Horgen* (`region=horgen`), Zone B (`area=B`), Karton und Altpapier (`types=cardboard&types=paper`).
- Der Kalender soll auf Deutsch angezeigt werden (`lang=de`).
+Beispiel für *Horgen* (`region=horgen`), Zone B (`area=B`), Karton und Altpapier (`types=cardboard&types=paper`).
+Der Kalender soll auf Deutsch angezeigt werden (`lang=de`).
  
- Als Format für den Kalender am besten ICS (`calendar.ics`) wählen, die so entstandene URL kann direkt in der Kalenderapplikation hinzugefügt werden.
- Wenn die Daten im API aktualisiert werden, so erscheinen die neuen Einträge automatisch im abonnierten Kalender.
+Als Format für den Kalender am besten ICS (`calendar.ics`) wählen, die so entstandene URL kann direkt in der Kalenderapplikation hinzugefügt werden. Wenn die Daten im API aktualisiert werden, so erscheinen die neuen Einträge automatisch im abonnierten Kalender.
  
- ```
- https://openerz.metaodi.ch/api/calendar.ics?region=horgen&area=B&types=cardboard&types=paper&sort=date&lang=de
- ```
- 
+```
+https://openerz.metaodi.ch/api/calendar.ics?region=horgen&area=B&types=cardboard&types=paper&sort=date&lang=de
+```
+
 ## Daten als JSON beziehen
- 
- JSON ist gut geeignet um die Daten z.B. in einer App oder auf einer Webseite anzuzeigen. 
+
+JSON ist gut geeignet um die Daten z.B. in einer App oder auf einer Webseite anzuzeigen. 
  
 ## Beispiele
  
- Dieses API wird von einigen Anwendungen verwednet, hier zwei Beispiele:
+Dieses API wird von einigen Anwendungen verwednet, hier zwei Beispiele:
  
- 1. [Denise App](https://www.stadt-zuerich.ch/portal/de/index/ogd/anwendungen/2022/deniseapp.html)\
-    Denise ist eine App für iOS und Android mit dem Fokus auf der Stadt Zürich. Lass dich an die Entsorgungstermine erinnern oder schau im Kalender nach.
-    ![Denise App](https://www.stadt-zuerich.ch/content/portal/de/index/ogd/anwendungen/2022/deniseapp/_jcr_content/mainparsys/graphic/image.1752.png/1641206645649.png)
+## Denise App
+ 
+[Denise](https://www.stadt-zuerich.ch/portal/de/index/ogd/anwendungen/2022/deniseapp.html) ist eine App für iOS und Android mit dem Fokus auf der Stadt Zürich. Lass dich an die Entsorgungstermine erinnern oder schau im Kalender nach.
+
+![Denise App](https://www.stadt-zuerich.ch/content/portal/de/index/ogd/anwendungen/2022/deniseapp/_jcr_content/mainparsys/graphic/image.1752.png/1641206645649.png)
     
- 1. [Altpapier Bot](https://www.stadt-zuerich.ch/portal/de/index/ogd/anwendungen/2020/altbapier_bot.html)\
-    Der Altpapier Bot ist ein Bot für den Messanger-Dienst Telegram. Ich kann einstellen, an welche Sammlung ich erinnert werden möchte und bekomme dann entsprechend eine Erinnerungsmeldung.
-    ![Altpapier Bot](https://www.stadt-zuerich.ch/content/portal/de/index/ogd/anwendungen/2020/altbapier_bot/_jcr_content/mainparsys/graphic_394334147/image.1752.png/1600523018815.png)
+## Altpapier Bot
+
+Der [Altpapier Bot](https://www.stadt-zuerich.ch/portal/de/index/ogd/anwendungen/2020/altbapier_bot.html) ist ein Bot für den Messanger-Dienst Telegram. Ich kann einstellen, an welche Sammlung ich erinnert werden möchte und bekomme dann entsprechend eine Erinnerungsmeldung.
+
+![Altpapier Bot](https://www.stadt-zuerich.ch/content/portal/de/index/ogd/anwendungen/2020/altbapier_bot/_jcr_content/mainparsys/graphic_394334147/image.1752.png/1600523018815.png)
