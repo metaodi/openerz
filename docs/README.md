@@ -64,6 +64,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
 <form id="url-form">
   <lable for="gemeinde">Gemeinde</lable>
   <select name="gemeinde">
+     <option value="" disabled="disabled">--- Bitte wählen ---</option>
      <option value="adliswil">Adliswil</option>
      <option value="basel">Basel</option>
      <option value="horgen">Horgen</option>
