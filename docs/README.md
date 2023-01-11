@@ -64,13 +64,33 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
 <form id="url-form">
   <lable for="gemeinde">Gemeinde</lable>
   <select name="gemeinde">
-    <option value="adliswil">Adliswil</option>
+     <option value="adliswil">Adliswil</option>
+     <option value="basel">Basel</option>
+     <option value="horgen">Horgen</option>
+     <option value="kilchberg">Kilchberg</option>
+     <option value="langnau">Langnau a. A.</option>
+     <option value="oberrieden">Oberrieden</option>
+     <option value="richterswil">Richterswil</option>
+     <option value="rueschlikon">Rüschlikon</option>
+     <option value="stgallen">St. Gallen</option>
+     <option value="thalwil">Thalwil</option>
+     <option value="uster">Uster</option>
+     <option value="waedenswil">Wädenswil</option>
+     <option value="zurich">Zürich</option>
   </select>
   <lable for="art">Abfallarten</lable>
-  <select name="art" multiple size="7">
+  <select name="art" multiple size="5">
+     <option value="waste">Kehricht</option>
+     <option value="organic">Grüngut</option>
+     <option value="paper">Altpapier</option>
      <option value="cardboard">Karton</option>
-     <option value="second">Second Value</option>
-     <option value="third">Third Value</option>
+     <option value="incombustible">Unbrennbares / Grubengut</option>
+     <option value="chipping_service">Häkseldienst</option>
+     <option value="metal">Grobmetall</option>
+     <option value="bulky_goods">Sperrmüll</option>
+     <option value="special">Sondermüll</option>
+     <option value="etram">eTram</option>
+     <option value="cargotram">CargoTram</option>
   </select>
   <lable for="area">Gebiet</lable>
   <input name="area" />
