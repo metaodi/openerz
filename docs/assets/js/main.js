@@ -17,11 +17,13 @@ function updateUrl(formData) {
     var gemeinde = formData.get('gemeinde');
     var art = formData.getAll('art');
     var area = formData.get('area');
+    var format = formData.get('format');
     
     if (!gemeinde) {
         return;
     }
-    var url = 'https://openerz.metaodi.ch/api/calendar.ics?lang=de&region=' + gemeinde;
+    var url = 'https://openerz.metaodi.ch/api/calendar.' + format;
+    url += '?lang=de&region=' + gemeinde;
     if (area) {
         url += '&area=' + area;
     }
