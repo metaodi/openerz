@@ -1,12 +1,13 @@
 window.addEventListener('DOMContentLoaded', function () {
     'use strict';
-    var form = $$('#url-form')[0];                          
+    var form = document.getElementById('url-form');                          
     for (var i = 0; i < form.elements.length; i++) {
         form.elements[i].onchange = function() {
-            var changedForm = $$('#url-form')[0];
+            var changedForm = document.getElementById('url-form');
             var data = new FormData(changedForm);
             var url = updateUrl(data);
-            $$('#result')[0].value = url;
+            var resultField = document.getElementById('result');
+            resultField.value = url;
         }
     }   
 });
