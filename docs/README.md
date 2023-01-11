@@ -109,7 +109,15 @@ https://openerz.metaodi.ch/api/calendar.ics?region=horgen&area=B&types=cardboard
 
 ## Daten als JSON beziehen
 
-JSON ist gut geeignet um die Daten z.B. in einer App oder auf einer Webseite anzuzeigen. 
+JSON ist gut geeignet um die Daten z.B. in einer App oder auf einer Webseite anzuzeigen.
+Um die Daten als JSON zu beziehen, muss das Format in der URL auf `.json` geändert werden.
+Alternativ kann auch via HTTP der Accept-Header `Accept: application/javascript` gesendet werden.
+
+Beispiel:
+
+```
+https://openerz.metaodi.ch/api/calendar.json?region=horgen&area=B&types=cardboard&types=paper&sort=date&lang=de
+```
  
 ## Beispiele
  
