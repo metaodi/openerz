@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded',function () {
+window.addEventListener('DOMContentLoaded', function () {
     'use strict';
     var form = $$('#url-form')[0];                          
     for (var i = 0; i < form.elements.length; i++) {
@@ -6,9 +6,7 @@ window.addEventListener('DOMContentLoaded',function () {
             var data = new FormData($$('#url-form')[0]);
             updateUrl(data);
         }
-    }
-}
-    
+    }   
 });
     
 function updateUrl(formData) {
