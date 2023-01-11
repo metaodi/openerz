@@ -26,7 +26,7 @@ function updateUrl(formData) {
         url += '&area=' + area;
     }
     if (art) {
-        art.forEach.forEach(function (a) {
+        art.forEach(function (a) {
             url += '&types=' + a;
         });
     }
