@@ -4,9 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [6.2.0] - 2023-01-11
 ### Added
 - New explainer website in German incl. form to generate a iCal URL (https://metaodi.ch/openerz/)
-- Add data of Wangen-Brüttisellen
+- Add data of Wangen-Brüttisellen (thanks for the contribution [@gabac](https://github.com/gabac))
 
 ## [6.1.0] - 2023-01-10
 ### Changed
@@ -402,7 +404,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v6.1.0...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v6.2.0...HEAD
+[6.2.0]: https://github.com/metaodi/openerz/compare/v6.1.0...v6.2.0
 [6.1.0]: https://github.com/metaodi/openerz/compare/v6.0.5...v6.1.0
 [6.0.5]: https://github.com/metaodi/openerz/compare/v6.0.4...v6.0.5
 [6.0.4]: https://github.com/metaodi/openerz/compare/v6.0.3...v6.0.4
