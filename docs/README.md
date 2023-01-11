@@ -41,8 +41,10 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
      <option value="ics">ICS (iCal Kalender)</option>
      <option value="json">JSON</option>
   </select>
+  <div style="margin-top:40px;">
   <lable for="url"><strong>Kalender-URL zum kopieren</strong></lable>
   <input id="result" name="url" type="text" />
+  </div>
 </form>
 
 
