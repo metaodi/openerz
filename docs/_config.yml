@@ -1,4 +1,9 @@
-theme: minima
+plugins:
+  - jekyll-remote-theme
+
+remote_theme: jekyll/minima
+
+
 title: "OpenERZ Hilfe"
 email: odi@metaodi.ch
 description: "Hilfe zur Benutung von OpenERZ."
