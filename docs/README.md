@@ -36,6 +36,11 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
   </select>
   <lable for="area">Gebiet</lable>
   <input name="area" type="text" />
+  <lable for="format">Format</lable>
+  <select name="format">
+     <option value="ics">ICS (iCal Kalender)</option>
+     <option value="json">JSON</option>
+  </select>
   <lable for="url"><strong>Kalender-URL zum kopieren</strong></lable>
   <input id="result" name="url" type="text" />
 </form>
