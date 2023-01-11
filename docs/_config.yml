@@ -4,7 +4,7 @@ plugins:
 remote_theme: jekyll/minima
 
 
-title: "OpenERZ Hilfe"
+title: "OpenERZ Anleitung"
 email: odi@metaodi.ch
 description: "Hilfe zur Benutung von OpenERZ."
 url: "http://metaodi.ch/openerz/"
