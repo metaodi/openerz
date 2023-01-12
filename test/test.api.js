@@ -90,8 +90,8 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/parameter/regions'
             });
             response.statusCode.should.equal(200);
-            response.result._metadata.total_count.should.equal(13);
-            response.result.result.length.should.equal(13);
+            response.result._metadata.total_count.should.equal(14);
+            response.result.result.length.should.equal(14);
             response.result.result.should.deepEqual([
                 'adliswil',
                 'basel',
@@ -105,6 +105,7 @@ describe('make sure the server is running (test.api)', function() {
                 'thalwil',
                 'uster',
                 'waedenswil',
+                'wangen-bruttisellen',
                 'zurich'
             ]);
         });
@@ -659,7 +660,7 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                '_metadata': {'total_count': 139, 'row_count': 1},
+                '_metadata': {'total_count': 135, 'row_count': 1},
                 'result': [{
                     'date': '2023-01-03',
                     'region': 'thalwil',
@@ -673,7 +674,7 @@ describe('make sure the server is running (test.api)', function() {
         it('should return a correct entries for 8800 (without and without area)', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/calendar.json?zip=8800&area=a&limit=2&start=2023-06-28&end=2023-06-30&sort=date'
+                url: '/api/calendar.json?zip=8800&area=a&limit=2&start=2023-06-28&end=2023-06-30&sort=date,area:desc'
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
