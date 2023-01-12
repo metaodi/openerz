@@ -19,6 +19,7 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
      <option value="thalwil">Thalwil</option>
      <option value="uster">Uster</option>
      <option value="waedenswil">Wädenswil</option>
+     <option value="wangen-bruttisellen">Wangen-Brüttisellen</option>
      <option value="zurich">Zürich</option>
   </select>
   <lable for="art">Abfallarten</lable>
@@ -72,7 +73,8 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * St. Gallen (`stgallen`)
     * Thalwil (`thalwil`)
     * Uster (`uster`)
-    * Wädenswil (`Waedenswil`)
+    * Wädenswil (`waedenswil`)
+    * Wangen-Brüttisellen (`wangen-bruttisellen`)
     * Zürich (`zurich`)
 1. Abfallarten auswählen **ACHTUNG: nicht alle Abfallarten sind in allen Gemeinden verfügbar**
     * Bioabfall (`organic`) -> Alle
@@ -80,9 +82,9 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Altpapier (`paper`) -> Alle
     * Karton (`cardboard`) -> Alle
     * Unbrennbares / Grubengut (`incombustible`) -> Thalwil, Horgen, Oberrieden, Basel
-    * Häkseldienst (`chipping_service`) -> Wädenswil, Basel, Oberrieden, Rüschlikon, Richterswil, Langnau a. A., Kilchberg, Horgen, Adliswil
+    * Häkseldienst (`chipping_service`) -> Wädenswil, Basel, Oberrieden, Rüschlikon, Richterswil, Langnau a. A., Kilchberg, Horgen, Adliswil, Wangen-Brüttisellen
     * Grobmetall (`metal`) -> Thalwil, Horgen, Uster, Basel, St. Gallen
-    * Sperrmüll (`bulky_goods`) -> Basel
+    * Sperrmüll (`bulky_goods`) -> Basel, Wangen-Brüttisellen
     * Sondermüll (`special`) -> Zürich, Thalwil, Adliswil, Horgen, Kilchberg, Langnau a. A., Rüschlikon, Richterswil, Oberrieden, Wädenswil, Uster
     * eTram (`etram`) -> Zürich
     * CargoTram (`cargotram`) -> Zürich
@@ -99,6 +101,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Thalwil -> Zone A-C
     * Uster -> Kehrichtkreise 1-4
     * Wädenswil -> Zone A-D
+    * Wangen-Brüttisellen -> keine Aufteilung
     * Zürich -> Aufgeteilt nach Postleitzahl (PLZ)
 1. Format wählen, entweder JSON (`calendar.json`) oder ICS (`calendar.ics`). 
     
