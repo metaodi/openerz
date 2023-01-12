@@ -5,10 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
-## [6.2.0] - 2023-01-11
+## [6.2.0] - 2023-01-12
 ### Added
 - New explainer website in German incl. form to generate a iCal URL (https://metaodi.ch/openerz/)
 - Add data of Wangen-Brüttisellen (thanks for the contribution [@gabac](https://github.com/gabac))
+
+### Fixed
+- Tests and loading of dotenv files
 
 ## [6.1.0] - 2023-01-10
 ### Changed
