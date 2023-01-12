@@ -47,11 +47,11 @@ Update data
 ===========
 
 Each year, new waste collection data is released. 
-Update the CSVs in the `csv` directory by appending the new data to the corresponding file.
+Update the CSVs in the `csv` directory by replacing the data or running the provided scripts.
 
-OpenERZ uses an in-memory database, which is initialized at startup based on the CSV files in the repository.
+OpenERZ uses a PostgreSQL database, which is updated using the `load_data_in_database.sh` script or the corresponding GitHub Action.
 
-Some regions are updated using Python scripts.
+Most regions are updated using Python scripts.
 You might want to setup a python virtualenv using the `python_setup.sh` script.
 
 Release
