@@ -130,7 +130,7 @@ https://openerz.metaodi.ch/api/calendar.json?region=horgen&area=B&types=cardboar
  
 ## Beispiele
  
-Dieses API wird von einigen Anwendungen verwednet, hier zwei Beispiele:
+Dieses API wird von einigen Anwendungen verwendet, hier zwei Beispiele:
  
 ### Denise App
  
