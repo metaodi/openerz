@@ -19,3 +19,7 @@ echo "Download Zimmerberg data..."
 # Uster
 echo "Download Uster data..."
 ./csv/uster/uster.py
+
+# Dübendorf
+echo "Download Dübendorf data..."
+./csv/duebendorf/duebendorf.py
