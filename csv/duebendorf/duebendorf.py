@@ -48,8 +48,16 @@ waste_type_map = {
     'Papier': 'paper',
     'Karton': 'cardboard',
     'Sonderabfallmobil': 'special',
-    'Hackselaktion': 'chipping_service'
+    'Häckselaktion': 'chipping_service'
 }
+
+ignore_entries = [
+    'Tour Öki-Bus fällt aus',
+    'Tour Öki-Bus Nachmittag fällt aus',
+    'Hauptsammelstelle geschlossen',
+    'Hauptsammelstelle Nachmittag geschlossen',
+    '"Kompostabgabe',
+]
 
 
 def waste_type(in_type):
@@ -81,9 +89,10 @@ try:
             end_date = (2023, 12, 31)
             events = parse_ics.parse_file(cal_path, start_date, end_date)
             for event in events:
-                from pprint import pprint
-                pprint(event)
                 if 'summary' not in event or not event['summary']:
+                    continue
+
+                if event['summary'] in ignore_entries:
                     continue
 
                 try:
@@ -92,11 +101,11 @@ try:
                         'area': zone,
                         'zip': '8600',
                         'col_date': event['start_date'].date().isoformat(),
-                        'waste_type': waste_type(event.get('summary', '')),
+                        'waste_type': waste_type(event['summary']),
                     }
                 except KeyError:
-                    print(f"ERROR: could not map {event.get('summary')}, skipping...", file=sys.stderr)
-                    continue
+                    print(f"ERROR: could not map {event['summary']}, skipping...", file=sys.stderr)
+                    raise
                 writer.writerow(out)
 
 except Exception as e:
