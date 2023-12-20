@@ -30,23 +30,15 @@ header = [
 source = {
     '1': {
         'url': 'https://www.uster.ch/_doc/4890898',
-        'waste_weekday': 1,  # Tuesday
-        'organic_weekday': 4, # Friday
     },
     '2': {
         'url': 'https://www.uster.ch/_doc/4890901',
-        'waste_weekday': 3,  # Thursday
-        'organic_weekday': 0, # Monday
     },
     '3': {
         'url': 'https://www.uster.ch/_doc/4890907',
-        'waste_weekday': 0,  # Monday
-        'organic_weekday': 2, # Wednesday
     },
     '4': {
         'url': 'https://www.uster.ch/_doc/4890910',
-        'waste_weekday': 2,  # Wednesday
-        'organic_weekday': 3, # Thursday
     },
 }
 
@@ -62,22 +54,6 @@ waste_type_map = {
     'Sonderabfallsammlung': 'special',
     'Sonderabfall': 'special',
 }
-
-skip_dates = [
-    '2024-01-01', # Neujahr
-    '2024-01-02', # Berchtoldstag
-    '2024-03-29', # Karfreitag
-    '2024-04-01', # Ostermontag
-    '2024-05-01', # 1. Mai
-    '2024-05-09', # Auffahrt
-    '2024-05-20', # Pfingstmontag
-    '2024-08-01', # 1. August
-    '2024-12-25', # Weihnachten
-    '2024-12-26', # Stephanstag
-    '2025-01-01', # Neujahr
-    '2025-01-02', # Berchtoldstag
-]
-
 
 def waste_type(in_type):
     try:
@@ -117,29 +93,6 @@ try:
                     'waste_type': waste_type(event.get('summary', '')),
                 }
                 writer.writerow(out)
-
-            # start_date = date(2024, 1, 1)
-            # total_days = 366
-            # for day in range(total_days):
-            #     current_date = (start_date + timedelta(days=day))
-            #     if current_date.isoformat() in skip_dates:
-            #         print(f"Skipping date {current_date.isoformat()}...")
-            #         continue
-            #     if current_date.weekday() == config['waste_weekday']:
-            #         w_type = 'waste'
-            #     elif current_date.weekday() == config['organic_weekday']:
-            #         w_type = 'organic'
-            #     else:
-            #         continue
-            #     out = {
-            #         'region': 'uster',
-            #         'area': zone,
-            #         'zip': '8610',
-            #         'col_date': current_date.isoformat(),
-            #         'waste_type': w_type,
-            #     }
-            #     writer.writerow(out)
-
 
 except Exception as e:
     print("Error: %s" % e)
