@@ -27,20 +27,28 @@ header = [
     'col_date',
 ]
 
-source = {
-    '1': {
+source = [
+    {
         'url': 'https://www.duebendorf.ch/_doc/4777654',
+        'area': '1',
     },
-    '2': {
+    {
         'url': 'https://www.duebendorf.ch/_doc/4777657',
+        'area': '2',
     },
-    '3': {
+    {
         'url': 'https://www.duebendorf.ch/_doc/4777660',
+        'area': '3',
     },
-    '4': {
+    {
         'url': 'https://www.duebendorf.ch/_doc/4777663',
+        'area': '4',
     },
-}
+    { # Separater Karton-Kalender, da Karton im Kreis 4 oben fehlt
+        'url': 'https://www.duebendorf.ch/_doc/4777642',
+        'area': '4',
+    }
+]
 
 waste_type_map = {
     'Kehricht': 'waste',
@@ -82,7 +90,8 @@ try:
         writer = csv.DictWriter(f, fieldnames=header, quoting=csv.QUOTE_NONNUMERIC)
         writer.writeheader()
 
-        for zone, config in source.items():
+        for config in source:
+            zone = config['area']
             # iCal Download URL
             cal_path = os.path.join(__location__, f'duebendorf_calendar_{zone}.ics')
 
