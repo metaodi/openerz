@@ -12,14 +12,15 @@ __location__ = os.path.realpath(
     )
 )
 
+year = "2024"
 waste_sources = {
-    'organic': "https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_bioabfall/download/entsorgungskalender_bioabfall_2023.csv",
-    'cargotram':"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_cargotram/download/entsorgungskalender_cargoTram_2023.csv",
-    'etram': "https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_etram/download/entsorgungskalender_eTram_2023.csv",
-    "cardboard": "https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_karton/download/entsorgungskalender_karton_2023.csv",
-    "waste": "https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_kehricht/download/entsorgungskalender_kehricht_2023.csv",
-    "paper": "https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_papier/download/entsorgungskalender_papier_2023.csv",
-    "special": "https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sonderabfall/download/entsorgungskalender_sonderabfall_2023.csv"
+    'organic': f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_bioabfall/download/entsorgungskalender_bioabfall_{year}.csv",
+    'cargotram': f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_cargotram/download/entsorgungskalender_cargoTram_{year}.csv",
+    'etram': f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_etram/download/entsorgungskalender_eTram_{year}.csv",
+    "cardboard": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_karton/download/entsorgungskalender_karton_{year}.csv",
+    "waste": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_kehricht/download/entsorgungskalender_kehricht_{year}.csv",
+    "paper": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_papier/download/entsorgungskalender_papier_.{year}csv",
+    "special": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sonderabfall/download/entsorgungskalender_sonderabfall_{year}.csv"
 }
 
 # Abfuhrtermine
