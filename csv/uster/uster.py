@@ -29,22 +29,22 @@ header = [
 
 source = {
     '1': {
-        'url': 'https://www.uster.ch/_doc/4202852',
+        'url': 'https://www.uster.ch/_doc/4890898',
         'waste_weekday': 1,  # Tuesday
         'organic_weekday': 4, # Friday
     },
     '2': {
-        'url': 'https://www.uster.ch/_doc/4202855',
+        'url': 'https://www.uster.ch/_doc/4890901',
         'waste_weekday': 3,  # Thursday
         'organic_weekday': 0, # Monday
     },
     '3': {
-        'url': 'https://www.uster.ch/_doc/4202858',
+        'url': 'https://www.uster.ch/_doc/4890907',
         'waste_weekday': 0,  # Monday
         'organic_weekday': 2, # Wednesday
     },
     '4': {
-        'url': 'https://www.uster.ch/_doc/4202861',
+        'url': 'https://www.uster.ch/_doc/4890910',
         'waste_weekday': 2,  # Wednesday
         'organic_weekday': 3, # Thursday
     },
@@ -52,28 +52,30 @@ source = {
 
 waste_type_map = {
     'Kleidersammlung': 'textile',
+    'Textilsammlung': 'textile',
     'Kehricht': 'waste',
     'Grüngut': 'organic',
     'Metallsammlung': 'metal',
     'Papiersammlung': 'paper',
     'Kartonsammlung': 'cardboard',
+    'Karton': 'cardboard',
     'Sonderabfallsammlung': 'special',
+    'Sonderabfall': 'special',
 }
 
 skip_dates = [
-    '2023-01-01',
-    '2023-01-02',
-    '2023-04-07',
-    '2023-04-10',
-    '2023-05-01',
-    '2023-05-18',
-    '2023-05-29',
-    '2023-08-01',
-    '2023-11-30',
-    '2023-12-25',
-    '2023-12-26',
-    '2024-01-01',
-    '2024-01-02',
+    '2024-01-01', # Neujahr
+    '2024-01-02', # Berchtoldstag
+    '2024-03-29', # Karfreitag
+    '2024-04-01', # Ostermontag
+    '2024-05-01', # 1. Mai
+    '2024-05-09', # Auffahrt
+    '2024-05-20', # Pfingstmontag
+    '2024-08-01', # 1. August
+    '2024-12-25', # Weihnachten
+    '2024-12-26', # Stephanstag
+    '2025-01-01', # Neujahr
+    '2025-01-02', # Berchtoldstag
 ]
 
 
@@ -101,8 +103,8 @@ try:
             print(f"Download URL: {config['url']}")
             dl.download_file(config['url'], cal_path)
 
-            start_date = (2023, 1, 1)
-            end_date = (2023, 12, 31)
+            start_date = (2024, 1, 1)
+            end_date = (2024, 12, 31)
             events = parse_ics.parse_file(cal_path, start_date, end_date)
             for event in events:
                 if 'summary' not in event or not event['summary']:
@@ -116,27 +118,27 @@ try:
                 }
                 writer.writerow(out)
 
-            start_date = date(2023, 1, 1)
-            total_days = 366
-            for day in range(total_days):
-                current_date = (start_date + timedelta(days=day))
-                if current_date.isoformat() in skip_dates:
-                    print(f"Skipping date {current_date.isoformat()}...")
-                    continue
-                if current_date.weekday() == config['waste_weekday']:
-                    w_type = 'waste'
-                elif current_date.weekday() == config['organic_weekday']:
-                    w_type = 'organic'
-                else:
-                    continue
-                out = {
-                    'region': 'uster',
-                    'area': zone,
-                    'zip': '8610',
-                    'col_date': current_date.isoformat(),
-                    'waste_type': w_type,
-                }
-                writer.writerow(out)
+            # start_date = date(2024, 1, 1)
+            # total_days = 366
+            # for day in range(total_days):
+            #     current_date = (start_date + timedelta(days=day))
+            #     if current_date.isoformat() in skip_dates:
+            #         print(f"Skipping date {current_date.isoformat()}...")
+            #         continue
+            #     if current_date.weekday() == config['waste_weekday']:
+            #         w_type = 'waste'
+            #     elif current_date.weekday() == config['organic_weekday']:
+            #         w_type = 'organic'
+            #     else:
+            #         continue
+            #     out = {
+            #         'region': 'uster',
+            #         'area': zone,
+            #         'zip': '8610',
+            #         'col_date': current_date.isoformat(),
+            #         'waste_type': w_type,
+            #     }
+            #     writer.writerow(out)
 
 
 except Exception as e:
