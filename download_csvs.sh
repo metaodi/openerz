@@ -1,4 +1,12 @@
-#!/bin/sh
+#!/bin/bash
+
+set -e
+
+function cleanup {
+    exit $?
+}
+
+trap "cleanup" EXIT
 
 # Basel
 echo "Download Basel data..."

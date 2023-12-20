@@ -1,5 +1,13 @@
 #!/bin/bash
 
+set -e
+
+function cleanup {
+    exit $?
+}
+
+trap "cleanup" EXIT
+
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # download
