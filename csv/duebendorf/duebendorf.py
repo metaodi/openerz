@@ -29,16 +29,16 @@ header = [
 
 source = {
     '1': {
-        'url': 'https://www.duebendorf.ch/_doc/4178203',
+        'url': 'https://www.duebendorf.ch/_doc/4777654',
     },
     '2': {
-        'url': 'https://www.duebendorf.ch/_doc/4178200',
+        'url': 'https://www.duebendorf.ch/_doc/4777657',
     },
     '3': {
-        'url': 'https://www.duebendorf.ch/_doc/4178197',
+        'url': 'https://www.duebendorf.ch/_doc/4777660',
     },
     '4': {
-        'url': 'https://www.duebendorf.ch/_doc/4178194',
+        'url': 'https://www.duebendorf.ch/_doc/4777663',
     },
 }
 
@@ -48,15 +48,19 @@ waste_type_map = {
     'Papier': 'paper',
     'Karton': 'cardboard',
     'Sonderabfallmobil': 'special',
-    'Häckselaktion': 'chipping_service'
+    'Häckselaktion': 'chipping_service',
+    'Haeckselaktion': 'chipping_service',
 }
 
 ignore_entries = [
     'Tour Öki-Bus fällt aus',
+    'Tour Oeki Bus faellt aus',
     'Tour Öki-Bus Nachmittag fällt aus',
+    'Tour Oeki Bus Nachmittag faellt aus',
     'Hauptsammelstelle geschlossen',
     'Hauptsammelstelle Nachmittag geschlossen',
-    '"Kompostabgabe',
+    'Hauptsammelstelle Vormittag geöffnet',
+    'Kompostabgabe',
 ]
 
 
@@ -85,8 +89,8 @@ try:
             print(f"Download URL: {config['url']}")
             dl.download_file(config['url'], cal_path)
 
-            start_date = (2023, 1, 1)
-            end_date = (2023, 12, 31)
+            start_date = (2024, 1, 1)
+            end_date = (2024, 12, 31)
             events = parse_ics.parse_file(cal_path, start_date, end_date)
             for event in events:
                 if 'summary' not in event or not event['summary']:

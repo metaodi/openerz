@@ -50,7 +50,7 @@ The information is taken from the [municipality website](https://www.wangen-brue
 
 ## Dübendorf
 
-Dübendorf publishes it's calendar as [iCal/ICS file on their website](https://www.duebendorf.ch/dienstleistungen/90368) (one for each area).
+Dübendorf publishes it's calendar as [iCal/ICS file on their website](https://www.duebendorf.ch/dienstleistungen/97555) (one for each area).
 The stations are [published](https://www.duebendorf.ch/abfallorte) as well.
 
 # Format
