@@ -60,7 +60,8 @@ with open(csv_path, 'w') as f:
             'col_date': row['termin'],
             'waste_type': waste_type(row['art']),
         }
-        writer.writerow(out)
+        if row['termin']:
+            writer.writerow(out)
 
 # Recyclingstationen
 CSV_URL = "https://data.bs.ch/explore/dataset/100027/download/?format=csv&timezone=Europe/Zurich&lang=de&use_labels_for_header=false&csv_separator=%2C"

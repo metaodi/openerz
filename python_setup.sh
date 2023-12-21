@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 [ ! -d pyenv ] && python -m venv pyenv
 source pyenv/bin/activate
 

@@ -1,4 +1,12 @@
-#!/bin/sh
+#!/bin/bash
+
+set -e
+
+function cleanup {
+    exit $?
+}
+
+trap "cleanup" EXIT
 
 # Basel
 echo "Download Basel data..."
@@ -19,3 +27,7 @@ echo "Download Zimmerberg data..."
 # Uster
 echo "Download Uster data..."
 ./csv/uster/uster.py
+
+# Dübendorf
+echo "Download Dübendorf data..."
+./csv/duebendorf/duebendorf.py

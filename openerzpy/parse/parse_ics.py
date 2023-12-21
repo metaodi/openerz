@@ -74,10 +74,10 @@ def parse_file(path, start_date=None, end_date=None):
         # map properties
         event = map_event(component)
         # delete fields that should not be exported as CSV
-        del event['extra']
-        del event['location']
-        del event['description']
-        del event['uid']
+        del_props = ['extra', 'location', 'description', 'uid']
+        for del_prop in del_props:
+            if del_prop in event:
+                del event[del_prop] 
         events.append(event)
 
     return events

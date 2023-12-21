@@ -37,6 +37,9 @@ arguments = docopt(__doc__, version='Update database with CSV file 1.0')
 if not arguments['--table'] in ('calendar', 'station'):
     raise ValueError("--table must be either 'calendar' or 'station'")
 
+if not os.path.exists(arguments['--file']):
+    raise FileNotFoundError(f"--file must be an existing file, {arguments['--file']} not found")
+
 
 def create_table(cur, table, drop=False, purge=False):
     if drop:

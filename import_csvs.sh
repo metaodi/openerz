@@ -1,4 +1,13 @@
-#!/bin/sh
+#!/bin/bash
+
+set -e
+
+function cleanup {
+    exit $?
+}
+
+trap "cleanup" EXIT
+
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
@@ -18,6 +27,7 @@ $DIR/update_database.py -f $DIR/csv/zimmerberg/oberrieden_stationen.csv --table 
 $DIR/update_database.py -f $DIR/csv/zimmerberg/kilchberg_stationen.csv --table station --region kilchberg
 $DIR/update_database.py -f $DIR/csv/uster/uster_stationen.csv --table station --region uster
 $DIR/update_database.py -f $DIR/csv/wangen-bruttisellen/wangen-bruttisellen_stationen.csv --table station --region wangen-bruttisellen
+$DIR/update_database.py -f $DIR/csv/duebendorf/duebendorf_stationen.csv --table station --region duebendorf
 
 
 # Calendar
@@ -35,3 +45,4 @@ $DIR/update_database.py -f $DIR/csv/zimmerberg/oberrieden.csv --table calendar -
 $DIR/update_database.py -f $DIR/csv/zimmerberg/kilchberg.csv --table calendar --region kilchberg
 $DIR/update_database.py -f $DIR/csv/uster/uster.csv --table calendar --region uster
 $DIR/update_database.py -f $DIR/csv/wangen-bruttisellen/wangen-bruttisellen.csv --table calendar --region wangen-bruttisellen
+$DIR/update_database.py -f $DIR/csv/duebendorf/duebendorf.csv --table calendar --region duebendorf
