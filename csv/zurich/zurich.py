@@ -24,17 +24,67 @@ logging.basicConfig(
 )
 logging.captureWarnings(True)
 
+last_year = "2023"
 year = "2024"
 
-waste_sources = {
-    'organic': f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_bioabfall/download/entsorgungskalender_bioabfall_{year}.csv",
-    'cargotram': f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_cargotram/download/entsorgungskalender_cargoTram_{year}.csv",
-    'etram': f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_etram/download/entsorgungskalender_eTram_{year}.csv",
-    "cardboard": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_karton/download/entsorgungskalender_karton_{year}.csv",
-    "waste": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_kehricht/download/entsorgungskalender_kehricht_{year}.csv",
-    "paper": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_papier/download/entsorgungskalender_papier_{year}.csv",
-    "special": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sonderabfall/download/entsorgungskalender_sonderabfall_{year}.csv"
-}
+waste_sources = [
+    {
+        "waste_type": 'organic',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_bioabfall/download/entsorgungskalender_bioabfall_{last_year}.csv",
+    },
+    {
+        "waste_type": 'cargotram',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_cargotram/download/entsorgungskalender_cargoTram_{last_year}.csv",
+    },
+    {
+        "waste_type": 'etram',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_etram/download/entsorgungskalender_eTram_{last_year}.csv",
+    },
+    {
+        "waste_type": 'cardboard',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_karton/download/entsorgungskalender_karton_{last_year}.csv",
+    },
+    {
+        "waste_type": 'waste',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_kehricht/download/entsorgungskalender_kehricht_{last_year}.csv",
+    },
+    {
+        "waste_type": 'paper',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_papier/download/entsorgungskalender_papier_{last_year}.csv",
+    },
+    {
+        "waste_type": 'special',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sonderabfall/download/entsorgungskalender_sonderabfall_{last_year}.csv",
+    },
+    {
+        "waste_type": 'organic',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_bioabfall/download/entsorgungskalender_bioabfall_{year}.csv",
+    },
+    {
+        "waste_type": 'cargotram',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_cargotram/download/entsorgungskalender_cargoTram_{year}.csv",
+    },
+    {
+        "waste_type": 'etram',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_etram/download/entsorgungskalender_eTram_{year}.csv",
+    },
+    {
+        "waste_type": 'cardboard',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_karton/download/entsorgungskalender_karton_{year}.csv",
+    },
+    {
+        "waste_type": 'waste',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_kehricht/download/entsorgungskalender_kehricht_{year}.csv",
+    },
+    {
+        "waste_type": 'paper',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_papier/download/entsorgungskalender_papier_{year}.csv",
+    },
+    {
+        "waste_type": 'special',
+        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sonderabfall/download/entsorgungskalender_sonderabfall_{year}.csv",
+    },
+]
 
 # Abfuhrtermine
 header = [
@@ -59,7 +109,9 @@ with open(csv_path, 'w') as f:
     log.info("Start writing zurich.csv")
     writer.writeheader()
 
-    for waste_type, url in waste_sources.items():
+    for s in waste_sources:
+        waste_type = s['waste_type']
+        url = s['url']
         log.info(f"Get {waste_type} CSV from {url}")
         r = requests.get(url)
         r.encoding = 'utf-8-sig'
