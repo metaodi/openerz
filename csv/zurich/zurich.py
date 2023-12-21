@@ -24,8 +24,8 @@ logging.basicConfig(
 )
 logging.captureWarnings(True)
 
-
 year = "2024"
+
 waste_sources = {
     'organic': f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_bioabfall/download/entsorgungskalender_bioabfall_{year}.csv",
     'cargotram': f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_cargotram/download/entsorgungskalender_cargoTram_{year}.csv",
@@ -79,7 +79,7 @@ with open(csv_path, 'w') as f:
             writer.writerow(out)
 
 # Recyclingstationen
-CSV_URL = "https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sammelstellen/download/entsorgungskalender_sammelstellen_2023.csv"
+CSV_URL = f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sammelstellen/download/entsorgungskalender_sammelstellen_{year}.csv"
 log.info(f"Get station CSV from {CSV_URL}")
 r = requests.get(CSV_URL)
 r.encoding = 'utf-8-sig'
