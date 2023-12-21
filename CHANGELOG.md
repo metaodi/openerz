@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+- Add Dübendorf as new region
+- Add data of Dübendorf 2024
+- Add data of Zurich 2024
+- Add data of Uster 2024
+- Error handling for bash scripts
+
+### Changed
+- Upgrade dependencies
+- Minimum version of node is now 16.0.0
 
 ## [6.2.0] - 2023-01-12
 ### Added
