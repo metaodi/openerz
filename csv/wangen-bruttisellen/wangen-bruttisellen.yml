@@ -1,0 +1,58 @@
+region: wangen-bruttisellen
+zip: 8306
+
+collections:
+  waste:
+    - schedule:
+        - weekly every Friday
+        - 2024-03-27 # Ersatzdatum für Karfreitag 
+      exclude: ~
+  
+  organic:
+    - schedule:
+        - every 2nd and 4th Monday in Jan
+        - every 1st and 3rd Monday in Feb
+        - weekly every Monday from March until December
+        - every 2nd and 4th Monday in Dec
+        - 2024-04-03 # Ersatzdatum für Ostermontag
+        - 2024-05-22 # Ersatzdatum für Pfingsmontag
+      exclude: ~
+
+  chipping_service:
+    - schedule:
+        - 2024-03-12
+        - 2024-03-13
+        - 2024-03-14
+        - 2024-10-29
+        - 2024-10-30
+        - 2024-10-31
+      exclude: ~
+
+  bulky_goods:
+    - schedule:
+        - weekly every Friday
+        - 2024-03-27 # Ersatzdatum für Karfreitag 
+      exclude: ~
+
+  paper:
+    - schedule:
+        - every first Saturday of the month
+      exclude: ~
+
+  cardboard:
+    - schedule:
+        - every first Wednesday of the month
+        - 2024-05-06 # Ersatzdatum für 1. Mai
+      exclude: ~
+
+exclude:
+  - 2024-01-01 # Neujahr
+  - 2024-01-02 # Berchtoldstag
+  - 2024-03-29 # Karfreitag
+  - 2024-04-01 # Ostermontag
+  - 2024-05-01 # 1. Mai
+  - 2024-05-09 # Auffahrt
+  - 2024-05-20 # Pfingstmontag
+  - 2024-08-01 # 1. August
+  - 2024-12-25 # Weihnachten
+  - 2024-12-26 # Stephanstag
