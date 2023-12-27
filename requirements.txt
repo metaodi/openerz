@@ -1,5 +1,6 @@
 docopts
 icalendar
+pandas
 psycopg2-binary
 python-dateutil
 python-dotenv

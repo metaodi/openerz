@@ -13,10 +13,22 @@ from pprint import pformat
 
 log = logging.getLogger(__name__)
 
+logging.basicConfig(
+    format="%(asctime)s %(levelname)-8s %(message)s",
+    level=logging.INFO,
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logging.captureWarnings(True)
 
-def generate_events(config_path, start_date, end_date):
+
+def generate_events(config_path, verbose=False):
+    if verbose:
+        log.setLevel(logging.DEBUG)
     config = load_config(config_path)
     region = config['region']
+    start_date = datetime.fromisoformat(config['start_date'])
+    end_date = datetime.fromisoformat(config['end_date'])
+
     for waste_type, collections in config['collections'].items():
         for collection in collections:
             area = collection.get('area', '')
@@ -61,16 +73,18 @@ def load_config(config_path):
     schema = Schema({
         "region": And(str, len),
         "zip": And(Use(int), lambda n: 1000 <= n <= 9999),
+        "start_date": Or(str, And(date, Use(lambda n: n.isoformat()))),
+        "end_date": Or(str, And(date, Use(lambda n: n.isoformat()))),
         "collections": {
              Or(*waste_types): [
                  {
                      "schedule": [Or(str, And(date, Use(lambda n: n.isoformat())))],
                      Optional("area"): And(str, len),
-                     Optional("exclude"): Or([And(date, Use(lambda n: n.isoformat()))], None),
+                     Optional("exclude"): Or([str], [And(date, Use(lambda n: n.isoformat()))], None),
                  }
              ]
         },
-        "exclude": Or([And(date, Use(lambda n: n.isoformat()))], None),
+        "exclude": Or([Or(str, And(date, Use(lambda n: n.isoformat())))], None),
     })
 
     with open(config_path) as f:
@@ -78,7 +92,6 @@ def load_config(config_path):
 
     validated_config = schema.validate(config)
     log.debug(pformat(validated_config))
-    print(validated_config)
     return validated_config
 
 

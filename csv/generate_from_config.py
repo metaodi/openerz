@@ -3,7 +3,7 @@
 """Generate CSV from config file
 
 Usage:
-  generate_from_config.py --config <path-to-config> --output <path-to-output> --year <year> [--verbose]
+  generate_from_config.py --config <path-to-config> --output <path-to-output> [--verbose]
   generate_from_config.py (-h | --help)
   generate_from_config.py --version
 
@@ -12,7 +12,6 @@ Options:
   --version                     Show version.
   -c, --config <path-to-config> Path to the config file.
   -o, --output <path-to-output> Path to the output CSV file.
-  -y, --year <year>             Year to generate the output for.
   -v, --verbose                 Enable more verbose output.
 """
 
@@ -34,9 +33,17 @@ __location__ = os.path.realpath(
 
 arguments = docopt(__doc__, version='Generate CSV from config file 1.0')
 
+# Parameter
+verbose = arguments['--verbose']
+config_path = arguments['--config']
+output_path = arguments['--output']
+
+if not os.path.exists(config_path):
+    raise FileNotFoundError(f"--config must be an existing file, {config_path} not found")
+
 # Logging
 log = logging.getLogger(__name__)
-if arguments['--verbose']:
+if verbose:
     log.setLevel(logging.DEBUG)
 
 logging.basicConfig(
@@ -45,14 +52,6 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 logging.captureWarnings(True)
-
-# Parameter
-config_path = arguments['--config']
-output_path = arguments['--output']
-year = int(arguments['--year'])
-
-if not os.path.exists(config_path):
-    raise FileNotFoundError(f"--config must be an existing file, {config_path} not found")
 
 
 try:
@@ -68,10 +67,7 @@ try:
         writer = csv.DictWriter(f, fieldnames=header, quoting=csv.QUOTE_NONNUMERIC)
         writer.writeheader()
 
-        start_date = datetime.datetime(year, 1, 1)
-        end_date = datetime.datetime(year, 12, 31)
-
-        for event in parse_config.generate_events(config_path, start_date, end_date):
+        for event in parse_config.generate_events(config_path, verbose=verbose):
             log.debug(pformat(event))
             writer.writerow(event)
 
