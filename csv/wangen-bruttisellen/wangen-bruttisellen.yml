@@ -1,0 +1,91 @@
+region: wangen-bruttisellen
+zip: 8306
+start_date: 2023-01-01
+end_date: 2024-12-31
+
+collections:
+  waste:
+    - schedule:
+        - weekly every Friday
+        - 2023-04-06 # Ersatzdatum für Karfreitag 
+        - 2024-03-27 # Ersatzdatum für Karfreitag 
+      exclude: ~
+  
+  organic:
+    - schedule:
+        - every 2nd and 4th Monday in Jan
+        - every 1st and 3rd Monday in Feb
+        - weekly every Monday from March until December
+        - every 2nd and 4th Monday in Dec
+        - 2023-04-12 # Ersatzdatum für Ostermontag
+        - 2023-05-03 # Ersatzdatum für 1. Mai
+        - 2023-05-31 # Ersatzdatum für Pfingsmontag
+        - 2024-04-03 # Ersatzdatum für Ostermontag
+        - 2024-05-22 # Ersatzdatum für Pfingsmontag
+      exclude: ~
+
+  chipping_service:
+    - schedule:
+        - 2023-03-14
+        - 2023-03-15
+        - 2023-03-16
+        - 2023-10-31
+        - 2023-11-01
+        - 2023-11-02
+        - 2024-03-12
+        - 2024-03-13
+        - 2024-03-14
+        - 2024-10-29
+        - 2024-10-30
+        - 2024-10-31
+      exclude: ~
+
+  bulky_goods:
+    - schedule:
+        - weekly every Friday
+        - 2023-04-06 # Ersatzdatum für Karfreitag 
+        - 2024-03-27 # Ersatzdatum für Karfreitag 
+      exclude: ~
+
+  paper:
+    - schedule:
+        - every first Saturday of the month
+      exclude: ~
+
+  cardboard:
+    - schedule:
+        - every first Wednesday of the month
+        - 2024-05-06 # Ersatzdatum für 1. Mai
+      exclude: ~
+
+  special:
+    - schedule:
+        - 2023-02-17 # Brüttisellen
+        - 2023-09-20 # Wangen
+        - 2024-02-16 # Brüttisellen
+        - 2024-09-11 # Wangen
+      exclude: ~
+
+exclude:
+  # 2023
+  - "2023-01-01" # Neujahr
+  - 2023-01-02 # Berchtoldstag
+  - 2023-04-07 # Karfreitag
+  - 2023-04-10 # Ostermontag
+  - 2023-05-01 # 1. Mai
+  - 2023-05-09 # Auffahrt
+  - 2023-05-29 # Pfingstmontag
+  - 2023-08-01 # 1. August
+  - 2023-12-25 # Weihnachten
+  - 2023-12-26 # Stephanstag
+  # 2024
+  - 2024-01-01 # Neujahr
+  - 2024-01-02 # Berchtoldstag
+  - 2024-03-29 # Karfreitag
+  - 2024-04-01 # Ostermontag
+  - 2024-05-01 # 1. Mai
+  - 2024-05-09 # Auffahrt
+  - 2024-05-20 # Pfingstmontag
+  - 2024-08-01 # 1. August
+  - 2024-12-25 # Weihnachten
+  - 2024-12-26 # Stephanstag

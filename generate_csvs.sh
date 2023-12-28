@@ -31,3 +31,8 @@ echo "Download Uster data..."
 # Dübendorf
 echo "Download Dübendorf data..."
 ./csv/duebendorf/duebendorf.py
+
+# Wangen-Brüttisellen
+echo "Generate Wangen-Brüttisellen data..."
+./csv/generate_from_config.py -c ./csv/wangen-bruttisellen/wangen-bruttisellen.yml -o ./csv/wangen-bruttisellen/wangen-bruttisellen.csv --verbose
+./csv/sort_csv.py -i ./csv/wangen-bruttisellen/wangen-bruttisellen.csv -o ./csv/wangen-bruttisellen/wangen-bruttisellen.csv -s "col_date, waste_type"

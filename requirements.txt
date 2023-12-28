@@ -1,6 +1,11 @@
-requests
-icalendar
-recurring-ical-events
-psycopg2-binary
-python-dotenv
 docopts
+icalendar
+pandas
+psycopg2-binary
+python-dateutil
+python-dotenv
+pyyaml==5.4
+recurrent
+recurring-ical-events
+requests
+schema
