@@ -19,6 +19,7 @@ import os
 import traceback
 import logging
 import pandas as pd
+import csv
 from pprint import pformat
 from docopt import docopt
 
@@ -38,7 +39,7 @@ try:
     df_sorted = df.sort_values(columns)
 
     # export sorted dataframe as CSV
-    df_sorted.to_csv(output_path, index=False)
+    df_sorted.to_csv(output_path, index=False, quoting=csv.QUOTE_NONNUMERIC)
 
 except Exception as e:
     print("Error: %s" % e)
