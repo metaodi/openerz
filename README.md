@@ -54,6 +54,40 @@ OpenERZ uses a PostgreSQL database, which is updated using the `load_data_in_dat
 Most regions are updated using Python scripts.
 You might want to setup a python virtualenv using the `python_setup.sh` script.
 
+Add a new municipality
+======================
+
+If you want to add a new municipality to OpenERZ, you need to create a new directory in the [`csv` folder](https://github.com/metaodi/openerz/tree/main/csv).
+There you either create a python script or a config file to generate the CSV needed for the import in the database.
+
+The details are described in the [README of the `csv` folder](https://github.com/metaodi/openerz/blob/main/csv/README.md).
+
+To make sure the data is loaded, make sure to add the new municipality to:
+
+- `generate_csvs.sh`
+- `import_csvs.sh`
+- `.gitignore` 
+
+And update the documentation in `docs/README.md` and `csv/README.md`.
+
+Apart from the data, you need to add an entry in the `regionConfig` in `lib/config.js`:
+
+```js
+    ...
+    <name>: {
+        route: '<name>',
+        omitParams: ['region', 'zip'],
+        types: [
+            'bulky_goods',
+            'organic',
+            'paper',
+            'special',
+            'waste'
+        ]
+    },
+    ...
+```
+
 Release
 =======
 

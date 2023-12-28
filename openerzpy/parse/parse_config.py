@@ -32,6 +32,7 @@ def generate_events(config_path, verbose=False):
     for waste_type, collections in config['collections'].items():
         for collection in collections:
             area = collection.get('area', '')
+            station = collection.get('station', '')
             zip_code = config.get('zip') or collection.get('zip', '')
 
             ruleset = rrule.rruleset()
@@ -50,6 +51,7 @@ def generate_events(config_path, verbose=False):
                     'region': region,
                     'area': area,
                     'zip': zip_code,
+                    'station': station,
                     'col_date': col_date.date().isoformat(),
                     'waste_type': waste_type,
                 }
@@ -80,6 +82,7 @@ def load_config(config_path):
                  {
                      "schedule": [Or(str, And(date, Use(lambda n: n.isoformat())))],
                      Optional("area"): And(str, len),
+                     Optional("station"): And(str, len),
                      Optional("exclude"): Or([str], [And(date, Use(lambda n: n.isoformat()))], None),
                  }
              ]
