@@ -36,3 +36,8 @@ echo "Download Dübendorf data..."
 echo "Generate Wangen-Brüttisellen data..."
 ./csv/generate_from_config.py -c ./csv/wangen-bruttisellen/wangen-bruttisellen.yml -o ./csv/wangen-bruttisellen/wangen-bruttisellen.csv --verbose
 ./csv/sort_csv.py -i ./csv/wangen-bruttisellen/wangen-bruttisellen.csv -o ./csv/wangen-bruttisellen/wangen-bruttisellen.csv -s "col_date, waste_type"
+
+# Bassersdorf
+echo "Generate Bassersdorf data..."
+./csv/generate_from_config.py -c ./csv/bassersdorf/bassersdorf.yml -o ./csv/bassersdorf/bassersdorf.csv --verbose
+./csv/sort_csv.py -i ./csv/bassersdorf/bassersdorf.csv -o ./csv/bassersdorf/bassersdorf.csv -s "col_date, waste_type"

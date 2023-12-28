@@ -9,7 +9,8 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
      <option value="" disabled="disabled">--- Bitte wählen ---</option>
      <option value="adliswil">Adliswil</option>
      <option value="basel">Basel</option>
-    <option value="duebendorf">Dübendorf</option>
+     <option value="bassersdorf">Bassersdorf</option>
+     <option value="duebendorf">Dübendorf</option>
      <option value="horgen">Horgen</option>
      <option value="kilchberg">Kilchberg</option>
      <option value="langnau">Langnau a. A.</option>
@@ -65,6 +66,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
 1. Prüfen, ob Daten für deine Gemeinde vorliegen, aktuell gibt es Daten für folgende Gemeinden
     * Adliswil (`adliswil`)
     * Basel (`basel`)
+    * Bassersdorf (`bassersdorf`)
     * Dübendorf (`duebendorf`)
     * Horgen (`horgen`)
     * Kilchberg (`kilchberg`)
@@ -93,6 +95,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
 1. Gebiet auswählen, grössere Gemeinden sind oft in mehrere Gebiete aufgeteilt (1, 2, 3 / A, B, C / PLZ)
     * Adliswil -> keine Aufteilung
     * Basel -> Zone A-H
+    * Bassersdorf -> keine Aufteilung
     * Horgen -> Zone A-D
     * Kilchberg -> Zone A und B
     * Langnau -> keine Aufteilung

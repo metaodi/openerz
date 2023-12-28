@@ -16,6 +16,8 @@ csv/uster/uster.csv
 csv/duebendorf/*.ics
 csv/duebendorf/*.csv
 !csv/duebendorf/duebendorf_stationen.csv
+csv/bassersdorf/*.csv
+!csv/bassersdorf/bassersdorf_stationen.csv
 !csv/uster/uster_stationen.csv
 csv/zimmerberg/*.ics
 csv/zimmerberg/*.csv

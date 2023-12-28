@@ -28,6 +28,7 @@ $DIR/update_database.py -f $DIR/csv/zimmerberg/kilchberg_stationen.csv --table s
 $DIR/update_database.py -f $DIR/csv/uster/uster_stationen.csv --table station --region uster
 $DIR/update_database.py -f $DIR/csv/wangen-bruttisellen/wangen-bruttisellen_stationen.csv --table station --region wangen-bruttisellen
 $DIR/update_database.py -f $DIR/csv/duebendorf/duebendorf_stationen.csv --table station --region duebendorf
+$DIR/update_database.py -f $DIR/csv/bassersdorf/bassersdorf_stationen.csv --table station --region bassersdorf
 
 
 # Calendar
@@ -46,3 +47,4 @@ $DIR/update_database.py -f $DIR/csv/zimmerberg/kilchberg.csv --table calendar --
 $DIR/update_database.py -f $DIR/csv/uster/uster.csv --table calendar --region uster
 $DIR/update_database.py -f $DIR/csv/wangen-bruttisellen/wangen-bruttisellen.csv --table calendar --region wangen-bruttisellen
 $DIR/update_database.py -f $DIR/csv/duebendorf/duebendorf.csv --table calendar --region duebendorf
+$DIR/update_database.py -f $DIR/csv/bassersdorf/bassersdorf.csv --table calendar --region bassersdorf

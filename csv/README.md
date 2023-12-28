@@ -30,6 +30,7 @@ The calendar must be available as CSV with the following structure to ensure the
     - `uster`
     - `wangen-bruttisellen`
     - `duebendorf`
+    - `bassersdorf`
 2. `zip`, sometimes a zip code is given
     - `8038`
 3. `area`, an area within a region that has the same schedule, this could be a street, a part of town etc.
@@ -75,6 +76,7 @@ The collection stations must be available as CSV with the following structure:
     - `uster`
     - `wangen-bruttisellen`
     - `duebendorf`
+    - `bassersdorf`
 2. `zip`, zip code where the station is located
     - `8815`
 3. `name`
@@ -215,7 +217,8 @@ The script to generate the CSV is `uster.py`%
 
 ## Wangen-Brüttisellen
 
-Wangen-Brüttisellen doesnt expose any machine readable format therefor the CSV are created manually.
+Wangen-Brüttisellen doesnt expose any machine readable format. The CSV is generated from the config file [wangen-bruttisellen.yml](https://github.com/metaodi/openerz/blob/main/csv/wangen-bruttisellen/wangen-bruttisellen.yml).
+
 The information is taken from the [municipality website](https://www.wangen-bruettisellen.ch/de/verwaltung/abfall)
 
 ## Dübendorf
@@ -223,3 +226,8 @@ The information is taken from the [municipality website](https://www.wangen-brue
 Dübendorf publishes it's calendar as [iCal/ICS file on their website](https://www.duebendorf.ch/dienstleistungen/97555) (one for each area).
 The stations are [published](https://www.duebendorf.ch/abfallorte) as well.
 
+## Bassersdorf
+
+Bassersdorf doesnt expose any machine readable format. The CSV is generated from the config file [bassersdorf.yml](https://github.com/metaodi/openerz/blob/main/csv/bassersdorf/bassersdorf.yml).
+
+The information is taken from the [municipality website](https://www.bassersdorf.ch/politik-verwaltung/verwaltung/dienstleistungen-az.html/81/service/367)
