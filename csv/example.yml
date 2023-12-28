@@ -33,18 +33,17 @@ collections:
         - 2024-10-30
         - 2024-10-31
       exclude: ~
+      station: "Werkhof, Zürichstrasse 22, 9999 Example-Town"
 
   paper:
     - schedule:
         - every first Saturday of the month
-      exclude: ~
 
   cardboard:
     - area: a
       schedule:
         - every first Wednesday of the month
         - 2024-05-06 # Ersatzdatum für 1. Mai
-      exclude: ~
     - area: b
       schedule:
         - every 2nd Wednesday of the month

@@ -61,14 +61,16 @@ collections:
   special:
     - schedule:
         - 2023-02-17 # Brüttisellen
-        - 2023-09-20 # Wangen
         - 2024-02-16 # Brüttisellen
+      station: "Sonderabfallmobil, Zürichstrasse 22, 8306 Brüttisellen"
+    - schedule:
+        - 2023-09-20 # Wangen
         - 2024-09-11 # Wangen
-      exclude: ~
+      station: "Sonderabfallmobil, Schulhaus Oberwisen, Unterdorfstrasse 50, 8302 Wangen"
 
 exclude:
   # 2023
-  - "2023-01-01" # Neujahr
+  - 2023-01-01 # Neujahr
   - 2023-01-02 # Berchtoldstag
   - 2023-04-07 # Karfreitag
   - 2023-04-10 # Ostermontag
