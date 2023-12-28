@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+- New config file approach to describe waste collection calendars
+- 2024 data of Wangen-Brüttisellen
+
+### Fixed
+- Parameter of `Retry`
 
 ## [6.3.0] - 2023-12-21
 ### Added
