@@ -20,3 +20,4 @@ csv/duebendorf/*.csv
 csv/zimmerberg/*.ics
 csv/zimmerberg/*.csv
 !csv/zimmerberg/*_stationen.csv
+csv/wangen-bruttisellen/*.csv
