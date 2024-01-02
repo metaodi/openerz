@@ -78,7 +78,7 @@ def load_config(config_path):
         "start_date": Or(str, And(date, Use(lambda n: n.isoformat()))),
         "end_date": Or(str, And(date, Use(lambda n: n.isoformat()))),
         "collections": {
-             Or(*waste_types): Or([
+             Or(*list(waste_types.keys())): Or([
                  {
                      "schedule": [Or(str, And(date, Use(lambda n: n.isoformat())))],
                      Optional("area"): And(Use(str), str, len),
