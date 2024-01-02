@@ -40,3 +40,6 @@ jobs:
       
     - name: Run tests
       run: npm test
+
+    - name: Validate config
+      run: ./validate_config.py
