@@ -63,9 +63,16 @@ try:
         'waste_type',
         'col_date',
     ]
-    with open(output_path, 'w', newline='', encoding='utf-8') as f:
+
+    if os.path.exists(output_path):
+        mode = 'a'
+    else:
+        mode = 'w'
+
+    with open(output_path, mode, newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=header, quoting=csv.QUOTE_NONNUMERIC)
-        writer.writeheader()
+        if mode == 'w':
+            writer.writeheader()
 
         for event in parse_config.generate_events(config_path, verbose=verbose):
             log.debug(pformat(event))

@@ -107,7 +107,7 @@ def generate_muni_csv(muni, config):
     dl.download_file(url, cal_path)
 
     events = parse_ics.parse_file(cal_path)
-    csv_path = os.path.join(__location__, f'{muni}.csv')
+    csv_path = os.path.join(__location__, '..', muni, f'{muni}.csv')
     with open(csv_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=header, quoting=csv.QUOTE_NONNUMERIC)
         writer.writeheader()

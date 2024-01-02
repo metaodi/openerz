@@ -39,6 +39,8 @@ def generate_events(config_path, verbose=False):
     end_date = datetime.fromisoformat(config['end_date'])
 
     for waste_type, collections in config['collections'].items():
+        if not collections:
+            continue
         for collection in collections:
             area = collection.get('area', '')
             station = collection.get('station', '')
@@ -49,7 +51,7 @@ def generate_events(config_path, verbose=False):
             for slot in collection['schedule']:
                 adder.add_rule(slot)
 
-            excludes = config['exclude']
+            excludes = config.get('exclude', [])
             excludes.extend(collection.get('exclude') or [])
             excluder = RuleExcluder(ruleset, start_date, end_date)
             for slot in excludes:
@@ -67,26 +69,27 @@ def generate_events(config_path, verbose=False):
 
 
 def load_config(config_path):
-    waste_type_path = os.path.join(__location__, '..', '..', 'config', 'waste_types.json')
+    waste_type_path = os.path.join(__location__, '..', '..', 'config', 'waste_types.yml')
     with open(waste_type_path, 'r') as f:
-        waste_types = json.load(f)
+        waste_types = yaml.safe_load(f)
 
     schema = Schema({
         "region": And(str, len),
-        "zip": And(Use(int), lambda n: 1000 <= n <= 9999),
         "start_date": Or(str, And(date, Use(lambda n: n.isoformat()))),
         "end_date": Or(str, And(date, Use(lambda n: n.isoformat()))),
         "collections": {
-             Or(*waste_types): [
+             Or(*waste_types): Or([
                  {
                      "schedule": [Or(str, And(date, Use(lambda n: n.isoformat())))],
-                     Optional("area"): And(str, len),
+                     Optional("area"): And(Use(str), str, len),
+                     Optional("zip"): And(Use(int), lambda n: 1000 <= n <= 9999),
                      Optional("station"): And(str, len),
                      Optional("exclude"): Or([str], [And(date, Use(lambda n: n.isoformat()))], None),
                  }
-             ]
+             ], None)
         },
-        "exclude": Or([Or(str, And(date, Use(lambda n: n.isoformat())))], None),
+        Optional("zip"): And(Use(int), lambda n: 1000 <= n <= 9999),
+        Optional("exclude"): Or([Or(str, And(date, Use(lambda n: n.isoformat())))], None),
     })
 
     with open(config_path) as f:

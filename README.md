@@ -147,6 +147,8 @@ If you use a python script to generate the CSV (i.e. if there is an official dat
 
 ```yaml
 region: zurich
+start_date: 2023-01-01
+end_date: 2024-12-31
 
 collections:
   cardboard: ~

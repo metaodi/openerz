@@ -10,4 +10,12 @@ csv/**/*.ics
 !csv/duebendorf/duebendorf_stationen.csv
 !csv/bassersdorf/bassersdorf_stationen.csv
 !csv/uster/uster_stationen.csv
-!csv/zimmerberg/*_stationen.csv
+!csv/thalwil/thalwil_stationen.csv
+!csv/richterswil/richterswil_stationen.csv
+!csv/rueschlikon/rueschlikon_stationen.csv
+!csv/langnau/langnau_stationen.csv
+!csv/oberrieden/oberrieden_stationen.csv
+!csv/waedenswil/waedenswil_stationen.csv
+!csv/horgen/horgen_stationen.csv
+!csv/kilchberg/kilchberg_stationen.csv
+!csv/adliswil/adliswil_stationen.csv
