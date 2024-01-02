@@ -1,0 +1,12 @@
+region: zurich
+
+collections:
+  cardboard: ~
+  cargotram: ~
+  etram: ~
+  metal: ~
+  organic: ~
+  paper: ~
+  special: ~
+  textile: ~
+  waste: ~

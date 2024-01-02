@@ -8,36 +8,19 @@ function cleanup {
 
 trap "cleanup" EXIT
 
-# Basel
-echo "Download Basel data..."
-./csv/basel/basel.py
+DIR="$(cd "$(dirname "$0")" && pwd)"
 
-# Zurich
-echo "Download Zurich data..."
-./csv/zurich/zurich.py
+# loop over all csv data folders
+for f in $DIR/config/*.yml
+do
+    [ -f "$f" ] || break
 
-# St. Gallen
-echo "Download St. Gallen data..."
-./csv/stgallen/stgallen.py
-
-# Zimmerberg (District Horgen)
-echo "Download Zimmerberg data..."
-./csv/zimmerberg/zimmerberg.py
-
-# Uster
-echo "Download Uster data..."
-./csv/uster/uster.py
-
-# Dübendorf
-echo "Download Dübendorf data..."
-./csv/duebendorf/duebendorf.py
-
-# Wangen-Brüttisellen
-echo "Generate Wangen-Brüttisellen data..."
-./csv/generate_from_config.py -c ./csv/wangen-bruttisellen/wangen-bruttisellen.yml -o ./csv/wangen-bruttisellen/wangen-bruttisellen.csv --verbose
-./csv/sort_csv.py -i ./csv/wangen-bruttisellen/wangen-bruttisellen.csv -o ./csv/wangen-bruttisellen/wangen-bruttisellen.csv -s "col_date, waste_type"
-
-# Bassersdorf
-echo "Generate Bassersdorf data..."
-./csv/generate_from_config.py -c ./csv/bassersdorf/bassersdorf.yml -o ./csv/bassersdorf/bassersdorf.csv --verbose
-./csv/sort_csv.py -i ./csv/bassersdorf/bassersdorf.csv -o ./csv/bassersdorf/bassersdorf.csv -s "col_date, waste_type"
+    region=$(basename $f .yml)
+    echo "Generate ${region} CSV..."
+    if test -f "$DIR/csv/$region/$region.py"; then
+        $DIR/csv/$region/$region.py
+    else
+        $DIR/generate_from_config.py -c $DIR/config/$region.yml -o $DIR/csv/$region/$region.csv --verbose
+        $DIR/sort_csv.py -i $DIR/csv/$region/$region.csv -o $DIR/csv/$region/$region.csv -s "col_date, waste_type"
+    fi
+done

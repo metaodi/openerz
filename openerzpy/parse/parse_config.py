@@ -5,8 +5,10 @@ from recurrent.event_parser import RecurringEvent
 from dateutil import rrule
 from datetime import datetime, date
 import yaml
+import json
 from schema import Schema, And, Or, Use, Optional, SchemaError
 import sys
+import os
 import logging
 from pprint import pformat
 
@@ -19,6 +21,13 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 logging.captureWarnings(True)
+
+__location__ = os.path.realpath(
+    os.path.join(
+        os.getcwd(),
+        os.path.dirname(__file__)
+    )
+)
 
 
 def generate_events(config_path, verbose=False):
@@ -58,20 +67,10 @@ def generate_events(config_path, verbose=False):
 
 
 def load_config(config_path):
-    waste_types = [
-        'bulky_goods',
-        'cardboard',
-        'cargotram',
-        'chipping_service',
-        'etram',
-        'incombustibles',
-        'metal',
-        'organic',
-        'paper',
-        'special',
-        'textile',
-        'waste',
-    ]
+    waste_type_path = os.path.join(__location__, '..', '..', 'config', 'waste_types.json')
+    with open(waste_type_path, 'r') as f:
+        waste_types = json.load(f)
+
     schema = Schema({
         "region": And(str, len),
         "zip": And(Use(int), lambda n: 1000 <= n <= 9999),

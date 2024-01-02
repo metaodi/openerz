@@ -1,0 +1,10 @@
+region: thalwil
+
+collections:
+  cardboard: ~
+  imcombustibles: ~
+  metal: ~
+  organic: ~
+  paper: ~
+  special: ~
+  waste: ~

@@ -1,0 +1,9 @@
+region: uster
+
+collections:
+  cardboard: ~
+  metal: ~
+  organic: ~
+  paper: ~
+  special: ~
+  waste: ~

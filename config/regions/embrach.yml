@@ -1,0 +1,57 @@
+region: embrach
+zip: 8484
+start_date: 2024-01-01
+end_date: 2024-12-31
+
+collections:
+  waste:
+    - schedule:
+        - weekly every Tuesday
+        - 2024-01-04 # Ersatzdatum für Berchtoldstag
+      exclude: ~
+  
+  organic:
+    - schedule:
+        - weekly every Monday
+        - 2024-01-03 # Ersatzdatum für Neujahr
+        - 2024-04-03 # Ersatzdatum für Ostermontag
+        - 2024-05-22 # Ersatzdatum für Pfingstmontag
+      exclude: ~
+
+  bulky_goods:
+    - schedule:
+        - weekly every Tuesday
+        - 2024-01-04 # Ersatzdatum für Berchtoldstag
+      exclude: ~
+
+  paper:
+    - schedule:
+        - 2024-01-13
+        - 2024-03-09
+        - 2024-05-04
+        - 2024-08-17
+        - 2024-09-21
+        - 2024-11-23
+      exclude: ~
+
+  special:
+    - schedule:
+        - 2024-03-28
+        - 2024-10-24
+      station: "Wertstoffsammelstelle Ufmatten, Ufmattenstrasse 5, 8303 Bassersdorf"
+    - schedule:
+        - 2024-07-13
+      station: "Hauptsammelstelle, Römerweg 9, Kloten"
+
+exclude:
+  # 2024
+  - 2024-01-01 # Neujahr, Montag
+  - 2024-01-02 # Berchtoldstag, Dienstag
+  - 2024-03-29 # Karfreitag, Freitag
+  - 2024-04-01 # Ostermontag, Montag
+  - 2024-05-01 # 1. Mai, Mittwoch
+  - 2024-05-09 # Auffahrt, Donnerstag
+  - 2024-05-20 # Pfingstmontag, Montag
+  - 2024-08-01 # 1. August, Donnerstag
+  - 2024-12-25 # Weihnachten, Mittwoch
+  - 2024-12-26 # Stephanstag, Donnerstag

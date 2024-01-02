@@ -1,0 +1,11 @@
+region: horgen
+
+collections:
+  cardboard: ~
+  chipping_service: ~
+  imcombustibles: ~
+  metal: ~
+  organic: ~
+  paper: ~
+  special: ~
+  waste: ~
