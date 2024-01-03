@@ -5,34 +5,34 @@ end_date: 2024-12-31
 
 collections:
   waste:
-    - area: Ost
+    - area: ost
       schedule:
         - weekly every Tuesday
         - 2024-01-03 # Ersatzdatum für Berchtoldstag
-    - area: West
+    - area: west
       schedule:
         - weekly every Friday
         - 2024-03-26 # Ersatzdatum für Karfreitag
 
   bulky_goods:
-    - area: Ost
+    - area: ost
       schedule:
         - weekly every Tuesday
         - 2024-01-03 # Ersatzdatum für Berchtoldstag
-    - area: West
+    - area: west
       schedule:
         - weekly every Friday
         - 2024-03-26 # Ersatzdatum für Karfreitag
   
   organic:
-    - area: Ost
+    - area: ost
       schedule:
         - every other Wednesday in Jan and Feb starting jan 10th
         - every Wednesday from feb 28th until December 
         - every other Wednesday in Dec
         - 2024-04-29 # Ersatzdatum für 1. Mai
         - 2024-12-30 # Ersatzdatum für Neujahr 2025
-    - area: West
+    - area: west
       schedule:
         - every other Monday in Jan and Feb starting jan 8th
         - every Monday from feb 26th until December
