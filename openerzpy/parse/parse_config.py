@@ -83,7 +83,7 @@ def load_config(config_path):
              Or(*list(waste_types.keys())): Or([
                  {
                      "schedule": [Or(str, And(date, Use(lambda n: n.isoformat())))],
-                     Optional("area"): And(Use(str), str, len),
+                     Optional("area"): And(Use(str), Use(str.lower), str, len),
                      Optional("zip"): And(Use(int), lambda n: 1000 <= n <= 9999),
                      Optional("station"): And(str, len),
                      Optional("exclude"): Or([str], [And(date, Use(lambda n: n.isoformat()))], None),
