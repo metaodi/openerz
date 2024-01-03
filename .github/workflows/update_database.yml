@@ -27,8 +27,18 @@ jobs:
       
       - name: Validate config
         run: ./validate_config.py
+
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "openerz"
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
+          justlogin: true
+      
+      - name: Get DATABASE_URL from heroku
+        run: |
+          dburl=$(heroku config:get DATABASE_URL -a openerz)
+          echo "DATABASE_URL=${dburl}" >> "$GITHUB_ENV"
           
       - name: Update database
         run: ./load_data_in_database.sh
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
