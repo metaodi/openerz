@@ -4,9 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Changed
+- BC-Break: New config file approach to describe waste collection calendars
+
 ### Added
-- New config file approach to describe waste collection calendars
 - 2024 data of Wangen-Brüttisellen
+- 2024 data of Bassersdorf
+- 2024 data of Embrach
 
 ### Fixed
 - Parameter of `Retry`
