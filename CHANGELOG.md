@@ -8,9 +8,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - BC-Break: New config file approach to describe waste collection calendars
 
 ### Added
+- New config file approach to describe waste collection calendars
 - 2024 data of Wangen-Brüttisellen
 - 2024 data of Bassersdorf
 - 2024 data of Embrach
+- New paramter endpoint `/api/parameter/areas` to query the values of the `area` parameter for each region
 
 ### Fixed
 - Parameter of `Retry`

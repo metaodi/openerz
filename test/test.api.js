@@ -183,6 +183,44 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
+    describe('/api/parameter/areas is working', function() {
+        it('should return the correct parameter', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/parameter/areas'
+            });
+            response.statusCode.should.equal(200);
+            response.result._metadata.total_count.should.equal(48);
+            response.result.result.length.should.equal(48);
+            response.result.result[0].should.deepEqual({
+                'region': 'basel',
+                'area': 'A'
+            });
+        });
+        it('should return the correct parameter with region thalwil', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/parameter/areas?region=thalwil'
+            });
+            response.statusCode.should.equal(200);
+            response.result._metadata.total_count.should.equal(4);
+            response.result.result.length.should.equal(4);
+            response.result.result.should.deepEqual([
+                {'region': 'thalwil', 'area': ''},
+                {'region': 'thalwil', 'area': 'A'},
+                {'region': 'thalwil', 'area': 'B'},
+                {'region': 'thalwil', 'area': 'C'}
+            ]);
+        });
+        it('should return an error with incorrect region', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/parameter/areas?region=xyz'
+            });
+            response.statusCode.should.equal(400);
+        });
+    });
+
     describe('/api/calendar is working', function() {
         it('should return something', async function() {
             var response = await server.inject({
