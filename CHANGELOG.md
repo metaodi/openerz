@@ -433,7 +433,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v6.3.0...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v7.0.0...HEAD
+[7.0.0]: https://github.com/metaodi/openerz/compare/v6.3.0...v7.0.0
 [6.3.0]: https://github.com/metaodi/openerz/compare/v6.2.0...v6.3.0
 [6.2.0]: https://github.com/metaodi/openerz/compare/v6.1.0...v6.2.0
 [6.1.0]: https://github.com/metaodi/openerz/compare/v6.0.5...v6.1.0
