@@ -1,0 +1,6 @@
+region,zip,name,oil,metal,glass,textile
+embrach,8424,"KZU",false,false,true,false
+embrach,8424,"Parkplatz Bibliothek",false,true,true,true
+embrach,8424,"Wildbachstrasse",true,true,true,true
+embrach,8424,"Altes Werkgebäude",false,true,false,false
+embrach,8424,"Parkplatz Friedhof",false,true,true,true

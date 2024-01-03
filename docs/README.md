@@ -11,6 +11,7 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
      <option value="basel">Basel</option>
      <option value="bassersdorf">Bassersdorf</option>
      <option value="duebendorf">Dübendorf</option>
+     <option value="embrach">Embrach</option>
      <option value="horgen">Horgen</option>
      <option value="kilchberg">Kilchberg</option>
      <option value="langnau">Langnau a. A.</option>
@@ -68,6 +69,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Basel (`basel`)
     * Bassersdorf (`bassersdorf`)
     * Dübendorf (`duebendorf`)
+    * Embrach (`embrach`)
     * Horgen (`horgen`)
     * Kilchberg (`kilchberg`)
     * Langnau a. A. (`langnau`)
@@ -83,19 +85,21 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
 1. Abfallarten auswählen **ACHTUNG: nicht alle Abfallarten sind in allen Gemeinden verfügbar**
     * Bioabfall (`organic`) -> Alle
     * Kehricht (`waste`) -> Alle
-    * Altpapier (`paper`) -> Alle
-    * Karton (`cardboard`) -> Alle
-    * Unbrennbares / Grubengut (`incombustible`) -> Thalwil, Horgen, Oberrieden, Basel
-    * Häkseldienst (`chipping_service`) -> Wädenswil, Basel, Oberrieden, Rüschlikon, Richterswil, Langnau a. A., Kilchberg, Horgen, Adliswil, Wangen-Brüttisellen
-    * Grobmetall (`metal`) -> Thalwil, Horgen, Uster, Basel, St. Gallen
-    * Sperrmüll (`bulky_goods`) -> Basel, Wangen-Brüttisellen
-    * Sondermüll (`special`) -> Zürich, Thalwil, Adliswil, Horgen, Kilchberg, Langnau a. A., Rüschlikon, Richterswil, Oberrieden, Wädenswil, Uster
+    * Altpapier (`paper`)
+    * Karton (`cardboard`)
+    * Unbrennbares / Grubengut (`incombustible`)
+    * Häkseldienst (`chipping_service`)
+    * Grobmetall (`metal`)
+    * Sperrmüll (`bulky_goods`)
+    * Sondermüll (`special`)
     * eTram (`etram`) -> Zürich
     * CargoTram (`cargotram`) -> Zürich
-1. Gebiet auswählen, grössere Gemeinden sind oft in mehrere Gebiete aufgeteilt (1, 2, 3 / A, B, C / PLZ)
+1. Gebiet auswählen, grössere Gemeinden sind oft in mehrere Gebiete aufgeteilt (1, 2, 3 / A, B, C / PLZ / Ost & West)
     * Adliswil -> keine Aufteilung
     * Basel -> Zone A-H
     * Bassersdorf -> keine Aufteilung
+    * Dübendorf -> Kehrichtskreise 1-4
+    * Embrach -> Ost und West
     * Horgen -> Zone A-D
     * Kilchberg -> Zone A und B
     * Langnau -> keine Aufteilung

@@ -49,12 +49,14 @@ def generate_events(config_path, verbose=False):
             ruleset = rrule.rruleset()
             adder = RuleAdder(ruleset, start_date, end_date)
             for slot in collection['schedule']:
+                log.debug(f"Adding rule for {slot} (RuleAdder)")
                 adder.add_rule(slot)
 
             excludes = config.get('exclude', [])
             excludes.extend(collection.get('exclude') or [])
             excluder = RuleExcluder(ruleset, start_date, end_date)
             for slot in excludes:
+                log.debug(f"Adding rule for {slot} (RuleExcluder)")
                 excluder.add_rule(slot)
         
             for col_date in ruleset.between(start_date, end_date, inc=True):

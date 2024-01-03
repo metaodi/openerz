@@ -31,6 +31,7 @@ The calendar must be available as CSV with the following structure to ensure the
     - `wangen-bruttisellen`
     - `duebendorf`
     - `bassersdorf`
+    - `embrach`
 2. `zip`, sometimes a zip code is given
     - `8038`
 3. `area`, an area within a region that has the same schedule, this could be a street, a part of town etc.
@@ -77,6 +78,7 @@ The collection stations must be available as CSV with the following structure:
     - `wangen-bruttisellen`
     - `duebendorf`
     - `bassersdorf`
+    - `embrach`
 2. `zip`, zip code where the station is located
     - `8815`
 3. `name`
@@ -153,6 +155,12 @@ The stations are [published](https://www.duebendorf.ch/abfallorte) as well.
 
 ## Bassersdorf
 
-Bassersdorf doesnt expose any machine readable format. The CSV is generated from the config file [bassersdorf.yml](https://github.com/metaodi/openerz/blob/main/csv/bassersdorf/bassersdorf.yml).
+Bassersdorf doesnt expose any machine readable format. The CSV is generated from the config file [bassersdorf.yml](https://github.com/metaodi/openerz/blob/main/config/regions/bassersdorf.yml).
 
 The information is taken from the [municipality website](https://www.bassersdorf.ch/politik-verwaltung/verwaltung/dienstleistungen-az.html/81/service/367)
+
+# Embrach
+
+Embrach doesn't expose any machine readable format, the CSV in genereted from the config file [`embrach.yml`](https://github.com/metaodi/openerz/blob/main/config/regions/embrach.yml).
+
+The information is taken from the [municipality website](https://www.embrach.ch/dienstleistungen/7338)

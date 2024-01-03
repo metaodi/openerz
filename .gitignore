@@ -19,3 +19,4 @@ csv/**/*.ics
 !csv/horgen/horgen_stationen.csv
 !csv/kilchberg/kilchberg_stationen.csv
 !csv/adliswil/adliswil_stationen.csv
+!csv/embrach/embrach_stationen.csv

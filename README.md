@@ -85,7 +85,9 @@ This contains information about what kind of waste collection is available, and 
 
 Based on these rules the script [`generate_from_config.py`](https://github.com/metaodi/openerz/blob/main/csv/generate_from_config.py) is able to create a calendar CSV for the database import.
 
-The config file is written in YAML and has this structure:
+The config file is written in YAML and has this structure, use the `validate_config.py` script to validate the contents of all config files.
+
+**Example:**
 
 ```yaml
 region: <name>
