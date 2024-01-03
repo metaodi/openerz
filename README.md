@@ -174,6 +174,7 @@ Release
 To create a new release follow these steps:
 
 1. Update the version number in `package.json`
+1. Run `npm install` to update `package-lock.json`
 1. Update the `CHANGELOG.md`
 1. Create a [new release/tag on GitHub](https://github.com/metaodi/openerz/releases)
 
