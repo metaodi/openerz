@@ -8,31 +8,26 @@ function cleanup {
 
 trap "cleanup" EXIT
 
-# Basel
-echo "Download Basel data..."
-./csv/basel/basel.py
+DIR="$(cd "$(dirname "$0")" && pwd)"
 
-# Zurich
-echo "Download Zurich data..."
-./csv/zurich/zurich.py
+# loop over all csvs to run scripts
+for f in $DIR/csv/*/
+do
+    [ -f "$f" ] || break
 
-# St. Gallen
-echo "Download St. Gallen data..."
-./csv/stgallen/stgallen.py
+    echo "Generate ${f} CSV..."
+    if test -f "$DIR/csv/$f/$f.py"; then
+        $DIR/csv/$f/$f.py
+    fi
+done
 
-# Zimmerberg (District Horgen)
-echo "Download Zimmerberg data..."
-./csv/zimmerberg/zimmerberg.py
+# loop over all config files
+for f in $DIR/config/regions/*.yml
+do
+    [ -f "$f" ] || break
 
-# Uster
-echo "Download Uster data..."
-./csv/uster/uster.py
-
-# Dübendorf
-echo "Download Dübendorf data..."
-./csv/duebendorf/duebendorf.py
-
-# Wangen-Brüttisellen
-echo "Generate Wangen-Brüttisellen data..."
-./csv/generate_from_config.py -c ./csv/wangen-bruttisellen/wangen-bruttisellen.yml -o ./csv/wangen-bruttisellen/wangen-bruttisellen.csv --verbose
-./csv/sort_csv.py -i ./csv/wangen-bruttisellen/wangen-bruttisellen.csv -o ./csv/wangen-bruttisellen/wangen-bruttisellen.csv -s "col_date, waste_type"
+    region=$(basename $f .yml)
+    echo "Generate ${region} CSV..."
+    $DIR/generate_from_config.py -c $DIR/config/regions/$region.yml -o $DIR/csv/$region/$region.csv --verbose
+    $DIR/sort_csv.py -i $DIR/csv/$region/$region.csv -o $DIR/csv/$region/$region.csv -s "col_date, waste_type"
+done

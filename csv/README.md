@@ -30,6 +30,8 @@ The calendar must be available as CSV with the following structure to ensure the
     - `uster`
     - `wangen-bruttisellen`
     - `duebendorf`
+    - `bassersdorf`
+    - `embrach`
 2. `zip`, sometimes a zip code is given
     - `8038`
 3. `area`, an area within a region that has the same schedule, this could be a street, a part of town etc.
@@ -75,6 +77,8 @@ The collection stations must be available as CSV with the following structure:
     - `uster`
     - `wangen-bruttisellen`
     - `duebendorf`
+    - `bassersdorf`
+    - `embrach`
 2. `zip`, zip code where the station is located
     - `8815`
 3. `name`
@@ -91,81 +95,6 @@ The collection stations must be available as CSV with the following structure:
 7. `textile`
     - `true`
     - `false`
-
-## Generate the CSVs
-
-### Python script
-
-A python script is the easiest way to get and convert the data for a municipality.
-It assumes that the data is available somewhere for download (e.g. as a CSV on an open data portal, or as a .ics on a municipality website).
-
-There are plenty of examples of these scripts: zurich, uster, basel, zimmerberg.
-
-### Config file
-
-If no such data is available, it's probably best to create a config file for a municipality containing the "rules" to generate the calendar.
-
-This contains information about what kind of waste collection is available, and on what schedule (e.g. "every first Saturday of the month", or "weekly every Friday").
-
-Based on these rules the script [`generate_from_config.py`](https://github.com/metaodi/openerz/blob/main/csv/generate_from_config.py) is able to create a calendar CSV for the database import.
-
-The config file is written in YAML and has this structure:
-
-```yaml
-region: <name>
-zip: <zip>
-
-collections:
-  waste:
-    - area: a
-      schedule:
-        - weekly every Friday
-        - 2024-03-27 # Ersatzdatum für Karfreitag 
-      exclude: ~
-    - area: b
-      schedule:
-        - weekly every Thurday
-        - 2024-05-08 # Ersatzdatum für Auffahrt
-      exclude: ~
-  
-  organic:
-    - schedule:
-        - every 2nd and 4th Monday in Jan
-        - every 1st and 3rd Monday in Feb
-        - weekly every Monday from March until December
-        - every 2nd and 4th Monday in Dec
-        - 2024-04-03 # Ersatzdatum für Ostermontag
-        - 2024-05-22 # Ersatzdatum für Pfingsmontag
-      exclude: ~
-
-  paper:
-    - schedule:
-        - every first Saturday of the month
-
-  cardboard:
-    - area: a
-      schedule:
-        - every first Wednesday of the month
-        - 2024-05-06 # Ersatzdatum für 1. Mai
-    - area: b
-      schedule:
-        - every 2nd Wednesday of the month
-
-exclude:
-  - 2024-01-01 # Neujahr
-  - 2024-01-02 # Berchtoldstag
-  - 2024-03-29 # Karfreitag
-  - 2024-04-01 # Ostermontag
-  - 2024-05-01 # 1. Mai
-  - 2024-05-09 # Auffahrt
-  - 2024-05-20 # Pfingstmontag
-  - 2024-08-01 # 1. August
-  - 2024-12-25 # Weihnachten
-  - 2024-12-26 # Stephanstag
-```
-
-
-There is an [`example.yml`](https://github.com/metaodi/openerz/blob/main/csv/example.yml) as a reference.
 
 
 ## Municipalities
@@ -215,7 +144,8 @@ The script to generate the CSV is `uster.py`%
 
 ## Wangen-Brüttisellen
 
-Wangen-Brüttisellen doesnt expose any machine readable format therefor the CSV are created manually.
+Wangen-Brüttisellen doesnt expose any machine readable format. The CSV is generated from the config file [wangen-bruttisellen.yml](https://github.com/metaodi/openerz/blob/main/csv/wangen-bruttisellen/wangen-bruttisellen.yml).
+
 The information is taken from the [municipality website](https://www.wangen-bruettisellen.ch/de/verwaltung/abfall)
 
 ## Dübendorf
@@ -223,3 +153,14 @@ The information is taken from the [municipality website](https://www.wangen-brue
 Dübendorf publishes it's calendar as [iCal/ICS file on their website](https://www.duebendorf.ch/dienstleistungen/97555) (one for each area).
 The stations are [published](https://www.duebendorf.ch/abfallorte) as well.
 
+## Bassersdorf
+
+Bassersdorf doesnt expose any machine readable format. The CSV is generated from the config file [bassersdorf.yml](https://github.com/metaodi/openerz/blob/main/config/regions/bassersdorf.yml).
+
+The information is taken from the [municipality website](https://www.bassersdorf.ch/politik-verwaltung/verwaltung/dienstleistungen-az.html/81/service/367)
+
+# Embrach
+
+Embrach doesn't expose any machine readable format, the CSV in genereted from the config file [`embrach.yml`](https://github.com/metaodi/openerz/blob/main/config/regions/embrach.yml).
+
+The information is taken from the [municipality website](https://www.embrach.ch/dienstleistungen/7338)

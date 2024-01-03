@@ -57,36 +57,116 @@ You might want to setup a python virtualenv using the `python_setup.sh` script.
 Add a new municipality
 ======================
 
-If you want to add a new municipality to OpenERZ, you need to create a new directory in the [`csv` folder](https://github.com/metaodi/openerz/tree/main/csv).
-There you either create a python script or a config file to generate the CSV needed for the import in the database.
+If you want to add a new municipality to OpenERZ, you need to create a new directory in the [`csv` folder](https://github.com/metaodi/openerz/tree/main/csv) and a config file in the [`config/regions` folder](https://github.com/metaodi/openerz/tree/main/config/regions).
 
-The details are described in the [README of the `csv` folder](https://github.com/metaodi/openerz/blob/main/csv/README.md).
+Then you either create a python script or fill out the config file to generate the CSV needed for the import in the database.
 
-To make sure the data is loaded, make sure to add the new municipality to:
+The details of the CSVs are described in the [README of the `csv` folder](https://github.com/metaodi/openerz/blob/main/csv/README.md).
 
-- `generate_csvs.sh`
-- `import_csvs.sh`
-- `.gitignore` 
+Apart from the config file:
+* Update the documentation in `docs/README.md`
+* Update the documentation in `csv/README.md`.
+* Add the correct entries in `.gitignore` (e.g. if you provide a static station CSV file)
 
-And update the documentation in `docs/README.md` and `csv/README.md`.
+## Generate the CSVs
 
-Apart from the data, you need to add an entry in the `regionConfig` in `lib/config.js`:
+### Python script
 
-```js
-    ...
-    <name>: {
-        route: '<name>',
-        omitParams: ['region', 'zip'],
-        types: [
-            'bulky_goods',
-            'organic',
-            'paper',
-            'special',
-            'waste'
-        ]
-    },
-    ...
+A python script is the easiest way to get and convert the data for a municipality.
+It assumes that the data is available somewhere for download (e.g. as a CSV on an open data portal, or as a .ics on a municipality website).
+
+There are plenty of examples of these scripts: [zurich.py](https://github.com/metaodi/openerz/blob/main/csv/zurich/zurich.py), [uster.py](https://github.com/metaodi/openerz/blob/main/csv/uster/uster.py), [basel.py](https://github.com/metaodi/openerz/blob/main/csv/basel/basel.py), [zimmerberg.py](https://github.com/metaodi/openerz/blob/main/csv/zimmerberg/zimmerberg.py).
+
+### Config file
+
+If no such data is available, it's probably best to create a config file for a municipality containing the "rules" to generate the calendar.
+
+This contains information about what kind of waste collection is available, and on what schedule (e.g. "every first Saturday of the month", or "weekly every Friday").
+
+Based on these rules the script [`generate_from_config.py`](https://github.com/metaodi/openerz/blob/main/csv/generate_from_config.py) is able to create a calendar CSV for the database import.
+
+The config file is written in YAML and has this structure, use the `validate_config.py` script to validate the contents of all config files.
+
+**Example:**
+
+```yaml
+region: <name>
+zip: <zip>
+
+collections:
+  waste:
+    - area: a
+      schedule:
+        - weekly every Friday
+        - 2024-03-27 # Ersatzdatum für Karfreitag 
+      exclude: ~
+    - area: b
+      schedule:
+        - weekly every Thurday
+        - 2024-05-08 # Ersatzdatum für Auffahrt
+      exclude: ~
+  
+  organic:
+    - schedule:
+        - every 2nd and 4th Monday in Jan
+        - every 1st and 3rd Monday in Feb
+        - weekly every Monday from March until December
+        - every 2nd and 4th Monday in Dec
+        - 2024-04-03 # Ersatzdatum für Ostermontag
+        - 2024-05-22 # Ersatzdatum für Pfingsmontag
+      exclude: ~
+
+  paper:
+    - schedule:
+        - every first Saturday of the month
+
+  cardboard:
+    - area: a
+      schedule:
+        - every first Wednesday of the month
+        - 2024-05-06 # Ersatzdatum für 1. Mai
+    - area: b
+      schedule:
+        - every 2nd Wednesday of the month
+
+exclude:
+  - 2024-01-01 # Neujahr
+  - 2024-01-02 # Berchtoldstag
+  - 2024-03-29 # Karfreitag
+  - 2024-04-01 # Ostermontag
+  - 2024-05-01 # 1. Mai
+  - 2024-05-09 # Auffahrt
+  - 2024-05-20 # Pfingstmontag
+  - 2024-08-01 # 1. August
+  - 2024-12-25 # Weihnachten
+  - 2024-12-26 # Stephanstag
 ```
+
+
+There is an [`example.yml`](https://github.com/metaodi/openerz/blob/main/config/example.yml) as a reference.
+
+If you use a python script to generate the CSV (i.e. if there is an official data source), then a minimal config file would look like this:
+
+```yaml
+region: zurich
+start_date: 2023-01-01
+end_date: 2024-12-31
+
+collections:
+  cardboard: ~
+  cargotram: ~
+  etram: ~
+  metal: ~
+  organic: ~
+  paper: ~
+  special: ~
+  textile: ~
+  waste: ~
+```
+
+This makes sure that an endpoint for the region (`zurich`) is generated and which types of collections this endpoint provides.
+
+
 
 Release
 =======

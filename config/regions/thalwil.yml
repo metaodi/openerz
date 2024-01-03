@@ -1,0 +1,12 @@
+region: thalwil
+start_date: 2024-01-01
+end_date: 2024-12-31
+
+collections:
+  cardboard: ~
+  incombustibles: ~
+  metal: ~
+  organic: ~
+  paper: ~
+  special: ~
+  waste: ~

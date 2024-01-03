@@ -1,0 +1,112 @@
+region: embrach
+zip: 8484
+start_date: 2024-01-01
+end_date: 2024-12-31
+
+collections:
+  waste:
+    - area: Ost
+      schedule:
+        - weekly every Tuesday
+        - 2024-01-03 # Ersatzdatum für Berchtoldstag
+    - area: West
+      schedule:
+        - weekly every Friday
+        - 2024-03-26 # Ersatzdatum für Karfreitag
+
+  bulky_goods:
+    - area: Ost
+      schedule:
+        - weekly every Tuesday
+        - 2024-01-03 # Ersatzdatum für Berchtoldstag
+    - area: West
+      schedule:
+        - weekly every Friday
+        - 2024-03-26 # Ersatzdatum für Karfreitag
+  
+  organic:
+    - area: Ost
+      schedule:
+        - every other Wednesday in Jan and Feb starting jan 10th
+        - every Wednesday from feb 28th until December 
+        - every other Wednesday in Dec
+        - 2024-04-29 # Ersatzdatum für 1. Mai
+        - 2024-12-30 # Ersatzdatum für Neujahr 2025
+    - area: West
+      schedule:
+        - every other Monday in Jan and Feb starting jan 8th
+        - every Monday from feb 26th until December
+        - every other Monday in Dec
+        - 2024-04-03 # Ersatzdatum für Ostermontag
+        - 2024-05-22 # Ersatzdatum für Pfingstmontag
+
+  metal:
+    - schedule:
+        - 2024-01-13
+        - 2024-03-09
+        - 2024-05-04
+        - 2024-08-17
+        - 2024-09-21
+        - 2024-11-23
+
+  paper:
+    - schedule:
+        - every first Saturday of the month
+  
+  cardboard:
+    - schedule:
+        - every other Thurday starting jan 11th
+        - 2024-12-23 # Ersatzdatum für Stephanstag
+
+  incombustibles:
+    - schedule:
+        - 2024-03-14
+        - 2024-06-06
+        - 2024-09-12
+        - 2024-11-07
+
+  chipping_service:
+    - schedule:
+        - 2024-04-08
+        - 2024-04-09
+        - 2024-04-10
+        - 2024-10-21
+        - 2024-10-22
+        - 2024-10-23
+
+  special:
+    - schedule:
+        - 2024-01-26
+        - 2024-09-06
+      station: "Badi Talegg, Embrach"
+    - schedule:
+        - 2024-03-07
+        - 2024-06-01
+        - 2024-09-05
+        - 2024-12-05
+      station: "Einkaufszentrum Sonnenhof, Bülach"
+    - schedule:
+        - 2024-06-07
+      station: "Werkhof, Mülistrasse 6, Lufingen"
+    - schedule:
+        - 2024-06-14
+      station: "Werkhof, Dorfstrasse 51, Freienstein"
+    - schedule:
+        - 2024-11-06
+      station: "Volg, Eigentalstrasse 8, Oberembrach"
+    - schedule:
+        - 2024-12-06
+      station: "Werkhof, Tössstrasse, Rorbas"
+
+exclude:
+  # 2024
+  - 2024-01-01 # Neujahr, Montag
+  - 2024-01-02 # Berchtoldstag, Dienstag
+  - 2024-03-29 # Karfreitag, Freitag
+  - 2024-04-01 # Ostermontag, Montag
+  - 2024-05-01 # 1. Mai, Mittwoch
+  - 2024-05-09 # Auffahrt, Donnerstag
+  - 2024-05-20 # Pfingstmontag, Montag
+  - 2024-08-01 # 1. August, Donnerstag
+  - 2024-12-25 # Weihnachten, Mittwoch
+  - 2024-12-26 # Stephanstag, Donnerstag

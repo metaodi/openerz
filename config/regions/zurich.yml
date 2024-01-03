@@ -1,0 +1,14 @@
+region: zurich
+start_date: 2024-01-01
+end_date: 2024-12-31
+
+collections:
+  cardboard: ~
+  cargotram: ~
+  etram: ~
+  metal: ~
+  organic: ~
+  paper: ~
+  special: ~
+  textile: ~
+  waste: ~
