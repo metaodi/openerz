@@ -193,8 +193,8 @@ describe('make sure the server is running (test.api)', function() {
             response.result._metadata.total_count.should.equal(48);
             response.result.result.length.should.equal(48);
             response.result.result[0].should.deepEqual({
-                "region": "basel",
-                "area": "A"
+                'region': 'basel',
+                'area': 'A'
             });
         });
         it('should return the correct parameter with region thalwil', async function() {
@@ -206,10 +206,10 @@ describe('make sure the server is running (test.api)', function() {
             response.result._metadata.total_count.should.equal(4);
             response.result.result.length.should.equal(4);
             response.result.result.should.deepEqual([
-                {"region": "thalwil", "area": ""},
-                {"region": "thalwil", "area": "A"},
-                {"region": "thalwil", "area": "B"},
-                {"region": "thalwil", "area": "C"}
+                {'region': 'thalwil', 'area': ''},
+                {'region': 'thalwil', 'area': 'A'},
+                {'region': 'thalwil', 'area': 'B'},
+                {'region': 'thalwil', 'area': 'C'}
             ]);
         });
         it('should return an error with incorrect region', async function() {
