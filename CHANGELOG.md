@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Changed
+- Remove `DATABASE_URL` secret from GitHub Actions and query heroku instead, which is much more reliable
 
 ## [7.0.1] - 2024-01-03
 ### Fixed
