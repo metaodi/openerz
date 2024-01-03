@@ -10,14 +10,16 @@ trap "cleanup" EXIT
 
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
-# loop over all csvs to run scripts
-for f in $DIR/csv/*/
+# loop over all csv folders to run scripts all available scripts
+for d in $DIR/csv/*/
 do
-    [ -f "$f" ] || break
+    [ -d "$d" ] || break
 
-    echo "Generate ${f} CSV..."
-    if test -f "$DIR/csv/$f/$f.py"; then
-        $DIR/csv/$f/$f.py
+    region=$(basename $d)
+
+    if test -f "$DIR/csv/$region/$region.py"; then
+        echo "Run ${region}.py script..."
+        $DIR/csv/$region/$region.py
     fi
 done
 
