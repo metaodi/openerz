@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import requests
-import csv
 import os
-from io import StringIO
+import sys
+import logging
+from openerzpy.file import csv_file
 
 __location__ = os.path.realpath(
     os.path.join(
@@ -12,45 +12,35 @@ __location__ = os.path.realpath(
     )
 )
 
-# Abfuhrtermine
-CSV_URL = "https://daten.stadt.sg.ch/explore/dataset/abfuhrdaten-stadt-stgallen/download/?format=csv&timezone=Europe/Zurich&lang=de&use_labels_for_header=false&csv_separator=%2C"
-r = requests.get(CSV_URL)
-reader = csv.DictReader(StringIO(r.text), delimiter=',')
+# Logging
+log = logging.getLogger(__name__)
+log.setLevel(logging.DEBUG)
 
-header = [
-    'region',
-    'zip',
-    'area',
-    'station',
-    'waste_type',
-    'col_date',
-]
-
-waste_type_map = {
-    'Kehricht': 'waste',
-    'Grüngut': 'organic',
-    'Altmetall': 'metal',
-    'Papier': 'paper',
-    'Karton': 'cardboard',
-}
+logging.basicConfig(
+    format="%(asctime)s %(levelname)-8s %(message)s",
+    level=logging.INFO,
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logging.captureWarnings(True)
 
 
 def waste_type(in_type):
+    waste_type_map = {
+        'Kehricht': 'waste',
+        'Grüngut': 'organic',
+        'Altmetall': 'metal',
+        'Papier': 'paper',
+        'Karton': 'cardboard',
+    }
     return waste_type_map[in_type]
 
-csv_path = os.path.join(__location__, 'stgallen.csv')
-with open(csv_path, 'w') as f:
-    writer = csv.DictWriter(
-        f,
-        header,
-        delimiter=',',
-        quotechar='"',
-        lineterminator='\r\n',
-        quoting=csv.QUOTE_NONNUMERIC
-    )
-    writer.writeheader()
 
-    for row in reader:
+# Abfuhrtermine
+def calendar_csv():
+    calendar_url = "https://daten.stadt.sg.ch/explore/dataset/abfuhrdaten-stadt-stgallen/download/?format=csv&timezone=Europe/Zurich&lang=de&use_labels_for_header=false&csv_separator=%2C"
+    rows = csv_file.read_csv_from_url(calendar_url, encoding='utf-8-sig')
+    output_rows = []
+    for row in rows:
         out = {
             'region': 'stgallen',
             'area': row['gebiets_id'],
@@ -58,36 +48,22 @@ with open(csv_path, 'w') as f:
             'col_date': row['datum'],
             'waste_type': waste_type(row['sammlung']),
         }
-        writer.writerow(out)
+        output_rows.append(out)
+
+    log.info("Start writing stgallen.csv")
+    csv_path = os.path.join(__location__, 'stgallen.csv')
+    csv_file.write_calendar_to_csv(csv_path, output_rows)
 
 # Recyclingstationen
-CSV_URL = "https://daten.stadt.sg.ch/explore/dataset/sammelstellen@stadt-stgallen/download/?format=csv&timezone=Europe/Zurich&lang=de&use_labels_for_header=false&csv_separator=%2C"
-r = requests.get(CSV_URL)
-reader = csv.DictReader(StringIO(r.text), delimiter=',')
+def station_csv():
+    station_csv_url = "https://daten.stadt.sg.ch/explore/dataset/sammelstellen@stadt-stgallen/download/?format=csv&timezone=Europe/Zurich&lang=de&use_labels_for_header=false&csv_separator=%2C"
+    log.info(f"Get station CSV from {station_csv_url}")
+    rows = csv_file.read_csv_from_url(station_csv_url, encoding='utf-8-sig')
 
-header = [
-    'region',
-    'zip',
-    'name',
-    'oil',
-    'glass',
-    'metal',
-    'textile'
-]
+    csv_path = os.path.join(__location__, 'stgallen_stationen.csv')
+    output_rows = []
 
-csv_path = os.path.join(__location__, 'stgallen_stationen.csv')
-with open(csv_path, 'w') as f:
-    writer = csv.DictWriter(
-        f,
-        header,
-        delimiter=',',
-        quotechar='"',
-        lineterminator='\r\n',
-        quoting=csv.QUOTE_NONNUMERIC
-    )
-    writer.writeheader()
-
-    for row in reader:
+    for row in rows:
         print(row)
         waste_types = [a.strip() for a in row['abfallarten'].split(';')]
         new_row = {
@@ -100,5 +76,16 @@ with open(csv_path, 'w') as f:
             'textile': ('Alttextilien' in waste_types), 
         }
         print(new_row)
-        writer.writerow(new_row)
+        output_rows.append(new_row)
 
+    log.info("Start writing stgallen_stationen.csv")
+    csv_path = os.path.join(__location__, 'stgallen_stationen.csv')
+    csv_file.write_station_to_csv(csv_path, output_rows)
+
+
+try:
+    calendar_csv()
+    station_csv()
+except Exception:
+    log.exception("Error in zurich.py")
+    sys.exit(1)
