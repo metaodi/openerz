@@ -165,7 +165,22 @@ incombustibles:
   name: Incombustible waste collection
   type: incombustibles
   description: Calendar of incombustible waste collection
-  notes: Return the current calendar of the incombustible waste collection (Unbrennbares)
+  notes: Return the current calendar of the incombustible waste collection (Unbrennbares/Grubengut)
+  params:
+  - region
+  - zip
+  - area
+  - start
+  - end
+  - sort
+  - offset
+  - limit
+  - lang
+oekibus:
+  name: Ökibus
+  type: oekibus
+  description: Calendar of Ökibus 
+  notes: Return the current calendar of the Ökibus
   params:
   - region
   - zip
