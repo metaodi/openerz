@@ -35,7 +35,8 @@ describe('make sure the server is running (test.api)', function() {
                 zip: 8003,
                 name: 'Aegertenstrasse vis-à-vis 16',
                 kind: { oil: false, metal: true, glass: true, textile: true },
-                region: 'zurich'
+                region: 'zurich',
+                description: ''
                      
             });
         });
@@ -49,7 +50,8 @@ describe('make sure the server is running (test.api)', function() {
                 zip: 4125,
                 name: 'Bahnhofstrasse',
                 kind: { oil: false, metal: true, glass: true, textile: false },
-                region: 'basel'
+                region: 'basel',
+                description: ''
                      
             });
         });
@@ -63,7 +65,8 @@ describe('make sure the server is running (test.api)', function() {
                 zip: '',
                 name: 'Ahornstrasse',
                 kind: { oil: false, metal: true, glass: true, textile: true },
-                region: 'stgallen'
+                region: 'stgallen',
+                description: ''
                      
             });
         });
@@ -77,7 +80,8 @@ describe('make sure the server is running (test.api)', function() {
                 zip: 8800,
                 name: 'Alter Schiessstand, Dorfstrasse 71',
                 kind: { oil: true, metal: true, glass: true, textile: true },
-                region: 'thalwil'
+                region: 'thalwil',
+                description: ''
                      
             });
         });
@@ -121,8 +125,8 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/parameter/types'
             });
             response.statusCode.should.equal(200);
-            response.result._metadata.total_count.should.equal(12);
-            response.result.result.length.should.equal(12);
+            response.result._metadata.total_count.should.equal(13);
+            response.result.result.length.should.equal(13);
             response.result.result.should.deepEqual([
                 'bulky_goods',
                 'cardboard',
@@ -131,6 +135,7 @@ describe('make sure the server is running (test.api)', function() {
                 'etram',
                 'incombustibles',
                 'metal',
+                'oekibus',
                 'organic',
                 'paper',
                 'special',
@@ -174,6 +179,23 @@ describe('make sure the server is running (test.api)', function() {
                 'waste',
             ]);
         });
+        it('should return the correct parameter with region bassersdorf', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/parameter/types?region=bassersdorf'
+            });
+            response.statusCode.should.equal(200);
+            response.result._metadata.total_count.should.equal(6);
+            response.result.result.length.should.equal(6);
+            response.result.result.should.deepEqual([
+                'bulky_goods',
+                'oekibus',
+                'organic',
+                'paper',
+                'special',
+                'waste',
+            ]);
+        });
         it('should return an error with incorrect region', async function() {
             var response = await server.inject({
                 method: 'GET',
@@ -190,8 +212,8 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/parameter/areas'
             });
             response.statusCode.should.equal(200);
-            response.result._metadata.total_count.should.equal(47);
-            response.result.result.length.should.equal(47);
+            response.result._metadata.total_count.should.equal(75);
+            response.result.result.length.should.equal(75);
             response.result.result[0].should.deepEqual({
                 'region': 'basel',
                 'area': 'A'
@@ -250,256 +272,6 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
-    describe('/api/calendar/cardboard is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/cardboard'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/cardboard.ics is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/cardboard.ics'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/cardboard.json is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/cardboard.json'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/paper is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/paper'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/paper.ics is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/paper.ics'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/paper.json is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/paper.json'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/waste is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/waste'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/waste.ics is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/waste.ics'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/waste.json is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/waste.json'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/special is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/special'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/special.ics is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/special.ics'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/special.json is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/special.json'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/organic is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/organic'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/organic.ics is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/organic.ics'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/organic.json is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/organic.json'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/textile is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/textile'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/textile.ics is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/textile.ics'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/textile.json is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/textile.json'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/etram is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/etram'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/etram.ics is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/etram.ics'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/etram.json is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/etram.json'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/cargotram is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/cargotram'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/cargotram.ics is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/cargotram.ics'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/cargotram.json is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/cargotram.json'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar/cargotram.test does not work', function() {
-        it('should return an error', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/cargotram.test'
-            });
-            response.statusCode.should.equal(406);
-        });
-    });
-
     describe('/api/calendar.json?types=cargotram is working', function() {
         it('should return something', async function() {
             var response = await server.inject({
@@ -546,7 +318,8 @@ describe('make sure the server is running (test.api)', function() {
                     'zip': 8038,
                     'area': '8038',
                     'type': 'paper',
-                    'station': ''
+                    'station': '',
+                    'description': ''
                 },
                 {
                     'date': '2023-01-16',
@@ -554,7 +327,8 @@ describe('make sure the server is running (test.api)', function() {
                     'zip': 8038,
                     'area': '8038',
                     'type': 'cardboard',
-                    'station': ''
+                    'station': '',
+                    'description': ''
                 }]
             });
         });
@@ -575,7 +349,8 @@ describe('make sure the server is running (test.api)', function() {
                     'zip': 8038,
                     'area': '8038',
                     'type': 'paper',
-                    'station': ''
+                    'station': '',
+                    'description': ''
                 }]
             });
         });
@@ -586,14 +361,15 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                '_metadata': {'total_count': 12, 'row_count': 1},
+                '_metadata': {'total_count': 2, 'row_count': 1},
                 'result': [{
-                    'date': '2023-01-12',
+                    'date': '2023-09-14',
                     'region': 'thalwil',
                     'zip': 8800,
                     'area': 'b',
                     'type': 'cardboard',
-                    'station': ''
+                    'station': '',
+                    'description': ''
                 }]
             });
         });
@@ -611,7 +387,8 @@ describe('make sure the server is running (test.api)', function() {
                     'area': 'e',
                     'zip': '',
                     'station': '',
-                    'type': 'waste'
+                    'type': 'waste',
+                    'description': ''
                 }]
             });
         });
@@ -622,71 +399,15 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                '_metadata': {'total_count': 6, 'row_count': 1},
+                '_metadata': {'total_count': 13, 'row_count': 1},
                 'result': [{
                     'date': '2023-01-23',
                     'region': 'stgallen',
                     'area': 'f',
                     'zip': '',
                     'station': '',
-                    'type': 'cardboard'
-                }]
-            });
-        });
-    });
-
-    describe('/api/calendar/cardboard.json with zip and area parameter', function() {
-        it('should return a correct entry for 8800', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/cardboard.json?zip=8800&area=b&limit=1&sort=date&end=2023-12-31'
-            });
-            response.statusCode.should.equal(200);
-            response.result.should.deepEqual({
-                '_metadata': {'total_count': 12, 'row_count': 1},
-                'result': [{
-                    'date': '2023-01-12',
-                    'zip': 8800,
-                    'region': 'thalwil',
-                    'area': 'b',
-                    'station': '',
-                    'type': 'cardboard'
-                }]
-            });
-        });
-        it('should return a correct entry for 8800 with uppercase area', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/cardboard.json?zip=8800&area=B&limit=1&sort=date&end=2023-12-31'
-            });
-            response.statusCode.should.equal(200);
-            response.result.should.deepEqual({
-                '_metadata': {'total_count': 12, 'row_count': 1},
-                'result': [{
-                    'date': '2023-01-12',
-                    'region': 'thalwil',
-                    'zip': 8800,
-                    'area': 'b',
-                    'station': '',
-                    'type': 'cardboard'
-                }]
-            });
-        });
-        it('should return a correct entry for 8800 without area parameter', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar/cardboard.json?zip=8800&limit=1&sort=date&end=2023-12-31'
-            });
-            response.statusCode.should.equal(200);
-            response.result.should.deepEqual({
-                '_metadata': {'total_count': 35, 'row_count': 1},
-                'result': [{
-                    'date': '2023-01-12',
-                    'region': 'thalwil',
-                    'zip': 8800,
-                    'area': 'b',
-                    'station': '',
-                    'type': 'cardboard'
+                    'type': 'cardboard',
+                    'description': ''
                 }]
             });
         });
@@ -700,115 +421,43 @@ describe('make sure the server is running (test.api)', function() {
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                '_metadata': {'total_count': 139, 'row_count': 1},
+                '_metadata': {'total_count': 11, 'row_count': 1},
                 'result': [{
                     'date': '2023-01-03',
                     'region': 'thalwil',
                     'zip': 8800,
                     'area': 'a',
                     'station': '',
-                    'type': 'waste'
+                    'type': 'waste',
+                    'description': ''
                 }]
             });
         });
         it('should return a correct entries for 8800 (without and without area)', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/calendar.json?zip=8800&area=a&limit=2&start=2023-06-28&end=2023-06-30&sort=date,area:desc'
+                url: '/api/calendar.json?zip=8800&area=b&limit=2&start=2024-06-25&end=2024-06-25&sort=date,area:desc'
             });
             response.statusCode.should.equal(200);
             response.result.should.deepEqual({
-                '_metadata': {'total_count': 4, 'row_count': 2},
+                '_metadata': {'total_count': 2, 'row_count': 2},
                 'result': [{
-                    'date': '2023-06-28',
+                    'date': '2024-06-25',
                     'region': 'thalwil',
                     'zip': 8800,
-                    'area': 'a',
+                    'area': 'b',
                     'station': '',
-                    'type': 'organic'
+                    'type': 'waste',
+                    'description': ''
                 },
                 {
-                    'date': '2023-06-28',
+                    'date': '2024-06-25',
                     'region': 'thalwil',
                     'zip': 8800,
                     'area': '',
                     'station': '',
-                    'type': 'special'
-                }]
-            });
-        });
-    });
-
-    describe('/api/region/basel/calendar.json API', function() {
-        it('should return a correct entry', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/region/basel/calendar.json?area=a&limit=1&sort=date&end=2023-12-31'
-            });
-            response.statusCode.should.equal(200);
-            response.result.should.deepEqual({
-                '_metadata': {'total_count': 803, 'row_count': 1},
-                'result': [{
-                    'date': '2020-01-02',
-                    'region': 'basel',
-                    'area': 'a',
-                    'type': 'organic',
-                    'station': '',
-                    'zip': '',
-                }]
-            });
-        });
-        it('should return a correct entries for bulky goods', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/region/basel/calendar.json?area=a&limit=1&sort=date&end=2023-12-31&types=bulky_goods'
-            });
-            response.statusCode.should.equal(200);
-            response.result.should.deepEqual({
-                '_metadata': {'total_count': 66, 'row_count': 1},
-                'result': [{
-                    'date': '2020-01-15',
-                    'region': 'basel',
-                    'area': 'a',
-                    'type': 'bulky_goods',
-                    'zip': '',
-                    'station': ''
-                }]
-            });
-        });
-        it('should return a correct entries for chipping service', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/region/basel/calendar.json?area=f&limit=1&sort=date&end=2023-12-31&types=chipping_service'
-            });
-            response.statusCode.should.equal(200);
-            response.result.should.deepEqual({
-                '_metadata': {'total_count': 20, 'row_count': 1},
-                'result': [{
-                    'date': '2020-02-26',
-                    'region': 'basel',
-                    'area': 'f',
-                    'type': 'chipping_service',
-                    'zip': '',
-                    'station': ''
-                }]
-            });
-        });
-        it('should return a correct entries for incombustibles', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/region/basel/calendar.json?area=f&limit=1&sort=date&end=2023-12-31&types=incombustibles'
-            });
-            response.statusCode.should.equal(200);
-            response.result.should.deepEqual({
-                '_metadata': {'total_count': 48, 'row_count': 1},
-                'result': [{
-                    'date': '2020-01-17',
-                    'region': 'basel',
-                    'area': 'f',
-                    'type': 'incombustibles',
-                    'zip': '',
-                    'station': ''
+                    'type': 'special',
+                    'description': ''
                 }]
             });
         });

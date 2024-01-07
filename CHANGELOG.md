@@ -4,8 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Removed
+- BC-Break: remove region and waste type based API endpoints, keep it simple!
+
 ### Changed
 - Remove `DATABASE_URL` secret from GitHub Actions and query heroku instead, which is much more reliable
+- Update test DB dump and all tests
+
+### Added
+- New `oekibus` waste type for Bassersdorf and Dübendorf
 
 ## [7.0.1] - 2024-01-03
 ### Fixed
