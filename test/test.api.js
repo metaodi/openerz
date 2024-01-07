@@ -190,8 +190,8 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/parameter/areas'
             });
             response.statusCode.should.equal(200);
-            response.result._metadata.total_count.should.equal(48);
-            response.result.result.length.should.equal(48);
+            response.result._metadata.total_count.should.equal(47);
+            response.result.result.length.should.equal(47);
             response.result.result[0].should.deepEqual({
                 'region': 'basel',
                 'area': 'A'
@@ -203,10 +203,9 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/parameter/areas?region=thalwil'
             });
             response.statusCode.should.equal(200);
-            response.result._metadata.total_count.should.equal(4);
-            response.result.result.length.should.equal(4);
+            response.result._metadata.total_count.should.equal(3);
+            response.result.result.length.should.equal(3);
             response.result.result.should.deepEqual([
-                {'region': 'thalwil', 'area': ''},
                 {'region': 'thalwil', 'area': 'A'},
                 {'region': 'thalwil', 'area': 'B'},
                 {'region': 'thalwil', 'area': 'C'}
