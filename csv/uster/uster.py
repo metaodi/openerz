@@ -91,6 +91,7 @@ try:
                 'zip': '8610',
                 'col_date': event['start_date'].date().isoformat(),
                 'waste_type': waste_type(event.get('summary', '')),
+                'description': '',
             }
             output_rows.append(out)
 

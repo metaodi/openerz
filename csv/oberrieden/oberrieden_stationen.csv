@@ -1,3 +1,3 @@
-region,zip,name,oil,glass,metal,textile
-oberrieden,8942,"Bahnhof Dorf, Alte Landstrasse / Winkelhaldenstrasse",False,True,True,True
-oberrieden,8942,"Bahnhof See, Fachstrasse 6",False,True,True,True
+"region","zip","name","oil","glass","metal","textile","description"
+"oberrieden",8942,"Bahnhof Dorf, Alte Landstrasse / Winkelhaldenstrasse",False,True,True,True,""
+"oberrieden",8942,"Bahnhof See, Fachstrasse 6",False,True,True,True,""

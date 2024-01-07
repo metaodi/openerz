@@ -1,10 +1,10 @@
-region,zip,name,oil,glass,metal,textile
-richterswil,8942,"Werkhof, Untere Schwandenstrasse 42",False,True,True,True
-richterswil,8942,"KERAG-Parkplatz, Zugerstrasse 8",False,True,True,True
-richterswil,8942,"Schulhaus Feld, Reidholzstrasse",False,True,True,True
-richterswil,8942,"Parkplatz Alte Brauerei, Gegenüber Seestrasse 57",False,True,True,True
-richterswil,8942,"Parkplatz Hafen, Ziegelhüttenstrasse",False,True,True,True
-richterswil,8942,"SPAR, Glärnischstrasse 1",False,False,False,True
-richterswil,8833,"Grüenfeld, Bergstrasse / Frohbergstrasse / Eselweidweg",False,True,True,True
-richterswil,8833,"Bärenbrüggli, Bärenbrügglistrasse / Bärenweidstrasse",False,True,True,True
-richterswil,8833,"SOB, Stationsstrasse 52",False,False,False,True
+"region","zip","name","oil","glass","metal","textile","description"
+"richterswil",8942,"Werkhof, Untere Schwandenstrasse 42",False,True,True,True,""
+"richterswil",8942,"KERAG-Parkplatz, Zugerstrasse 8",False,True,True,True,""
+"richterswil",8942,"Schulhaus Feld, Reidholzstrasse",False,True,True,True,""
+"richterswil",8942,"Parkplatz Alte Brauerei, Gegenüber Seestrasse 57",False,True,True,True,""
+"richterswil",8942,"Parkplatz Hafen, Ziegelhüttenstrasse",False,True,True,True,""
+"richterswil",8942,"SPAR, Glärnischstrasse 1",False,False,False,True,""
+"richterswil",8833,"Grüenfeld, Bergstrasse / Frohbergstrasse / Eselweidweg",False,True,True,True,""
+"richterswil",8833,"Bärenbrüggli, Bärenbrügglistrasse / Bärenweidstrasse",False,True,True,True,""
+"richterswil",8833,"SOB, Stationsstrasse 52",False,False,False,True,""

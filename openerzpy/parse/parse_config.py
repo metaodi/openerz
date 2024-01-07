@@ -45,6 +45,7 @@ def generate_events(config_path, verbose=False):
             area = collection.get('area', '')
             station = collection.get('station', '')
             zip_code = config.get('zip') or collection.get('zip', '')
+            description = collection.get('description', '')
 
             ruleset = rrule.rruleset()
             adder = RuleAdder(ruleset, start_date, end_date)
@@ -67,6 +68,7 @@ def generate_events(config_path, verbose=False):
                     'station': station,
                     'col_date': col_date.date().isoformat(),
                     'waste_type': waste_type,
+                    'description': description,
                 }
 
 
@@ -86,6 +88,7 @@ def load_config(config_path):
                      Optional("area"): And(Use(str), Use(str.lower), str, len),
                      Optional("zip"): And(Use(int), lambda n: 1000 <= n <= 9999),
                      Optional("station"): And(str, len),
+                     Optional("description"): And(str, len),
                      Optional("exclude"): Or([str], [And(date, Use(lambda n: n.isoformat()))], None),
                  }
              ], None)

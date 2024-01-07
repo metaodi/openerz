@@ -65,6 +65,7 @@ try:
         'station',
         'waste_type',
         'col_date',
+        'description',
     ]
     
     if dry_run:

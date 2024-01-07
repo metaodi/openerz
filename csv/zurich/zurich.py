@@ -131,6 +131,7 @@ def station_csv():
             'metal': (row['Metall'] == 'x'),
             'glass': (row['Glas'] == 'x'),
             'textile': (row['Textilien'] == 'x'),
+            'description': '',
         }
         output_rows.append(new_row)
 

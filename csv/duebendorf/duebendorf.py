@@ -117,6 +117,7 @@ try:
                     'zip': '8600',
                     'col_date': event['start_date'].date().isoformat(),
                     'waste_type': waste_type(event['summary']),
+                    'description': '',
                 }
                 output_rows.append(out)
             except KeyError:

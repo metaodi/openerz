@@ -47,6 +47,7 @@ def calendar_csv():
             'zip': '',
             'col_date': row['datum'],
             'waste_type': waste_type(row['sammlung']),
+            'description': '',
         }
         output_rows.append(out)
 
@@ -74,6 +75,7 @@ def station_csv():
             'metal': any(x in waste_types for x in ['Dosen', 'Altmetall', 'Aluminium']),
             'glass': ('Glas' in waste_types),
             'textile': ('Alttextilien' in waste_types), 
+            'description': '',
         }
         print(new_row)
         output_rows.append(new_row)

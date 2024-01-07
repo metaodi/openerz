@@ -1,25 +1,25 @@
-region,zip,name,oil,glass,metal,textile
-uster,8610,"Altstoff-Hauptsammelstelle Dammstrasse",True,True,True,True
-uster,8610,"Asylstrasse",False,True,True,False
-uster,8610,"Asylstrasse",False,True,True,False
-uster,8610,"Bachgasse/Steigstrasse",False,True,True,True
-uster,8610,"Brunnenwiesenstrasse",False,True,True,True
-uster,8610,"Drusbergstrasse",False,True,True,True
-uster,8610,"Friedhofstrasse",False,True,True,True
-uster,8610,"Gerichtsstrasse",False,True,True,False
-uster,8610,"Haberweidstrasse",False,True,False,False
-uster,8610,"Kläranlage/ARA, Seestrasse 171",False,True,True,True
-uster,8610,"Krämeracker, Eichstrasse 19",False,True,False,False
-uster,8610,"Loren/Gschwaderstrasse",False,True,True,False
-uster,8606,"Nänikon/Bahnhof",False,True,True,True
-uster,8606,"Nänikon/Volg",False,True,False,False
-uster,8610,"Nossikon/Burgstrasse",False,True,True,True
-uster,8610,"Nossikon/Nossikerstrasse",False,True,False,True
-uster,8610,"Pfannenstielstrasse",False,True,True,True
-uster,8610,"Reithalle Buchholz, Pfäffikerstrasse 15",False,True,True,True
-uster,8616,"Riedikon, Bühlenweg 20",False,True,True,True
-uster,8614,"Sulzbach, Walkestrasse 10",False,True,True,True
-uster,8610,"Uschter 77/Seestrasse",False,True,True,True
-uster,8610,"Wagerenhof, Wermatswilerstrasse 24",False,True,True,True
-uster,8615,"Wermatswil, Sennhüttenstrasse 10",False,True,True,True
-uster,8610,"Zellweger, Weiherallee 20",False,True,True,True
+"region","zip","name","oil","glass","metal","textile","description"
+"uster",8610,"Altstoff-Hauptsammelstelle Dammstrasse",True,True,True,True,""
+"uster",8610,"Asylstrasse",False,True,True,False,""
+"uster",8610,"Asylstrasse",False,True,True,False,""
+"uster",8610,"Bachgasse/Steigstrasse",False,True,True,True,""
+"uster",8610,"Brunnenwiesenstrasse",False,True,True,True,""
+"uster",8610,"Drusbergstrasse",False,True,True,True,""
+"uster",8610,"Friedhofstrasse",False,True,True,True,""
+"uster",8610,"Gerichtsstrasse",False,True,True,False,""
+"uster",8610,"Haberweidstrasse",False,True,False,False,""
+"uster",8610,"Kläranlage/ARA, Seestrasse 171",False,True,True,True,""
+"uster",8610,"Krämeracker, Eichstrasse 19",False,True,False,False,""
+"uster",8610,"Loren/Gschwaderstrasse",False,True,True,False,""
+"uster",8606,"Nänikon/Bahnhof",False,True,True,True,""
+"uster",8606,"Nänikon/Volg",False,True,False,False,""
+"uster",8610,"Nossikon/Burgstrasse",False,True,True,True,""
+"uster",8610,"Nossikon/Nossikerstrasse",False,True,False,True,""
+"uster",8610,"Pfannenstielstrasse",False,True,True,True,""
+"uster",8610,"Reithalle Buchholz, Pfäffikerstrasse 15",False,True,True,True,""
+"uster",8616,"Riedikon, Bühlenweg 20",False,True,True,True,""
+"uster",8614,"Sulzbach, Walkestrasse 10",False,True,True,True,""
+"uster",8610,"Uschter 77/Seestrasse",False,True,True,True,""
+"uster",8610,"Wagerenhof, Wermatswilerstrasse 24",False,True,True,True,""
+"uster",8615,"Wermatswil, Sennhüttenstrasse 10",False,True,True,True,""
+"uster",8610,"Zellweger, Weiherallee 20",False,True,True,True,""
