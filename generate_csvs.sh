@@ -17,6 +17,9 @@ do
 
     region=$(basename $d)
 
+    # delete all CSVs at the beginning
+    rm -f $DIR/csv/$region/$region.csv
+    
     if test -f "$DIR/csv/$region/$region.py"; then
         echo "Run ${region}.py script..."
         $DIR/csv/$region/$region.py
