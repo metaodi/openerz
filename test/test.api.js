@@ -462,6 +462,71 @@ describe('make sure the server is running (test.api)', function() {
             });
         });
     });
+    describe('/api/calendar.json for Bassersdorf (no areas, oekibus)', function() {
+        it('should return a correct entry for bassersdorf', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=bassersdorf&limit=100&sort=date,waste_type:desc&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(100);
+            response.result._metadata.should.deepEqual({
+                'total_count': 218,
+                'row_count': 100,
+            });
+            response.result.result[0].should.deepEqual({
+                'date': '2024-01-03',
+                'region': 'bassersdorf',
+                'zip': 8303,
+                'area': '',
+                'station': '',
+                'type': 'organic',
+                'description': ''
+            });
+        });
+        it('should return a correct entry for oekibus bassersdorf', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=bassersdorf&types=oekibus&sort=date&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(50);
+            response.result._metadata.should.deepEqual({
+                'total_count': 50,
+                'row_count': 50,
+            });
+            response.result.result[1].should.deepEqual({
+                'date': '2024-01-10',
+                'region': 'bassersdorf',
+                'zip': 8303,
+                'area': '',
+                'station': '',
+                'type': 'oekibus',
+                'description': 'Ökibus am Morgen'
+            });
+        });
+        it('should return a correct entry for paper bassersdorf', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=bassersdorf&types=paper&sort=date&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(6);
+            response.result._metadata.should.deepEqual({
+                'total_count': 6,
+                'row_count': 6,
+            });
+            response.result.result[0].should.deepEqual({
+                'date': '2024-01-13',
+                'region': 'bassersdorf',
+                'zip': 8303,
+                'area': '',
+                'station': '',
+                'type': 'paper',
+                'description': ''
+            });
+        });
+    });
 
     describe('/api/calendar.ics API is returning a correct entry', function() {
         it('should return something', async function() {
