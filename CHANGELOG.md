@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [8.0.0] - 2024-01-08
 ### Removed
 - BC-Break: remove region and waste type based API endpoints, keep it simple!
 
@@ -446,7 +448,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v7.0.1...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v8.0.0...HEAD
+[8.0.0]: https://github.com/metaodi/openerz/compare/v7.0.1...v8.0.0
 [7.0.1]: https://github.com/metaodi/openerz/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/metaodi/openerz/compare/v6.3.0...v7.0.0
 [6.3.0]: https://github.com/metaodi/openerz/compare/v6.2.0...v6.3.0
