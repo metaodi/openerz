@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Changed
+- Renamed `type` to `waste_type` in calendar output
+- Accept sort parameter `type` (mapped to `waste_type`)
+
+### Added
+- More tests for emrbach, duebendorf, wangen-bruttisellen
 
 ## [8.0.0] - 2024-01-08
 ### Removed
