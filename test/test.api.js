@@ -85,6 +85,38 @@ describe('make sure the server is running (test.api)', function() {
                      
             });
         });
+        it('should return an error for inexisting region', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/stations?region=xyz'
+            });
+            response.statusCode.should.equal(400);
+        });
+    });
+
+    describe('/api/stations API with sort parameter', function() {
+        it('should return entry for thalwil with sort=name:desc', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/stations?region=thalwil&sort=name:desc'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result[0].should.deepEqual({
+                zip: 8800,
+                name: 'Tödistrasse, beim Schulhaus Feld',
+                kind: { oil: false, metal: true, glass: true, textile: true },
+                region: 'thalwil',
+                description: ''
+                     
+            });
+        });
+        it('should return an error for wrong sort parameter', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/stations?region=thalwil&sort=xyz'
+            });
+            response.statusCode.should.equal(400);
+        });
     });
 
     describe('/api/parameter/regions is working', function() {
@@ -317,7 +349,7 @@ describe('make sure the server is running (test.api)', function() {
                     'region': 'zurich',
                     'zip': 8038,
                     'area': '8038',
-                    'type': 'paper',
+                    'waste_type': 'paper',
                     'station': '',
                     'description': ''
                 },
@@ -326,11 +358,18 @@ describe('make sure the server is running (test.api)', function() {
                     'region': 'zurich',
                     'zip': 8038,
                     'area': '8038',
-                    'type': 'cardboard',
+                    'waste_type': 'cardboard',
                     'station': '',
                     'description': ''
                 }]
             });
+        });
+        it('should return an error with incorrect sort parameter', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?types=paper&types=cardboard&zip=8038&lang=de&start=2023-01-01&end=2023-01-16&sort=xyz'
+            });
+            response.statusCode.should.equal(400);
         });
     });
 
@@ -348,7 +387,7 @@ describe('make sure the server is running (test.api)', function() {
                     'region': 'zurich',
                     'zip': 8038,
                     'area': '8038',
-                    'type': 'paper',
+                    'waste_type': 'paper',
                     'station': '',
                     'description': ''
                 }]
@@ -367,7 +406,7 @@ describe('make sure the server is running (test.api)', function() {
                     'region': 'thalwil',
                     'zip': 8800,
                     'area': 'b',
-                    'type': 'cardboard',
+                    'waste_type': 'cardboard',
                     'station': '',
                     'description': ''
                 }]
@@ -387,7 +426,7 @@ describe('make sure the server is running (test.api)', function() {
                     'area': 'e',
                     'zip': '',
                     'station': '',
-                    'type': 'waste',
+                    'waste_type': 'waste',
                     'description': ''
                 }]
             });
@@ -406,7 +445,7 @@ describe('make sure the server is running (test.api)', function() {
                     'area': 'f',
                     'zip': '',
                     'station': '',
-                    'type': 'cardboard',
+                    'waste_type': 'cardboard',
                     'description': ''
                 }]
             });
@@ -428,12 +467,12 @@ describe('make sure the server is running (test.api)', function() {
                     'zip': 8800,
                     'area': 'a',
                     'station': '',
-                    'type': 'waste',
+                    'waste_type': 'waste',
                     'description': ''
                 }]
             });
         });
-        it('should return a correct entries for 8800 (without and without area)', async function() {
+        it('should return a correct entries for 8800 (with and without area)', async function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?zip=8800&area=b&limit=2&start=2024-06-25&end=2024-06-25&sort=date,area:desc'
@@ -447,7 +486,7 @@ describe('make sure the server is running (test.api)', function() {
                     'zip': 8800,
                     'area': 'b',
                     'station': '',
-                    'type': 'waste',
+                    'waste_type': 'waste',
                     'description': ''
                 },
                 {
@@ -456,7 +495,7 @@ describe('make sure the server is running (test.api)', function() {
                     'zip': 8800,
                     'area': '',
                     'station': '',
-                    'type': 'special',
+                    'waste_type': 'special',
                     'description': ''
                 }]
             });
@@ -480,7 +519,7 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8303,
                 'area': '',
                 'station': '',
-                'type': 'organic',
+                'waste_type': 'organic',
                 'description': ''
             });
         });
@@ -501,7 +540,7 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8303,
                 'area': '',
                 'station': '',
-                'type': 'oekibus',
+                'waste_type': 'oekibus',
                 'description': 'Ökibus am Morgen'
             });
         });
@@ -522,7 +561,184 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8303,
                 'area': '',
                 'station': '',
-                'type': 'paper',
+                'waste_type': 'paper',
+                'description': ''
+            });
+        });
+    });
+
+    describe('/api/calendar.json for Embrach', function() {
+        it('should return a correct entry for embrach', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=embrach&sort=date,waste_type&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(368);
+            response.result._metadata.should.deepEqual({
+                'total_count': 368,
+                'row_count': 368,
+            });
+            response.result.result[0].should.deepEqual({
+                'date': '2024-01-03',
+                'region': 'embrach',
+                'zip': 8424,
+                'area': 'ost',
+                'station': '',
+                'waste_type': 'bulky_goods',
+                'description': ''
+            });
+        });
+        it('should return a correct entry for cardboard embrach', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=embrach&sort=date,waste_type&start=2024-01-01&end=2024-12-31&types=cardboard'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(26);
+            response.result._metadata.should.deepEqual({
+                'total_count': 26,
+                'row_count': 26,
+            });
+            response.result.result[1].should.deepEqual({
+                'date': '2024-01-25',
+                'region': 'embrach',
+                'zip': 8424,
+                'area': '',
+                'station': '',
+                'waste_type': 'cardboard',
+                'description': ''
+            });
+        });
+        it('should return a correct entry for organic embrach area=west', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=embrach&types=organic&area=west&sort=date&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(47);
+            response.result._metadata.should.deepEqual({
+                'total_count': 47,
+                'row_count': 47,
+            });
+            response.result.result[2].should.deepEqual({
+                'date': '2024-02-05',
+                'region': 'embrach',
+                'zip': 8424,
+                'area': 'west',
+                'station': '',
+                'waste_type': 'organic',
+                'description': ''
+            });
+        });
+    });
+
+    describe('/api/calendar.json for Dübendorf', function() {
+        it('should return a correct entry for duebendorf', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=duebendorf&sort=date,waste_type,area&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(500);
+            response.result._metadata.should.deepEqual({
+                'total_count': 783,
+                'row_count': 500,
+            });
+            response.result.result[1].should.deepEqual({
+                'date': '2024-01-03',
+                'region': 'duebendorf',
+                'zip': 8600,
+                'area': '4',
+                'station': '',
+                'waste_type': 'organic',
+                'description': ''
+            });
+        });
+        it('should return a correct entry for waste duebendorf area=2', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=duebendorf&area=2&sort=date,waste_type&start=2024-01-01&end=2024-12-31&types=waste'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(52);
+            response.result._metadata.should.deepEqual({
+                'total_count': 52,
+                'row_count': 52,
+            });
+            response.result.result[2].should.deepEqual({
+                'date': '2024-01-16',
+                'region': 'duebendorf',
+                'zip': 8600,
+                'area': '2',
+                'station': '',
+                'waste_type': 'waste',
+                'description': ''
+            });
+        });
+        it('should return a correct entry for oekibus duebendorf area=oekibus-donnerstag', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=duebendorf&types=oekibus&area=oekibus-donnerstag&sort=date&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(50);
+            response.result._metadata.should.deepEqual({
+                'total_count': 50,
+                'row_count': 50,
+            });
+            response.result.result[2].should.deepEqual({
+                'date': '2024-01-18',
+                'region': 'duebendorf',
+                'zip': 8600,
+                'area': 'oekibus-donnerstag',
+                'station': '',
+                'waste_type': 'oekibus',
+                'description': '08.00–08.20 Kunklerstrasse 15\n08.30–08.50 Dietlikonstrasse (Parkplatz Flugfeld)\n09.00–09.20 Zwinggartenstrasse 55–65\n09.30–09.50 Kriesbachstrasse 61\n10.00–10.20 Grundstrasse 28–34 (Zwinggartenparkplatz)\n10.30–10.50 Bühlwiesenstrasse 3\n13.30–13.50 Ringwiesen (Zionshalle)\n14.00–14.20 Wasserfurren 15\n14.30–14.50 Stettbach (Milchhüsli / Stettbach-Lädeli)\n15.00–15.20 Meisenrain 39\n15.25–15.45 Alte Gockhauserstrasse 2\n15.50–16.10 Tichelrütistrasse 6\n16.15–16.35 Untere Geerenstrasse 61 (Holzkorporation)\n'
+            });
+        });
+    });
+
+    describe('/api/calendar.json for Wangen-Brüttisellen', function() {
+        it('should return a correct entry for wangen-bruttisellen', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=wangen-bruttisellen&sort=date,waste_type,area&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(144);
+            response.result._metadata.should.deepEqual({
+                'total_count': 144,
+                'row_count': 144,
+            });
+            response.result.result[0].should.deepEqual({
+                'date': '2024-01-03',
+                'region': 'wangen-bruttisellen',
+                'zip': 8306,
+                'area': '',
+                'station': '',
+                'waste_type': 'cardboard',
+                'description': ''
+            });
+        });
+        it('should return a correct entry for wangen-bruttisellen paper', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=wangen-bruttisellen&sort=date,waste_type&start=2024-01-01&end=2024-12-31&types=paper'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(12);
+            response.result._metadata.should.deepEqual({
+                'total_count': 12,
+                'row_count': 12,
+            });
+            response.result.result[2].should.deepEqual({
+                'date': '2024-03-02',
+                'region': 'wangen-bruttisellen',
+                'zip': 8306,
+                'area': '',
+                'station': '',
+                'waste_type': 'paper',
                 'description': ''
             });
         });

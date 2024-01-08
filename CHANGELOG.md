@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Changed
+- Renamed `type` to `waste_type` in calendar output
+- Accept sort parameter `type` (mapped to `waste_type`)
+
+### Added
+- More tests for embrach, bassersdorf, duebendorf, wangen-bruttisellen
+- Tests for error conditions
+
+### Fixed
+- There was a typo in the ZIP code of embrach, it should be 8424 instead of 8484.
+- Return error (incl. HTTP error code) when a query fails
 
 ## [8.0.0] - 2024-01-08
 ### Removed

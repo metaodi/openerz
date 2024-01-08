@@ -8210,7 +8210,7 @@ bassersdorf	8303			bulky_goods	2024-02-20 00:00:00+00
 bassersdorf	8303			bulky_goods	2024-02-27 00:00:00+00	
 bassersdorf	8303			bulky_goods	2024-03-05 00:00:00+00	
 bassersdorf	8303			bulky_goods	2024-03-12 00:00:00+00	
-embrach	8484	ost		waste	2024-01-30 00:00:00+00	
+embrach	8424	ost		waste	2024-01-30 00:00:00+00	
 bassersdorf	8303			bulky_goods	2024-03-19 00:00:00+00	
 bassersdorf	8303			bulky_goods	2024-03-26 00:00:00+00	
 bassersdorf	8303			bulky_goods	2024-04-02 00:00:00+00	
@@ -8307,7 +8307,7 @@ bassersdorf	8303			organic	2024-01-03 00:00:00+00
 bassersdorf	8303			organic	2024-01-08 00:00:00+00	
 bassersdorf	8303			organic	2024-01-15 00:00:00+00	
 bassersdorf	8303			organic	2024-01-22 00:00:00+00	
-embrach	8484	ost		waste	2024-02-06 00:00:00+00	
+embrach	8424	ost		waste	2024-02-06 00:00:00+00	
 bassersdorf	8303			organic	2024-01-29 00:00:00+00	
 bassersdorf	8303			organic	2024-02-05 00:00:00+00	
 bassersdorf	8303			organic	2024-02-12 00:00:00+00	
@@ -9006,8 +9006,8 @@ duebendorf	8600	oekibus-dienstag		oekibus	2024-01-30 00:00:00+00	08.00–08.20 G
 duebendorf	8600	oekibus-dienstag		oekibus	2024-02-06 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-02-13 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-05-15 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
-embrach	8484		Einkaufszentrum Sonnenhof, Bülach	special	2024-09-05 00:00:00+00	
-embrach	8484	ost		waste	2024-02-13 00:00:00+00	
+embrach	8424		Einkaufszentrum Sonnenhof, Bülach	special	2024-09-05 00:00:00+00	
+embrach	8424	ost		waste	2024-02-13 00:00:00+00	
 duebendorf	8600	oekibus-dienstag		oekibus	2024-02-20 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-02-27 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-03-05 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
@@ -9022,8 +9022,8 @@ duebendorf	8600	oekibus-dienstag		oekibus	2024-04-30 00:00:00+00	08.00–08.20 G
 duebendorf	8600	oekibus-dienstag		oekibus	2024-05-07 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-05-14 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-05-21 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
-embrach	8484			paper	2024-01-06 00:00:00+00	
-embrach	8484			paper	2024-02-03 00:00:00+00	
+embrach	8424			paper	2024-01-06 00:00:00+00	
+embrach	8424			paper	2024-02-03 00:00:00+00	
 duebendorf	8600	oekibus-dienstag		oekibus	2024-05-28 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-06-04 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-06-11 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
@@ -9038,8 +9038,8 @@ duebendorf	8600	oekibus-dienstag		oekibus	2024-08-06 00:00:00+00	08.00–08.20 G
 duebendorf	8600	oekibus-dienstag		oekibus	2024-08-13 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-08-20 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-08-27 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
-embrach	8484			paper	2024-03-02 00:00:00+00	
-embrach	8484			paper	2024-04-06 00:00:00+00	
+embrach	8424			paper	2024-03-02 00:00:00+00	
+embrach	8424			paper	2024-04-06 00:00:00+00	
 duebendorf	8600	oekibus-dienstag		oekibus	2024-09-03 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-09-10 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-09-17 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
@@ -9054,8 +9054,8 @@ duebendorf	8600	oekibus-dienstag		oekibus	2024-11-12 00:00:00+00	08.00–08.20 G
 duebendorf	8600	oekibus-dienstag		oekibus	2024-11-19 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-11-26 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-12-03 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
-embrach	8484			paper	2024-05-04 00:00:00+00	
-embrach	8484			paper	2024-06-01 00:00:00+00	
+embrach	8424			paper	2024-05-04 00:00:00+00	
+embrach	8424			paper	2024-06-01 00:00:00+00	
 duebendorf	8600	oekibus-dienstag		oekibus	2024-12-10 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-12-17 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
 duebendorf	8600	oekibus-dienstag		oekibus	2024-12-24 00:00:00+00	08.00–08.20 Gfenn: Parkplatz\n08.30–08.50 Glärnischstrasse 22\n09.00–09.20 Neuhofstrasse (Parkplatz)\n09.30–09.50 Untere Zelglistrasse\n10.00–10.20 Wilstrasse (Busstation Zelgli)\n10.30–10.50 Fällandenstrasse\n(Bushaltestelle Kirche Wil)\n13.00–13.20 Rotbuchstrasse 40\n13.30–13.50 Claridenstrasse 3–5\n14.00–14.20 Alte Gfennstrasse 12\n14.30–14.50 Hermikonstrasse 84\n15.00–15.20 Greifenseestrasse 36\n15.30–15.50 Sunnhaldenstrasse 24\n16.00–16.20 Im Branzenäsch 2\n
@@ -9069,9 +9069,9 @@ duebendorf	8600	oekibus-donnerstag		oekibus	2024-02-08 00:00:00+00	08.00–08.20
 duebendorf	8600	oekibus-donnerstag		oekibus	2024-02-15 00:00:00+00	08.00–08.20 Kunklerstrasse 15\n08.30–08.50 Dietlikonstrasse (Parkplatz Flugfeld)\n09.00–09.20 Zwinggartenstrasse 55–65\n09.30–09.50 Kriesbachstrasse 61\n10.00–10.20 Grundstrasse 28–34 (Zwinggartenparkplatz)\n10.30–10.50 Bühlwiesenstrasse 3\n13.30–13.50 Ringwiesen (Zionshalle)\n14.00–14.20 Wasserfurren 15\n14.30–14.50 Stettbach (Milchhüsli / Stettbach-Lädeli)\n15.00–15.20 Meisenrain 39\n15.25–15.45 Alte Gockhauserstrasse 2\n15.50–16.10 Tichelrütistrasse 6\n16.15–16.35 Untere Geerenstrasse 61 (Holzkorporation)\n
 duebendorf	8600	oekibus-donnerstag		oekibus	2024-02-22 00:00:00+00	08.00–08.20 Kunklerstrasse 15\n08.30–08.50 Dietlikonstrasse (Parkplatz Flugfeld)\n09.00–09.20 Zwinggartenstrasse 55–65\n09.30–09.50 Kriesbachstrasse 61\n10.00–10.20 Grundstrasse 28–34 (Zwinggartenparkplatz)\n10.30–10.50 Bühlwiesenstrasse 3\n13.30–13.50 Ringwiesen (Zionshalle)\n14.00–14.20 Wasserfurren 15\n14.30–14.50 Stettbach (Milchhüsli / Stettbach-Lädeli)\n15.00–15.20 Meisenrain 39\n15.25–15.45 Alte Gockhauserstrasse 2\n15.50–16.10 Tichelrütistrasse 6\n16.15–16.35 Untere Geerenstrasse 61 (Holzkorporation)\n
 duebendorf	8600	oekibus-donnerstag		oekibus	2024-02-29 00:00:00+00	08.00–08.20 Kunklerstrasse 15\n08.30–08.50 Dietlikonstrasse (Parkplatz Flugfeld)\n09.00–09.20 Zwinggartenstrasse 55–65\n09.30–09.50 Kriesbachstrasse 61\n10.00–10.20 Grundstrasse 28–34 (Zwinggartenparkplatz)\n10.30–10.50 Bühlwiesenstrasse 3\n13.30–13.50 Ringwiesen (Zionshalle)\n14.00–14.20 Wasserfurren 15\n14.30–14.50 Stettbach (Milchhüsli / Stettbach-Lädeli)\n15.00–15.20 Meisenrain 39\n15.25–15.45 Alte Gockhauserstrasse 2\n15.50–16.10 Tichelrütistrasse 6\n16.15–16.35 Untere Geerenstrasse 61 (Holzkorporation)\n
-embrach	8484			paper	2024-07-06 00:00:00+00	
-embrach	8484			paper	2024-08-03 00:00:00+00	
-embrach	8484			paper	2024-09-07 00:00:00+00	
+embrach	8424			paper	2024-07-06 00:00:00+00	
+embrach	8424			paper	2024-08-03 00:00:00+00	
+embrach	8424			paper	2024-09-07 00:00:00+00	
 duebendorf	8600	oekibus-donnerstag		oekibus	2024-03-07 00:00:00+00	08.00–08.20 Kunklerstrasse 15\n08.30–08.50 Dietlikonstrasse (Parkplatz Flugfeld)\n09.00–09.20 Zwinggartenstrasse 55–65\n09.30–09.50 Kriesbachstrasse 61\n10.00–10.20 Grundstrasse 28–34 (Zwinggartenparkplatz)\n10.30–10.50 Bühlwiesenstrasse 3\n13.30–13.50 Ringwiesen (Zionshalle)\n14.00–14.20 Wasserfurren 15\n14.30–14.50 Stettbach (Milchhüsli / Stettbach-Lädeli)\n15.00–15.20 Meisenrain 39\n15.25–15.45 Alte Gockhauserstrasse 2\n15.50–16.10 Tichelrütistrasse 6\n16.15–16.35 Untere Geerenstrasse 61 (Holzkorporation)\n
 duebendorf	8600	oekibus-donnerstag		oekibus	2024-03-14 00:00:00+00	08.00–08.20 Kunklerstrasse 15\n08.30–08.50 Dietlikonstrasse (Parkplatz Flugfeld)\n09.00–09.20 Zwinggartenstrasse 55–65\n09.30–09.50 Kriesbachstrasse 61\n10.00–10.20 Grundstrasse 28–34 (Zwinggartenparkplatz)\n10.30–10.50 Bühlwiesenstrasse 3\n13.30–13.50 Ringwiesen (Zionshalle)\n14.00–14.20 Wasserfurren 15\n14.30–14.50 Stettbach (Milchhüsli / Stettbach-Lädeli)\n15.00–15.20 Meisenrain 39\n15.25–15.45 Alte Gockhauserstrasse 2\n15.50–16.10 Tichelrütistrasse 6\n16.15–16.35 Untere Geerenstrasse 61 (Holzkorporation)\n
 duebendorf	8600	oekibus-donnerstag		oekibus	2024-03-21 00:00:00+00	08.00–08.20 Kunklerstrasse 15\n08.30–08.50 Dietlikonstrasse (Parkplatz Flugfeld)\n09.00–09.20 Zwinggartenstrasse 55–65\n09.30–09.50 Kriesbachstrasse 61\n10.00–10.20 Grundstrasse 28–34 (Zwinggartenparkplatz)\n10.30–10.50 Bühlwiesenstrasse 3\n13.30–13.50 Ringwiesen (Zionshalle)\n14.00–14.20 Wasserfurren 15\n14.30–14.50 Stettbach (Milchhüsli / Stettbach-Lädeli)\n15.00–15.20 Meisenrain 39\n15.25–15.45 Alte Gockhauserstrasse 2\n15.50–16.10 Tichelrütistrasse 6\n16.15–16.35 Untere Geerenstrasse 61 (Holzkorporation)\n
@@ -9131,9 +9131,9 @@ duebendorf	8600	oekibus-mittwoch		oekibus	2024-04-10 00:00:00+00	08.00–08.20 L
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-04-17 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-04-24 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-05-08 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
-embrach	8484			paper	2024-10-05 00:00:00+00	
-embrach	8484			paper	2024-11-02 00:00:00+00	
-embrach	8484			paper	2024-12-07 00:00:00+00	
+embrach	8424			paper	2024-10-05 00:00:00+00	
+embrach	8424			paper	2024-11-02 00:00:00+00	
+embrach	8424			paper	2024-12-07 00:00:00+00	
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-05-22 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-05-29 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-06-05 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
@@ -9155,9 +9155,9 @@ duebendorf	8600	oekibus-mittwoch		oekibus	2024-09-18 00:00:00+00	08.00–08.20 L
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-09-25 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-10-02 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-10-09 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
-embrach	8484		Badi Talegg, Embrach	special	2024-01-26 00:00:00+00	
-embrach	8484		Einkaufszentrum Sonnenhof, Bülach	special	2024-03-07 00:00:00+00	
-embrach	8484		Einkaufszentrum Sonnenhof, Bülach	special	2024-06-01 00:00:00+00	
+embrach	8424		Badi Talegg, Embrach	special	2024-01-26 00:00:00+00	
+embrach	8424		Einkaufszentrum Sonnenhof, Bülach	special	2024-03-07 00:00:00+00	
+embrach	8424		Einkaufszentrum Sonnenhof, Bülach	special	2024-06-01 00:00:00+00	
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-10-16 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-10-23 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
 duebendorf	8600	oekibus-mittwoch		oekibus	2024-10-30 00:00:00+00	08.00–08.20 Lägernstrasse 16\n08.30–08.50 Birchlenstrasse 21\n09.00–09.20 Ahornstrasse 13/15\n09.30–09.50 Im Winkel 5\n10.00–10.20 In der Weid 22\n10.30–10.50 Alte Gfennstrasse 55\n13.00–13.20 Am Stadtrand 25\n13.30–13.50 Am Giessenplatz\n14.05–14.30 Alterszentrum IMWIL\n
@@ -9177,7 +9177,7 @@ duebendorf	8600	oekibus-montag		oekibus	2024-02-05 00:00:00+00	08.00–08.20 Gie
 duebendorf	8600	oekibus-montag		oekibus	2024-02-12 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-02-19 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-02-26 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
-embrach	8484	ost		waste	2024-01-16 00:00:00+00	
+embrach	8424	ost		waste	2024-01-16 00:00:00+00	
 duebendorf	8600	oekibus-montag		oekibus	2024-03-04 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-03-11 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-03-18 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
@@ -9194,8 +9194,8 @@ duebendorf	8600	oekibus-montag		oekibus	2024-06-10 00:00:00+00	08.00–08.20 Gie
 duebendorf	8600	oekibus-montag		oekibus	2024-06-17 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-06-24 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-07-01 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
-embrach	8484		Werkhof, Mülistrasse 6, Lufingen	special	2024-06-07 00:00:00+00	
-embrach	8484	ost		waste	2024-01-23 00:00:00+00	
+embrach	8424		Werkhof, Mülistrasse 6, Lufingen	special	2024-06-07 00:00:00+00	
+embrach	8424	ost		waste	2024-01-23 00:00:00+00	
 duebendorf	8600	oekibus-montag		oekibus	2024-07-08 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-07-15 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-07-22 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
@@ -9212,7 +9212,7 @@ duebendorf	8600	oekibus-montag		oekibus	2024-09-30 00:00:00+00	08.00–08.20 Gie
 duebendorf	8600	oekibus-montag		oekibus	2024-10-07 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-10-14 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-10-21 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
-embrach	8484		Werkhof, Dorfstrasse 51, Freienstein	special	2024-06-14 00:00:00+00	
+embrach	8424		Werkhof, Dorfstrasse 51, Freienstein	special	2024-06-14 00:00:00+00	
 duebendorf	8600	oekibus-montag		oekibus	2024-10-28 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-11-04 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-11-11 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
@@ -9223,351 +9223,351 @@ duebendorf	8600	oekibus-montag		oekibus	2024-12-09 00:00:00+00	08.00–08.20 Gie
 duebendorf	8600	oekibus-montag		oekibus	2024-12-16 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-12-23 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
 duebendorf	8600	oekibus-montag		oekibus	2024-12-30 00:00:00+00	08.00–08.20 Giessenstrasse 13\n08.30–08.50 Seidenweg 10\n09.00–09.20 Heugatterstrasse 9\n09.30–09.50 Lindenplatz\n10.00–10.20 Grüzenstrasse 44\n10.30–10.50 Schulhausstrasse 27\n13.00–13.20 Hochbordstrasse 31\n13.30–13.50 Rütistrasse 19\n14.00–14.20 Im Leisibühl 45\n14.30–14.50 Alte Gockhauserstrasse 9\n15.00–15.20 Tennried\n15.30–15.50 Geerenackerstrasse / Chileweg\n16.00–16.20 Im Tobelacker 12\n
-embrach	8484			cardboard	2024-01-11 00:00:00+00	
-embrach	8484			cardboard	2024-01-25 00:00:00+00	
-embrach	8484			cardboard	2024-02-08 00:00:00+00	
-embrach	8484			cardboard	2024-02-22 00:00:00+00	
-embrach	8484			cardboard	2024-03-07 00:00:00+00	
-embrach	8484			cardboard	2024-03-21 00:00:00+00	
-embrach	8484			cardboard	2024-04-04 00:00:00+00	
-embrach	8484			cardboard	2024-04-18 00:00:00+00	
-embrach	8484			cardboard	2024-05-02 00:00:00+00	
-embrach	8484			cardboard	2024-05-16 00:00:00+00	
-embrach	8484			cardboard	2024-05-30 00:00:00+00	
-embrach	8484			cardboard	2024-06-13 00:00:00+00	
-embrach	8484			cardboard	2024-06-27 00:00:00+00	
-embrach	8484			cardboard	2024-07-11 00:00:00+00	
-embrach	8484			cardboard	2024-07-25 00:00:00+00	
-embrach	8484			cardboard	2024-08-08 00:00:00+00	
-embrach	8484			cardboard	2024-08-22 00:00:00+00	
-embrach	8484			cardboard	2024-09-05 00:00:00+00	
-embrach	8484			cardboard	2024-09-19 00:00:00+00	
-embrach	8484			cardboard	2024-10-03 00:00:00+00	
-embrach	8484			cardboard	2024-10-17 00:00:00+00	
-embrach	8484			cardboard	2024-10-31 00:00:00+00	
-embrach	8484			cardboard	2024-11-14 00:00:00+00	
-embrach	8484			cardboard	2024-11-28 00:00:00+00	
-embrach	8484			cardboard	2024-12-12 00:00:00+00	
-embrach	8484			cardboard	2024-12-23 00:00:00+00	
-embrach	8484			chipping_service	2024-04-08 00:00:00+00	
-embrach	8484			chipping_service	2024-04-09 00:00:00+00	
-embrach	8484			chipping_service	2024-04-10 00:00:00+00	
-embrach	8484			chipping_service	2024-10-21 00:00:00+00	
-embrach	8484			chipping_service	2024-10-22 00:00:00+00	
-embrach	8484			chipping_service	2024-10-23 00:00:00+00	
-embrach	8484			incombustibles	2024-03-14 00:00:00+00	
-embrach	8484			incombustibles	2024-06-06 00:00:00+00	
-embrach	8484			incombustibles	2024-09-12 00:00:00+00	
-embrach	8484			incombustibles	2024-11-07 00:00:00+00	
-embrach	8484			metal	2024-01-13 00:00:00+00	
-embrach	8484			metal	2024-03-09 00:00:00+00	
-embrach	8484			metal	2024-05-04 00:00:00+00	
-embrach	8484			metal	2024-08-17 00:00:00+00	
-embrach	8484			metal	2024-09-21 00:00:00+00	
-embrach	8484			metal	2024-11-23 00:00:00+00	
-embrach	8484		Badi Talegg, Embrach	special	2024-09-06 00:00:00+00	
-embrach	8484		Volg, Eigentalstrasse 8, Oberembrach	special	2024-11-06 00:00:00+00	
-embrach	8484		Einkaufszentrum Sonnenhof, Bülach	special	2024-12-05 00:00:00+00	
-embrach	8484		Werkhof, Tössstrasse, Rorbas	special	2024-12-06 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-01-03 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-01-09 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-01-16 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-01-23 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-01-30 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-02-06 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-02-13 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-02-20 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-02-27 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-03-05 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-03-12 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-03-19 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-03-26 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-04-02 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-04-09 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-04-16 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-04-23 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-04-30 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-05-07 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-05-14 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-05-21 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-05-28 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-06-04 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-06-11 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-06-18 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-06-25 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-07-02 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-07-09 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-07-16 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-07-23 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-07-30 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-08-06 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-08-13 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-08-20 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-08-27 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-09-03 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-09-10 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-09-17 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-09-24 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-10-01 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-10-08 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-10-15 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-10-22 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-10-29 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-11-05 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-11-12 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-11-19 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-11-26 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-12-03 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-12-10 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-12-17 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-12-24 00:00:00+00	
-embrach	8484	ost		bulky_goods	2024-12-31 00:00:00+00	
-embrach	8484	ost		organic	2024-01-10 00:00:00+00	
-embrach	8484	ost		organic	2024-01-24 00:00:00+00	
-embrach	8484	ost		organic	2024-02-07 00:00:00+00	
-embrach	8484	ost		organic	2024-02-21 00:00:00+00	
-embrach	8484	ost		organic	2024-02-28 00:00:00+00	
-embrach	8484	ost		organic	2024-03-06 00:00:00+00	
-embrach	8484	ost		organic	2024-03-13 00:00:00+00	
-embrach	8484	ost		organic	2024-03-20 00:00:00+00	
-embrach	8484	ost		organic	2024-03-27 00:00:00+00	
-embrach	8484	ost		organic	2024-04-03 00:00:00+00	
-embrach	8484	ost		organic	2024-04-10 00:00:00+00	
-embrach	8484	ost		organic	2024-04-17 00:00:00+00	
-embrach	8484	ost		organic	2024-04-24 00:00:00+00	
-embrach	8484	ost		organic	2024-04-29 00:00:00+00	
-embrach	8484	ost		organic	2024-05-08 00:00:00+00	
-embrach	8484	ost		organic	2024-05-15 00:00:00+00	
-embrach	8484	ost		organic	2024-05-22 00:00:00+00	
-embrach	8484	ost		organic	2024-05-29 00:00:00+00	
-embrach	8484	ost		organic	2024-06-05 00:00:00+00	
-embrach	8484	ost		organic	2024-06-12 00:00:00+00	
-embrach	8484	ost		organic	2024-06-19 00:00:00+00	
-embrach	8484	ost		organic	2024-06-26 00:00:00+00	
-embrach	8484	ost		organic	2024-07-03 00:00:00+00	
-embrach	8484	ost		organic	2024-07-10 00:00:00+00	
-embrach	8484	ost		organic	2024-07-17 00:00:00+00	
-embrach	8484	ost		organic	2024-07-24 00:00:00+00	
-embrach	8484	ost		organic	2024-07-31 00:00:00+00	
-embrach	8484	ost		organic	2024-08-07 00:00:00+00	
-embrach	8484	ost		organic	2024-08-14 00:00:00+00	
-embrach	8484	ost		organic	2024-08-21 00:00:00+00	
-embrach	8484	ost		organic	2024-08-28 00:00:00+00	
-embrach	8484	ost		organic	2024-09-04 00:00:00+00	
-embrach	8484	ost		organic	2024-09-11 00:00:00+00	
-embrach	8484	ost		organic	2024-09-18 00:00:00+00	
-embrach	8484	ost		organic	2024-09-25 00:00:00+00	
-embrach	8484	ost		organic	2024-10-02 00:00:00+00	
-embrach	8484	ost		organic	2024-10-09 00:00:00+00	
-embrach	8484	ost		organic	2024-10-16 00:00:00+00	
-embrach	8484	ost		organic	2024-10-23 00:00:00+00	
-embrach	8484	ost		organic	2024-10-30 00:00:00+00	
-embrach	8484	ost		organic	2024-11-06 00:00:00+00	
-embrach	8484	ost		organic	2024-11-13 00:00:00+00	
-embrach	8484	ost		organic	2024-11-20 00:00:00+00	
-embrach	8484	ost		organic	2024-11-27 00:00:00+00	
-embrach	8484	ost		organic	2024-12-04 00:00:00+00	
-embrach	8484	ost		organic	2024-12-18 00:00:00+00	
-embrach	8484	ost		organic	2024-12-30 00:00:00+00	
-embrach	8484	ost		waste	2024-01-03 00:00:00+00	
-embrach	8484	ost		waste	2024-01-09 00:00:00+00	
-embrach	8484	ost		waste	2024-02-20 00:00:00+00	
-embrach	8484	ost		waste	2024-02-27 00:00:00+00	
-embrach	8484	ost		waste	2024-03-05 00:00:00+00	
-embrach	8484	ost		waste	2024-03-12 00:00:00+00	
-embrach	8484	ost		waste	2024-03-19 00:00:00+00	
-embrach	8484	ost		waste	2024-03-26 00:00:00+00	
-embrach	8484	ost		waste	2024-04-02 00:00:00+00	
-embrach	8484	ost		waste	2024-04-09 00:00:00+00	
-embrach	8484	ost		waste	2024-04-16 00:00:00+00	
-embrach	8484	ost		waste	2024-04-23 00:00:00+00	
-embrach	8484	ost		waste	2024-04-30 00:00:00+00	
-embrach	8484	ost		waste	2024-05-07 00:00:00+00	
-embrach	8484	ost		waste	2024-05-14 00:00:00+00	
-embrach	8484	ost		waste	2024-05-21 00:00:00+00	
-embrach	8484	ost		waste	2024-05-28 00:00:00+00	
-embrach	8484	ost		waste	2024-06-04 00:00:00+00	
-embrach	8484	ost		waste	2024-06-11 00:00:00+00	
-embrach	8484	ost		waste	2024-06-18 00:00:00+00	
-embrach	8484	ost		waste	2024-06-25 00:00:00+00	
-embrach	8484	ost		waste	2024-07-02 00:00:00+00	
-embrach	8484	ost		waste	2024-07-09 00:00:00+00	
-embrach	8484	ost		waste	2024-07-16 00:00:00+00	
-embrach	8484	ost		waste	2024-07-23 00:00:00+00	
-embrach	8484	ost		waste	2024-07-30 00:00:00+00	
-embrach	8484	ost		waste	2024-08-06 00:00:00+00	
-embrach	8484	ost		waste	2024-08-13 00:00:00+00	
-embrach	8484	ost		waste	2024-08-20 00:00:00+00	
-embrach	8484	ost		waste	2024-08-27 00:00:00+00	
-embrach	8484	ost		waste	2024-09-03 00:00:00+00	
-embrach	8484	ost		waste	2024-09-10 00:00:00+00	
-embrach	8484	ost		waste	2024-09-17 00:00:00+00	
-embrach	8484	ost		waste	2024-09-24 00:00:00+00	
-embrach	8484	ost		waste	2024-10-01 00:00:00+00	
-embrach	8484	ost		waste	2024-10-08 00:00:00+00	
-embrach	8484	ost		waste	2024-10-15 00:00:00+00	
-embrach	8484	ost		waste	2024-10-22 00:00:00+00	
-embrach	8484	ost		waste	2024-10-29 00:00:00+00	
-embrach	8484	ost		waste	2024-11-05 00:00:00+00	
-embrach	8484	ost		waste	2024-11-12 00:00:00+00	
-embrach	8484	ost		waste	2024-11-19 00:00:00+00	
-embrach	8484	ost		waste	2024-11-26 00:00:00+00	
-embrach	8484	ost		waste	2024-12-03 00:00:00+00	
-embrach	8484	ost		waste	2024-12-10 00:00:00+00	
-embrach	8484	ost		waste	2024-12-17 00:00:00+00	
-embrach	8484	ost		waste	2024-12-24 00:00:00+00	
-embrach	8484	ost		waste	2024-12-31 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-01-05 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-01-12 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-01-19 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-01-26 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-02-02 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-02-09 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-02-16 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-02-23 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-03-01 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-03-08 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-03-15 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-03-22 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-03-26 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-04-05 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-04-12 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-04-19 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-04-26 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-05-03 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-05-10 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-05-17 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-05-24 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-05-31 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-06-07 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-06-14 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-06-21 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-06-28 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-07-05 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-07-12 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-07-19 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-07-26 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-08-02 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-08-09 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-08-16 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-08-23 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-08-30 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-09-06 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-09-13 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-09-20 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-09-27 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-10-04 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-10-11 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-10-18 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-10-25 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-11-01 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-11-08 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-11-15 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-11-22 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-11-29 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-12-06 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-12-13 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-12-20 00:00:00+00	
-embrach	8484	west		bulky_goods	2024-12-27 00:00:00+00	
-embrach	8484	west		organic	2024-01-08 00:00:00+00	
-embrach	8484	west		organic	2024-01-22 00:00:00+00	
-embrach	8484	west		organic	2024-02-05 00:00:00+00	
-embrach	8484	west		organic	2024-02-19 00:00:00+00	
-embrach	8484	west		organic	2024-02-26 00:00:00+00	
-embrach	8484	west		organic	2024-03-04 00:00:00+00	
-embrach	8484	west		organic	2024-03-11 00:00:00+00	
-embrach	8484	west		organic	2024-03-18 00:00:00+00	
-embrach	8484	west		organic	2024-03-25 00:00:00+00	
-embrach	8484	west		organic	2024-04-03 00:00:00+00	
-embrach	8484	west		organic	2024-04-08 00:00:00+00	
-embrach	8484	west		organic	2024-04-15 00:00:00+00	
-embrach	8484	west		organic	2024-04-22 00:00:00+00	
-embrach	8484	west		organic	2024-04-29 00:00:00+00	
-embrach	8484	west		organic	2024-05-06 00:00:00+00	
-embrach	8484	west		organic	2024-05-13 00:00:00+00	
-embrach	8484	west		organic	2024-05-22 00:00:00+00	
-embrach	8484	west		organic	2024-05-27 00:00:00+00	
-embrach	8484	west		organic	2024-06-03 00:00:00+00	
-embrach	8484	west		organic	2024-06-10 00:00:00+00	
-embrach	8484	west		organic	2024-06-17 00:00:00+00	
-embrach	8484	west		organic	2024-06-24 00:00:00+00	
-embrach	8484	west		organic	2024-07-01 00:00:00+00	
-embrach	8484	west		organic	2024-07-08 00:00:00+00	
-embrach	8484	west		organic	2024-07-15 00:00:00+00	
-embrach	8484	west		organic	2024-07-22 00:00:00+00	
-embrach	8484	west		organic	2024-07-29 00:00:00+00	
-embrach	8484	west		organic	2024-08-05 00:00:00+00	
-embrach	8484	west		organic	2024-08-12 00:00:00+00	
-embrach	8484	west		organic	2024-08-19 00:00:00+00	
-embrach	8484	west		organic	2024-08-26 00:00:00+00	
-embrach	8484	west		organic	2024-09-02 00:00:00+00	
-embrach	8484	west		organic	2024-09-09 00:00:00+00	
-embrach	8484	west		organic	2024-09-16 00:00:00+00	
-embrach	8484	west		organic	2024-09-23 00:00:00+00	
-embrach	8484	west		organic	2024-09-30 00:00:00+00	
-embrach	8484	west		organic	2024-10-07 00:00:00+00	
-embrach	8484	west		organic	2024-10-14 00:00:00+00	
-embrach	8484	west		organic	2024-10-21 00:00:00+00	
-embrach	8484	west		organic	2024-10-28 00:00:00+00	
-embrach	8484	west		organic	2024-11-04 00:00:00+00	
-embrach	8484	west		organic	2024-11-11 00:00:00+00	
-embrach	8484	west		organic	2024-11-18 00:00:00+00	
-embrach	8484	west		organic	2024-11-25 00:00:00+00	
-embrach	8484	west		organic	2024-12-02 00:00:00+00	
-embrach	8484	west		organic	2024-12-16 00:00:00+00	
-embrach	8484	west		organic	2024-12-30 00:00:00+00	
-embrach	8484	west		waste	2024-01-05 00:00:00+00	
-embrach	8484	west		waste	2024-01-12 00:00:00+00	
-embrach	8484	west		waste	2024-01-19 00:00:00+00	
-embrach	8484	west		waste	2024-01-26 00:00:00+00	
-embrach	8484	west		waste	2024-02-02 00:00:00+00	
-embrach	8484	west		waste	2024-02-09 00:00:00+00	
-embrach	8484	west		waste	2024-02-16 00:00:00+00	
-embrach	8484	west		waste	2024-02-23 00:00:00+00	
-embrach	8484	west		waste	2024-03-01 00:00:00+00	
-embrach	8484	west		waste	2024-03-08 00:00:00+00	
-embrach	8484	west		waste	2024-03-15 00:00:00+00	
-embrach	8484	west		waste	2024-03-22 00:00:00+00	
-embrach	8484	west		waste	2024-03-26 00:00:00+00	
-embrach	8484	west		waste	2024-04-05 00:00:00+00	
-embrach	8484	west		waste	2024-04-12 00:00:00+00	
-embrach	8484	west		waste	2024-04-19 00:00:00+00	
-embrach	8484	west		waste	2024-04-26 00:00:00+00	
-embrach	8484	west		waste	2024-05-03 00:00:00+00	
-embrach	8484	west		waste	2024-05-10 00:00:00+00	
-embrach	8484	west		waste	2024-05-17 00:00:00+00	
-embrach	8484	west		waste	2024-05-24 00:00:00+00	
-embrach	8484	west		waste	2024-05-31 00:00:00+00	
-embrach	8484	west		waste	2024-06-07 00:00:00+00	
-embrach	8484	west		waste	2024-06-14 00:00:00+00	
-embrach	8484	west		waste	2024-06-21 00:00:00+00	
-embrach	8484	west		waste	2024-06-28 00:00:00+00	
-embrach	8484	west		waste	2024-07-05 00:00:00+00	
-embrach	8484	west		waste	2024-07-12 00:00:00+00	
-embrach	8484	west		waste	2024-07-19 00:00:00+00	
-embrach	8484	west		waste	2024-07-26 00:00:00+00	
-embrach	8484	west		waste	2024-08-02 00:00:00+00	
-embrach	8484	west		waste	2024-08-09 00:00:00+00	
-embrach	8484	west		waste	2024-08-16 00:00:00+00	
-embrach	8484	west		waste	2024-08-23 00:00:00+00	
-embrach	8484	west		waste	2024-08-30 00:00:00+00	
-embrach	8484	west		waste	2024-09-06 00:00:00+00	
-embrach	8484	west		waste	2024-09-13 00:00:00+00	
-embrach	8484	west		waste	2024-09-20 00:00:00+00	
-embrach	8484	west		waste	2024-09-27 00:00:00+00	
-embrach	8484	west		waste	2024-10-04 00:00:00+00	
-embrach	8484	west		waste	2024-10-11 00:00:00+00	
-embrach	8484	west		waste	2024-10-18 00:00:00+00	
-embrach	8484	west		waste	2024-10-25 00:00:00+00	
-embrach	8484	west		waste	2024-11-01 00:00:00+00	
-embrach	8484	west		waste	2024-11-08 00:00:00+00	
-embrach	8484	west		waste	2024-11-15 00:00:00+00	
-embrach	8484	west		waste	2024-11-22 00:00:00+00	
-embrach	8484	west		waste	2024-11-29 00:00:00+00	
-embrach	8484	west		waste	2024-12-06 00:00:00+00	
-embrach	8484	west		waste	2024-12-13 00:00:00+00	
-embrach	8484	west		waste	2024-12-20 00:00:00+00	
-embrach	8484	west		waste	2024-12-27 00:00:00+00	
+embrach	8424			cardboard	2024-01-11 00:00:00+00	
+embrach	8424			cardboard	2024-01-25 00:00:00+00	
+embrach	8424			cardboard	2024-02-08 00:00:00+00	
+embrach	8424			cardboard	2024-02-22 00:00:00+00	
+embrach	8424			cardboard	2024-03-07 00:00:00+00	
+embrach	8424			cardboard	2024-03-21 00:00:00+00	
+embrach	8424			cardboard	2024-04-04 00:00:00+00	
+embrach	8424			cardboard	2024-04-18 00:00:00+00	
+embrach	8424			cardboard	2024-05-02 00:00:00+00	
+embrach	8424			cardboard	2024-05-16 00:00:00+00	
+embrach	8424			cardboard	2024-05-30 00:00:00+00	
+embrach	8424			cardboard	2024-06-13 00:00:00+00	
+embrach	8424			cardboard	2024-06-27 00:00:00+00	
+embrach	8424			cardboard	2024-07-11 00:00:00+00	
+embrach	8424			cardboard	2024-07-25 00:00:00+00	
+embrach	8424			cardboard	2024-08-08 00:00:00+00	
+embrach	8424			cardboard	2024-08-22 00:00:00+00	
+embrach	8424			cardboard	2024-09-05 00:00:00+00	
+embrach	8424			cardboard	2024-09-19 00:00:00+00	
+embrach	8424			cardboard	2024-10-03 00:00:00+00	
+embrach	8424			cardboard	2024-10-17 00:00:00+00	
+embrach	8424			cardboard	2024-10-31 00:00:00+00	
+embrach	8424			cardboard	2024-11-14 00:00:00+00	
+embrach	8424			cardboard	2024-11-28 00:00:00+00	
+embrach	8424			cardboard	2024-12-12 00:00:00+00	
+embrach	8424			cardboard	2024-12-23 00:00:00+00	
+embrach	8424			chipping_service	2024-04-08 00:00:00+00	
+embrach	8424			chipping_service	2024-04-09 00:00:00+00	
+embrach	8424			chipping_service	2024-04-10 00:00:00+00	
+embrach	8424			chipping_service	2024-10-21 00:00:00+00	
+embrach	8424			chipping_service	2024-10-22 00:00:00+00	
+embrach	8424			chipping_service	2024-10-23 00:00:00+00	
+embrach	8424			incombustibles	2024-03-14 00:00:00+00	
+embrach	8424			incombustibles	2024-06-06 00:00:00+00	
+embrach	8424			incombustibles	2024-09-12 00:00:00+00	
+embrach	8424			incombustibles	2024-11-07 00:00:00+00	
+embrach	8424			metal	2024-01-13 00:00:00+00	
+embrach	8424			metal	2024-03-09 00:00:00+00	
+embrach	8424			metal	2024-05-04 00:00:00+00	
+embrach	8424			metal	2024-08-17 00:00:00+00	
+embrach	8424			metal	2024-09-21 00:00:00+00	
+embrach	8424			metal	2024-11-23 00:00:00+00	
+embrach	8424		Badi Talegg, Embrach	special	2024-09-06 00:00:00+00	
+embrach	8424		Volg, Eigentalstrasse 8, Oberembrach	special	2024-11-06 00:00:00+00	
+embrach	8424		Einkaufszentrum Sonnenhof, Bülach	special	2024-12-05 00:00:00+00	
+embrach	8424		Werkhof, Tössstrasse, Rorbas	special	2024-12-06 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-01-03 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-01-09 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-01-16 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-01-23 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-01-30 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-02-06 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-02-13 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-02-20 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-02-27 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-03-05 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-03-12 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-03-19 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-03-26 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-04-02 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-04-09 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-04-16 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-04-23 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-04-30 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-05-07 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-05-14 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-05-21 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-05-28 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-06-04 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-06-11 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-06-18 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-06-25 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-07-02 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-07-09 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-07-16 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-07-23 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-07-30 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-08-06 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-08-13 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-08-20 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-08-27 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-09-03 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-09-10 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-09-17 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-09-24 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-10-01 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-10-08 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-10-15 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-10-22 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-10-29 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-11-05 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-11-12 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-11-19 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-11-26 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-12-03 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-12-10 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-12-17 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-12-24 00:00:00+00	
+embrach	8424	ost		bulky_goods	2024-12-31 00:00:00+00	
+embrach	8424	ost		organic	2024-01-10 00:00:00+00	
+embrach	8424	ost		organic	2024-01-24 00:00:00+00	
+embrach	8424	ost		organic	2024-02-07 00:00:00+00	
+embrach	8424	ost		organic	2024-02-21 00:00:00+00	
+embrach	8424	ost		organic	2024-02-28 00:00:00+00	
+embrach	8424	ost		organic	2024-03-06 00:00:00+00	
+embrach	8424	ost		organic	2024-03-13 00:00:00+00	
+embrach	8424	ost		organic	2024-03-20 00:00:00+00	
+embrach	8424	ost		organic	2024-03-27 00:00:00+00	
+embrach	8424	ost		organic	2024-04-03 00:00:00+00	
+embrach	8424	ost		organic	2024-04-10 00:00:00+00	
+embrach	8424	ost		organic	2024-04-17 00:00:00+00	
+embrach	8424	ost		organic	2024-04-24 00:00:00+00	
+embrach	8424	ost		organic	2024-04-29 00:00:00+00	
+embrach	8424	ost		organic	2024-05-08 00:00:00+00	
+embrach	8424	ost		organic	2024-05-15 00:00:00+00	
+embrach	8424	ost		organic	2024-05-22 00:00:00+00	
+embrach	8424	ost		organic	2024-05-29 00:00:00+00	
+embrach	8424	ost		organic	2024-06-05 00:00:00+00	
+embrach	8424	ost		organic	2024-06-12 00:00:00+00	
+embrach	8424	ost		organic	2024-06-19 00:00:00+00	
+embrach	8424	ost		organic	2024-06-26 00:00:00+00	
+embrach	8424	ost		organic	2024-07-03 00:00:00+00	
+embrach	8424	ost		organic	2024-07-10 00:00:00+00	
+embrach	8424	ost		organic	2024-07-17 00:00:00+00	
+embrach	8424	ost		organic	2024-07-24 00:00:00+00	
+embrach	8424	ost		organic	2024-07-31 00:00:00+00	
+embrach	8424	ost		organic	2024-08-07 00:00:00+00	
+embrach	8424	ost		organic	2024-08-14 00:00:00+00	
+embrach	8424	ost		organic	2024-08-21 00:00:00+00	
+embrach	8424	ost		organic	2024-08-28 00:00:00+00	
+embrach	8424	ost		organic	2024-09-04 00:00:00+00	
+embrach	8424	ost		organic	2024-09-11 00:00:00+00	
+embrach	8424	ost		organic	2024-09-18 00:00:00+00	
+embrach	8424	ost		organic	2024-09-25 00:00:00+00	
+embrach	8424	ost		organic	2024-10-02 00:00:00+00	
+embrach	8424	ost		organic	2024-10-09 00:00:00+00	
+embrach	8424	ost		organic	2024-10-16 00:00:00+00	
+embrach	8424	ost		organic	2024-10-23 00:00:00+00	
+embrach	8424	ost		organic	2024-10-30 00:00:00+00	
+embrach	8424	ost		organic	2024-11-06 00:00:00+00	
+embrach	8424	ost		organic	2024-11-13 00:00:00+00	
+embrach	8424	ost		organic	2024-11-20 00:00:00+00	
+embrach	8424	ost		organic	2024-11-27 00:00:00+00	
+embrach	8424	ost		organic	2024-12-04 00:00:00+00	
+embrach	8424	ost		organic	2024-12-18 00:00:00+00	
+embrach	8424	ost		organic	2024-12-30 00:00:00+00	
+embrach	8424	ost		waste	2024-01-03 00:00:00+00	
+embrach	8424	ost		waste	2024-01-09 00:00:00+00	
+embrach	8424	ost		waste	2024-02-20 00:00:00+00	
+embrach	8424	ost		waste	2024-02-27 00:00:00+00	
+embrach	8424	ost		waste	2024-03-05 00:00:00+00	
+embrach	8424	ost		waste	2024-03-12 00:00:00+00	
+embrach	8424	ost		waste	2024-03-19 00:00:00+00	
+embrach	8424	ost		waste	2024-03-26 00:00:00+00	
+embrach	8424	ost		waste	2024-04-02 00:00:00+00	
+embrach	8424	ost		waste	2024-04-09 00:00:00+00	
+embrach	8424	ost		waste	2024-04-16 00:00:00+00	
+embrach	8424	ost		waste	2024-04-23 00:00:00+00	
+embrach	8424	ost		waste	2024-04-30 00:00:00+00	
+embrach	8424	ost		waste	2024-05-07 00:00:00+00	
+embrach	8424	ost		waste	2024-05-14 00:00:00+00	
+embrach	8424	ost		waste	2024-05-21 00:00:00+00	
+embrach	8424	ost		waste	2024-05-28 00:00:00+00	
+embrach	8424	ost		waste	2024-06-04 00:00:00+00	
+embrach	8424	ost		waste	2024-06-11 00:00:00+00	
+embrach	8424	ost		waste	2024-06-18 00:00:00+00	
+embrach	8424	ost		waste	2024-06-25 00:00:00+00	
+embrach	8424	ost		waste	2024-07-02 00:00:00+00	
+embrach	8424	ost		waste	2024-07-09 00:00:00+00	
+embrach	8424	ost		waste	2024-07-16 00:00:00+00	
+embrach	8424	ost		waste	2024-07-23 00:00:00+00	
+embrach	8424	ost		waste	2024-07-30 00:00:00+00	
+embrach	8424	ost		waste	2024-08-06 00:00:00+00	
+embrach	8424	ost		waste	2024-08-13 00:00:00+00	
+embrach	8424	ost		waste	2024-08-20 00:00:00+00	
+embrach	8424	ost		waste	2024-08-27 00:00:00+00	
+embrach	8424	ost		waste	2024-09-03 00:00:00+00	
+embrach	8424	ost		waste	2024-09-10 00:00:00+00	
+embrach	8424	ost		waste	2024-09-17 00:00:00+00	
+embrach	8424	ost		waste	2024-09-24 00:00:00+00	
+embrach	8424	ost		waste	2024-10-01 00:00:00+00	
+embrach	8424	ost		waste	2024-10-08 00:00:00+00	
+embrach	8424	ost		waste	2024-10-15 00:00:00+00	
+embrach	8424	ost		waste	2024-10-22 00:00:00+00	
+embrach	8424	ost		waste	2024-10-29 00:00:00+00	
+embrach	8424	ost		waste	2024-11-05 00:00:00+00	
+embrach	8424	ost		waste	2024-11-12 00:00:00+00	
+embrach	8424	ost		waste	2024-11-19 00:00:00+00	
+embrach	8424	ost		waste	2024-11-26 00:00:00+00	
+embrach	8424	ost		waste	2024-12-03 00:00:00+00	
+embrach	8424	ost		waste	2024-12-10 00:00:00+00	
+embrach	8424	ost		waste	2024-12-17 00:00:00+00	
+embrach	8424	ost		waste	2024-12-24 00:00:00+00	
+embrach	8424	ost		waste	2024-12-31 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-01-05 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-01-12 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-01-19 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-01-26 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-02-02 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-02-09 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-02-16 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-02-23 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-03-01 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-03-08 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-03-15 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-03-22 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-03-26 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-04-05 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-04-12 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-04-19 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-04-26 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-05-03 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-05-10 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-05-17 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-05-24 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-05-31 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-06-07 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-06-14 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-06-21 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-06-28 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-07-05 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-07-12 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-07-19 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-07-26 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-08-02 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-08-09 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-08-16 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-08-23 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-08-30 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-09-06 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-09-13 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-09-20 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-09-27 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-10-04 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-10-11 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-10-18 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-10-25 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-11-01 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-11-08 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-11-15 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-11-22 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-11-29 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-12-06 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-12-13 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-12-20 00:00:00+00	
+embrach	8424	west		bulky_goods	2024-12-27 00:00:00+00	
+embrach	8424	west		organic	2024-01-08 00:00:00+00	
+embrach	8424	west		organic	2024-01-22 00:00:00+00	
+embrach	8424	west		organic	2024-02-05 00:00:00+00	
+embrach	8424	west		organic	2024-02-19 00:00:00+00	
+embrach	8424	west		organic	2024-02-26 00:00:00+00	
+embrach	8424	west		organic	2024-03-04 00:00:00+00	
+embrach	8424	west		organic	2024-03-11 00:00:00+00	
+embrach	8424	west		organic	2024-03-18 00:00:00+00	
+embrach	8424	west		organic	2024-03-25 00:00:00+00	
+embrach	8424	west		organic	2024-04-03 00:00:00+00	
+embrach	8424	west		organic	2024-04-08 00:00:00+00	
+embrach	8424	west		organic	2024-04-15 00:00:00+00	
+embrach	8424	west		organic	2024-04-22 00:00:00+00	
+embrach	8424	west		organic	2024-04-29 00:00:00+00	
+embrach	8424	west		organic	2024-05-06 00:00:00+00	
+embrach	8424	west		organic	2024-05-13 00:00:00+00	
+embrach	8424	west		organic	2024-05-22 00:00:00+00	
+embrach	8424	west		organic	2024-05-27 00:00:00+00	
+embrach	8424	west		organic	2024-06-03 00:00:00+00	
+embrach	8424	west		organic	2024-06-10 00:00:00+00	
+embrach	8424	west		organic	2024-06-17 00:00:00+00	
+embrach	8424	west		organic	2024-06-24 00:00:00+00	
+embrach	8424	west		organic	2024-07-01 00:00:00+00	
+embrach	8424	west		organic	2024-07-08 00:00:00+00	
+embrach	8424	west		organic	2024-07-15 00:00:00+00	
+embrach	8424	west		organic	2024-07-22 00:00:00+00	
+embrach	8424	west		organic	2024-07-29 00:00:00+00	
+embrach	8424	west		organic	2024-08-05 00:00:00+00	
+embrach	8424	west		organic	2024-08-12 00:00:00+00	
+embrach	8424	west		organic	2024-08-19 00:00:00+00	
+embrach	8424	west		organic	2024-08-26 00:00:00+00	
+embrach	8424	west		organic	2024-09-02 00:00:00+00	
+embrach	8424	west		organic	2024-09-09 00:00:00+00	
+embrach	8424	west		organic	2024-09-16 00:00:00+00	
+embrach	8424	west		organic	2024-09-23 00:00:00+00	
+embrach	8424	west		organic	2024-09-30 00:00:00+00	
+embrach	8424	west		organic	2024-10-07 00:00:00+00	
+embrach	8424	west		organic	2024-10-14 00:00:00+00	
+embrach	8424	west		organic	2024-10-21 00:00:00+00	
+embrach	8424	west		organic	2024-10-28 00:00:00+00	
+embrach	8424	west		organic	2024-11-04 00:00:00+00	
+embrach	8424	west		organic	2024-11-11 00:00:00+00	
+embrach	8424	west		organic	2024-11-18 00:00:00+00	
+embrach	8424	west		organic	2024-11-25 00:00:00+00	
+embrach	8424	west		organic	2024-12-02 00:00:00+00	
+embrach	8424	west		organic	2024-12-16 00:00:00+00	
+embrach	8424	west		organic	2024-12-30 00:00:00+00	
+embrach	8424	west		waste	2024-01-05 00:00:00+00	
+embrach	8424	west		waste	2024-01-12 00:00:00+00	
+embrach	8424	west		waste	2024-01-19 00:00:00+00	
+embrach	8424	west		waste	2024-01-26 00:00:00+00	
+embrach	8424	west		waste	2024-02-02 00:00:00+00	
+embrach	8424	west		waste	2024-02-09 00:00:00+00	
+embrach	8424	west		waste	2024-02-16 00:00:00+00	
+embrach	8424	west		waste	2024-02-23 00:00:00+00	
+embrach	8424	west		waste	2024-03-01 00:00:00+00	
+embrach	8424	west		waste	2024-03-08 00:00:00+00	
+embrach	8424	west		waste	2024-03-15 00:00:00+00	
+embrach	8424	west		waste	2024-03-22 00:00:00+00	
+embrach	8424	west		waste	2024-03-26 00:00:00+00	
+embrach	8424	west		waste	2024-04-05 00:00:00+00	
+embrach	8424	west		waste	2024-04-12 00:00:00+00	
+embrach	8424	west		waste	2024-04-19 00:00:00+00	
+embrach	8424	west		waste	2024-04-26 00:00:00+00	
+embrach	8424	west		waste	2024-05-03 00:00:00+00	
+embrach	8424	west		waste	2024-05-10 00:00:00+00	
+embrach	8424	west		waste	2024-05-17 00:00:00+00	
+embrach	8424	west		waste	2024-05-24 00:00:00+00	
+embrach	8424	west		waste	2024-05-31 00:00:00+00	
+embrach	8424	west		waste	2024-06-07 00:00:00+00	
+embrach	8424	west		waste	2024-06-14 00:00:00+00	
+embrach	8424	west		waste	2024-06-21 00:00:00+00	
+embrach	8424	west		waste	2024-06-28 00:00:00+00	
+embrach	8424	west		waste	2024-07-05 00:00:00+00	
+embrach	8424	west		waste	2024-07-12 00:00:00+00	
+embrach	8424	west		waste	2024-07-19 00:00:00+00	
+embrach	8424	west		waste	2024-07-26 00:00:00+00	
+embrach	8424	west		waste	2024-08-02 00:00:00+00	
+embrach	8424	west		waste	2024-08-09 00:00:00+00	
+embrach	8424	west		waste	2024-08-16 00:00:00+00	
+embrach	8424	west		waste	2024-08-23 00:00:00+00	
+embrach	8424	west		waste	2024-08-30 00:00:00+00	
+embrach	8424	west		waste	2024-09-06 00:00:00+00	
+embrach	8424	west		waste	2024-09-13 00:00:00+00	
+embrach	8424	west		waste	2024-09-20 00:00:00+00	
+embrach	8424	west		waste	2024-09-27 00:00:00+00	
+embrach	8424	west		waste	2024-10-04 00:00:00+00	
+embrach	8424	west		waste	2024-10-11 00:00:00+00	
+embrach	8424	west		waste	2024-10-18 00:00:00+00	
+embrach	8424	west		waste	2024-10-25 00:00:00+00	
+embrach	8424	west		waste	2024-11-01 00:00:00+00	
+embrach	8424	west		waste	2024-11-08 00:00:00+00	
+embrach	8424	west		waste	2024-11-15 00:00:00+00	
+embrach	8424	west		waste	2024-11-22 00:00:00+00	
+embrach	8424	west		waste	2024-11-29 00:00:00+00	
+embrach	8424	west		waste	2024-12-06 00:00:00+00	
+embrach	8424	west		waste	2024-12-13 00:00:00+00	
+embrach	8424	west		waste	2024-12-20 00:00:00+00	
+embrach	8424	west		waste	2024-12-27 00:00:00+00	
 horgen	8810			chipping_service	2024-04-05 00:00:00+00	
 horgen	8810			chipping_service	2024-04-06 00:00:00+00	
 horgen	8810			chipping_service	2024-04-11 00:00:00+00	
