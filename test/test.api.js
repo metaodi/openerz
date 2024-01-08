@@ -601,6 +601,117 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
+    describe('/api/calendar.json for Dübendorf', function() {
+        it('should return a correct entry for duebendorf', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=duebendorf&sort=date,waste_type,area&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(500);
+            response.result._metadata.should.deepEqual({
+                'total_count': 783,
+                'row_count': 500,
+            });
+            response.result.result[1].should.deepEqual({
+                'date': '2024-01-03',
+                'region': 'duebendorf',
+                'zip': 8600,
+                'area': '4',
+                'station': '',
+                'type': 'organic',
+                'description': ''
+            });
+        });
+        it('should return a correct entry for waste duebendorf area=2', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=duebendorf&area=2&sort=date,waste_type&start=2024-01-01&end=2024-12-31&types=waste'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(52);
+            response.result._metadata.should.deepEqual({
+                'total_count': 52,
+                'row_count': 52,
+            });
+            response.result.result[2].should.deepEqual({
+                'date': '2024-01-16',
+                'region': 'duebendorf',
+                'zip': 8600,
+                'area': '2',
+                'station': '',
+                'type': 'waste',
+                'description': ''
+            });
+        });
+        it('should return a correct entry for oekibus duebendorf area=oekibus-donnerstag', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=duebendorf&types=oekibus&area=oekibus-donnerstag&sort=date&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(50);
+            response.result._metadata.should.deepEqual({
+                'total_count': 50,
+                'row_count': 50,
+            });
+            response.result.result[2].should.deepEqual({
+                'date': '2024-01-18',
+                'region': 'duebendorf',
+                'zip': 8600,
+                'area': 'oekibus-donnerstag',
+                'station': '',
+                'type': 'oekibus',
+                'description': '08.00–08.20 Kunklerstrasse 15\n08.30–08.50 Dietlikonstrasse (Parkplatz Flugfeld)\n09.00–09.20 Zwinggartenstrasse 55–65\n09.30–09.50 Kriesbachstrasse 61\n10.00–10.20 Grundstrasse 28–34 (Zwinggartenparkplatz)\n10.30–10.50 Bühlwiesenstrasse 3\n13.30–13.50 Ringwiesen (Zionshalle)\n14.00–14.20 Wasserfurren 15\n14.30–14.50 Stettbach (Milchhüsli / Stettbach-Lädeli)\n15.00–15.20 Meisenrain 39\n15.25–15.45 Alte Gockhauserstrasse 2\n15.50–16.10 Tichelrütistrasse 6\n16.15–16.35 Untere Geerenstrasse 61 (Holzkorporation)\n'
+            });
+        });
+    });
+
+    describe('/api/calendar.json for Wangen-Brüttisellen', function() {
+        it('should return a correct entry for wangen-bruttisellen', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=wangen-bruttisellen&sort=date,waste_type,area&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(144);
+            response.result._metadata.should.deepEqual({
+                'total_count': 144,
+                'row_count': 144,
+            });
+            response.result.result[1].should.deepEqual({
+                'date': '2024-01-03',
+                'region': 'wangen-bruttisellen',
+                'zip': 8306,
+                'area': '',
+                'station': '',
+                'type': 'cardboard',
+                'description': ''
+            });
+        });
+        it('should return a correct entry for wangen-bruttisellen paper', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=wangen-bruttisellen&sort=date,waste_type&start=2024-01-01&end=2024-12-31&types=paper'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(12);
+            response.result._metadata.should.deepEqual({
+                'total_count': 12,
+                'row_count': 12,
+            });
+            response.result.result[2].should.deepEqual({
+                'date': '2024-03-02',
+                'region': 'wangen-bruttisellen',
+                'zip': 8306,
+                'area': '',
+                'station': '',
+                'type': 'paper',
+                'description': ''
+            });
+        });
+    });
+
     describe('/api/calendar.ics API is returning a correct entry', function() {
         it('should return something', async function() {
             var expectedLines = [

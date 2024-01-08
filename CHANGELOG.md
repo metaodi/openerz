@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Accept sort parameter `type` (mapped to `waste_type`)
 
 ### Added
-- More tests for emrbach, duebendorf, wangen-bruttisellen
+- More tests for emrbach, bassersdorf, duebendorf, wangen-bruttisellen
 
 ## [8.0.0] - 2024-01-08
 ### Removed
