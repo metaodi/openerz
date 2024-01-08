@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [8.1.0] - 2024-01-08
 ### Changed
 - Renamed `type` to `waste_type` in calendar output
 - Accept sort parameter `type` (mapped to `waste_type`)
@@ -459,7 +461,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v8.0.0...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v8.1.0...HEAD
+[8.1.0]: https://github.com/metaodi/openerz/compare/v8.0.0...v8.1.0
 [8.0.0]: https://github.com/metaodi/openerz/compare/v7.0.1...v8.0.0
 [7.0.1]: https://github.com/metaodi/openerz/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/metaodi/openerz/compare/v6.3.0...v7.0.0
