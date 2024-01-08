@@ -11,6 +11,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Added
 - More tests for emrbach, bassersdorf, duebendorf, wangen-bruttisellen
 
+### Fixed
+- There was a typo in the ZIP code of embrach, it should be 8424 instead of 8484.
+
 ## [8.0.0] - 2024-01-08
 ### Removed
 - BC-Break: remove region and waste type based API endpoints, keep it simple!

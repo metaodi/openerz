@@ -317,7 +317,7 @@ describe('make sure the server is running (test.api)', function() {
                     'region': 'zurich',
                     'zip': 8038,
                     'area': '8038',
-                    'type': 'paper',
+                    'waste_type': 'paper',
                     'station': '',
                     'description': ''
                 },
@@ -326,7 +326,7 @@ describe('make sure the server is running (test.api)', function() {
                     'region': 'zurich',
                     'zip': 8038,
                     'area': '8038',
-                    'type': 'cardboard',
+                    'waste_type': 'cardboard',
                     'station': '',
                     'description': ''
                 }]
@@ -355,7 +355,7 @@ describe('make sure the server is running (test.api)', function() {
                     'region': 'zurich',
                     'zip': 8038,
                     'area': '8038',
-                    'type': 'paper',
+                    'waste_type': 'paper',
                     'station': '',
                     'description': ''
                 }]
@@ -374,7 +374,7 @@ describe('make sure the server is running (test.api)', function() {
                     'region': 'thalwil',
                     'zip': 8800,
                     'area': 'b',
-                    'type': 'cardboard',
+                    'waste_type': 'cardboard',
                     'station': '',
                     'description': ''
                 }]
@@ -394,7 +394,7 @@ describe('make sure the server is running (test.api)', function() {
                     'area': 'e',
                     'zip': '',
                     'station': '',
-                    'type': 'waste',
+                    'waste_type': 'waste',
                     'description': ''
                 }]
             });
@@ -413,7 +413,7 @@ describe('make sure the server is running (test.api)', function() {
                     'area': 'f',
                     'zip': '',
                     'station': '',
-                    'type': 'cardboard',
+                    'waste_type': 'cardboard',
                     'description': ''
                 }]
             });
@@ -435,7 +435,7 @@ describe('make sure the server is running (test.api)', function() {
                     'zip': 8800,
                     'area': 'a',
                     'station': '',
-                    'type': 'waste',
+                    'waste_type': 'waste',
                     'description': ''
                 }]
             });
@@ -454,7 +454,7 @@ describe('make sure the server is running (test.api)', function() {
                     'zip': 8800,
                     'area': 'b',
                     'station': '',
-                    'type': 'waste',
+                    'waste_type': 'waste',
                     'description': ''
                 },
                 {
@@ -463,7 +463,7 @@ describe('make sure the server is running (test.api)', function() {
                     'zip': 8800,
                     'area': '',
                     'station': '',
-                    'type': 'special',
+                    'waste_type': 'special',
                     'description': ''
                 }]
             });
@@ -487,7 +487,7 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8303,
                 'area': '',
                 'station': '',
-                'type': 'organic',
+                'waste_type': 'organic',
                 'description': ''
             });
         });
@@ -508,7 +508,7 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8303,
                 'area': '',
                 'station': '',
-                'type': 'oekibus',
+                'waste_type': 'oekibus',
                 'description': 'Ökibus am Morgen'
             });
         });
@@ -529,7 +529,7 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8303,
                 'area': '',
                 'station': '',
-                'type': 'paper',
+                'waste_type': 'paper',
                 'description': ''
             });
         });
@@ -542,18 +542,18 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/calendar.json?region=embrach&sort=date,waste_type&start=2024-01-01&end=2024-12-31'
             });
             response.statusCode.should.equal(200);
-            response.result.result.length.should.equal(100);
+            response.result.result.length.should.equal(368);
             response.result._metadata.should.deepEqual({
                 'total_count': 368,
-                'row_count': 100,
+                'row_count': 368,
             });
             response.result.result[0].should.deepEqual({
                 'date': '2024-01-03',
                 'region': 'embrach',
                 'zip': 8424,
-                'area': '',
+                'area': 'ost',
                 'station': '',
-                'type': 'bulky_goods',
+                'waste_type': 'bulky_goods',
                 'description': ''
             });
         });
@@ -574,7 +574,7 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8424,
                 'area': '',
                 'station': '',
-                'type': 'cardboard',
+                'waste_type': 'cardboard',
                 'description': ''
             });
         });
@@ -584,7 +584,7 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/calendar.json?region=embrach&types=organic&area=west&sort=date&start=2024-01-01&end=2024-12-31'
             });
             response.statusCode.should.equal(200);
-            response.result.result.length.should.equal(6);
+            response.result.result.length.should.equal(47);
             response.result._metadata.should.deepEqual({
                 'total_count': 47,
                 'row_count': 47,
@@ -595,7 +595,7 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8424,
                 'area': 'west',
                 'station': '',
-                'type': 'organic',
+                'waste_type': 'organic',
                 'description': ''
             });
         });
@@ -619,7 +619,7 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8600,
                 'area': '4',
                 'station': '',
-                'type': 'organic',
+                'waste_type': 'organic',
                 'description': ''
             });
         });
@@ -640,7 +640,7 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8600,
                 'area': '2',
                 'station': '',
-                'type': 'waste',
+                'waste_type': 'waste',
                 'description': ''
             });
         });
@@ -661,7 +661,7 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8600,
                 'area': 'oekibus-donnerstag',
                 'station': '',
-                'type': 'oekibus',
+                'waste_type': 'oekibus',
                 'description': '08.00–08.20 Kunklerstrasse 15\n08.30–08.50 Dietlikonstrasse (Parkplatz Flugfeld)\n09.00–09.20 Zwinggartenstrasse 55–65\n09.30–09.50 Kriesbachstrasse 61\n10.00–10.20 Grundstrasse 28–34 (Zwinggartenparkplatz)\n10.30–10.50 Bühlwiesenstrasse 3\n13.30–13.50 Ringwiesen (Zionshalle)\n14.00–14.20 Wasserfurren 15\n14.30–14.50 Stettbach (Milchhüsli / Stettbach-Lädeli)\n15.00–15.20 Meisenrain 39\n15.25–15.45 Alte Gockhauserstrasse 2\n15.50–16.10 Tichelrütistrasse 6\n16.15–16.35 Untere Geerenstrasse 61 (Holzkorporation)\n'
             });
         });
@@ -679,13 +679,13 @@ describe('make sure the server is running (test.api)', function() {
                 'total_count': 144,
                 'row_count': 144,
             });
-            response.result.result[1].should.deepEqual({
+            response.result.result[0].should.deepEqual({
                 'date': '2024-01-03',
                 'region': 'wangen-bruttisellen',
                 'zip': 8306,
                 'area': '',
                 'station': '',
-                'type': 'cardboard',
+                'waste_type': 'cardboard',
                 'description': ''
             });
         });
@@ -706,7 +706,7 @@ describe('make sure the server is running (test.api)', function() {
                 'zip': 8306,
                 'area': '',
                 'station': '',
-                'type': 'paper',
+                'waste_type': 'paper',
                 'description': ''
             });
         });
