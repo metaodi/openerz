@@ -18,7 +18,6 @@ Options:
 
 import os
 import datetime
-import traceback
 import csv
 import logging
 import sys
@@ -65,6 +64,7 @@ try:
         'station',
         'waste_type',
         'col_date',
+        'description',
     ]
     
     if dry_run:
@@ -86,7 +86,6 @@ try:
             log.debug(pformat(event))
             writer.writerow(event)
 
-except Exception as e:
-    print("Error: %s" % e)
-    print(traceback.format_exc())
+except Exception:
+    log.exception("Error in generate_from_config.py")
     sys.exit(1)

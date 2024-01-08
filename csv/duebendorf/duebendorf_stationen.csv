@@ -1,7 +1,7 @@
-region,zip,name,oil,glass,metal,textile
-duebendorf,8600,"Hauptsammelstelle",True,True,True,True
-duebendorf,8600,"Nebensammelstelle Flugfeld",False,True,True,True
-duebendorf,8600,"Nebensammelstelle Hochbord",False,True,True,False
-duebendorf,8600,"Nebensammelstelle Schossacher",False,True,True,True
-duebendorf,8600,"Nebensammelstelle Seidenstrasse",False,True,True,True
-duebendorf,8600,"Nebensammelstelle Stadthausparkplatz",False,True,True,True
+"region","zip","name","oil","glass","metal","textile","description"
+"duebendorf",8600,"Hauptsammelstelle",True,True,True,True,""
+"duebendorf",8600,"Nebensammelstelle Flugfeld",False,True,True,True,""
+"duebendorf",8600,"Nebensammelstelle Hochbord",False,True,True,False,""
+"duebendorf",8600,"Nebensammelstelle Schossacher",False,True,True,True,""
+"duebendorf",8600,"Nebensammelstelle Seidenstrasse",False,True,True,True,""
+"duebendorf",8600,"Nebensammelstelle Stadthausparkplatz",False,True,True,True,""

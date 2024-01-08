@@ -54,6 +54,7 @@ def create_table(cur, table, drop=False, purge=False):
             station text,
             waste_type text,
             col_date timestamptz,
+            description text,
             PRIMARY KEY (region, area, waste_type, col_date)
         );
         """
@@ -72,6 +73,7 @@ def create_table(cur, table, drop=False, purge=False):
             metal boolean,
             glass boolean,
             textile boolean,
+            description text,
             PRIMARY KEY (region, name)
         );
         """

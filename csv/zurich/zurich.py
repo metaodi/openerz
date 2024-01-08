@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import os
-import requests
 import csv
-from io import StringIO
+import sys
 import logging
+from openerzpy.file import csv_file
 
 __location__ = os.path.realpath(
     os.path.join(
@@ -87,37 +87,15 @@ waste_sources = [
 ]
 
 # Abfuhrtermine
-header = [
-    'region',
-    'zip',
-    'area',
-    'station',
-    'waste_type',
-    'col_date',
-]
-
-csv_path = os.path.join(__location__, 'zurich.csv')
-with open(csv_path, 'w') as f:
-    writer = csv.DictWriter(
-        f,
-        header,
-        delimiter=',',
-        quotechar='"',
-        lineterminator='\r\n',
-        quoting=csv.QUOTE_NONNUMERIC
-    )
-    log.info("Start writing zurich.csv")
-    writer.writeheader()
-
+def calendar_csv():
+    output_rows = []
     for s in waste_sources:
         waste_type = s['waste_type']
         url = s['url']
         log.info(f"Get {waste_type} CSV from {url}")
-        r = requests.get(url)
-        r.encoding = 'utf-8-sig'
-        reader = csv.DictReader(StringIO(r.text), delimiter=',')
+        rows = csv_file.read_csv_from_url(url, encoding='utf-8-sig')
 
-        for row in reader:
+        for row in rows:
             from pprint import pprint
             pprint(row)
             out = {
@@ -127,40 +105,23 @@ with open(csv_path, 'w') as f:
                 'col_date': row['Abholdatum'],
                 'waste_type': waste_type,
                 'station': row.get('Station', ''),
+                'description': '',
             }
-            writer.writerow(out)
+            output_rows.append(out)
+
+    log.info("Start writing zurich.csv")
+    csv_path = os.path.join(__location__, 'zurich.csv')
+    csv_file.write_calendar_to_csv(csv_path, output_rows)
+
 
 # Recyclingstationen
-CSV_URL = f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sammelstellen/download/entsorgungskalender_sammelstellen_{year}.csv"
-log.info(f"Get station CSV from {CSV_URL}")
-r = requests.get(CSV_URL)
-r.encoding = 'utf-8-sig'
-reader = csv.DictReader(StringIO(r.text), delimiter=',')
+def station_csv():
+    station_csv_url = f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sammelstellen/download/entsorgungskalender_sammelstellen_{year}.csv"
+    log.info(f"Get station CSV from {station_csv_url}")
+    rows = csv_file.read_csv_from_url(station_csv_url, encoding='utf-8-sig')
 
-header = [
-    'region',
-    'zip',
-    'name',
-    'oil',
-    'glass',
-    'metal',
-    'textile'
-]
-
-csv_path = os.path.join(__location__, 'zurich_stationen.csv')
-with open(csv_path, 'w') as f:
-    writer = csv.DictWriter(
-        f,
-        header,
-        delimiter=',',
-        quotechar='"',
-        lineterminator='\r\n',
-        quoting=csv.QUOTE_NONNUMERIC
-    )
-    log.info("Start writing zurich_stationen.csv")
-    writer.writeheader()
-
-    for row in reader:
+    output_rows = []
+    for row in rows:
         print(row)
         new_row = {
             'region': 'zurich',
@@ -170,6 +131,18 @@ with open(csv_path, 'w') as f:
             'metal': (row['Metall'] == 'x'),
             'glass': (row['Glas'] == 'x'),
             'textile': (row['Textilien'] == 'x'),
+            'description': '',
         }
-        writer.writerow(new_row)
+        output_rows.append(new_row)
 
+    log.info("Start writing zurich_stationen.csv")
+    csv_path = os.path.join(__location__, 'zurich_stationen.csv')
+    csv_file.write_station_to_csv(csv_path, output_rows)
+
+
+try:
+    calendar_csv()
+    station_csv()
+except Exception:
+    log.exception("Error in zurich.py")
+    sys.exit(1)

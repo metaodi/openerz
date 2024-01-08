@@ -1,17 +1,17 @@
-region,zip,name,oil,glass,metal,textile
-waedenswil,8820,"Waisenhausstrasse",False,True,True,True
-waedenswil,8820,"Friedhof Wädenswil, Neuguetstrasse",False,True,True,True
-waedenswil,8820,"Gasiplatz, Eintrachtstrasse",False,True,True,True
-waedenswil,8820,"Migros, Oberdorfstrasse",False,True,True,False
-waedenswil,8820,"Bürgerheimstrasse",False,True,True,True
-waedenswil,8820,"Neudorf, Neudorfstrasse/Glärnisch",False,True,True,True
-waedenswil,8820,"Tiefenhofstrasse",False,True,True,True
-waedenswil,8820,"Gwad, Zopfweg",False,True,True,True
-waedenswil,8804,"Alte Steinacherstrasse",False,True,True,True
-waedenswil,8804,"Bahnhof Au, Seestrasse",False,True,True,True
-waedenswil,8820,"Feld, Langrütistrasse",False,True,True,True
-waedenswil,8820,"Hinter Rüti, Rütistrasse",False,True,True,True
-waedenswil,8824,"Schönenberg, Dorfhuus-Parkplatz",False,True,True,True
-waedenswil,8825,"Friedhof Hütten",False,True,True,True
-waedenswil,8820,"Im Staubeweidli, Im Staubeweidli 15",False,False,False,True
-waedenswil,8804,"Coop Au, Alte Landstrasse 26",False,False,False,True
+"region","zip","name","oil","glass","metal","textile","description"
+"waedenswil",8820,"Waisenhausstrasse",False,True,True,True,""
+"waedenswil",8820,"Friedhof Wädenswil, Neuguetstrasse",False,True,True,True,""
+"waedenswil",8820,"Gasiplatz, Eintrachtstrasse",False,True,True,True,""
+"waedenswil",8820,"Migros, Oberdorfstrasse",False,True,True,False,""
+"waedenswil",8820,"Bürgerheimstrasse",False,True,True,True,""
+"waedenswil",8820,"Neudorf, Neudorfstrasse/Glärnisch",False,True,True,True,""
+"waedenswil",8820,"Tiefenhofstrasse",False,True,True,True,""
+"waedenswil",8820,"Gwad, Zopfweg",False,True,True,True,""
+"waedenswil",8804,"Alte Steinacherstrasse",False,True,True,True,""
+"waedenswil",8804,"Bahnhof Au, Seestrasse",False,True,True,True,""
+"waedenswil",8820,"Feld, Langrütistrasse",False,True,True,True,""
+"waedenswil",8820,"Hinter Rüti, Rütistrasse",False,True,True,True,""
+"waedenswil",8824,"Schönenberg, Dorfhuus-Parkplatz",False,True,True,True,""
+"waedenswil",8825,"Friedhof Hütten",False,True,True,True,""
+"waedenswil",8820,"Im Staubeweidli, Im Staubeweidli 15",False,False,False,True,""
+"waedenswil",8804,"Coop Au, Alte Landstrasse 26",False,False,False,True,""

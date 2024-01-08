@@ -43,6 +43,14 @@ collections:
         - 2024-07-13
       station: "Hauptsammelstelle, Römerweg 9, Kloten"
 
+  oekibus:
+    - schedule:
+        - every 2nd, 3rd, 4th and 5th Wednesday of the month until 23rd Dec
+      description: "Ökibus am Morgen"
+    - schedule:
+        - every 1st Wednesday of the month until 23rd Dec
+      description: "Ökibus am Abend"
+
 exclude:
   # 2024
   - 2024-01-01 # Neujahr, Montag

@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
-import traceback
 import csv
 import re
+import logging
 from openerzpy.download import download as dl
 from openerzpy.parse import parse_ics
+from openerzpy.file import csv_file
 
 
 __location__ = os.path.realpath(
@@ -15,6 +16,17 @@ __location__ = os.path.realpath(
         os.path.dirname(__file__)
     )
 )
+
+# Logging
+log = logging.getLogger(__name__)
+log.setLevel(logging.DEBUG)
+
+logging.basicConfig(
+    format="%(asctime)s %(levelname)-8s %(message)s",
+    level=logging.INFO,
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logging.captureWarnings(True)
 
 
 municipalities = {
@@ -46,15 +58,6 @@ municipalities = {
         'zip': '8800',
     },
 }
-
-header = [
-    'region',
-    'zip',
-    'area',
-    'station',
-    'waste_type',
-    'col_date',
-]
 
 waste_type_map = {
     'Kehricht': 'waste',
@@ -97,40 +100,38 @@ def waste_type(in_type):
         return waste_type_map[m['first']]
 
 
-
 def generate_muni_csv(muni, config):
     # iCal Download URL
     url = f"https://{muni}.entsorglos.swiss/calendar.ics"
     cal_path = os.path.join(__location__, f'{muni}_calendar.ics')
 
-    print(f"Download URL: {url}")
+    log.info(f"Download URL: {url}")
     dl.download_file(url, cal_path)
 
     events = parse_ics.parse_file(cal_path)
+    output_rows = []
+    for event in events:
+        m = re.match(r'(?P<art>.*?)( (Zone|Tour) (?P<zone>\w+?)(?P<rest>.*))?$', event['summary'])
+        if m['art'] in other_categories:
+            continue
+        area = ''
+        if m['zone']:
+            area = m['zone']
+        out = {
+            'region': muni,
+            'area': area,
+            'zip': config['zip'],
+            'col_date': event['start_date'].date().isoformat(),
+            'waste_type': waste_type(m['art']),
+            'description': '',
+        }
+        output_rows.append(out)
     csv_path = os.path.join(__location__, '..', muni, f'{muni}.csv')
-    with open(csv_path, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=header, quoting=csv.QUOTE_NONNUMERIC)
-        writer.writeheader()
-        for event in events:
-            m = re.match(r'(?P<art>.*?)( (Zone|Tour) (?P<zone>\w+?)(?P<rest>.*))?$', event['summary'])
-            if m['art'] in other_categories:
-                continue
-            area = ''
-            if m['zone']:
-                area = m['zone']
-            out = {
-                'region': muni,
-                'area': area,
-                'zip': config['zip'],
-                'col_date': event['start_date'].date().isoformat(),
-                'waste_type': waste_type(m['art']),
-            }
-            writer.writerow(out)
+    csv_file.write_calendar_to_csv(csv_path, output_rows)
 
 try:
     for muni, config in municipalities.items():
         generate_muni_csv(muni, config)
-except Exception as e:
-    print("Error: %s" % e)
-    print(traceback.format_exc())
-    raise
+except Exception:
+    log.exception("Error in zimmerberg.py")
+    sys.exit(1)

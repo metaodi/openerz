@@ -1,10 +1,10 @@
-region,zip,name,oil,glass,metal,textile
-adliswil,8134,"Entsorgungspark Adliswil",True,True,True,True
-adliswil,8134,"Albisstrasse",False,True,True,True
-adliswil,8134,"Albisstrasse Wacht",False,True,True,True
-adliswil,8134,"Grütstrasse",False,True,True,True
-adliswil,8134,"Rütistrasse",False,True,True,True
-adliswil,8134,"Sihlhof",False,True,True,True
-adliswil,8134,"Sportplatz Tal",False,True,True,True
-adliswil,8134,"Zopfstrasse",False,True,True,True
-adliswil,8134,"Bushaltestelle Rifertstrasse",False,False,False,True
+"region","zip","name","oil","glass","metal","textile","description"
+"adliswil",8134,"Entsorgungspark Adliswil",True,True,True,True,""
+"adliswil",8134,"Albisstrasse",False,True,True,True,""
+"adliswil",8134,"Albisstrasse Wacht",False,True,True,True,""
+"adliswil",8134,"Grütstrasse",False,True,True,True,""
+"adliswil",8134,"Rütistrasse",False,True,True,True,""
+"adliswil",8134,"Sihlhof",False,True,True,True,""
+"adliswil",8134,"Sportplatz Tal",False,True,True,True,""
+"adliswil",8134,"Zopfstrasse",False,True,True,True,""
+"adliswil",8134,"Bushaltestelle Rifertstrasse",False,False,False,True,""

@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
-import traceback
-import csv
 import re
-from datetime import datetime, date, timedelta
+import logging
+from datetime import datetime
 from openerzpy.download import download as dl
 from openerzpy.parse import parse_ics
+from openerzpy.parse import parse_config
+from openerzpy.file import csv_file
 
 
 __location__ = os.path.realpath(
@@ -17,15 +18,16 @@ __location__ = os.path.realpath(
     )
 )
 
+# Logging
+log = logging.getLogger(__name__)
+log.setLevel(logging.DEBUG)
 
-header = [
-    'region',
-    'zip',
-    'area',
-    'station',
-    'waste_type',
-    'col_date',
-]
+logging.basicConfig(
+    format="%(asctime)s %(levelname)-8s %(message)s",
+    level=logging.INFO,
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logging.captureWarnings(True)
 
 source = {
     '1': {
@@ -67,34 +69,36 @@ def waste_type(in_type):
 
 
 try:
+    # iCal Download URL
+    config_path = os.path.join(__location__, '..', '..', 'config', 'regions', 'uster.yml')
+    config = parse_config.load_config(config_path)
+
+    output_rows = []
+    for zone, data in source.items():
+        log.info(f"Download URL: {data['url']}")
+        cal_path = os.path.join(__location__, f'uster_calendar_{zone}.ics')
+        dl.download_file(data['url'], cal_path)
+
+        start_date = datetime.fromisoformat(config['start_date'])
+        end_date = datetime.fromisoformat(config['end_date'])
+        events = parse_ics.parse_file(cal_path, start_date, end_date)
+        for event in events:
+            if 'summary' not in event or not event['summary']:
+                continue
+            out = {
+                'region': 'uster',
+                'area': zone,
+                'zip': '8610',
+                'col_date': event['start_date'].date().isoformat(),
+                'waste_type': waste_type(event.get('summary', '')),
+                'description': '',
+            }
+            output_rows.append(out)
+
+    log.info("Start writing uster.csv")
     csv_path = os.path.join(__location__, f'uster.csv')
-    with open(csv_path, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=header, quoting=csv.QUOTE_NONNUMERIC)
-        writer.writeheader()
+    csv_file.write_calendar_to_csv(csv_path, output_rows)
 
-        for zone, config in source.items():
-            # iCal Download URL
-            cal_path = os.path.join(__location__, f'uster_calendar_{zone}.ics')
-
-            print(f"Download URL: {config['url']}")
-            dl.download_file(config['url'], cal_path)
-
-            start_date = (2024, 1, 1)
-            end_date = (2024, 12, 31)
-            events = parse_ics.parse_file(cal_path, start_date, end_date)
-            for event in events:
-                if 'summary' not in event or not event['summary']:
-                    continue
-                out = {
-                    'region': 'uster',
-                    'area': zone,
-                    'zip': '8610',
-                    'col_date': event['start_date'].date().isoformat(),
-                    'waste_type': waste_type(event.get('summary', '')),
-                }
-                writer.writerow(out)
-
-except Exception as e:
-    print("Error: %s" % e)
-    print(traceback.format_exc())
-    raise
+except Exception:
+    log.exception("Error in uster.py")
+    sys.exit(1)
