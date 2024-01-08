@@ -332,6 +332,13 @@ describe('make sure the server is running (test.api)', function() {
                 }]
             });
         });
+        it('should return an error with incorrect sort parameter', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?types=paper&types=cardboard&zip=8038&lang=de&start=2023-01-01&end=2023-01-16&sort=xyz'
+            });
+            response.statusCode.should.equal(400);
+        });
     });
 
     describe('/api/calendar.json API with region parameter', function() {
@@ -433,7 +440,7 @@ describe('make sure the server is running (test.api)', function() {
                 }]
             });
         });
-        it('should return a correct entries for 8800 (without and without area)', async function() {
+        it('should return a correct entries for 8800 (with and without area)', async function() {
             var response = await server.inject({
                 method: 'GET',
                 url: '/api/calendar.json?zip=8800&area=b&limit=2&start=2024-06-25&end=2024-06-25&sort=date,area:desc'
@@ -523,6 +530,72 @@ describe('make sure the server is running (test.api)', function() {
                 'area': '',
                 'station': '',
                 'type': 'paper',
+                'description': ''
+            });
+        });
+    });
+
+    describe('/api/calendar.json for Embrach', function() {
+        it('should return a correct entry for embrach', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=embrach&sort=date,waste_type&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(100);
+            response.result._metadata.should.deepEqual({
+                'total_count': 368,
+                'row_count': 100,
+            });
+            response.result.result[0].should.deepEqual({
+                'date': '2024-01-03',
+                'region': 'embrach',
+                'zip': 8424,
+                'area': '',
+                'station': '',
+                'type': 'bulky_goods',
+                'description': ''
+            });
+        });
+        it('should return a correct entry for cardboard embrach', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=embrach&sort=date,waste_type&start=2024-01-01&end=2024-12-31&types=cardboard'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(26);
+            response.result._metadata.should.deepEqual({
+                'total_count': 26,
+                'row_count': 26,
+            });
+            response.result.result[1].should.deepEqual({
+                'date': '2024-01-25',
+                'region': 'embrach',
+                'zip': 8424,
+                'area': '',
+                'station': '',
+                'type': 'cardboard',
+                'description': ''
+            });
+        });
+        it('should return a correct entry for organic embrach area=west', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/calendar.json?region=embrach&types=organic&area=west&sort=date&start=2024-01-01&end=2024-12-31'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result.length.should.equal(6);
+            response.result._metadata.should.deepEqual({
+                'total_count': 47,
+                'row_count': 47,
+            });
+            response.result.result[2].should.deepEqual({
+                'date': '2024-02-05',
+                'region': 'embrach',
+                'zip': 8424,
+                'area': 'west',
+                'station': '',
+                'type': 'organic',
                 'description': ''
             });
         });
