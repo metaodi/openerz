@@ -85,6 +85,38 @@ describe('make sure the server is running (test.api)', function() {
                      
             });
         });
+        it('should return an error for inexisting region', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/stations?region=xyz'
+            });
+            response.statusCode.should.equal(400);
+        });
+    });
+
+    describe('/api/stations API with sort parameter', function() {
+        it('should return entry for thalwil with sort=name:desc', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/stations?region=thalwil&sort=name:desc'
+            });
+            response.statusCode.should.equal(200);
+            response.result.result[0].should.deepEqual({
+                zip: 8800,
+                name: 'Tödistrasse, beim Schulhaus Feld',
+                kind: { oil: false, metal: true, glass: true, textile: true },
+                region: 'thalwil',
+                description: ''
+                     
+            });
+        });
+        it('should return an error for wrong sort parameter', async function() {
+            var response = await server.inject({
+                method: 'GET',
+                url: '/api/stations?region=thalwil&sort=xyz'
+            });
+            response.statusCode.should.equal(400);
+        });
     });
 
     describe('/api/parameter/regions is working', function() {
