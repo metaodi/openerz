@@ -4,7 +4,7 @@ pandas
 psycopg2-binary
 python-dateutil
 python-dotenv
-pyyaml==5.4
+pyyaml
 recurrent
 recurring-ical-events
 requests
