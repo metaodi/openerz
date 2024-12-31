@@ -24,8 +24,8 @@ logging.basicConfig(
 )
 logging.captureWarnings(True)
 
-last_year = "2023"
-year = "2024"
+last_year = "2024"
+year = "2025"
 
 waste_sources = [
     {
