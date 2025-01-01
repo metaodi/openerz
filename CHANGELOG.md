@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## [9.0.0] - 2025-01-01
+### Changed
+- BC-Break: require node >= 20
+- Update data for 2025 for Zurich, St. Gallen, Basel and district Horgen
+
 ## [8.1.0] - 2024-01-08
 ### Changed
 - Renamed `type` to `waste_type` in calendar output
