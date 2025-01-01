@@ -80,7 +80,7 @@ def station_csv():
         }
         output_rows.append(new_row)
 
-    log.info("Start writing zurich_stationen.csv")
+    log.info("Start writing basel_stationen.csv")
     csv_path = os.path.join(__location__, 'basel_stationen.csv')
     csv_file.write_station_to_csv(csv_path, output_rows)
 
@@ -89,5 +89,5 @@ try:
     calendar_csv()
     station_csv()
 except Exception:
-    log.exception("Error in zurich.py")
+    log.exception("Error in basel.py")
     sys.exit(1)
