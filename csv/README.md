@@ -106,20 +106,20 @@ The files from the City of Zurich are appended to the corresponding CSV.
 
 Use `zurich.py` to download the data.
 
-## Basel
+### Basel
 
 The source file of Basel are published in their [Open Data Portal](https://data.bs.ch/explore/dataset/100096/).
 The file from Basel is append to the corresponding CSV.
 
 You can use `basel.py` to download the latest version.
 
-## St. Gallen
+### St. Gallen
 
 The source file of St. Gallen ist publihsed on their [Open Data Portal](https://daten.stadt.sg.ch/explore/dataset/abfuhrdaten-stadt-stgallen/).
 
 Use `stgallen.py` to download the latest version
 
-## District Horgen
+### District Horgen
 
 All municipalities in the district of Horgen are using the same web application to publish the waste collection calendar.
 Therefore a single script called `zimmerberg.py` can be used to download the files of the following municipalities:
@@ -134,32 +134,32 @@ Therefore a single script called `zimmerberg.py` can be used to download the fil
 - Thalwil
 - Wädenswil
 
-## Uster
+### Uster
 
 Uster publishes part of their waste calendar as ICS file, but normal waste and organic have a simple rule (weekly on weekday X in area Z).
 Therefore all dates must be checked for holidays.
 
 This requires some manual work.
-The script to generate the CSV is `uster.py`%
+The script to generate the CSV is `uster.py`
 
-## Wangen-Brüttisellen
+### Wangen-Brüttisellen
 
 Wangen-Brüttisellen doesnt expose any machine readable format. The CSV is generated from the config file [wangen-bruttisellen.yml](https://github.com/metaodi/openerz/blob/main/csv/wangen-bruttisellen/wangen-bruttisellen.yml).
 
 The information is taken from the [municipality website](https://www.wangen-bruettisellen.ch/de/verwaltung/abfall)
 
-## Dübendorf
+### Dübendorf
 
 Dübendorf publishes it's calendar as [iCal/ICS file on their website](https://www.duebendorf.ch/dienstleistungen/97555) (one for each area).
 The stations are [published](https://www.duebendorf.ch/abfallorte) as well.
 
-## Bassersdorf
+### Bassersdorf
 
 Bassersdorf doesnt expose any machine readable format. The CSV is generated from the config file [bassersdorf.yml](https://github.com/metaodi/openerz/blob/main/config/regions/bassersdorf.yml).
 
 The information is taken from the [municipality website](https://www.bassersdorf.ch/politik-verwaltung/verwaltung/dienstleistungen-az.html/81/service/367)
 
-# Embrach
+### Embrach
 
 Embrach doesn't expose any machine readable format, the CSV in genereted from the config file [`embrach.yml`](https://github.com/metaodi/openerz/blob/main/config/regions/embrach.yml).
 
