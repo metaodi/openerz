@@ -316,7 +316,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Added
 - New CSV with data for 2016
 - Description in README for loading data
-
+heroku config:get DATABASE_URL -a openerz
 ### Changed
 - Added possibility to configure CSV delimiter, as the new CSV do not use semicolon (;) anymore, but a simple comma (,)
 
@@ -334,7 +334,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Added new parameter `offset` for pagination to calendar and station routes
 
 ### Changed
-- Updated moment-timezone to get rid of deprecation warning
+- Updated moment-timezone to get rid ofheroku config:get DATABASE_URL -a openerz deprecation warning
 - Use container-based infrastructure on Travis CI
 
 ## 0.7.6 - 2015-08-03
@@ -466,7 +466,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v8.1.0...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v9.0.0...HEAD
+[9.0.0]: https://github.com/metaodi/openerz/compare/v8.1.0...v9.0.0
 [8.1.0]: https://github.com/metaodi/openerz/compare/v8.0.0...v8.1.0
 [8.0.0]: https://github.com/metaodi/openerz/compare/v7.0.1...v8.0.0
 [7.0.1]: https://github.com/metaodi/openerz/compare/v7.0.0...v7.0.1
