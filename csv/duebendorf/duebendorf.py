@@ -31,30 +31,28 @@ logging.captureWarnings(True)
 
 source = [
     {
-        'url': 'https://www.duebendorf.ch/_doc/4777654',
+        'url': 'https://www.duebendorf.ch/_doc/5447728',
         'area': '1',
     },
     {
-        'url': 'https://www.duebendorf.ch/_doc/4777657',
+        'url': 'https://www.duebendorf.ch/_doc/5447731',
         'area': '2',
     },
     {
-        'url': 'https://www.duebendorf.ch/_doc/4777660',
+        'url': 'https://www.duebendorf.ch/_doc/5447734',
         'area': '3',
     },
     {
-        'url': 'https://www.duebendorf.ch/_doc/4777663',
+        'url': 'https://www.duebendorf.ch/_doc/5447737',
         'area': '4',
     },
-    { # Separater Karton-Kalender, da Karton im Kreis 4 oben fehlt
-        'url': 'https://www.duebendorf.ch/_doc/4777642',
-        'area': '4',
-    }
 ]
 
 waste_type_map = {
     'Kehricht': 'waste',
     'Grüngut': 'organic',
+    'Gruengut': 'organic',
+    'Gr ngut': 'organic',
     'Papier': 'paper',
     'Karton': 'cardboard',
     'Sonderabfallmobil': 'special',
@@ -70,6 +68,8 @@ ignore_entries = [
     'Hauptsammelstelle geschlossen',
     'Hauptsammelstelle Nachmittag geschlossen',
     'Hauptsammelstelle Vormittag geöffnet',
+    'Hauptsammelstelle Vormittag ge ffnet',
+    'Hauptsammelstelle',
     'Kompostabgabe',
 ]
 

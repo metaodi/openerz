@@ -31,16 +31,16 @@ logging.captureWarnings(True)
 
 source = {
     '1': {
-        'url': 'https://www.uster.ch/_doc/4890898',
+        'url': 'https://www.uster.ch/_doc/5435044',
     },
     '2': {
-        'url': 'https://www.uster.ch/_doc/4890901',
+        'url': 'https://www.uster.ch/_doc/5435053',
     },
     '3': {
-        'url': 'https://www.uster.ch/_doc/4890907',
+        'url': 'https://www.uster.ch/_doc/5435059',
     },
     '4': {
-        'url': 'https://www.uster.ch/_doc/4890910',
+        'url': 'https://www.uster.ch/_doc/5435104',
     },
 }
 
@@ -55,6 +55,7 @@ waste_type_map = {
     'Karton': 'cardboard',
     'Sonderabfallsammlung': 'special',
     'Sonderabfall': 'special',
+    'Häcksel': 'chipping_service',
 }
 
 def waste_type(in_type):
