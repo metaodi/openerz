@@ -1,43 +1,37 @@
 region: bassersdorf
 zip: 8303
-start_date: 2024-01-01
-end_date: 2024-12-31
+start_date: 2025-01-01
+end_date: 2025-12-31
 
 collections:
   waste:
     - schedule:
         - weekly every Tuesday
-        - 2024-01-04 # Ersatzdatum für Berchtoldstag
   
   organic:
     - schedule:
         - weekly every Monday
-        - 2024-01-03 # Ersatzdatum für Neujahr
-        - 2024-04-03 # Ersatzdatum für Ostermontag
-        - 2024-05-22 # Ersatzdatum für Pfingstmontag
+        - 2025-04-23 # Ersatzdatum für Ostermontag
+        - 2025-06-11 # Ersatzdatum für Pfingstmontag
 
   bulky_goods:
     - schedule:
         - weekly every Tuesday
-        - 2024-01-04 # Ersatzdatum für Berchtoldstag
 
   paper:
     - schedule:
-        - 2024-01-13
-        - 2024-03-09
-        - 2024-05-04
-        - 2024-08-17
-        - 2024-09-21
-        - 2024-11-23
+        - 2025-01-18
+        - 2025-03-08
+        - 2025-05-10
+        - 2025-07-05
+        - 2025-09-20
+        - 2025-11-22
 
   special:
     - schedule:
-        - 2024-03-28
-        - 2024-10-24
+        - 2025-03-29
+        - 2025-10-23
       station: "Wertstoffsammelstelle Ufmatten, Ufmattenstrasse 5, 8303 Bassersdorf"
-    - schedule:
-        - 2024-07-13
-      station: "Hauptsammelstelle, Römerweg 9, Kloten"
 
   oekibus:
     - schedule:
@@ -48,14 +42,14 @@ collections:
       description: "Ökibus am Abend"
 
 exclude:
-  # 2024
-  - 2024-01-01 # Neujahr, Montag
-  - 2024-01-02 # Berchtoldstag, Dienstag
-  - 2024-03-29 # Karfreitag, Freitag
-  - 2024-04-01 # Ostermontag, Montag
-  - 2024-05-01 # 1. Mai, Mittwoch
-  - 2024-05-09 # Auffahrt, Donnerstag
-  - 2024-05-20 # Pfingstmontag, Montag
-  - 2024-08-01 # 1. August, Donnerstag
-  - 2024-12-25 # Weihnachten, Mittwoch
-  - 2024-12-26 # Stephanstag, Donnerstag
+  # 2025
+  - 2025-01-01 # Neujahr, Mittwoch
+  - 2025-01-02 # Berchtoldstag, Donnerstag
+  - 2025-04-18 # Karfreitag, Freitag
+  - 2025-04-21 # Ostermontag, Montag
+  - 2025-05-01 # 1. Mai, Donnerstag
+  - 2025-05-29 # Auffahrt, Donnerstag
+  - 2025-06-09 # Pfingstmontag, Montag
+  - 2025-08-01 # 1. August, Freitag
+  - 2025-12-25 # Weihnachten, Donnerstag
+  - 2025-12-26 # Stephanstag, Freitag
