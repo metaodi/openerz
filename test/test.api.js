@@ -145,6 +145,7 @@ describe('make sure the server is running (test.api)', function() {
                 'uster',
                 'waedenswil',
                 'wangen-bruttisellen',
+                'wetzikon',
                 'zurich'
             ]);
         });
