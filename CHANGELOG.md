@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+### Added
+- Add new region `wetzikon` based on the provided iCal-Files
 
 ## [9.1.0] - 2025-01-02
 ### Changed

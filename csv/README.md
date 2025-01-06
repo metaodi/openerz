@@ -14,24 +14,25 @@ There are two entities needed for each municipality:
 The calendar must be available as CSV with the following structure to ensure the seamless import in the database:
 
 1. `region`, region/municipality of the waste collection
-    - `zurich`
-    - `stgallen`
-    - `basel`
-    - `thalwil`
     - `adliswil`
+    - `basel`
+    - `bassersdorf`
+    - `duebendorf`
+    - `embrach`
     - `horgen`
     - `kilchberg`
     - `langnau`
     - `oberrieden`
     - `richterswil`
     - `rueschlikon`
+    - `stgallen`
     - `thalwil`
-    - `waedenswil`
+    - `thalwil`
     - `uster`
+    - `waedenswil`
     - `wangen-bruttisellen`
-    - `duebendorf`
-    - `bassersdorf`
-    - `embrach`
+    - `wetzikon`
+    - `zurich`
 2. `zip`, sometimes a zip code is given
     - `8038`
 3. `area`, an area within a region that has the same schedule, this could be a street, a part of town etc.
@@ -61,24 +62,25 @@ The calendar must be available as CSV with the following structure to ensure the
 The collection stations must be available as CSV with the following structure:
 
 1. `region`
-    - `zurich`
-    - `stgallen`
-    - `basel`
-    - `thalwil`
     - `adliswil`
+    - `basel`
+    - `bassersdorf`
+    - `duebendorf`
+    - `embrach`
     - `horgen`
     - `kilchberg`
     - `langnau`
     - `oberrieden`
     - `richterswil`
     - `rueschlikon`
+    - `stgallen`
     - `thalwil`
-    - `waedenswil`
+    - `thalwil`
     - `uster`
+    - `waedenswil`
     - `wangen-bruttisellen`
-    - `duebendorf`
-    - `bassersdorf`
-    - `embrach`
+    - `wetzikon`
+    - `zurich`
 2. `zip`, zip code where the station is located
     - `8815`
 3. `name`
@@ -164,3 +166,7 @@ The information is taken from the [municipality website](https://www.bassersdorf
 Embrach doesn't expose any machine readable format, the CSV in genereted from the config file [`embrach.yml`](https://github.com/metaodi/openerz/blob/main/config/regions/embrach.yml).
 
 The information is taken from the [municipality website](https://www.embrach.ch/dienstleistungen/7338)
+
+### Wetzikon
+
+Wetzikon provides a [calender via Antrahzit](https://www.wetzikon.ch/de/verwaltung/abteilungen/70_entsorgung-+-entw%C3%A4sserung), one for each "Kreis" and waste type.

@@ -1,0 +1,14 @@
+region: wetzikon
+start_date: 2025-01-01
+end_date: 2025-12-31
+zip: 8620
+
+collections:
+  cardboard: ~
+  chipping_service: ~
+  incombustibles: ~
+  metal: ~
+  organic: ~
+  paper: ~
+  special: ~
+  waste: ~
