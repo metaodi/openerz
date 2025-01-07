@@ -37,13 +37,13 @@ def write_station_to_csv(csv_path, rows):
 
 
 def write_to_csv(csv_path, header, rows):
-    with open(csv_path, 'w') as f:
+    with open(csv_path, 'w', encoding="uft-8") as f:
         writer = csv.DictWriter(
             f,
             header,
             delimiter=',',
             quotechar='"',
-            lineterminator='\r\n',
+            lineterminator='\n',
             quoting=csv.QUOTE_NONNUMERIC
         )
         log.info("Start writing CSV")
