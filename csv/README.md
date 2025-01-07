@@ -32,6 +32,8 @@ The calendar must be available as CSV with the following structure to ensure the
     - `waedenswil`
     - `wangen-bruttisellen`
     - `wetzikon`
+    - `wiesendangen`
+    - `winterthur`
     - `zurich`
 2. `zip`, sometimes a zip code is given
     - `8038`
@@ -80,6 +82,8 @@ The collection stations must be available as CSV with the following structure:
     - `waedenswil`
     - `wangen-bruttisellen`
     - `wetzikon`
+    - `wiesendangen`
+    - `winterthur`
     - `zurich`
 2. `zip`, zip code where the station is located
     - `8815`
@@ -146,7 +150,7 @@ The script to generate the CSV is `uster.py`
 
 ### Wangen-Brüttisellen
 
-Wangen-Brüttisellen doesnt expose any machine readable format. The CSV is generated from the config file [wangen-bruttisellen.yml](https://github.com/metaodi/openerz/blob/main/csv/wangen-bruttisellen/wangen-bruttisellen.yml).
+Wangen-Brüttisellen doesnt expose any machine readable format. The CSV is generated from the config file [wangen-bruttisellen.yml](https://github.com/metaodi/openerz/blob/main/config/regions/wangen-bruttisellen.yml).
 
 The information is taken from the [municipality website](https://www.wangen-bruettisellen.ch/de/verwaltung/abfall)
 
@@ -170,3 +174,13 @@ The information is taken from the [municipality website](https://www.embrach.ch/
 ### Wetzikon
 
 Wetzikon provides a [calender via Antrahzit](https://www.wetzikon.ch/de/verwaltung/abteilungen/70_entsorgung-+-entw%C3%A4sserung), one for each "Kreis" and waste type.
+
+### Wiesendangen
+
+Wiesendangen doesnt expose any machine readable format. The CSV is generated from the config file [wiesendangen.yml](https://github.com/metaodi/openerz/blob/main/config/regions/wiesendangen.yml).
+
+The information is taken from the [municipality website](https://www.wiesendangen.ch/dienstleistungen/28321)
+
+### Winterthur
+
+Winterthur provides a [calender via Antrahzit](https://stadt.winterthur.ch/themen/leben-in-winterthur/abfall/abfallsammelstellen), one for each "Tour" and waste type.

@@ -24,6 +24,8 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
      <option value="waedenswil">Wädenswil</option>
      <option value="wangen-bruttisellen">Wangen-Brüttisellen</option>
      <option value="wetzikon">Wetzikon</option>
+     <option value="wiesendangen">Wiesendangen</option>
+     <option value="winterthur">Winterthur</option>
      <option value="zurich">Zürich</option>
   </select>
   <lable for="art">Abfallarten</lable>
@@ -83,6 +85,8 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Wädenswil (`waedenswil`)
     * Wangen-Brüttisellen (`wangen-bruttisellen`)
     * Wetzikon (`wetzikon`)
+    * Wiesendangen (`wiesendangen`)
+    * Winterthur (`winterthur`)
     * Zürich (`zurich`)
 1. Abfallarten auswählen **ACHTUNG: nicht alle Abfallarten sind in allen Gemeinden verfügbar**
     * Bioabfall (`organic`) -> Alle
@@ -114,6 +118,8 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Wädenswil -> Zone A-D
     * Wangen-Brüttisellen -> keine Aufteilung
     * Wetzikon -> Kreise 1-4
+    * Wiesendangen -> Dorf + Aussenwachten
+    * Winterthur -> A + B (Altstadt) und Tour 1-9
     * Zürich -> Aufgeteilt nach Postleitzahl (PLZ)
 1. Format wählen, entweder JSON (`calendar.json`) oder ICS (`calendar.ics`). 
     
