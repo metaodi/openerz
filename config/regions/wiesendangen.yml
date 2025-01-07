@@ -1,0 +1,94 @@
+region: wiesendangen
+zip: 8542
+start_date: 2025-01-01
+end_date: 2025-12-31
+
+collections:
+  waste:
+    - schedule:
+        - weekly every Thursday
+        - 2025-01-03 # Ersatzdatum für Berchtoldstag
+        - 2025-05-03 # Ersatzdatum für 1. Mai
+        - 2025-05-31 # Ersatzdatum für Auffahrt
+        - 2025-12-27 # Ersatzdatum für Weihnachten
+  
+  organic:
+    - area: Dorf
+      description: "Wiesendangen, Gundetswil, Bertschikon, Attikon"
+      schedule:
+        - weekly every Thursday
+        - 2025-01-03 # Ersatzdatum für Berchtoldstag
+        - 2025-05-02 # Ersatzdatum für 1. Mai
+        - 2025-05-30 # Ersatzdatum für Auffahrt
+        - 2025-12-24 # Ersatzdatum für Weihnachten
+    - area: Aussenwachten
+      description: "Oberbertschikon, Bewangen, Buch, Gündlikon, Liebensberg, Menzengrüt, Meisberg, Sammelsgrüt, Stegen, Wallikon, Zünikon"
+      schedule:
+        - every other Thursday starting Jan 3
+        - 2025-01-03 # Ersatzdatum für Berchtoldstag
+        - 2025-12-30 # Ersatzdatum für Neujahrstag 2026
+
+  bulky_goods:
+    - schedule:
+        - weekly every Thursday
+        - 2025-01-03 # Ersatzdatum für Berchtoldstag
+        - 2025-05-03 # Ersatzdatum für 1. Mai
+        - 2025-05-31 # Ersatzdatum für Auffahrt
+        - 2025-12-27 # Ersatzdatum für Weihnachten
+  
+  chipping_service:
+    - schedule:
+        - 2025-03-24
+        - 2025-04-28
+        - 2025-09-15
+        - 2025-10-20
+      description: "Für den Häckselservice ist eine Anmeldung erforderlich"
+
+  paper:
+    - schedule:
+        - 2025-03-10
+        - 2025-06-02
+        - 2025-09-08
+        - 2025-12-01
+      description: "Ganzjährig: Papier- und Kartoncontainer auf dem Trottenplatz Wiesendangen"
+  
+  cardboard:
+    - area: Aussenwachten
+      schedule:
+        - 2025-03-10
+        - 2025-06-02
+        - 2025-09-08
+        - 2025-12-01
+      description: "Ganzjährig: Papier- und Kartoncontainer auf dem Trottenplatz Wiesendangen "
+
+  special:
+    - schedule:
+        - 2025-04-04
+        - 2025-12-09
+      station: "Wiesendangen, Trottenplatz"
+    - schedule:
+        - 2025-12-09
+      station: "Gundetswil, Werkhof"
+    - schedule:
+        - 2025-01-23
+      station: "Rickenbach, Werkgebäude"
+    - schedule:
+        - 2025-03-14
+      station: "Elsau, Werkgebäude"
+    - schedule:
+        - 2025-01-15
+        - 2025-08-21
+      station: "Seuzach, Werkhof"
+
+exclude:
+  # 2025
+  - 2025-01-01 # Neujahr, Mittwoch
+  - 2025-01-02 # Berchtoldstag, Donnerstag
+  - 2025-04-18 # Karfreitag, Freitag
+  - 2025-04-21 # Ostermontag, Montag
+  - 2025-05-01 # Tag der Arbeit, Donnerstag
+  - 2025-05-29 # Auffahrt, Donnerstag
+  - 2025-06-09 # Pfingstmontag, Montag
+  - 2025-08-01 # 1. August, Freitag
+  - 2025-12-25 # Weihnachten, Donnerstag
+  - 2025-12-26 # Stephanstag, Freitag
