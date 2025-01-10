@@ -19,6 +19,7 @@ The calendar must be available as CSV with the following structure to ensure the
     - `bassersdorf`
     - `duebendorf`
     - `embrach`
+    - `hombrechtikon`
     - `horgen`
     - `kilchberg`
     - `langnau`
@@ -69,6 +70,7 @@ The collection stations must be available as CSV with the following structure:
     - `bassersdorf`
     - `duebendorf`
     - `embrach`
+    - `hombrechtikon`
     - `horgen`
     - `kilchberg`
     - `langnau`
