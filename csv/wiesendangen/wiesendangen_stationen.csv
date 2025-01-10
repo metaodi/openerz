@@ -1,0 +1,6 @@
+"region","zip","name","oil","metal","glass","textile","description"
+"wiesendangen",8542,"Trottenplatz Wiesendangen",True,True,True,True,""
+"wiesendangen",8542,"Werkhof Gundetswil",True,True,True,True,""
+"wiesendangen",8543,"Gündlikon",True,False,True,True,""
+"wiesendangen",8544,"Attikon",False,False,True,False,""
+"wiesendangen",8542,"Buch",False,False,True,False,""

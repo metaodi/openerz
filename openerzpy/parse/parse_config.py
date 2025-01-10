@@ -97,7 +97,7 @@ def load_config(config_path):
         Optional("exclude"): Or([Or(str, And(date, Use(lambda n: n.isoformat())))], None),
     })
 
-    with open(config_path) as f:
+    with open(config_path, encoding="utf-8") as f:
         config = yaml.safe_load(f)
 
     validated_config = schema.validate(config)

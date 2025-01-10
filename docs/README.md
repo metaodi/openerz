@@ -23,6 +23,9 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
      <option value="uster">Uster</option>
      <option value="waedenswil">Wädenswil</option>
      <option value="wangen-bruttisellen">Wangen-Brüttisellen</option>
+     <option value="wetzikon">Wetzikon</option>
+     <option value="wiesendangen">Wiesendangen</option>
+     <option value="winterthur">Winterthur</option>
      <option value="zurich">Zürich</option>
   </select>
   <lable for="art">Abfallarten</lable>
@@ -81,6 +84,9 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Uster (`uster`)
     * Wädenswil (`waedenswil`)
     * Wangen-Brüttisellen (`wangen-bruttisellen`)
+    * Wetzikon (`wetzikon`)
+    * Wiesendangen (`wiesendangen`)
+    * Winterthur (`winterthur`)
     * Zürich (`zurich`)
 1. Abfallarten auswählen **ACHTUNG: nicht alle Abfallarten sind in allen Gemeinden verfügbar**
     * Bioabfall (`organic`) -> Alle
@@ -111,6 +117,9 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Uster -> Kehrichtkreise 1-4
     * Wädenswil -> Zone A-D
     * Wangen-Brüttisellen -> keine Aufteilung
+    * Wetzikon -> Kreise 1-4
+    * Wiesendangen -> Dorf + Aussenwachten
+    * Winterthur -> A + B (Altstadt) und Tour 1-9
     * Zürich -> Aufgeteilt nach Postleitzahl (PLZ)
 1. Format wählen, entweder JSON (`calendar.json`) oder ICS (`calendar.ics`). 
     
@@ -141,14 +150,14 @@ https://openerz.metaodi.ch/api/calendar.json?region=horgen&area=B&types=cardboar
  
 Dieses API wird von einigen Anwendungen verwendet, hier zwei Beispiele:
  
-### Denise App
+### ZüriCityGPT
  
-[Denise](https://www.stadt-zuerich.ch/portal/de/index/ogd/anwendungen/2022/deniseapp.html) ist eine App für iOS und Android mit dem Fokus auf der Stadt Zürich. Lass dich an die Entsorgungstermine erinnern oder schau im Kalender nach.
+[ZüriCityGPT](https://zuericitygpt.ch/?q=Wann+ist+die+n%C3%A4chste+Papiersammlung+in+Wollishofen%3F) ist ein Chatbot für die Webseite der Stadt Zürich. U.a. kann dieser dank OpenERZ auch Fragen zu kommenden Entsorgungsterminen beantworten.
 
-![Denise App](https://www.stadt-zuerich.ch/content/portal/de/index/ogd/anwendungen/2022/deniseapp/_jcr_content/mainparsys/graphic/image.1752.png/1641206645649.png)
-    
+![ZüriCityGPT](https://github.com/user-attachments/assets/3b6c5bb1-9bd0-4faa-b0c0-77583af00842)
+
 ### Altpapier Bot
 
-Der [Altpapier Bot](https://www.stadt-zuerich.ch/portal/de/index/ogd/anwendungen/2020/altbapier_bot.html) ist ein Bot für den Messenger-Dienst Telegram. Ich kann einstellen, an welche Sammlung ich erinnert werden möchte und bekomme dann entsprechend eine Erinnerungsmeldung.
+Der [Altpapier Bot](https://www.stadt-zuerich.ch/de/politik-und-verwaltung/statistik-und-daten/open-government-data/anwendungen/anwendungen-2020/altpapier_bot.html) ist ein Bot für den Messenger-Dienst Telegram. Ich kann einstellen, an welche Sammlung ich erinnert werden möchte und bekomme dann entsprechend eine Erinnerungsmeldung.
 
-![Altpapier Bot](https://www.stadt-zuerich.ch/content/portal/de/index/ogd/anwendungen/2020/altbapier_bot/_jcr_content/mainparsys/graphic_394334147/image.1752.png/1600523018815.png)
+![Altpapier Bot](https://www.stadt-zuerich.ch/content/web/de/politik-und-verwaltung/statistik-und-daten/open-government-data/anwendungen/anwendungen-2020/altpapier_bot/_jcr_content/mainparsys/texttitleimage_89136/image.876.png/1600522212468.png)
