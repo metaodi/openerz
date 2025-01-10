@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [9.2.0] - 2025-01-10
 ### Added
 - Add new region `wetzikon` based on the provided iCal-Files
 - Add new region `wiesendangen` based on published PDF
@@ -476,7 +478,8 @@ heroku config:get DATABASE_URL -a openerz
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v9.1.0...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v9.2.0...HEAD
+[9.2.0]: https://github.com/metaodi/openerz/compare/v9.1.0...v9.2.0
 [9.1.0]: https://github.com/metaodi/openerz/compare/v9.0.0...v9.1.0
 [9.0.0]: https://github.com/metaodi/openerz/compare/v8.1.0...v9.0.0
 [8.1.0]: https://github.com/metaodi/openerz/compare/v8.0.0...v8.1.0
