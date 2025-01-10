@@ -126,8 +126,8 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/parameter/regions'
             });
             response.statusCode.should.equal(200);
-            response.result._metadata.total_count.should.equal(18);
-            response.result.result.length.should.equal(18);
+            response.result._metadata.total_count.should.equal(20);
+            response.result.result.length.should.equal(20);
             response.result.result.should.deepEqual([
                 'adliswil',
                 'basel',
@@ -146,6 +146,8 @@ describe('make sure the server is running (test.api)', function() {
                 'waedenswil',
                 'wangen-bruttisellen',
                 'wetzikon',
+                'wiesendangen',
+                'winterthur',
                 'zurich'
             ]);
         });
