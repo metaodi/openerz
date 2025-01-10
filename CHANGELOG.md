@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## [Unreleased][unreleased]
 ### Added
 - Add new region `wetzikon` based on the provided iCal-Files
+- Add new region `wiesendangen` based on published PDF
+- Add new region `winterthur` based on the provided iCal-File
+- Update data of Embrach
 
 ## [9.1.0] - 2025-01-02
 ### Changed

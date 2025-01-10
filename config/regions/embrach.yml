@@ -8,46 +8,52 @@ collections:
     - area: Ost
       schedule:
         - weekly every Tuesday
-        - 2024-01-03 # Ersatzdatum für Berchtoldstag
     - area: West
       schedule:
         - weekly every Friday
-        - 2024-03-26 # Ersatzdatum für Karfreitag
+        - 2025-04-17 # Ersatzdatum für Karfreitag
+        - 2025-07-31 # Ersatzdatum für 1. August, Freitag
+        - 2025-12-24 # Ersatzdatum für Stephanstag, Freitag
 
   bulky_goods:
     - area: Ost
       schedule:
         - weekly every Tuesday
-        - 2024-01-03 # Ersatzdatum für Berchtoldstag
     - area: West
       schedule:
         - weekly every Friday
-        - 2024-03-26 # Ersatzdatum für Karfreitag
+        - 2025-04-17 # Ersatzdatum für Karfreitag
+        - 2025-07-31 # Ersatzdatum für 1. August, Freitag
+        - 2025-12-24 # Ersatzdatum für Stephanstag, Freitag
   
   organic:
     - area: Ost
       schedule:
-        - every other Wednesday in Jan and Feb starting jan 10th
+        - every other Wednesday in Jan and Feb starting jan 15th
         - every Wednesday from feb 28th until December 
         - every other Wednesday in Dec
-        - 2024-04-29 # Ersatzdatum für 1. Mai
-        - 2024-12-30 # Ersatzdatum für Neujahr 2025
     - area: West
       schedule:
-        - every other Monday in Jan and Feb starting jan 8th
+        - every other Monday in Jan and Feb starting jan 13th
         - every Monday from feb 26th until December
         - every other Monday in Dec
-        - 2024-04-03 # Ersatzdatum für Ostermontag
-        - 2024-05-22 # Ersatzdatum für Pfingstmontag
+        - 2025-04-23 # Ersatzdatum für Ostermontag
+        - 2025-06-11 # Ersatzdatum für Pfingstmontag
 
   metal:
     - schedule:
-        - 2024-01-13
-        - 2024-03-09
-        - 2024-05-04
-        - 2024-08-17
-        - 2024-09-21
-        - 2024-11-23
+        - 2025-01-16
+        - 2025-02-13
+        - 2025-03-27
+        - 2025-04-24
+        - 2025-05-22
+        - 2025-06-19
+        - 2025-07-17
+        - 2025-08-14
+        - 2025-09-25
+        - 2025-10-23
+        - 2025-11-20
+        - 2025-12-18
 
   paper:
     - schedule:
@@ -55,47 +61,50 @@ collections:
   
   cardboard:
     - schedule:
-        - every other Thurday starting jan 11th
-        - 2024-12-23 # Ersatzdatum für Stephanstag
+        - every other Thurday starting jan 9th
+        - 2025-04-30 # Ersatzdatum für 1. Mai
+        - 2025-05-28 # Ersatzdatum für Auffahrt
+        - 2025-12-22 # Ersatzdatum für Weihnachten
+
 
   incombustibles:
     - schedule:
-        - 2024-03-14
-        - 2024-06-06
-        - 2024-09-12
-        - 2024-11-07
+        - 2025-03-13
+        - 2025-06-05
+        - 2025-09-11
+        - 2025-12-04
 
   chipping_service:
     - schedule:
-        - 2024-04-08
-        - 2024-04-09
-        - 2024-04-10
-        - 2024-10-21
-        - 2024-10-22
-        - 2024-10-23
+        - 2025-04-07
+        - 2025-04-08
+        - 2025-04-09
+        - 2025-10-20
+        - 2025-10-21
+        - 2025-10-22
 
   special:
     - schedule:
-        - 2024-01-26
-        - 2024-09-06
+        - 2025-01-24
+        - 2025-09-12
       station: "Badi Talegg, Embrach"
     - schedule:
-        - 2024-03-07
-        - 2024-06-01
-        - 2024-09-05
-        - 2024-12-05
+        - 2025-02-14
+        - 2025-06-06
+        - 2025-09-11
+        - 2025-12-06
       station: "Einkaufszentrum Sonnenhof, Bülach"
     - schedule:
-        - 2024-06-07
+        - 2025-05-03
       station: "Werkhof, Mülistrasse 6, Lufingen"
     - schedule:
-        - 2024-06-14
+        - 2025-06-13
       station: "Werkhof, Dorfstrasse 51, Freienstein"
     - schedule:
-        - 2024-11-06
+        - 2025-12-03
       station: "Volg, Eigentalstrasse 8, Oberembrach"
     - schedule:
-        - 2024-12-06
+        - 2025-10-11
       station: "Werkhof, Tössstrasse, Rorbas"
 
 exclude:
