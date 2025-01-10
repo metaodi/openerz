@@ -12,6 +12,7 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
      <option value="bassersdorf">Bassersdorf</option>
      <option value="duebendorf">Dübendorf</option>
      <option value="embrach">Embrach</option>
+     <option value="hombrechtikon">Hombrechtikon</option>
      <option value="horgen">Horgen</option>
      <option value="kilchberg">Kilchberg</option>
      <option value="langnau">Langnau a. A.</option>
@@ -73,6 +74,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Bassersdorf (`bassersdorf`)
     * Dübendorf (`duebendorf`)
     * Embrach (`embrach`)
+    * Hombrechtikon (`hombrechtikon`)
     * Horgen (`horgen`)
     * Kilchberg (`kilchberg`)
     * Langnau a. A. (`langnau`)
@@ -106,6 +108,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Bassersdorf -> keine Aufteilung
     * Dübendorf -> Kehrichtskreise 1-4
     * Embrach -> Ost und West
+    * Hombrechtikon -> keine Aufteilung
     * Horgen -> Zone A-D
     * Kilchberg -> Zone A und B
     * Langnau -> keine Aufteilung
