@@ -184,3 +184,9 @@ The information is taken from the [municipality website](https://www.wiesendange
 ### Winterthur
 
 Winterthur provides a [calender via Antrahzit](https://stadt.winterthur.ch/themen/leben-in-winterthur/abfall/abfallsammelstellen), one for each "Tour" and waste type.
+
+### Hombrechtikon
+
+Hombrechtikon doesn't expose any machine readable format, the CSV is generated from the config file [`hombrechtikon.yml`](https://github.com/metaodi/openerz/blob/main/config/regions/hombrechtikon.yml).
+
+The information is taken from the [municipality website](https://www.hombrechtikon.ch/verwaltung/online-schalter.html/311/product/230)
