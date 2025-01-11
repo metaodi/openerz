@@ -33,42 +33,42 @@ logging.captureWarnings(True)
 source = [
     {  # Altstadt A Kehricht
         'url': 'https://m.winterthur.ch/appl/ical.php?apid=4763999&calhome=1066394',
-        'area': 'a',
+        'area': 'A',
         'waste_type': 'waste',
     },
     {  # Altstadt A Grüntour
         'url': 'https://m.winterthur.ch/appl/ical.php?apid=15421519&calhome=1066394',
-        'area': 'a',
+        'area': 'A',
         'waste_type': 'organic',
     },
     {  # Altstadt A Papier/Karton
         'url': 'https://m.winterthur.ch/appl/ical.php?apid=814175&calhome=1066394',
-        'area': 'a',
+        'area': 'A',
         'waste_type': 'paper',
     },
     {  # Altstadt A Papier/Karton
         'url': 'https://m.winterthur.ch/appl/ical.php?apid=814175&calhome=1066394',
-        'area': 'a',
+        'area': 'A',
         'waste_type': 'cardboard',
     },
     {  # Altstadt B Kehricht
         'url': 'https://m.winterthur.ch/appl/ical.php?apid=4476922&calhome=1066394',
-        'area': 'b',
+        'area': 'B',
         'waste_type': 'waste',
     },
     {  # Altstadt B Grüntour
         'url': 'https://m.winterthur.ch/appl/ical.php?apid=15560605&calhome=1066394',
-        'area': 'b',
+        'area': 'B',
         'waste_type': 'organic',
     },
     {  # Altstadt B Papier/Karton
         'url': 'https://m.winterthur.ch/appl/ical.php?apid=6220599&calhome=1066394',
-        'area': 'b',
+        'area': 'B',
         'waste_type': 'paper',
     },
     {  # Altstadt B Papier/Karton
         'url': 'https://m.winterthur.ch/appl/ical.php?apid=6220599&calhome=1066394',
-        'area': 'b',
+        'area': 'B',
         'waste_type': 'cardboard',
     },
     {  # Tour 1 Kehricht
