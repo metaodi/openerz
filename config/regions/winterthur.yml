@@ -8,8 +8,4 @@ collections:
   organic: ~
   paper: ~
   waste: ~
-  metal:
-    - schedule:
-        - every last Wednesday in Jan, Mar, May, Jul, Sep, Nov
-      description: |
-        Anmeldung für die Metalltour bis spätestens 16.00 Uhr des Vortages, Tel. 052 267 68 68 oder elektronische Anmeldung.
+  metal: ~
