@@ -57,7 +57,7 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
 </form>
 
 
-Die URL kann kopiert und in einer beliebigen Kalender-Applikation abonniert werden (z.B. Outlook, Apple Kalender, Google Kalender).
+Die URL kann kopiert und in einer beliebigen Kalender-Applikation abonniert werden (z.B. mit [Outlook](https://support.microsoft.com/de-de/office/importieren-oder-abonnieren-eines-kalenders-in-outlook-com-oder-outlook-im-web-cff1429c-5af6-41ec-a5b4-74f2c278e98c), [Apple Kalender](https://support.apple.com/de-ch/guide/calendar/icl1022/mac), [Google Kalender](https://support.google.com/calendar/answer/37100?hl=de&co=GENIE.Platform%3DAndroid&sjid=11250879590794395823-EU)).
 
 ## Datenbezug
 
