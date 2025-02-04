@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project follows [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [9.3.0] - 2025-02-04
 ### Added
 - Add new region `gossau-zh` based on published PDF
 
@@ -484,7 +486,8 @@ heroku config:get DATABASE_URL -a openerz
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v9.2.1...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v9.3.0...HEAD
+[9.3.0]: https://github.com/metaodi/openerz/compare/v9.2.1...v9.3.0
 [9.2.1]: https://github.com/metaodi/openerz/compare/v9.2.0...v9.2.1
 [9.2.0]: https://github.com/metaodi/openerz/compare/v9.1.0...v9.2.0
 [9.1.0]: https://github.com/metaodi/openerz/compare/v9.0.0...v9.1.0
