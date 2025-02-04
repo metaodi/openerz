@@ -75,7 +75,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Bassersdorf (`bassersdorf`)
     * Dübendorf (`duebendorf`)
     * Embrach (`embrach`)
-    * Gossau (`gossau-zh`)
+    * Gossau ZH (`gossau-zh`)
     * Hombrechtikon (`hombrechtikon`)
     * Horgen (`horgen`)
     * Kilchberg (`kilchberg`)
