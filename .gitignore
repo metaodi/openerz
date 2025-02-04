@@ -11,6 +11,7 @@ csv/**/*.ics
 !csv/bassersdorf/bassersdorf_stationen.csv
 !csv/duebendorf/duebendorf_stationen.csv
 !csv/embrach/embrach_stationen.csv
+!csv/gossau-zh/gossau-zh_stationen.csv
 !csv/hombrechtikon/hombrechtikon_stationen.csv
 !csv/horgen/horgen_stationen.csv
 !csv/kilchberg/kilchberg_stationen.csv

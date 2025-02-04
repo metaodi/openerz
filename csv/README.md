@@ -19,6 +19,7 @@ The calendar must be available as CSV with the following structure to ensure the
     - `bassersdorf`
     - `duebendorf`
     - `embrach`
+    - `gossau-zh`
     - `hombrechtikon`
     - `horgen`
     - `kilchberg`
@@ -70,6 +71,7 @@ The collection stations must be available as CSV with the following structure:
     - `bassersdorf`
     - `duebendorf`
     - `embrach`
+    - `gossau-zh`
     - `hombrechtikon`
     - `horgen`
     - `kilchberg`
@@ -192,3 +194,9 @@ Winterthur provides a [calender via Antrahzit](https://stadt.winterthur.ch/theme
 Hombrechtikon doesn't expose any machine readable format, the CSV is generated from the config file [`hombrechtikon.yml`](https://github.com/metaodi/openerz/blob/main/config/regions/hombrechtikon.yml).
 
 The information is taken from the [municipality website](https://www.hombrechtikon.ch/verwaltung/online-schalter.html/311/product/230)
+
+### Gossau ZH
+
+Gossau ZH doesn't expose any machine readable format, the CSV is generated from the config file [`gossau-zh.yml`](https://github.com/metaodi/openerz/blob/main/config/regions/gossau-zh.yml).
+
+The information is taken from the [municipality website](https://www.gossau-zh.ch/ueber-uns/verwaltung/bauabteilung/entsorgung/)

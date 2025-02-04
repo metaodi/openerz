@@ -1,0 +1,91 @@
+region: gossau-zh
+zip: 8625
+start_date: 2025-01-01
+end_date: 2025-12-31
+
+collections:
+  waste:
+    - area: Dorf
+      description: "Gossau-Dorf, Grüt, Ober-Ottikon, Hellberg"
+      schedule:
+        - weekly every Friday
+        - 2025-04-17 # Ersatzdatum für Karfreitag
+        - 2025-07-31 # Ersatzdatum für 1. August
+        - 2025-12-29 # Ersatzdatum für Stephanstag
+    - area: Aussenwachten
+      description: "Bertschikon, Unter-Ottikon, Herschmettlen, Aussenwachten"
+      schedule:
+        - weekly every Tuesday
+
+  bulky_goods:
+    - area: Dorf
+      description: "Gossau-Dorf, Grüt, Ober-Ottikon, Hellberg"
+      schedule:
+        - weekly every Friday
+        - 2025-04-17 # Ersatzdatum für Karfreitag
+        - 2025-07-31 # Ersatzdatum für 1. August
+        - 2025-12-29 # Ersatzdatum für Stephanstag
+    - area: Aussenwachten
+      description: "Bertschikon, Unter-Ottikon, Herschmettlen, Aussenwachten"
+      schedule:
+        - weekly every Tuesday
+  
+  organic:
+    - schedule:
+        - 2025-01-16
+        - 2025-02-13
+        - 2025-03-13
+        - 2025-04-10
+        - 2025-05-08
+        - 2025-06-05
+        - 2025-07-03
+        - 2025-08-14
+        - 2025-09-11
+        - 2025-10-09
+        - 2025-11-06
+        - 2025-12-04
+
+  paper:
+    - schedule:
+        - 2025-03-08
+        - 2025-06-21
+        - 2025-11-15
+  
+  cardboard:
+    - schedule:
+        - 2025-01-11
+        - 2025-03-08
+        - 2025-05-03
+        - 2025-06-14
+        - 2025-08-23
+        - 2025-11-08
+
+  special:
+    - schedule:
+        - 2025-04-05
+        - 2025-11-25
+      station: "Gossau, Ernst-Brugger-Platz"
+    - schedule:
+        - 2025-02-28
+      station: "Mönchaltorf, Werkhof, Gossauerstr. 21"
+    - schedule:
+        - 2025-01-28
+        - 2025-04-16
+        - 2025-06-03
+        - 2025-09-23
+        - 2025-11-29
+      station: "Wetzikon, Sammelstelle Bahnhof Kempten"
+
+exclude:
+  # 2025
+  - 2025-01-01 # Neujahr, Mittwoch
+  - 2025-01-02 # Berchtoldstag, Donnerstag
+  - 2025-04-18 # Karfreitag, Freitag
+  - 2025-04-21 # Ostermontag, Montag
+  - 2025-05-01 # 1. Mai, Donnerstag
+  - 2025-05-29 # Auffahrt, Donnerstag
+  - 2025-06-09 # Pfingstmontag, Montag
+  - 2025-08-01 # 1. August, Freitag
+  - 2025-12-25 # Weihnachten, Donnerstag
+  - 2025-12-26 # Stephanstag, Freitag
+  - 2025-01-01 # Neujahr 2025, Donnerstag
