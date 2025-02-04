@@ -126,7 +126,7 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/parameter/regions'
             });
             response.statusCode.should.equal(200);
-            response.result._metadata.total_count.should.equal(22;
+            response.result._metadata.total_count.should.equal(22);
             response.result.result.length.should.equal(22);
             response.result.result.should.deepEqual([
                 'adliswil',
