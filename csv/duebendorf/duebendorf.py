@@ -43,7 +43,7 @@ source = [
         'area': '3',
     },
     {
-        'url': 'https://www.duebendorf.ch/_doc/5447737',
+        'url': 'https://www.duebendorf.ch/_doc/5492221',
         'area': '4',
     },
 ]
