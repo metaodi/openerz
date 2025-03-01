@@ -29,7 +29,14 @@ collections:
       description: "Bertschikon, Unter-Ottikon, Herschmettlen, Aussenwachten"
       schedule:
         - weekly every Tuesday
-  
+        
+  chipping_service:
+    - schedule:
+        - 2025-03-24
+        - 2025-06-11
+        - 2025-09-17
+        - 2025-11-03
+        
   organic:
     - schedule:
         - 2025-01-16
