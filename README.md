@@ -67,6 +67,8 @@ Apart from the config file:
 * Update the documentation in `docs/README.md`
 * Update the documentation in `csv/README.md`.
 * Add the correct entries in `.gitignore` (e.g. if you provide a static station CSV file)
+* Update the municipality count and list in `test/test.api.js`
+
 
 ## Generate the CSVs
 
