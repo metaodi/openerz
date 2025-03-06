@@ -27,6 +27,7 @@ The calendar must be available as CSV with the following structure to ensure the
     - `oberrieden`
     - `richterswil`
     - `rueschlikon`
+    - `seon`
     - `stgallen`
     - `thalwil`
     - `thalwil`
@@ -79,6 +80,7 @@ The collection stations must be available as CSV with the following structure:
     - `oberrieden`
     - `richterswil`
     - `rueschlikon`
+    - `seon`
     - `stgallen`
     - `thalwil`
     - `thalwil`
@@ -200,3 +202,9 @@ The information is taken from the [municipality website](https://www.hombrechtik
 Gossau ZH doesn't expose any machine readable format, the CSV is generated from the config file [`gossau-zh.yml`](https://github.com/metaodi/openerz/blob/main/config/regions/gossau-zh.yml).
 
 The information is taken from the [municipality website](https://www.gossau-zh.ch/ueber-uns/verwaltung/bauabteilung/entsorgung/)
+
+### Seon
+
+Seon doesn't expose any machine readable format, the CSV is generated from the config file [`seon.yml`](https://github.com/metaodi/openerz/blob/main/config/regions/seon.yml).
+
+The information is taken from the [municipality website](https://www.seon.ch/verwaltung/dienstleistungen.html/21/egov_service/370)

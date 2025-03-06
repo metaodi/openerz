@@ -1,0 +1,5 @@
+"region","zip","name","oil","glass","metal","textile","description"
+"seon",5703,"Oberdorf",False,True,True,True,""
+"seon",5703,"Neulen",False,True,True,False,""
+"seon",5703,"Talstrasse",False,True,True,True,""
+"seon",5703,"Mühleweg, Weingartenstrasse 11",True,True,True,True,""
