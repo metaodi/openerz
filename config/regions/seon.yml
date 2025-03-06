@@ -1,0 +1,47 @@
+region: seon
+start_date: 2025-03-01
+end_date: 2025-12-31
+
+collections:
+  cardboard: 
+    - schedule:
+      - 2025-03-21
+      - 2025-05-16
+      - 2025-07-04
+      - 2025-09-12
+      - 2025-11-14
+  chipping_service: 
+    - schedule:
+      - 2025-03-19
+      - 2025-10-15
+  organic:
+    - schedule:
+      - weekly every Monday from March to November
+      - every 2 weeks on Monday from December to February, starting Dec 8
+      - 2025-04-23 # Ersatzdatum für Ostern
+      - 2025-06-11 # Ersatzdatum für Pfingstmontag
+  paper:
+    - schedule:
+      - 2025-03-14
+      - 2025-04-04
+      - 2025-05-09
+      - 2025-06-06
+      - 2025-07-11
+      - 2025-08-15
+      - 2025-09-19
+      - 2025-10-10
+      - 2025-11-07
+      - 2025-12-12
+  waste:
+    - schedule:
+      - weekly every Thursday
+      - 2025-05-28 # Ersatzdatum für Auffahrt
+      - 2025-12-24 # Ersatzdatum für Weihnachten
+      - 2025-12-31 # Ersatzdatum für Neujahr
+
+exclude:
+  - 2025-04-21 # Ostermontag
+  - 2025-05-29 # Auffahrt
+  - 2025-06-09 # Pfingstmontag
+  - 2025-05-25 # Weihnachten
+  - 2026-01-01 # Neujahr

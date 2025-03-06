@@ -20,6 +20,7 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
      <option value="oberrieden">Oberrieden</option>
      <option value="richterswil">Richterswil</option>
      <option value="rueschlikon">Rüschlikon</option>
+     <option value="seon">Seon</option>
      <option value="stgallen">St. Gallen</option>
      <option value="thalwil">Thalwil</option>
      <option value="uster">Uster</option>
@@ -83,6 +84,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Oberrieden (`oberrieden`)
     * Richterswil (`richterswil`)
     * Rüschlikon (`rueschlikon`)
+    * Seon (`seon`)
     * St. Gallen (`stgallen`)
     * Thalwil (`thalwil`)
     * Uster (`uster`)
@@ -118,6 +120,7 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Oberrieden -> keine Aufteilung
     * Richterswil -> Zone A und B
     * Rüschlikon -> Zone A und B
+    * Seon -> keine Aufteilung
     * St. Gallen -> Gebiets-ID A-K + L Ost und L West
     * Thalwil -> Zone A-C
     * Uster -> Kehrichtkreise 1-4
