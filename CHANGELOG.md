@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## [9.4.0] - 2025-03-07
+### Added
+- Add new region `seon` based on published PDF (thanks for the contribution [@colinfrei](https://github.com/colinfrei))
+
 ## [9.3.0] - 2025-02-04
 ### Added
 - Add new region `gossau-zh` based on published PDF
@@ -486,7 +490,8 @@ heroku config:get DATABASE_URL -a openerz
 - `Fixed` for any bug fixes.
 - `Security` to invite users to upgrade in case of vulnerabilities.
 
-[Unreleased]: https://github.com/metaodi/openerz/compare/v9.3.0...HEAD
+[Unreleased]: https://github.com/metaodi/openerz/compare/v9.4.0...HEAD
+[9.4.0]: https://github.com/metaodi/openerz/compare/v9.3.0...v9.4.0
 [9.3.0]: https://github.com/metaodi/openerz/compare/v9.2.1...v9.3.0
 [9.2.1]: https://github.com/metaodi/openerz/compare/v9.2.0...v9.2.1
 [9.2.0]: https://github.com/metaodi/openerz/compare/v9.1.0...v9.2.0
