@@ -33,7 +33,7 @@
     "hapi-swagger": "17.3.2",
     "icalendar": "^0.7.1",
     "joi": "^17.13.3",
-    "js-yaml": "^4.1.0",
+    "js-yaml": "^4.1.1",
     "lint": "^1.1.2",
     "localize": "^0.4.7",
     "moment": "^2.30.1",
