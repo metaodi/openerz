@@ -52,7 +52,8 @@ Update the CSVs in the `csv` directory by replacing the data or running the prov
 OpenERZ uses a PostgreSQL database, which is updated using the `load_data_in_database.sh` script or the corresponding GitHub Action.
 
 Most regions are updated using Python scripts.
-You might want to setup a python virtualenv using the `python_setup.sh` script.
+This project uses `uv` to manage dependencies and virtual envs.
+To run scripts it's therefore recommended to use `uv run <script>` to run the script in the correct environment.
 
 Add a new municipality
 ======================

@@ -24,65 +24,32 @@ logging.basicConfig(
 )
 logging.captureWarnings(True)
 
-last_year = "2024"
-year = "2025"
+year = "2026"
 
 waste_sources = [
     {
         "waste_type": 'organic',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_bioabfall/download/entsorgungskalender_bioabfall_{last_year}.csv",
+        "url": f"https://data.stadt-zuerich.ch/dataset/entsorgungskalender_bioabfall/download/entsorgungskalender_bioabfall_{year}.csv",
     },
     {
-        "waste_type": 'cargotram',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_cargotram/download/entsorgungskalender_cargoTram_{last_year}.csv",
-    },
-    {
-        "waste_type": 'etram',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_etram/download/entsorgungskalender_eTram_{last_year}.csv",
+        "waste_type": 'mobile',
+        "url": f"https://data.stadt-zuerich.ch/dataset/entsorgungskalender_mobiler_recyclinghof/download/mobiler_recyclinghof_{year}.csv",
     },
     {
         "waste_type": 'cardboard',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_karton/download/entsorgungskalender_karton_{last_year}.csv",
+        "url": f"https://data.stadt-zuerich.ch/dataset/entsorgungskalender_karton/download/entsorgungskalender_karton_{year}.csv",
     },
     {
         "waste_type": 'waste',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_kehricht/download/entsorgungskalender_kehricht_{last_year}.csv",
+        "url": f"https://data.stadt-zuerich.ch/dataset/entsorgungskalender_kehricht/download/entsorgungskalender_kehricht_{year}.csv",
     },
     {
         "waste_type": 'paper',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_papier/download/entsorgungskalender_papier_{last_year}.csv",
+        "url": f"https://data.stadt-zuerich.ch/dataset/entsorgungskalender_papier/download/entsorgungskalender_papier_{year}.csv",
     },
     {
         "waste_type": 'special',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sonderabfall/download/entsorgungskalender_sonderabfall_{last_year}.csv",
-    },
-    {
-        "waste_type": 'organic',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_bioabfall/download/entsorgungskalender_bioabfall_{year}.csv",
-    },
-    {
-        "waste_type": 'cargotram',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_cargotram/download/entsorgungskalender_cargoTram_{year}.csv",
-    },
-    {
-        "waste_type": 'etram',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_etram/download/entsorgungskalender_eTram_{year}.csv",
-    },
-    {
-        "waste_type": 'cardboard',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_karton/download/entsorgungskalender_karton_{year}.csv",
-    },
-    {
-        "waste_type": 'waste',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_kehricht/download/entsorgungskalender_kehricht_{year}.csv",
-    },
-    {
-        "waste_type": 'paper',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_papier/download/entsorgungskalender_papier_{year}.csv",
-    },
-    {
-        "waste_type": 'special',
-        "url": f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sonderabfall/download/entsorgungskalender_sonderabfall_{year}.csv",
+        "url": f"https://data.stadt-zuerich.ch/dataset/entsorgungskalender_sonderabfall/download/entsorgungskalender_sonderabfall_{year}.csv",
     },
 ]
 
@@ -116,7 +83,7 @@ def calendar_csv():
 
 # Recyclingstationen
 def station_csv():
-    station_csv_url = f"https://data.stadt-zuerich.ch/dataset/erz_entsorgungskalender_sammelstellen/download/entsorgungskalender_sammelstellen_{year}.csv"
+    station_csv_url = f"https://data.stadt-zuerich.ch/dataset/entsorgungskalender_sammelstellen/download/entsorgungskalender_sammelstellen_{year}.csv"
     log.info(f"Get station CSV from {station_csv_url}")
     rows = csv_file.read_csv_from_url(station_csv_url, encoding='utf-8-sig')
 

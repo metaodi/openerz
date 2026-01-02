@@ -44,7 +44,11 @@ logging.basicConfig(
 logging.captureWarnings(True)
 
 try:
-    # read CSV in dataframr
+    if not os.path.exists(input_path):
+        log.debug(f"Input file {input_path} does not exist.")
+        sys.exit(0)
+
+    # read CSV in dataframe
     df = pd.read_csv(input_path)
 
     # sort the dataframe
