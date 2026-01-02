@@ -13,7 +13,7 @@ const compat = new FlatCompat({
 });
 
 export default [{
-    ignores: ["docs/**/*.js"],
+    ignores: ["docs/**/*.js", ".venv/**/*.js"],
 }, ...compat.extends("eslint:recommended"), {
     languageOptions: {
         globals: {
