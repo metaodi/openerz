@@ -13,10 +13,13 @@ jobs:
         with:
           node-version: 20
 
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version-file: ".python-version"
+          
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
           
       - name: Install heroku-cli
         run: curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
@@ -24,12 +27,10 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install -e .
+          uv sync --locked --all-extras --dev
       
       - name: Validate config
-        run: ./validate_config.py
+        run: uv run validate_config.py
 
       - uses: akhileshns/heroku-deploy@v3.12.14
         with:
