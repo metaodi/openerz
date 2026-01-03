@@ -17,6 +17,7 @@ dependencies = [
     "recurring-ical-events>=3.8.0",
     "requests>=2.32.4",
     "schema>=0.7.8",
+]
 
 [build-system]
 requires = ["setuptools >= 61.0"]
