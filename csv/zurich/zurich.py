@@ -4,9 +4,9 @@ import os
 import csv
 import sys
 import logging
-from openerzpy.file import csv_file
-from openerzpy.file import cache
-from openerzpy.parse import parse_config
+from openerzpy import csv_file
+from openerzpy import cache
+from openerzpy import parse_config
 
 __location__ = os.path.realpath(
     os.path.join(

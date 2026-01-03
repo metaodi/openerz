@@ -3,7 +3,7 @@
 import os
 import sys
 import logging
-from openerzpy.file import csv_file
+from openerzpy import csv_file
 
 __location__ = os.path.realpath(
     os.path.join(
