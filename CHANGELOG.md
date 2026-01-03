@@ -5,6 +5,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## [9.5.0] - 2026-01-03
+### Added
+- New waste type `mobile` for zurich to represent the new "Mobiler Recyclinghof" that supersedes the `etram` and `cargotram` types.
+
+### Changed
+- Update dependencies
+- Update zurich data
+
+### Removed
+- Remove `etram` and `cargotram` waste types, since they no longer exist
+
 ## [9.4.0] - 2025-03-07
 ### Added
 - Add new region `seon` based on published PDF (thanks for the contribution [@colinfrei](https://github.com/colinfrei))
