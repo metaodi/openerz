@@ -2,7 +2,8 @@ npm-debug.log
 node_modules/
 .env
 data/
-pyenv/
+cache/
+.venv/
 __pycache__
 *.egg-info
 csv/**/*.csv

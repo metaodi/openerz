@@ -2,6 +2,7 @@ region: hombrechtikon
 zip: 8634
 start_date: 2025-01-01
 end_date: 2026-01-03
+status: in-progress
 
 collections:
   waste:

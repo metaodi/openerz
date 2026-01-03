@@ -51,10 +51,10 @@ def write_to_csv(csv_path, header, rows):
         writer.writerows(rows)
 
 
-def read_csv_from_url(url, encoding="uft-8"):
+def read_csv_from_url(url, encoding="utf-8"):
     log.info(f"Download content from {url}")
 
     text = dl.download(url, encoding=encoding)
-    reader = csv.DictReader(StringIO(text), delimiter=',')
+    reader = csv.DictReader(StringIO(text), delimiter=',', quoting=csv.QUOTE_NONNUMERIC)
 
     return reader

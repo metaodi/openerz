@@ -19,8 +19,10 @@ do
 
     region=$(basename $f .yml)
     echo "Import ${region}_stationen.csv CSV..."
-    $DIR/update_database.py -f $DIR/csv/${region}/${region}_stationen.csv --table station --region $region $drop_args
-    drop_args=""
+    if test -f "$DIR/csv/$region/${region}_stationen.csv"; then
+        uv run $DIR/update_database.py -f $DIR/csv/${region}/${region}_stationen.csv --table station --region $region $drop_args
+        drop_args=""
+    fi
 done
 
 # Calendar
@@ -31,6 +33,8 @@ do
 
     region=$(basename $f .yml)
     echo "Import ${region}.csv CSV..."
-    $DIR/update_database.py -f $DIR/csv/${region}/${region}.csv --table calendar --region $region $drop_args
-    drop_args=""
+    if test -f "$DIR/csv/$region/$region.csv"; then
+        uv run $DIR/update_database.py -f $DIR/csv/${region}/${region}.csv --table calendar --region $region $drop_args
+        drop_args=""
+    fi
 done

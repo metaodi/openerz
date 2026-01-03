@@ -196,6 +196,7 @@ source = [
 ignore_entries = []
 
 try:
+    sys.exit(0)
     # iCal Download URL
     config_path = os.path.join(__location__, '..', '..', 'config', 'regions', 'wetzikon.yml')
     config = parse_config.load_config(config_path)

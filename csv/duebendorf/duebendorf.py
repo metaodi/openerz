@@ -87,6 +87,7 @@ def waste_type(in_type):
 
 
 try:
+    sys.exit(0)
     # iCal Download URL
     config_path = os.path.join(__location__, '..', '..', 'config', 'regions', 'duebendorf.yml')
     config = parse_config.load_config(config_path)

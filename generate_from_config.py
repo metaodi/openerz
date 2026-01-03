@@ -3,7 +3,7 @@
 """Generate CSV from config file
 
 Usage:
-  generate_from_config.py --config <path-to-config> --output <path-to-output> [--dry-run] [--verbose]
+  generate_from_config.py --config <path-to-config> --output <path-to-output> [--status <status>] [--dry-run] [--verbose]
   generate_from_config.py (-h | --help)
   generate_from_config.py --version
 
@@ -12,6 +12,7 @@ Options:
   --version                     Show version.
   -c, --config <path-to-config> Path to the config file.
   -o, --output <path-to-output> Path to the output CSV file.
+  -s, --status <status>         Filter config by status [default: done].
   -d, --dry-run                 Parse and validate the config but don't write a file.
   -v, --verbose                 Enable more verbose output.
 """
@@ -39,6 +40,7 @@ dry_run = arguments['--dry-run']
 verbose = arguments['--verbose']
 config_path = arguments['--config']
 output_path = arguments['--output']
+status = arguments['--status']
 
 if not os.path.exists(config_path):
     raise FileNotFoundError(f"--config must be an existing file, {config_path} not found")
@@ -55,6 +57,7 @@ logging.basicConfig(
 )
 logging.captureWarnings(True)
 
+config = parse_config.load_config(config_path)
 
 try:
     header = [
@@ -70,6 +73,10 @@ try:
     if dry_run:
         for event in parse_config.generate_events(config_path, verbose=verbose):
             log.debug(pformat(event))
+        sys.exit(0)
+
+    if status and status != config["status"]:
+        log.debug(f"Skipping, status {status} != {config['status']}")
         sys.exit(0)
 
     if os.path.exists(output_path):

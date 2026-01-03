@@ -85,6 +85,9 @@ def station_csv():
     csv_file.write_station_to_csv(csv_path, output_rows)
 
 
+
+sys.exit(0)
+
 try:
     calendar_csv()
     station_csv()

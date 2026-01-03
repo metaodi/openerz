@@ -101,26 +101,11 @@ textile:
   - offset
   - limit
   - lang
-cargotram:
-  name: Cargotram
-  type: cargotram
-  description: Calendar of CargoTram
-  notes: Return the current calendar of the CargoTram (Sperrmüll)
-  params:
-  - region
-  - zip
-  - station
-  - start
-  - end
-  - sort
-  - offset
-  - limit
-  - lang
-etram:
-  name: eTram
-  type: etram
-  description: Calendar of eTram
-  notes: Return the current calendar of the eTram (electronic waste)
+mobile:
+  name: Mobile
+  type: mobile
+  description: Calendar of Recycling Mobile
+  notes: Return the current calendar of the Recycling Mobile
   params:
   - region
   - zip

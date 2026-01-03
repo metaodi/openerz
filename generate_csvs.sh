@@ -22,7 +22,7 @@ do
     
     if test -f "$DIR/csv/$region/$region.py"; then
         echo "Run ${region}.py script..."
-        $DIR/csv/$region/$region.py
+        uv run $DIR/csv/$region/$region.py
     fi
 done
 
@@ -33,6 +33,6 @@ do
 
     region=$(basename $f .yml)
     echo "Generate ${region} CSV..."
-    $DIR/generate_from_config.py -c $DIR/config/regions/$region.yml -o $DIR/csv/$region/$region.csv --verbose
-    $DIR/sort_csv.py -i $DIR/csv/$region/$region.csv -o $DIR/csv/$region/$region.csv -s "col_date, waste_type"
+    uv run $DIR/generate_from_config.py -c $DIR/config/regions/$region.yml -o $DIR/csv/$region/$region.csv --verbose --status=done
+    uv run $DIR/sort_csv.py -i $DIR/csv/$region/$region.csv -o $DIR/csv/$region/$region.csv -s "col_date, waste_type"
 done
