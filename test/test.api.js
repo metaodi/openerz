@@ -163,16 +163,15 @@ describe('make sure the server is running (test.api)', function() {
                 url: '/api/parameter/types'
             });
             response.statusCode.should.equal(200);
-            response.result._metadata.total_count.should.equal(13);
-            response.result.result.length.should.equal(13);
+            response.result._metadata.total_count.should.equal(12);
+            response.result.result.length.should.equal(12);
             response.result.result.should.deepEqual([
                 'bulky_goods',
                 'cardboard',
-                'cargotram',
                 'chipping_service',
-                'etram',
                 'incombustibles',
                 'metal',
+                'mobile',
                 'oekibus',
                 'organic',
                 'paper',
@@ -310,21 +309,11 @@ describe('make sure the server is running (test.api)', function() {
         });
     });
 
-    describe('/api/calendar.json?types=cargotram is working', function() {
+    describe('/api/calendar.json?types=mobile is working', function() {
         it('should return something', async function() {
             var response = await server.inject({
                 method: 'GET',
-                url: '/api/calendar.json?types=cargotram'
-            });
-            response.statusCode.should.equal(200);
-        });
-    });
-
-    describe('/api/calendar.json?types=cargotram&types=etram is working', function() {
-        it('should return something', async function() {
-            var response = await server.inject({
-                method: 'GET',
-                url: '/api/calendar.json?types=cargotram&types=etram'
+                url: '/api/calendar.json?types=mobile'
             });
             response.statusCode.should.equal(200);
         });
