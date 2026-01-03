@@ -7,6 +7,7 @@ requires-python = ">=3.8"
 dependencies = [
     "docopts>=0.6.1",
     "icalendar>=6.3.2",
+    "openerzpy",
     "pandas>=2.0.3",
     "psycopg2-binary>=2.9.10",
     "python-dateutil>=2.9.0.post0",
@@ -17,3 +18,11 @@ dependencies = [
     "requests>=2.32.4",
     "schema>=0.7.8",
 ]
+
+[tool.uv.workspace]
+members = [
+    "openerzpy",
+]
+
+[tool.uv.sources]
+openerzpy = { workspace = true, editable = true }
