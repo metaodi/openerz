@@ -19,7 +19,7 @@ do
 
     region=$(basename $f .yml)
     echo "Import ${region}_stationen.csv CSV..."
-    if test -f "$DIR/csv/$region/$region_stationen.csv"; then
+    if test -f "$DIR/csv/$region/${region}_stationen.csv"; then
         uv run $DIR/update_database.py -f $DIR/csv/${region}/${region}_stationen.csv --table station --region $region $drop_args
         drop_args=""
     fi

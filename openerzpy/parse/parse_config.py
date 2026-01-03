@@ -79,6 +79,7 @@ def load_config(config_path):
 
     schema = Schema({
         "region": And(str, len),
+        Optional("status", default="done"): And(str, Or("todo", "in-progress", "done")),
         "start_date": Or(str, And(date, Use(lambda n: n.isoformat()))),
         "end_date": Or(str, And(date, Use(lambda n: n.isoformat()))),
         "collections": {
@@ -95,6 +96,10 @@ def load_config(config_path):
         },
         Optional("zip"): And(Use(int), lambda n: 1000 <= n <= 9999),
         Optional("exclude"): Or([Or(str, And(date, Use(lambda n: n.isoformat())))], None),
+        Optional("cache"): {
+            Optional("calendar"): And(str, len),
+            Optional("station"): And(str, len),
+        },
     })
 
     with open(config_path, encoding="utf-8") as f:

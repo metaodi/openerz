@@ -5,6 +5,8 @@ import csv
 import sys
 import logging
 from openerzpy.file import csv_file
+from openerzpy.file import cache
+from openerzpy.parse import parse_config
 
 __location__ = os.path.realpath(
     os.path.join(
@@ -23,6 +25,23 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 logging.captureWarnings(True)
+
+config_path = os.path.join(__location__, "..", "..", "config", "regions", "zurich.yml")
+config = parse_config.load_config(config_path)
+
+# check if the cache is available, if so skip all steps and use cached file instead
+calendar_loaded = False
+station_loaded = False
+cache_config = config.get("cache")
+if cache_config and cache_config.get("calendar"):
+    calendar_path = os.path.join(__location__, 'zurich.csv')
+    cache.copy_file_from_cache(cache_config["calendar"], calendar_path) 
+    calendar_loaded = True
+
+if cache_config and cache_config.get("station"):
+    station_path = os.path.join(__location__, 'zurich_stationen.csv')
+    cache.copy_file_from_cache(cache_config["station"], station_path) 
+    station_loaded = True
 
 year = "2026"
 
@@ -67,8 +86,8 @@ def calendar_csv():
             pprint(row)
             out = {
                 'region': 'zurich',
-                'area': row['PLZ'],
-                'zip': row['PLZ'],
+                'area': int(row['PLZ']),
+                'zip': int(row['PLZ']),
                 'col_date': row['Abholdatum'],
                 'waste_type': waste_type,
                 'station': row.get('Station', ''),
@@ -89,10 +108,12 @@ def station_csv():
 
     output_rows = []
     for row in rows:
+        if not row["Station"] or row["Station"] == '.':
+            continue
         print(row)
         new_row = {
             'region': 'zurich',
-            'zip': row['PLZ'],
+            'zip': int(row['PLZ']),
             'name': row['Station'],
             'oil': (row['Oel'] == 'x'),
             'metal': (row['Metall'] == 'x'),
@@ -108,8 +129,10 @@ def station_csv():
 
 
 try:
-    calendar_csv()
-    station_csv()
+    if not calendar_loaded:
+        calendar_csv()
+    if not station_loaded:
+        station_csv()
 except Exception:
     log.exception("Error in zurich.py")
     sys.exit(1)
