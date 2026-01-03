@@ -32,6 +32,11 @@ jobs:
       - name: Validate config
         run: uv run validate_config.py
 
+      - name: Load data in cache
+        run: |
+          wget -P cache -O zurich.csv https://www.dropbox.com/scl/fi/zai25a3tvn9a9nvj9pkuw/zurich.csv?rlkey=4zutnyc0xft7v0afdbqr1081w&dl=0
+          wget -P cache -O zurich_stationen.csv https://www.dropbox.com/scl/fi/ywk1670ep3wqawe87w5ew/zurich_stationen.csv?rlkey=hxgmu9nqvdl8tocp2s5hlr89o&dl=0
+
       - uses: akhileshns/heroku-deploy@v3.12.14
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
