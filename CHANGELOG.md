@@ -12,6 +12,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Changed
 - Update dependencies
 - Update zurich data
+- Add new config options for caching
+- Add new status config option
 
 ### Removed
 - Remove `etram` and `cargotram` waste types, since they no longer exist
