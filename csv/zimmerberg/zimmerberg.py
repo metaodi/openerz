@@ -130,6 +130,7 @@ def generate_muni_csv(muni, config):
     csv_file.write_calendar_to_csv(csv_path, output_rows)
 
 try:
+    sys.exit(0)
     for muni, config in municipalities.items():
         generate_muni_csv(muni, config)
 except Exception:

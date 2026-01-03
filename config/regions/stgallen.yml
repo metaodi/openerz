@@ -1,6 +1,7 @@
 region: stgallen
 start_date: 2025-01-01
 end_date: 2025-06-30
+status: in-progress
 
 collections:
   cardboard: ~
