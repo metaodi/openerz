@@ -7,7 +7,6 @@ requires-python = ">=3.8"
 dependencies = [
     "docopts>=0.6.1",
     "icalendar>=6.3.2",
-    "openerzpy",
     "pandas>=2.0.3",
     "psycopg2-binary>=2.9.10",
     "python-dateutil>=2.9.0.post0",
@@ -20,17 +19,12 @@ dependencies = [
 ]
 
 [build-system]
-requires = ["setuptools >= 61.0"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools.packages.find]
-where = ["./openerzpy"]
-include = ["openerzpy"]
+[tool.setuptools]
+packages = ["openerzpy"]
+py-modules = ["openerzpy"]
 
-[tool.uv.workspace]
-members = [
-    "openerzpy",
-]
-
-[tool.uv.sources]
-openerzpy = { workspace = true, editable = true }
+[tool.uv]
+package = true

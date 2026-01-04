@@ -9,12 +9,6 @@ resolution-markers = [
     "python_full_version < '3.9'",
 ]
 
-[manifest]
-members = [
-    "openerz",
-    "openerzpy",
-]
-
 [[package]]
 name = "backports-zoneinfo"
 version = "0.2.1"
@@ -484,7 +478,6 @@ source = { editable = "." }
 dependencies = [
     { name = "docopts" },
     { name = "icalendar" },
-    { name = "openerzpy" },
     { name = "pandas", version = "2.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
     { name = "pandas", version = "2.3.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
     { name = "psycopg2-binary", version = "2.9.10", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
@@ -504,7 +497,6 @@ dependencies = [
 requires-dist = [
     { name = "docopts", specifier = ">=0.6.1" },
     { name = "icalendar", specifier = ">=6.3.2" },
-    { name = "openerzpy", editable = "openerzpy" },
     { name = "pandas", specifier = ">=2.0.3" },
     { name = "psycopg2-binary", specifier = ">=2.9.10" },
     { name = "python-dateutil", specifier = ">=2.9.0.post0" },
@@ -515,11 +507,6 @@ requires-dist = [
     { name = "requests", specifier = ">=2.32.4" },
     { name = "schema", specifier = ">=0.7.8" },
 ]
-
-[[package]]
-name = "openerzpy"
-version = "0.1.0"
-source = { editable = "openerzpy" }
 
 [[package]]
 name = "pandas"
