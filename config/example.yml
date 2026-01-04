@@ -1,5 +1,6 @@
 region: example-town
 zip: 9999
+status: todo
 
 collections:
   waste:
