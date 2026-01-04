@@ -62,8 +62,21 @@ jobs:
           
       - name: Load data in cache
         run: |
-          wget -P cache -O zurich.csv https://www.dropbox.com/scl/fi/zai25a3tvn9a9nvj9pkuw/zurich.csv?rlkey=4zutnyc0xft7v0afdbqr1081w&dl=0
-          wget -P cache -O zurich_stationen.csv https://www.dropbox.com/scl/fi/ywk1670ep3wqawe87w5ew/zurich_stationen.csv?rlkey=hxgmu9nqvdl8tocp2s5hlr89o&dl=0
+          wget -O cache/zurich.csv https://www.dropbox.com/scl/fi/zai25a3tvn9a9nvj9pkuw/zurich.csv?rlkey=4zutnyc0xft7v0afdbqr1081w&dl=0
+          wget -O cache/zurich_stationen.csv https://www.dropbox.com/scl/fi/ywk1670ep3wqawe87w5ew/zurich_stationen.csv?rlkey=hxgmu9nqvdl8tocp2s5hlr89o&dl=0
+
+          wget -O cache/basel.csv https://www.dropbox.com/scl/fi/aar6p4bkmbnj78qgn8ijo/basel.csv?rlkey=fvrmug7m2yp6gp5vophgqhsee&dl=0
+          wget -O cache/basel_stationen.csv https://www.dropbox.com/scl/fi/lqz11wx6v8tniyzcc71lz/basel_stationen.csv?rlkey=fvxn5higzyk67yvx9yotykn3n&dl=0
+
+          wget -O cache/adliswil.csv https://www.dropbox.com/scl/fi/9frl1yp2bicjr2j2tj9w7/adliswil.csv?rlkey=8084wy5r1c132k5pxaf8predp&dl=0
+          wget -O cache/horgen.csv https://www.dropbox.com/scl/fi/p5rij7l4y72js806y9v8b/horgen.csv?rlkey=fj1j5y8g9kf222izh946utpzs&dl=0
+          wget -O cache/kilchberg.csv https://www.dropbox.com/scl/fi/kds2n3mls7pk49oymtaqz/kilchberg.csv?rlkey=u3tgngyigadakx1liirnljwfr&e=1&dl=0
+          wget -O cache/langnau.csv https://www.dropbox.com/scl/fi/xzwap2hstqkjy34g2ykc4/langnau.csv?rlkey=bkcb04jwirvhcrxvbjvd8j16r&dl=0
+          wget -O cache/richterswil.csv https://www.dropbox.com/scl/fi/q4papyqg3es4emz0dpb93/richterswil.csv?rlkey=0qpczb590b02pkjboh3fkj1r1&dl=0
+          wget -O cache/rueschlikon.csv https://www.dropbox.com/scl/fi/h8etohrvl1yceohge9t9g/rueschlikon.csv?rlkey=76s484odiap0p660gel1qh6jr&dl=0
+          wget -O cache/waedenswil.csv https://www.dropbox.com/scl/fi/hwygy4f1p1l08rcivalhd/waedenswil.csv?rlkey=guguxngv6xign2w6al58861bt&dl=0
+          wget -O cache/oberrieden.csv https://www.dropbox.com/scl/fi/vhwuyic1wov3gfypuxyhd/oberrieden.csv?rlkey=84gjhc6ywcbukto53qlpaal3k&dl=0
+          wget -O cache/thalwil.csv https://www.dropbox.com/scl/fi/c4y2i3wivweruxsoo6l1i/thalwil.csv?rlkey=8r5qncps4tjrzlwtnusxyyqss&dl=0
 
       - name: Validate config
         run: uv run validate_config.py

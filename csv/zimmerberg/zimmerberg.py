@@ -5,9 +5,11 @@ import os
 import csv
 import re
 import logging
-from openerzpy.download import download as dl
-from openerzpy.parse import parse_ics
-from openerzpy.file import csv_file
+from openerzpy import download as dl
+from openerzpy import parse_ics
+from openerzpy import csv_file
+from openerzpy import cache
+from openerzpy import parse_config
 
 
 __location__ = os.path.realpath(
@@ -84,6 +86,7 @@ other_categories = [
     'Velorbörse',
     'Bring- und Holtag',
     'Wertstoffsammelstelle',
+    'Wertstoffsammelstelle (verlängert)',
     'Abfälle Räbenchilbi',
     'Christbäume',
 ]
@@ -104,6 +107,17 @@ def generate_muni_csv(muni, config):
     # iCal Download URL
     url = f"https://{muni}.entsorglos.swiss/calendar.ics"
     cal_path = os.path.join(__location__, f'{muni}_calendar.ics')
+
+    muni_config_path = os.path.join(__location__, "..", "..", "config", "regions", f"{muni}.yml")
+    muni_config = parse_config.load_config(muni_config_path)
+    csv_path = os.path.join(__location__, '..', muni, f'{muni}.csv')
+
+    # check if the cache is available, if so skip all steps and use cached file instead
+    cache_config = muni_config.get("cache")
+    if cache_config and cache_config.get("calendar"):
+        log.info(f"Load CSV {muni}.csv from {cache_config['calendar']}...")
+        cache.copy_file_from_cache(cache_config["calendar"], csv_path) 
+        return
 
     log.info(f"Download URL: {url}")
     dl.download_file(url, cal_path)
@@ -126,11 +140,9 @@ def generate_muni_csv(muni, config):
             'description': '',
         }
         output_rows.append(out)
-    csv_path = os.path.join(__location__, '..', muni, f'{muni}.csv')
     csv_file.write_calendar_to_csv(csv_path, output_rows)
 
 try:
-    sys.exit(0)
     for muni, config in municipalities.items():
         generate_muni_csv(muni, config)
 except Exception:

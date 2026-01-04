@@ -1,7 +1,9 @@
 region: oberrieden
-start_date: 2025-01-01
-end_date: 2025-12-31
-status: in-progress
+start_date: 2026-01-01
+end_date: 2026-12-31
+status: done
+cache:
+  calendar: cache/oberrieden.csv
 
 collections:
   cardboard: ~
