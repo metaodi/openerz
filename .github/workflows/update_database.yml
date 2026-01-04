@@ -40,6 +40,9 @@ jobs:
           wget -O cache/basel.csv https://www.dropbox.com/scl/fi/aar6p4bkmbnj78qgn8ijo/basel.csv?rlkey=fvrmug7m2yp6gp5vophgqhsee&dl=0
           wget -O cache/basel_stationen.csv https://www.dropbox.com/scl/fi/lqz11wx6v8tniyzcc71lz/basel_stationen.csv?rlkey=fvxn5higzyk67yvx9yotykn3n&dl=0
 
+          wget -O cache/stgallen.csv https://www.dropbox.com/scl/fi/4zjcfonwj2yp3j6dpurtc/stgallen.csv?rlkey=sr2rqwbz08i5kflifc3dig5oc&dl=0
+          wget -O cache/stgallen_stationen.csv https://www.dropbox.com/scl/fi/jfbmnsw3blexciur1cmqe/stgallen_stationen.csv?rlkey=y3xl4jxlbcsb926mi9cxruq8o&dl=0
+
           wget -O cache/adliswil.csv https://www.dropbox.com/scl/fi/9frl1yp2bicjr2j2tj9w7/adliswil.csv?rlkey=8084wy5r1c132k5pxaf8predp&dl=0
           wget -O cache/horgen.csv https://www.dropbox.com/scl/fi/p5rij7l4y72js806y9v8b/horgen.csv?rlkey=fj1j5y8g9kf222izh946utpzs&dl=0
           wget -O cache/kilchberg.csv https://www.dropbox.com/scl/fi/kds2n3mls7pk49oymtaqz/kilchberg.csv?rlkey=u3tgngyigadakx1liirnljwfr&e=1&dl=0
@@ -53,6 +56,10 @@ jobs:
           wget -O cache/uster.csv https://www.dropbox.com/scl/fi/xojexe7opl5cn3ldr8tz7/uster.csv?rlkey=jctjkufstgpu6pdastdzwa9ip&dl=0
 
           wget -O cache/duebendorf.csv https://www.dropbox.com/scl/fi/tw95ir80buhtcwjruatpy/duebendorf.csv?rlkey=vb07z0ozvqytd7wzvpeh3sbko&dl=0
+
+          wget -O cache/wetzikon.csv https://www.dropbox.com/scl/fi/j9de8ij8s7jzjn2ik8zp6/wetzikon.csv?rlkey=bx1ou5eam9c1b6js4029sxsyk&dl=0
+
+          wget -O cache/winterthur.csv https://www.dropbox.com/scl/fi/3dlf9gad3fa0in7febaql/winterthur.csv?rlkey=2s7i3zzeestzakiagy3lh0vse&dl=0
 
       - uses: akhileshns/heroku-deploy@v3.12.14
         with:

@@ -1,7 +1,10 @@
 region: stgallen
-start_date: 2025-01-01
-end_date: 2025-06-30
-status: in-progress
+start_date: 2026-01-01
+end_date: 2026-06-30
+status: done
+cache:
+  station: cache/stgallen_stationen.csv
+  calendar: cache/stgallen.csv
 
 collections:
   cardboard: ~
