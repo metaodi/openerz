@@ -36,6 +36,8 @@ jobs:
         run: |
           wget -O cache/zurich.csv https://www.dropbox.com/scl/fi/zai25a3tvn9a9nvj9pkuw/zurich.csv?rlkey=4zutnyc0xft7v0afdbqr1081w&dl=0
           wget -O cache/zurich_stationen.csv https://www.dropbox.com/scl/fi/ywk1670ep3wqawe87w5ew/zurich_stationen.csv?rlkey=hxgmu9nqvdl8tocp2s5hlr89o&dl=0
+          wget -O cache/basel.csv https://www.dropbox.com/scl/fi/aar6p4bkmbnj78qgn8ijo/basel.csv?rlkey=fvrmug7m2yp6gp5vophgqhsee&dl=0
+          wget -O cache/basel_stationen.csv https://www.dropbox.com/scl/fi/lqz11wx6v8tniyzcc71lz/basel_stationen.csv?rlkey=fvxn5higzyk67yvx9yotykn3n&dl=0
 
       - uses: akhileshns/heroku-deploy@v3.12.14
         with:
