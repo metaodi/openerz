@@ -1,7 +1,10 @@
 region: basel
-start_date: 2025-01-01
-end_date: 2025-12-31
-status: in-progress
+start_date: 2026-01-01
+end_date: 2026-12-31
+status: done
+cache:
+  station: cache/basel_stationen.csv
+  calendar: cache/basel.csv
 
 collections:
   bulky_goods: ~
