@@ -5,10 +5,11 @@ import os
 import re
 import logging
 from datetime import datetime, date, timedelta
-from openerzpy.download import download as dl
-from openerzpy.parse import parse_ics
-from openerzpy.parse import parse_config
-from openerzpy.file import csv_file
+from openerzpy import download as dl
+from openerzpy import parse_ics
+from openerzpy import csv_file
+from openerzpy import cache
+from openerzpy import parse_config
 
 
 __location__ = os.path.realpath(
@@ -31,19 +32,19 @@ logging.captureWarnings(True)
 
 source = [
     {
-        'url': 'https://www.duebendorf.ch/_doc/5447728',
+        'url': 'https://www.duebendorf.ch/_doc/6390563',
         'area': '1',
     },
     {
-        'url': 'https://www.duebendorf.ch/_doc/5447731',
+        'url': 'https://www.duebendorf.ch/_doc/6390566',
         'area': '2',
     },
     {
-        'url': 'https://www.duebendorf.ch/_doc/5447734',
+        'url': 'https://www.duebendorf.ch/_doc/6390569',
         'area': '3',
     },
     {
-        'url': 'https://www.duebendorf.ch/_doc/5492221',
+        'url': 'https://www.duebendorf.ch/_doc/6390572',
         'area': '4',
     },
 ]
@@ -69,6 +70,7 @@ ignore_entries = [
     'Hauptsammelstelle Nachmittag geschlossen',
     'Hauptsammelstelle Vormittag geöffnet',
     'Hauptsammelstelle Vormittag ge ffnet',
+    'Hauptsammelstelle nur am Vormittag geoeffnet',
     'Hauptsammelstelle',
     'Kompostabgabe',
 ]
@@ -87,10 +89,17 @@ def waste_type(in_type):
 
 
 try:
-    sys.exit(0)
     # iCal Download URL
     config_path = os.path.join(__location__, '..', '..', 'config', 'regions', 'duebendorf.yml')
     config = parse_config.load_config(config_path)
+    csv_path = os.path.join(__location__, f'duebendorf.csv')
+
+    # check if the cache is available, if so skip all steps and use cached file instead
+    cache_config = config.get("cache")
+    if cache_config and cache_config.get("calendar"):
+        log.info(f"Load CSV duebendorf.csv from {cache_config['calendar']}...")
+        cache.copy_file_from_cache(cache_config["calendar"], csv_path) 
+        sys.exit(0)
 
     output_rows = []
     for data in source:
@@ -126,7 +135,6 @@ try:
                 raise
 
     log.info("Start writing duebendorf.csv")
-    csv_path = os.path.join(__location__, f'duebendorf.csv')
     csv_file.write_calendar_to_csv(csv_path, output_rows)
 
 except Exception:

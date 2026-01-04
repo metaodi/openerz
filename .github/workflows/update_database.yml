@@ -52,6 +52,8 @@ jobs:
 
           wget -O cache/uster.csv https://www.dropbox.com/scl/fi/xojexe7opl5cn3ldr8tz7/uster.csv?rlkey=jctjkufstgpu6pdastdzwa9ip&dl=0
 
+          wget -O cache/duebendorf.csv https://www.dropbox.com/scl/fi/tw95ir80buhtcwjruatpy/duebendorf.csv?rlkey=vb07z0ozvqytd7wzvpeh3sbko&dl=0
+
       - uses: akhileshns/heroku-deploy@v3.12.14
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}

@@ -1,8 +1,10 @@
 region: duebendorf
-start_date: 2025-01-01
-end_date: 2025-12-31
+start_date: 2026-01-01
+end_date: 2026-12-31
 zip: 8600
-status: in-progress
+status: done
+cache:
+  calendar: cache/duebendorf.csv
 
 collections:
   cardboard: ~
@@ -16,75 +18,73 @@ collections:
         - every Monday
       area: oekibus-montag
       description: |
-        08.00–08.20 Giessenstrasse 13
-        08.30–08.50 Seidenweg 10
-        09.00–09.20 Heugatterstrasse 9
-        09.30–09.50 Lindenplatz
-        10.00–10.20 Grüzenstrasse 44
-        10.30–10.50 Schulhausstrasse 27
-        13.00–13.20 Hochbordstrasse 31
-        13.30–13.50 Rütistrasse 19
-        14.00–14.20 Im Leisibühl 45
-        14.30–14.50 Alte Gockhauserstrasse 9
-        15.00–15.20 Tennried
-        15.30–15.50 Geerenackerstrasse / Chileweg
-        16.00–16.20 Im Tobelacker 12
+        08.00-08.20 Giessenstrasse 13
+        08.30-08.50 Zwicky-Areal, Am Wasser 11
+        09.00-09.20 Heugatterstrasse 9
+        09.30-09.50 Lindenplatz
+        10.00-10.20 Grüzenstrasse 44
+        10.30-10.50 Schulhausstrasse 27
+        13.00-13.20 Hochbordstr. 31
+        13.30-13.50 Rütistrasse 19
+        14.00-14.20 Rütistrasse/Leisibühl
+        14.30-14.50 Alte Gockhauserstrasse/Schützenrütistrasse
+        15.00-15.20 Tennmoos/Tennried
+        15.30-15.50 Geerenackerstrasse/Chileweg
+        16.00-16.20 Im Tobelacker 12
       exclude:
-        - 2024-01-01
-        - 2024-04-01
-        - 2024-05-20
+        - 2026-04-06
+        - 2026-05-25
     - schedule:
         - every Tuesday
       area: oekibus-dienstag
       description: |
-        08.00–08.20 Gfenn: Parkplatz
+        08.00–08.20 Gfenn. Parkplatz
         08.30–08.50 Glärnischstrasse 22
-        09.00–09.20 Neuhofstrasse (Parkplatz)
+        09.00–09.20 Neuhofstrasse. Parkplatz
         09.30–09.50 Untere Zelglistrasse
-        10.00–10.20 Wilstrasse (Busstation Zelgli)
-        10.30–10.50 Fällandenstrasse
-        (Bushaltestelle Kirche Wil)
+        10.00–10.20 Wilstrasse. Busstation Zelgli
+        10.30–10.50 Fällandenstrasse. Bushaltestelle Kirche Wil
         13.00–13.20 Rotbuchstrasse 40
-        13.30–13.50 Claridenstrasse 3–5
+        13.30–13.50 Claridenstrasse 3-5
         14.00–14.20 Alte Gfennstrasse 12
         14.30–14.50 Hermikonstrasse 84
         15.00–15.20 Greifenseestrasse 36
-        15.30–15.50 Sunnhaldenstrasse 24
+        15.30–15.50 Sunnhaldenstr. 24
         16.00–16.20 Im Branzenäsch 2
-      exclude:
-        - 2024-01-02
+      exclude: ~
     - schedule:
         - every Wednesday
       area: oekibus-mittwoch
       description: |
-        08.00–08.20 Lägernstrasse 16
-        08.30–08.50 Birchlenstrasse 21
-        09.00–09.20 Ahornstrasse 13/15
-        09.30–09.50 Im Winkel 5
-        10.00–10.20 In der Weid 22
-        10.30–10.50 Alte Gfennstrasse 55
-        13.00–13.20 Am Stadtrand 25
-        13.30–13.50 Am Giessenplatz
-        14.05–14.30 Alterszentrum IMWIL
-      exclude:
-        - 2024-05-01
+        08.00-08.20 Lägernstrasse 16
+        08.30-08.50 Birchlenstrasse 21
+        09.00-09.20 Ahornstrasse 13/15
+        09.30-09.50 Im Winkel 5
+        10.00-10.20 In der Weid 22
+        10.30-10.50 Alte Gfennstrasse 55
+        13.00-13.20 Am Stadtrand 25
+        13.30-13.50 Am Giessenplatz
+        14.05-14.30 Alterszentrum IMWIL
+      exclude: ~
     - schedule:
         - every Thursday
       area: oekibus-donnerstag
       description: |
         08.00–08.20 Kunklerstrasse 15
-        08.30–08.50 Dietlikonstrasse (Parkplatz Flugfeld)
-        09.00–09.20 Zwinggartenstrasse 55–65
+        08.30–08.50 Dietlikonstrasse. Parkplatz Flugfeld
+        09.00–09.20 Zwinggartenstrasse 55 – 65
         09.30–09.50 Kriesbachstrasse 61
-        10.00–10.20 Grundstrasse 28–34 (Zwinggartenparkplatz)
+        10.00–10.20 Grundstrasse 28-34 (Zwinggartenparkplatz)
         10.30–10.50 Bühlwiesenstrasse 3
-        13.30–13.50 Ringwiesen (Zionshalle)
-        14.00–14.20 Wasserfurren 15
-        14.30–14.50 Stettbach (Milchhüsli / Stettbach-Lädeli)
+        13.00–13.20  Wasserfurren 15
+        13.30–13.50 Ringwiesen. Zionhalle
+        14.00–14.20 Sonnentalstrasse (Three Point)
+        14.30–14.50 Stettbach. Milchhüsli/Stettbach-Lädeli
         15.00–15.20 Meisenrain 39
         15.25–15.45 Alte Gockhauserstrasse 2
         15.50–16.10 Tichelrütistrasse 6
-        16.15–16.35 Untere Geerenstrasse 61 (Holzkorporation)
+        16.15–16.35 Holzkoporation / Untere Geerenstrasse 61
       exclude:
-        - 2024-03-28
-        - 2024-05-09
+        - 2026-01-01
+        - 2026-04-02
+        - 2026-05-14

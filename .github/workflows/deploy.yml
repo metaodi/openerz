@@ -79,6 +79,8 @@ jobs:
           wget -O cache/thalwil.csv https://www.dropbox.com/scl/fi/c4y2i3wivweruxsoo6l1i/thalwil.csv?rlkey=8r5qncps4tjrzlwtnusxyyqss&dl=0
 
           wget -O cache/uster.csv https://www.dropbox.com/scl/fi/xojexe7opl5cn3ldr8tz7/uster.csv?rlkey=jctjkufstgpu6pdastdzwa9ip&dl=0
+          
+          wget -O cache/duebendorf.csv https://www.dropbox.com/scl/fi/tw95ir80buhtcwjruatpy/duebendorf.csv?rlkey=vb07z0ozvqytd7wzvpeh3sbko&dl=0
 
       - name: Validate config
         run: uv run validate_config.py
