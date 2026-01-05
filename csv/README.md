@@ -195,7 +195,7 @@ Winterthur provides a [calender via Antrahzit](https://stadt.winterthur.ch/theme
 
 Hombrechtikon doesn't expose any machine readable format, the CSV is generated from the config file [`hombrechtikon.yml`](https://github.com/metaodi/openerz/blob/main/config/regions/hombrechtikon.yml).
 
-The information is taken from the [municipality website](https://www.hombrechtikon.ch/verwaltung/online-schalter.html/311/product/230)
+The information is taken from the [municipality website](https://www.hombrechtikon.ch/verwaltung/dienstleistungen.html/46/l/de/service/451)
 
 ### Gossau ZH
 
