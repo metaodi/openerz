@@ -204,7 +204,7 @@ try:
 
     # check if the cache is available, if so skip all steps and use cached file instead
     cache_config = config.get("cache")
-    if cache_config and cache_config.get("calendar"):
+    if cache_config and cache_config.get("calendar") and config.get("status") == "done":
         log.info(f"Load CSV wetzikon.csv from {cache_config['calendar']}...")
         cache.copy_file_from_cache(cache_config["calendar"], csv_path) 
         sys.exit(0)

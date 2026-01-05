@@ -114,7 +114,7 @@ def generate_muni_csv(muni, config):
 
     # check if the cache is available, if so skip all steps and use cached file instead
     cache_config = muni_config.get("cache")
-    if cache_config and cache_config.get("calendar"):
+    if cache_config and cache_config.get("calendar") and muni_config.get("status") == "done":
         log.info(f"Load CSV {muni}.csv from {cache_config['calendar']}...")
         cache.copy_file_from_cache(cache_config["calendar"], csv_path) 
         return

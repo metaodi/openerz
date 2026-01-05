@@ -33,12 +33,14 @@ config = parse_config.load_config(config_path)
 calendar_loaded = False
 station_loaded = False
 cache_config = config.get("cache")
-if cache_config and cache_config.get("calendar"):
+if cache_config and cache_config.get("calendar") and config.get("status") == "done":
+    log.info(f"Load CSV zurich.csv from {cache_config['calendar']}...")
     calendar_path = os.path.join(__location__, 'zurich.csv')
     cache.copy_file_from_cache(cache_config["calendar"], calendar_path) 
     calendar_loaded = True
 
-if cache_config and cache_config.get("station"):
+if cache_config and cache_config.get("station") and config.get("status") == "done":
+    log.info(f"Load CSV zurich_stationen.csv from {cache_config['station']}...")
     station_path = os.path.join(__location__, 'zurich_stationen.csv')
     cache.copy_file_from_cache(cache_config["station"], station_path) 
     station_loaded = True
