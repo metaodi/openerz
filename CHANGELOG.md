@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased][unreleased]
 
+## [9.6.0] - 2026-01-05
+### Added
+- New data for all areas
+
+### Changed
+- The `area` parameter is now always lowercased for comparison
+
 ## [9.5.0] - 2026-01-03
 ### Added
 - New waste type `mobile` for zurich to represent the new "Mobiler Recyclinghof" that supersedes the `etram` and `cargotram` types.
