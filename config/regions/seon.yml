@@ -1,48 +1,56 @@
 region: seon
-start_date: 2025-03-01
-end_date: 2025-12-31
-status: in-progress
+start_date: 2026-01-01
+end_date: 2026-12-31
+status: done
 
 collections:
   cardboard: 
     - schedule:
-      - 2025-03-21
-      - 2025-05-16
-      - 2025-07-04
-      - 2025-09-12
-      - 2025-11-14
+      - 2026-01-09
+      - 2026-03-06
+      - 2026-05-08
+      - 2026-07-03
+      - 2026-09-04
+      - 2026-11-06
   chipping_service: 
     - schedule:
-      - 2025-03-19
-      - 2025-10-15
+      - 2026-03-18
+      - 2026-10-14
   organic:
     - schedule:
-      - weekly every Monday from March to November
-      - every 2 weeks on Monday from December to February, starting Dec 8
-      - 2025-04-23 # Ersatzdatum für Ostern
-      - 2025-06-11 # Ersatzdatum für Pfingstmontag
+      - weekly every Monday from March to December
+      - every 2 weeks on Monday from January to February, starting Jan 5
+      - every 2 weeks on Monday in December, starting Dec 14
+      - 2026-04-08 # Ersatzdatum für Ostern
+      - 2026-06-27 # Ersatzdatum für Pfingstmontag
   paper:
     - schedule:
-      - 2025-03-14
-      - 2025-04-04
-      - 2025-05-09
-      - 2025-06-06
-      - 2025-07-11
-      - 2025-08-15
-      - 2025-09-19
-      - 2025-10-10
-      - 2025-11-07
-      - 2025-12-12
+      - 2026-01-16
+      - 2026-02-13
+      - 2026-03-14
+      - 2026-04-24
+      - 2026-05-24
+      - 2026-06-26
+      - 2026-07-24
+      - 2026-08-21
+      - 2026-09-18
+      - 2026-10-23
+      - 2026-11-20
+      - 2026-12-18
   waste:
     - schedule:
-      - weekly every Thursday
-      - 2025-05-28 # Ersatzdatum für Auffahrt
-      - 2025-12-24 # Ersatzdatum für Weihnachten
-      - 2025-12-31 # Ersatzdatum für Neujahr
+      - weekly every Thursday starting jan 8th
+      - 2026-05-13 # Ersatzdatum für Auffahrt
 
 exclude:
-  - 2025-04-21 # Ostermontag
-  - 2025-05-29 # Auffahrt
-  - 2025-06-09 # Pfingstmontag
-  - 2025-12-25 # Weihnachten
-  - 2026-01-01 # Neujahr
+  # 2026
+  - 2026-01-01 # Neujahr, Donnerstag
+  - 2026-01-02 # Berchtoldstag, Freitag
+  - 2026-04-03 # Karfreitag, Freitag
+  - 2026-04-06 # Ostermontag, Montag
+  - 2026-05-01 # 1. Mai, Freitag
+  - 2026-05-14 # Auffahrt, Donnerstag
+  - 2026-05-25 # Pfingstmontag, Montag
+  - 2026-08-01 # 1. August, Samstag
+  - 2026-12-25 # Weihnachten, Freitag
+  - 2026-12-26 # Stephanstag, Samstag
