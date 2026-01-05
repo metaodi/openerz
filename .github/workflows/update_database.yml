@@ -61,6 +61,8 @@ jobs:
 
           wget -O cache/winterthur.csv https://www.dropbox.com/scl/fi/3dlf9gad3fa0in7febaql/winterthur.csv?rlkey=2s7i3zzeestzakiagy3lh0vse&dl=0
 
+          wget -O cache/gossau-zh.csv https://www.dropbox.com/scl/fi/80jhlprsvp8jodht1mmj0/gossau-zh.csv?rlkey=ma0lb17gaddqv4cnfoowpc629&dl=0
+
       - uses: akhileshns/heroku-deploy@v3.12.14
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
