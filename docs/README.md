@@ -42,8 +42,8 @@ Die Daten können von dort entweder als JSON oder ICS (iCal-Kalender) bezogen we
      <option value="metal">Grobmetall</option>
      <option value="bulky_goods">Sperrmüll</option>
      <option value="special">Sondermüll</option>
-     <option value="etram">eTram</option>
-     <option value="cargotram">CargoTram</option>
+     <option value="mobile">Mobiler Recyclinghof</option>
+     <option value="oekibus">Ökibus</option>
   </select>
   <lable for="area">Gebiet</lable>
   <input name="area" type="text" />
@@ -104,8 +104,8 @@ Wenn du die Entsorungsdaten für deine Gemeinde als Kalender abonnieren möchtes
     * Grobmetall (`metal`)
     * Sperrmüll (`bulky_goods`)
     * Sondermüll (`special`)
-    * eTram (`etram`) -> Zürich
-    * CargoTram (`cargotram`) -> Zürich
+    * Mobiler Recyclinghof (`mobile`) -> Zürich
+    * Ökibus (`oekibus`) -> Dübendorf, Bassersdorf
 1. Gebiet auswählen, grössere Gemeinden sind oft in mehrere Gebiete aufgeteilt (1, 2, 3 / A, B, C / PLZ / Ost & West)
     * Adliswil -> keine Aufteilung
     * Basel -> Zone A-H
