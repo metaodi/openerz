@@ -1,8 +1,8 @@
 region: embrach
 zip: 8424
-start_date: 2025-01-01
-end_date: 2025-12-31
-status: in-progress
+start_date: 2026-01-01
+end_date: 2026-12-31
+status: done
 
 collections:
   waste:
@@ -12,9 +12,9 @@ collections:
     - area: West
       schedule:
         - weekly every Friday
-        - 2025-04-17 # Ersatzdatum für Karfreitag
-        - 2025-07-31 # Ersatzdatum für 1. August, Freitag
-        - 2025-12-24 # Ersatzdatum für Stephanstag, Freitag
+        - 2026-04-02 # Ersatzdatum für Karfreitag
+        - 2026-04-30 # Ersatzdatum für 1. Mai, Freitag
+        - 2026-12-24 # Ersatzdatum für Weihnachten, Freitag
 
   bulky_goods:
     - area: Ost
@@ -23,38 +23,38 @@ collections:
     - area: West
       schedule:
         - weekly every Friday
-        - 2025-04-17 # Ersatzdatum für Karfreitag
-        - 2025-07-31 # Ersatzdatum für 1. August, Freitag
-        - 2025-12-24 # Ersatzdatum für Stephanstag, Freitag
+        - 2026-04-02 # Ersatzdatum für Karfreitag
+        - 2026-04-30 # Ersatzdatum für 1. Mai, Freitag
+        - 2026-12-24 # Ersatzdatum für Weihnachten, Freitag
   
   organic:
     - area: Ost
       schedule:
-        - every other Wednesday in Jan and Feb starting jan 15th
+        - every other Wednesday in Jan and Feb starting jan 14th
         - every Wednesday from feb 28th until December 
         - every other Wednesday in Dec
     - area: West
       schedule:
-        - every other Monday in Jan and Feb starting jan 13th
+        - every other Monday in Jan and Feb starting jan 12th
         - every Monday from feb 26th until December
         - every other Monday in Dec
-        - 2025-04-23 # Ersatzdatum für Ostermontag
-        - 2025-06-11 # Ersatzdatum für Pfingstmontag
+        - 2025-04-08 # Ersatzdatum für Ostermontag
+        - 2025-05-27 # Ersatzdatum für Pfingstmontag
 
   metal:
     - schedule:
-        - 2025-01-16
-        - 2025-02-13
-        - 2025-03-27
-        - 2025-04-24
-        - 2025-05-22
-        - 2025-06-19
-        - 2025-07-17
-        - 2025-08-14
-        - 2025-09-25
-        - 2025-10-23
-        - 2025-11-20
-        - 2025-12-18
+        - 2026-01-21
+        - 2026-02-18
+        - 2026-03-12
+        - 2026-04-09
+        - 2026-05-07
+        - 2026-06-11
+        - 2026-07-09
+        - 2026-08-13
+        - 2026-09-17
+        - 2026-10-15
+        - 2026-11-12
+        - 2026-12-10
 
   paper:
     - schedule:
@@ -62,61 +62,58 @@ collections:
   
   cardboard:
     - schedule:
-        - every other Thurday starting jan 9th
-        - 2025-04-30 # Ersatzdatum für 1. Mai
-        - 2025-05-28 # Ersatzdatum für Auffahrt
-        - 2025-12-22 # Ersatzdatum für Weihnachten
-
+        - every other Thurday starting jan 8th
 
   incombustibles:
     - schedule:
-        - 2025-03-13
-        - 2025-06-05
-        - 2025-09-11
-        - 2025-12-04
+        - 2026-03-26
+        - 2026-06-25
+        - 2026-09-03
+        - 2026-11-26
 
   chipping_service:
     - schedule:
-        - 2025-04-07
-        - 2025-04-08
-        - 2025-04-09
-        - 2025-10-20
-        - 2025-10-21
-        - 2025-10-22
+        - 2026-03-23
+        - 2026-03-24
+        - 2026-10-20
+        - 2026-10-21
 
   special:
     - schedule:
-        - 2025-01-24
-        - 2025-09-12
+        - 2026-01-30
       station: "Badi Talegg, Embrach"
     - schedule:
-        - 2025-02-14
-        - 2025-06-06
-        - 2025-09-11
-        - 2025-12-06
+        - 2026-09-19
+      station: "hinter dem Werkgebäude, Hardstrasse 3a, Embrach"
+    
+    - schedule:
+        - 2026-02-13
+        - 2026-06-05
+        - 2026-09-18
+        - 2026-12-12
       station: "Einkaufszentrum Sonnenhof, Bülach"
     - schedule:
-        - 2025-05-03
+        - 2026-05-15
       station: "Werkhof, Mülistrasse 6, Lufingen"
     - schedule:
-        - 2025-06-13
-      station: "Werkhof, Dorfstrasse 51, Freienstein"
+        - 2026-06-12
+      station: "Entsorgungsstelle, Dorfstrasse 51, Freienstein"
     - schedule:
-        - 2025-12-03
-      station: "Volg, Eigentalstrasse 8, Oberembrach"
+        - 2026-12-09
+      station: "Werkgebäude, Obstgartenstrasse 3, Oberembrach"
     - schedule:
-        - 2025-10-11
+        - 2026-10-21
       station: "Werkhof, Tössstrasse, Rorbas"
 
 exclude:
-  # 2025
-  - 2025-01-01 # Neujahr, Mittwoch
-  - 2025-01-02 # Berchtoldstag, Donnerstag
-  - 2025-04-18 # Karfreitag, Freitag
-  - 2025-04-21 # Ostermontag, Montag
-  - 2025-05-01 # 1. Mai, Donnerstag
-  - 2025-05-29 # Auffahrt, Donnerstag
-  - 2025-06-09 # Pfingstmontag, Montag
-  - 2025-08-01 # 1. August, Freitag
-  - 2025-12-25 # Weihnachten, Donnerstag
-  - 2025-12-26 # Stephanstag, Freitag
+  # 2026
+  - 2026-01-01 # Neujahr, Donnerstag
+  - 2026-01-02 # Berchtoldstag, Freitag
+  - 2026-04-03 # Karfreitag, Freitag
+  - 2026-04-06 # Ostermontag, Montag
+  - 2026-05-01 # 1. Mai, Freitag
+  - 2026-05-14 # Auffahrt, Donnerstag
+  - 2026-05-25 # Pfingstmontag, Montag
+  - 2026-08-01 # 1. August, Samstag
+  - 2026-12-25 # Weihnachten, Freitag
+  - 2026-12-26 # Stephanstag, Samstag
