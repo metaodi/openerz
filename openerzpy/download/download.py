@@ -34,12 +34,14 @@ def download_content(url):
 
 
 def jsondownload(url):
-    r = _download_request(url, silent)
+    r = _download_request(url)
     return r.json()
 
 
-def download_file(url, path):
+def download_file(url, path,  encoding='utf-8'):
     r = _download_request(url)
+    if encoding:
+        r.encoding = encoding
     with open(path, 'wb') as f:
         for chunk in r.iter_content(1024):
             f.write(chunk)

@@ -64,7 +64,7 @@ def map_event(comp):
 # parse the ICS file
 def parse_file(path, start_date=None, end_date=None):
     cal = None
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         cal = Calendar.from_ical(f.read())
 
     # convert to CSV/JSON?
