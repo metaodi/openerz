@@ -55,6 +55,11 @@ Most regions are updated using Python scripts.
 This project uses `uv` to manage dependencies and virtual envs.
 To run scripts it's therefore recommended to use `uv run <script>` to run the script in the correct environment.
 
+AI agent
+========
+
+Use `python -m agent --url <source-url> --region <region>` to collect dates from HTML or PDF sources and write an OpenERZ-style config file (optionally with `--config-template` to merge into an existing file).
+
 Add a new municipality
 ======================
 
