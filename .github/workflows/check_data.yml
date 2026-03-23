@@ -1,0 +1,75 @@
+name: Check data availability
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-data:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check data availability and open issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          # Ensure the data-availability label exists
+          gh label create "data-availability" --repo "$GH_REPO" --color "d93f0b" --description "Automated alert for missing waste collection data" --force
+
+          # Get all regions from the API
+          if ! regions_response=$(curl -sf "https://openerz.metaodi.ch/api/parameter/regions"); then
+            echo "Error: Could not fetch regions from API (network or server error)"
+            exit 1
+          fi
+
+          regions=$(echo "$regions_response" | jq -r '.result[]')
+          if [ -z "$regions" ]; then
+            echo "Error: Could not parse regions from API response"
+            exit 1
+          fi
+
+          today=$(date -u +%Y-%m-%d)
+          future_date=$(date -u -d "+30 days" +%Y-%m-%d)
+          issue_title_prefix="No data available for region:"
+          echo "Checking data availability from $today to $future_date"
+
+          for region in $regions; do
+            echo "Checking region: $region"
+
+            # Check if there are any calendar entries for this region in the next 30 days
+            if ! response=$(curl -sf "https://openerz.metaodi.ch/api/calendar.json?region=${region}&start=${today}&end=${future_date}&limit=1"); then
+              echo "  Warning: API request failed for region $region, skipping"
+              continue
+            fi
+
+            count=$(echo "$response" | jq '._metadata.total_count')
+            echo "  Found $count entries for $region"
+
+            if [ "$count" -eq 0 ]; then
+              echo "  No data found for $region, checking for existing issue..."
+
+              issue_title="${issue_title_prefix} ${region}"
+
+              # Check if there is already an open issue for this region
+              existing=$(gh issue list --repo "$GH_REPO" --label "data-availability" --state open --json title --jq "[.[] | select(.title == \"${issue_title}\")] | length")
+
+              if [ "$existing" -eq 0 ]; then
+                echo "  Opening new issue for $region"
+                body="There are no waste collection date entries for the region **${region}** in the next 30 days (checked on ${today}, looking until ${future_date}).
+
+          Please update the data for this region."
+                gh issue create \
+                  --repo "$GH_REPO" \
+                  --title "$issue_title" \
+                  --body "$body" \
+                  --label "data-availability"
+              else
+                echo "  Open issue already exists for $region, skipping"
+              fi
+            fi
+          done
