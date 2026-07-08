@@ -1,6 +1,8 @@
+beautifulsoup4
 docopts
 icalendar
 pandas
+pdfminer.six
 psycopg2-binary
 python-dateutil
 python-dotenv
